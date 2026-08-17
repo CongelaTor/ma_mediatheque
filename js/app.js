@@ -282,6 +282,7 @@ function showSerieDetails(serie) {
 
     grid.classList.add('hidden');
     episodesPanel.classList.remove('hidden');
+    window.scrollTo(0, 0);
 
     setText('seriesTitle', serie.titre);
     setText('seriesCount', `${countSerieEpisodes(serie)} épisode${countSerieEpisodes(serie) > 1 ? 's' : ''}`);

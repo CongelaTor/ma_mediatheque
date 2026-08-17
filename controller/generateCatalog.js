@@ -1,3 +1,11 @@
+// REINIT du fichier catalog
+// {
+//     "version": 1,
+//     "dateDernierScan": null,
+//     "films": [],
+//     "series": []
+// }
+
 const fs = require('fs');
 const path = require('path');
 
@@ -146,22 +154,17 @@ function scanDirectory(directory, extensions, results = []) {
 }
 
 function analyzeVideoFile(fichier, source) {
-
     const nomSansExtension = path.parse(fichier.nom).name;
-
     const episodeInfo = detectEpisode(nomSansExtension);
     const annee = detectYear(nomSansExtension);
+    const langue = detectLanguage(fichier.fichier);
 
     let titreBrut = nomSansExtension;
 
-    if (source.type === 'serie' && episodeInfo) {
-
-        titreBrut = nomSansExtension.substring(0, episodeInfo.index);
-
+    if (source.type === 'serie') {
+        titreBrut = getSeriesTitleFromPath(fichier.fichier, source.path) || nomSansExtension;
     } else if (source.type === 'film' && annee) {
-
         titreBrut = nomSansExtension.substring(0, nomSansExtension.indexOf(annee));
-
     }
 
     const titre = cleanTitle(titreBrut);
@@ -171,6 +174,7 @@ function analyzeVideoFile(fichier, source) {
         id: buildId(titre, annee),
         titre: titre,
         annee: annee,
+        langue: langue,
         saison: episodeInfo ? episodeInfo.saison : null,
         episode: episodeInfo ? episodeInfo.episode : null,
         nomFichier: fichier.nom,
@@ -178,8 +182,44 @@ function analyzeVideoFile(fichier, source) {
         taille: fichier.taille,
         image: findAssociatedImage(fichier.fichier)
     };
-
 }
+
+function getSeriesTitleFromPath(videoPath, sourcePath) {
+    const directory = path.dirname(videoPath);
+    const relativePath = path.relative(sourcePath, directory);
+    const parts = relativePath.split(path.sep).filter(part => part && part !== '.');
+    for (const part of parts) {
+        if (isSeriesTechnicalFolder(part)) {
+            continue;
+        }
+        return part;
+    }
+    return null;
+}
+
+function isSeriesTechnicalFolder(value) {
+    const normalized = cleanTitle(value).toUpperCase();
+    if (['VO', 'VF', 'VOST', 'VOSTFR'].includes(normalized)) {
+        return true;
+    }
+    if (/^S\d{1,2}/i.test(normalized)) {
+        return true;
+    }
+    if (/^SAISON\s+\d+/i.test(normalized)) {
+        return true;
+    }
+    return false;
+}
+
+function detectLanguage(filePath) {
+    const upperPath = filePath.toUpperCase();
+    const match = upperPath.match(/(^|[^A-Z0-9])(VOSTFR|VOST|VF|VO)([^A-Z0-9]|$)/);
+    if (!match) {
+        return null;
+    }
+    return match[2];
+}
+
 
 function detectYear(value) {
 
@@ -196,61 +236,62 @@ function detectYear(value) {
 function detectEpisode(value) {
 
     const matchSxxExx = value.match(/S(\d{2})E(\d{2})/i);
-
     if (matchSxxExx) {
-
         return {
             pattern: matchSxxExx[0],
             index: matchSxxExx.index,
             saison: parseInt(matchSxxExx[1], 10),
             episode: parseInt(matchSxxExx[2], 10)
         };
-
     }
 
     const matchX = value.match(/(\d)x(\d{2})/i);
-
     if (matchX) {
-
         return {
             pattern: matchX[0],
             index: matchX.index,
             saison: parseInt(matchX[1], 10),
             episode: parseInt(matchX[2], 10)
         };
+    }
+
+    const match3Digits = value.match(/\b([1-9])(\d{2})\b/);
+
+    if (match3Digits) {
+
+        return {
+            pattern: match3Digits[0],
+            index: match3Digits.index,
+            saison: parseInt(match3Digits[1], 10),
+            episode: parseInt(match3Digits[2], 10)
+        };
 
     }
 
     return null;
-
 }
 
 function cleanTitle(value) {
-
+    value = value
+        .replace(/\[[^\]]*\]/g, ' ')
+        .replace(/^\d+\s+(.+)$/g, '$1')
+        .replace(/\s+/g, ' ')
+        .trim();
     const words = cleanSeparators(value)
         .split(' ')
         .filter(word => word.trim().length > 0);
-
     const cleanedWords = [];
-
     for (const word of words) {
-
         const upperWord = word.toUpperCase();
-
         if (ignoreWordsConfig.ignoreWords.includes(upperWord)) {
             continue;
         }
-
         if (wordMatchesPattern(upperWord, ignoreWordsConfig.patterns)) {
             continue;
         }
-
         cleanedWords.push(word);
-
     }
-
     return cleanedWords.join(' ').trim();
-
 }
 
 function cleanSeparators(value) {
@@ -347,6 +388,7 @@ function addFilmIfNew(catalog, analyse) {
         titre: analyse.titre,
         annee: analyse.annee,
         genre: null,
+        langue: analyse.langue,
         fichier: analyse.fichier,
         nomFichier: analyse.nomFichier,
         taille: analyse.taille,
@@ -414,6 +456,7 @@ function addEpisodeIfNew(catalog, analyse) {
 
     saison.episodes.push({
         numero: analyse.episode,
+        langue: analyse.langue,
         fichier: analyse.fichier,
         nomFichier: analyse.nomFichier,
         taille: analyse.taille,
