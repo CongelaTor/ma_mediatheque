@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Vidéothèque</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎬</text></svg>">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="topbar">
+            <div class="brand" onclick="showPage('home')">
+                <div class="brand-icon">
+                    <span>🎬</span>
+                </div>
+                <div class="brand-title">Ma Médiathèque</div>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-button active" data-page="home" onclick="showPage('home')">Accueil</button>
+                <button class="nav-button" data-page="films" onclick="showPage('films')">Films</button>
+                <button class="nav-button" data-page="series" onclick="showPage('series')">Séries</button>
+            </nav>
+
+            <div class="top-actions">
+                <input id="searchInput" class="search-input" type="text" placeholder="Rechercher..."
+                    oninput="handleSearch()">
+                <button class="icon-button" onclick="reloadCatalog()" title="Actualiser">⟳</button>
+            </div>
+        </header>
+
+        <main>
+
+            <section id="page-home" class="page active">
+
+                <div class="home-header">
+                    <div>
+                        <h1>Bienvenue dans votre vidéothèque</h1>
+                        <p>Accédez à toute votre collection de films et séries.</p>
+                    </div>
+                </div>
+
+                <div class="home-cards">
+
+                    <article class="home-card home-card-films" onclick="showPage('films')">
+                        <div class="home-card-image film-hero"></div>
+                        <div class="home-card-icon">🎬</div>
+                        <h2>Films</h2>
+                        <p>Découvrez votre collection de films classés par genre.</p>
+                        <button type="button">Accéder aux films ›</button>
+                    </article>
+
+                    <article class="home-card home-card-series" onclick="showPage('series')">
+                        <div class="home-card-image serie-hero"></div>
+                        <div class="home-card-icon purple">📺</div>
+                        <h2>Séries</h2>
+                        <p>Retrouvez vos séries organisées par saison et épisode.</p>
+                        <button type="button" class="purple-button">Accéder aux séries ›</button>
+                    </article>
+
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <span id="statFilms">0</span>
+                        <small>Films</small>
+                    </div>
+                    <div class="stat-card">
+                        <span id="statSeries">0</span>
+                        <small>Séries</small>
+                    </div>
+                    <div class="stat-card">
+                        <span id="statEpisodes">0</span>
+                        <small>Épisodes</small>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="page-films" class="page">
+
+                <div class="layout">
+
+                    <aside class="sidebar">
+                        <div class="sidebar-title">Navigation</div>
+
+                        <button class="sidebar-link active" data-genre="all" onclick="selectGenre('all')">Tous les
+                            films</button>
+                        <button class="sidebar-link" data-genre="Action" onclick="selectGenre('Action')">Action</button>
+                        <button class="sidebar-link" data-genre="Aventure"
+                            onclick="selectGenre('Aventure')">Aventure</button>
+                        <button class="sidebar-link" data-genre="Comédie"
+                            onclick="selectGenre('Comédie')">Comédie</button>
+                        <button class="sidebar-link" data-genre="Science-Fiction"
+                            onclick="selectGenre('Science-Fiction')">Science-Fiction</button>
+                        <button class="sidebar-link" data-genre="Drame" onclick="selectGenre('Drame')">Drame</button>
+                        <button class="sidebar-link" data-genre="Fantastique"
+                            onclick="selectGenre('Fantastique')">Fantastique</button>
+                        <button class="sidebar-link" data-genre="Thriller"
+                            onclick="selectGenre('Thriller')">Thriller</button>
+                        <button class="sidebar-link" data-genre="Documentaire"
+                            onclick="selectGenre('Documentaire')">Documentaire</button>
+                        <button class="sidebar-link" data-genre="Animation"
+                            onclick="selectGenre('Animation')">Animation</button>
+
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Statistiques</div>
+                            <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
+                            <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
+                            <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
+                        </div>
+                    </aside>
+
+                    <section class="content">
+
+                        <div class="content-header">
+                            <div>
+                                <h1>Films</h1>
+                                <p id="filmsCount">0 film</p>
+                            </div>
+                            <div class="sort-label">Tri : Titre A-Z</div>
+                        </div>
+
+                        <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
+                            ▶ Reprendre : <span id="resumeFilmText"></span>
+                        </button>
+
+                        <div id="filmsGrid" class="cards-grid"></div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+            <section id="page-series" class="page">
+
+                <div class="layout">
+
+                    <aside class="sidebar">
+                        <div class="sidebar-title">Navigation</div>
+                        <button class="sidebar-link active" onclick="renderSeries()">Toutes les séries</button>
+                        <button class="sidebar-link" onclick="showPage('films')">Films</button>
+                    </aside>
+
+                    <section class="content">
+
+                        <div class="content-header">
+                            <div>
+                                <h1 id="seriesTitle">Séries</h1>
+                                <p id="seriesCount">0 série</p>
+                            </div>
+                            <button id="backToSeriesButton" class="secondary-button hidden" onclick="renderSeries()">←
+                                Retour aux séries</button>
+                        </div>
+
+                        <button id="resumeSerieButton" class="resume-button hidden" onclick="resumeSerie()">
+                            ▶ Reprendre : <span id="resumeSerieText"></span>
+                        </button>
+
+                        <div id="seriesGrid" class="cards-grid"></div>
+                        <div id="episodesPanel" class="episodes-panel hidden"></div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

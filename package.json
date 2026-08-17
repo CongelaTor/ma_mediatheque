@@ -1,0 +1,13 @@
+{
+  "name": "ma_videotheque",
+  "version": "1.0.0",
+  "description": "Générateur de catalogue pour Ma vidéothèque",
+  "main": "controller/generateCatalog.js",
+  "scripts": {
+    "generate": "node controller/generateCatalog.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

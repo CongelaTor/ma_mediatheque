@@ -1,0 +1,27 @@
+{
+    "ignoreWords": [
+        "AC3",
+        "BLURAY",
+        "DTS",
+        "DVDRIP",
+        "FASTSUB",
+        "HDTV",
+        "HEVC",
+        "NEWZT",
+        "TORRENT9",
+        "TRUEHD",
+        "VOSTFR",
+        "WEB-DL",
+        "WEBRIP",
+        "WWW",
+        "X264",
+        "X265",
+        "XVID"
+    ],
+    "patterns": [
+        "????P",
+        "?X??",
+        "AAC?",
+        "S??E??"
+    ]
+}

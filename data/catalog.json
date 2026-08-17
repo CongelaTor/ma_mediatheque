@@ -1,0 +1,158 @@
+{
+    "version": 1,
+    "dateDernierScan": "2026-08-16T21:10:30.637Z",
+    "films": [
+        {
+            "id": "gad_elmaleh_part_en_live_2017",
+            "titre": "Gad Elmaleh part en live",
+            "annee": 2017,
+            "genre": null,
+            "fichier": "C:\\mes_videos\\Films\\Gad.Elmaleh.part.en.live.2017.WEB-DL.XViD-EXTREME.www.torrent9.biz.avi",
+            "nomFichier": "Gad.Elmaleh.part.en.live.2017.WEB-DL.XViD-EXTREME.www.torrent9.biz.avi",
+            "taille": 578973654,
+            "image": null,
+            "imdbId": null,
+            "doublonExact": false,
+            "doublonProbable": false,
+            "groupeDoublon": null,
+            "dateAjout": "2026-08-15T14:57:44.783Z"
+        },
+        {
+            "id": "kpop",
+            "titre": "Kpop",
+            "annee": null,
+            "genre": null,
+            "fichier": "C:\\mes_videos\\Films\\Kpop.mp4",
+            "nomFichier": "Kpop.mp4",
+            "taille": 1972061933,
+            "image": null,
+            "imdbId": null,
+            "doublonExact": false,
+            "doublonProbable": false,
+            "groupeDoublon": null,
+            "dateAjout": "2026-08-16T21:10:30.597Z"
+        },
+        {
+            "id": "soyez_sympas_rembobinez",
+            "titre": "Soyez sympas, rembobinez",
+            "annee": null,
+            "genre": null,
+            "fichier": "C:\\mes_videos\\Films\\Soyez sympas, rembobinez.avi",
+            "nomFichier": "Soyez sympas, rembobinez.avi",
+            "taille": 575630416,
+            "image": null,
+            "imdbId": null,
+            "doublonExact": false,
+            "doublonProbable": false,
+            "groupeDoublon": null,
+            "dateAjout": "2026-08-15T14:57:44.786Z"
+        }
+    ],
+    "series": [
+        {
+            "id": "apb",
+            "titre": "APB",
+            "image": null,
+            "imdbId": null,
+            "saisons": [
+                {
+                    "numero": 1,
+                    "episodes": [
+                        {
+                            "numero": 1,
+                            "fichier": "C:\\mes_videos\\Series\\apb\\APB.S01E01.FASTSUB.VOSTFR.HDTV.XviD-NEWZT-WwW..avi",
+                            "nomFichier": "APB.S01E01.FASTSUB.VOSTFR.HDTV.XviD-NEWZT-WwW..avi",
+                            "taille": 366788598,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-15T14:57:44.790Z"
+                        },
+                        {
+                            "numero": 2,
+                            "fichier": "C:\\mes_videos\\Series\\apb\\APB.S01E02.FASTSUB.VOSTFR.HDTV.XviD-NEWZT-WwW..avi",
+                            "nomFichier": "APB.S01E02.FASTSUB.VOSTFR.HDTV.XviD-NEWZT-WwW..avi",
+                            "taille": 366691572,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-15T14:57:44.824Z"
+                        }
+                    ]
+                }
+            ],
+            "dateAjout": "2026-08-15T14:57:44.790Z"
+        },
+        {
+            "id": "blindspot",
+            "titre": "Blindspot",
+            "image": null,
+            "imdbId": null,
+            "saisons": [
+                {
+                    "numero": 1,
+                    "episodes": [
+                        {
+                            "numero": 1,
+                            "fichier": "C:\\mes_videos\\Series\\blindspot\\s01\\Blindspot - 1x01.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie (2).avi",
+                            "nomFichier": "Blindspot - 1x01.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie (2).avi",
+                            "taille": 365920034,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-16T21:10:30.611Z"
+                        },
+                        {
+                            "numero": 3,
+                            "fichier": "C:\\mes_videos\\Series\\blindspot\\s01\\Blindspot - 1x03.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie (4).avi",
+                            "nomFichier": "Blindspot - 1x03.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie (4).avi",
+                            "taille": 365920034,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-16T21:10:30.633Z"
+                        },
+                        {
+                            "numero": 5,
+                            "fichier": "C:\\mes_videos\\Series\\blindspot\\s01\\Blindspot - 1x05.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie.avi",
+                            "nomFichier": "Blindspot - 1x05.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie.avi",
+                            "taille": 365920034,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-16T21:10:30.635Z"
+                        },
+                        {
+                            "numero": 6,
+                            "fichier": "C:\\mes_videos\\Series\\blindspot\\s01\\Blindspot - 1x06.FASTSUB.VOSTFR.HDTV.XviD-RUDY.avi",
+                            "nomFichier": "Blindspot - 1x06.FASTSUB.VOSTFR.HDTV.XviD-RUDY.avi",
+                            "taille": 365920034,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-16T21:10:30.636Z"
+                        },
+                        {
+                            "numero": 7,
+                            "fichier": "C:\\mes_videos\\Series\\blindspot\\s01\\Blindspot - 1x07.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie (3).avi",
+                            "nomFichier": "Blindspot - 1x07.FASTSUB.VOSTFR.HDTV.XviD-RUDY - Copie (3).avi",
+                            "taille": 365920034,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-16T21:10:30.636Z"
+                        }
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "episodes": [
+                        {
+                            "numero": 1,
+                            "fichier": "C:\\mes_videos\\Series\\blindspot\\s02\\Blindspot.S02E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "nomFichier": "Blindspot.S02E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "taille": 381354506,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-15T14:57:44.825Z"
+                        }
+                    ]
+                }
+            ],
+            "dateAjout": "2026-08-15T14:57:44.824Z"
+        }
+    ]
+}

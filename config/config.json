@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "type": "film",
+      "path": "C:\\mes_videos\\Films"
+    },
+    {
+      "type": "serie",
+      "path": "C:\\mes_videos\\Series"
+    }
+  ],
+  "extensions": [
+    ".avi",
+    ".mkv",
+    ".mp4"
+  ],
+  "imageExtensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp"
+  ]
+}
