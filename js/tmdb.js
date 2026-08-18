@@ -134,6 +134,30 @@ async function searchTmdbSerie(title) {
     }));
 }
 
+async function getTmdbSeasonEpisodes(serie, seasonNumber) {
+    if (!serie.tmdbId) {
+        return new Map();
+    }
+    const response = await fetch(`https://api.themoviedb.org/3/tv/${serie.tmdbId}/season/${seasonNumber}?api_key=${tmdbApiKey}&language=fr-FR`);
+    const data = await response.json();
+    if (!data.episodes) {
+        console.error(data);
+        return new Map();
+    }
+    const episodes = new Map();
+    for (const item of data.episodes) {
+        episodes.set(item.episode_number, {
+            titre: item.name || '',
+            description: item.overview || '',
+            image: item.still_path ? `https://image.tmdb.org/t/p/w300${item.still_path}` : null,
+            dateDiffusion: item.air_date || '',
+            duree: item.runtime || '',
+            tmdbUrl: `https://www.themoviedb.org/tv/${serie.tmdbId}/season/${seasonNumber}/episode/${item.episode_number}`
+        });
+    }
+    return episodes;
+}
+
 document.addEventListener('keydown', event => {
 
     if (event.key === 'Escape') {
