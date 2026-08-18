@@ -750,3 +750,20 @@ input {
     font-size: 1.5em;
     font-weight: bold;
 }
+
+.serie-info-card {
+    margin-bottom: 20px;
+}
+
+.serie-info-image {
+    width: 94px;
+    height: 140px;
+}
+
+.serie-info-image .poster-zone,
+.serie-info-image img,
+.serie-info-image .missing-poster {
+    width: 94px;
+    height: 140px;
+    border-radius: 10px;
+}

@@ -6,6 +6,7 @@ const PORT = 9876;
 const VLC = 'C:\\Program Files\\VideoLAN\\VLC\\vlc.exe';
 const rootDir = path.join(__dirname, '..');
 const catalogPath = path.join(rootDir, 'data', 'catalog.json');
+
 http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Headers', '*');
@@ -31,6 +32,10 @@ http.createServer((request, response) => {
                 saveSerieTmdbData(data, response);
                 return;
             }
+            if (request.url === '/refresh-catalog') {
+                refreshCatalog(response);
+                return;
+            }
             launchVlc(data, response);
         } catch (error) {
             response.writeHead(500, {
@@ -40,7 +45,7 @@ http.createServer((request, response) => {
         }
     });
 }).listen(PORT, () => {
-    console.log(`VLC Launcher actif sur http://localhost:${PORT}`);
+    console.log(`MediaServer actif sur http://localhost:${PORT}`);
 });
 function launchVlc(data, response) {
     execFile(VLC, [data.fichier], error => {
@@ -74,4 +79,35 @@ function saveSerieTmdbData(data, response) {
         'Content-Type': 'text/plain; charset=utf-8'
     });
     response.end('Association TMDB enregistrée');
+}
+
+function refreshCatalog(response) {
+    console.log('REFRESH CATALOG');
+    const scriptPath =
+        path.join(rootDir, 'controller', 'generateCatalog.js');
+    console.log(scriptPath);
+    execFile(
+        process.execPath,
+        [scriptPath],
+        { cwd: rootDir },
+        (error, stdout, stderr) => {
+            console.log('FIN EXECFILE');
+            console.log('ERROR =', error);
+            console.log('STDOUT =');
+            console.log(stdout);
+            console.log('STDERR =');
+            console.log(stderr);
+            if (error) {
+                response.writeHead(500, {
+                    'Content-Type': 'text/plain; charset=utf-8'
+                });
+                response.end(stderr || error.message);
+                return;
+            }
+            response.writeHead(200, {
+                'Content-Type': 'text/plain; charset=utf-8'
+            });
+            response.end(stdout || 'Catalogue synchronisé');
+        }
+    );
 }

@@ -69,14 +69,24 @@ function episodeMatchesDetailLanguage(episode) {
     return episode.langue === activeDetailLanguage;
 }
 function serieMatchesSeriesLanguages(serie) {
+    let hasLanguage = false;
+
     for (const saison of serie.saisons) {
         for (const episode of saison.episodes) {
-            if (episode.langue && activeSeriesLanguages.has(episode.langue)) {
+
+            if (!episode.langue) {
+                continue;
+            }
+
+            hasLanguage = true;
+
+            if (activeSeriesLanguages.has(episode.langue)) {
                 return true;
             }
         }
     }
-    return false;
+
+    return !hasLanguage;
 }
 function renderSeries() {
     currentPage = 'series';
@@ -102,21 +112,20 @@ function createSerieCard(serie) {
     const posterZone = document.createElement('div');
     posterZone.className = 'poster-zone';
     posterZone.onclick = () => {
-        if (serie.tmdbId) {
-            openTmdbForSerie(serie);
-        } else {
+        if (!serie.tmdbId) {
             showTmdbSerieSearch(serie);
+            return;
         }
+        window.location.href =
+            `episodes.html?id=${encodeURIComponent(serie.id)}`;
     };
-    posterZone.appendChild(createPosterContent(serie.image, serie.titre, serie.id));
-    const playButton = document.createElement('button');
-    playButton.className = 'play-button';
-    playButton.innerHTML = '<span class="play-icon">▶</span>';
-    playButton.onclick = event => {
-        event.stopPropagation();
-        window.location.href = `episodes.html?id=${encodeURIComponent(serie.id)}`;
-    };
-    posterZone.appendChild(playButton);
+    posterZone.appendChild(
+        createPosterContent(
+            serie.image,
+            serie.titre,
+            serie.id
+        )
+    );
     card.appendChild(posterZone);
     return card;
 }

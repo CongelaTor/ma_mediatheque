@@ -3,8 +3,21 @@ async function loadCatalog() {
     catalog = await response.json();
 }
 async function reloadCatalog() {
+    openScanModal();
+    const response = await fetch('http://localhost:9876/refresh-catalog', {
+        method: 'POST'
+    });
+    if (!response.ok) {
+        const log = await response.text();
+        alert(log);
+        console.error(await response.text());
+        return;
+    }
+    const log = await response.text();
+
     await loadCatalog();
     updateStats();
+
     if (currentPage === 'films' && typeof renderFilms === 'function') {
         renderFilms();
     }
@@ -14,6 +27,7 @@ async function reloadCatalog() {
     if (currentPage === 'serie-detail' && currentSerie && typeof showSerieDetails === 'function') {
         showSerieDetails(currentSerie, currentSeason);
     }
+    document.getElementById('scanLog').textContent = log;
 }
 function updateStats() {
     if (!catalog) {
@@ -37,4 +51,15 @@ function countEpisodes() {
         }
     }
     return count;
+}
+function openScanModal() {
+    document
+        .getElementById('scanModal')
+        .classList.remove('hidden');
+}
+
+function closeScanModal() {
+    document
+        .getElementById('scanModal')
+        .classList.add('hidden');
 }

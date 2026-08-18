@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-08-17T21:37:06.459Z",
+    "dateDernierScan": "2026-08-18T18:19:11.161Z",
     "films": [
         {
             "id": "_2008",
@@ -14,8 +14,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.040Z"
         },
         {
@@ -78,8 +78,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.044Z"
         },
         {
@@ -110,8 +110,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.045Z"
         },
         {
@@ -158,8 +158,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.048Z"
         },
         {
@@ -190,8 +190,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.049Z"
         },
         {
@@ -286,8 +286,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.054Z"
         },
         {
@@ -350,8 +350,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.058Z"
         },
         {
@@ -430,8 +430,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.062Z"
         },
         {
@@ -542,8 +542,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.068Z"
         },
         {
@@ -606,8 +606,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.072Z"
         },
         {
@@ -670,8 +670,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "",
             "dateAjout": "2026-08-17T21:37:03.098Z"
         },
         {
@@ -974,8 +974,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "doctor_strange_2",
             "dateAjout": "2026-08-17T21:37:03.085Z"
         },
         {
@@ -1150,8 +1150,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "dune",
             "dateAjout": "2026-08-17T21:37:03.106Z"
         },
         {
@@ -1230,8 +1230,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "eternals_1",
             "dateAjout": "2026-08-17T21:37:03.075Z"
         },
         {
@@ -1358,8 +1358,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "f9_the_fast_saga",
             "dateAjout": "2026-08-17T21:37:03.004Z"
         },
         {
@@ -1598,8 +1598,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "jason_bourne",
             "dateAjout": "2026-08-17T21:37:03.018Z"
         },
         {
@@ -1774,8 +1774,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_3",
             "dateAjout": "2026-08-17T21:37:03.023Z"
         },
         {
@@ -1822,8 +1822,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_4_ghost_protocol",
             "dateAjout": "2026-08-17T21:37:03.026Z"
         },
         {
@@ -1854,8 +1854,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_5_rogue_nation",
             "dateAjout": "2026-08-17T21:37:03.028Z"
         },
         {
@@ -2222,8 +2222,8 @@
             "image": null,
             "imdbId": null,
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "thor_love_and_thunder",
             "dateAjout": "2026-08-17T21:37:03.128Z"
         },
         {
@@ -2425,6 +2425,12 @@
             "titre": "Agent X",
             "image": "https://image.tmdb.org/t/p/w342/7KYgoZgXuk1EkUkV797MXh8ik5k.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:04.894Z",
+            "tmdbId": 63645,
+            "tmdbUrl": "https://www.themoviedb.org/tv/63645",
+            "titreTmdb": "Agent X",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "Première femme Vice-Présidente des Etats-Unis, Natalie Maccabee découvre que son statut lui confère le pouvoir d'intervenir en temps de crise pour protéger son pays. Pour accomplir ce devoir en toute discrétion, elle a à sa disposition un mystérieux Agent X...",
             "saisons": [
                 {
                     "numero": 1,
@@ -2531,19 +2537,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:04.894Z",
-            "tmdbId": 63645,
-            "tmdbUrl": "https://www.themoviedb.org/tv/63645",
-            "titreTmdb": "Agent X",
-            "anneeTmdb": "2015",
-            "descriptionTmdb": "Première femme Vice-Présidente des Etats-Unis, Natalie Maccabee découvre que son statut lui confère le pouvoir d'intervenir en temps de crise pour protéger son pays. Pour accomplir ce devoir en toute discrétion, elle a à sa disposition un mystérieux Agent X..."
+            ]
         },
         {
             "id": "almost_paradise",
             "titre": "Almost paradise",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/wtmV4qF9ADKn8BQ1nHq3eTFjuaS.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:04.924Z",
+            "tmdbId": 100383,
+            "tmdbUrl": "https://www.themoviedb.org/tv/100383",
+            "titreTmdb": "Almost Paradise",
+            "anneeTmdb": "2020",
+            "descriptionTmdb": "Alex Walker, un des meilleurs agents de la DEA, a été contraint de prendre une retraite anticipée. La trahison de son partenaire et son hypertension l'ont amené à s'expatrier sur une petite île de l'archipel des Philippines où il est le gérant d'une boutique de souvenirs dans un hôtel de luxe. Si le cadre idyllique séduit les riches et les puissants, il attire aussi l'élite des criminels venus des quatre coins du monde. Malgré tous ses efforts pour mener une vie tranquille, Alex n'a pas son pareil pour se retrouver dans les situations les plus périlleuses. Et il aime ça !",
             "saisons": [
                 {
                     "numero": 1,
@@ -2650,14 +2656,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:04.924Z"
+            ]
         },
         {
             "id": "apb",
             "titre": "APB",
             "image": "https://image.tmdb.org/t/p/w342/6nobSVxOse1XFO43CLyH6r6u5DN.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:04.933Z",
+            "tmdbId": 67129,
+            "tmdbUrl": "https://www.themoviedb.org/tv/67129",
+            "titreTmdb": "A.P.B. : Alerte d'urgence",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Après avoir été aux premières loges d'un crime violent, un génie milliardaire rachète un commissariat de police délaissé pour mettre en place une force de police privée plus efficace, renforcée par de nouveaux outils high tech et des idées novatrices.",
             "saisons": [
                 {
                     "numero": 1,
@@ -2784,19 +2795,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:04.933Z",
-            "tmdbId": 67129,
-            "tmdbUrl": "https://www.themoviedb.org/tv/67129",
-            "titreTmdb": "A.P.B. : Alerte d'urgence",
-            "anneeTmdb": "2017",
-            "descriptionTmdb": "Après avoir été aux premières loges d'un crime violent, un génie milliardaire rachète un commissariat de police délaissé pour mettre en place une force de police privée plus efficace, renforcée par de nouveaux outils high tech et des idées novatrices."
+            ]
         },
         {
             "id": "blindspot",
             "titre": "Blindspot",
             "image": "https://image.tmdb.org/t/p/w342/jKm93ft0kBKrRgYGF7cPvztpx4p.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:04.939Z",
+            "tmdbId": 62710,
+            "tmdbUrl": "https://www.themoviedb.org/tv/62710",
+            "titreTmdb": "Blindspot",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "Une jeune femme amnésique est retrouvée totalement nue en plein milieu de Times Square à New York, recouverte de tatouages mystérieux, fraîchement réalisés. Un agent du FBI, chargé de l'enquête, suit les indices dispersés sur son corps, qui révèlent bientôt une conspiration de grande ampleur...",
             "saisons": [
                 {
                     "numero": 1,
@@ -3483,7 +3494,7 @@
                             "nomFichier": "Blindspot.S04E03.VOSTFR.web.XviD-EXTREME.avi",
                             "taille": 342410706,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:04.976Z"
                         },
                         {
@@ -3533,7 +3544,7 @@
                             "nomFichier": "Blindspot.S04E07.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 370738132,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:04.978Z"
                         },
                         {
@@ -3553,7 +3564,7 @@
                             "nomFichier": "Blindspot.S04E08.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 391216526,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:04.980Z"
                         },
                         {
@@ -3593,7 +3604,7 @@
                             "nomFichier": "Blindspot.S04E11.FASTSUB.VOSTFR.WEBRip.XviD-ZT.avi",
                             "taille": 367369230,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:04.982Z"
                         },
                         {
@@ -3623,7 +3634,7 @@
                             "nomFichier": "Blindspot.S04E13.HDTV.x264-SVA[ettv].mkv",
                             "taille": 320932552,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:04.983Z"
                         },
                         {
@@ -3643,7 +3654,7 @@
                             "nomFichier": "Blindspot.S04E14.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 387605112,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:04.984Z"
                         },
                         {
@@ -3853,19 +3864,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:04.939Z",
-            "tmdbId": 62710,
-            "tmdbUrl": "https://www.themoviedb.org/tv/62710",
-            "titreTmdb": "Blindspot",
-            "anneeTmdb": "2015",
-            "descriptionTmdb": "Une jeune femme amnésique est retrouvée totalement nue en plein milieu de Times Square à New York, recouverte de tatouages mystérieux, fraîchement réalisés. Un agent du FBI, chargé de l'enquête, suit les indices dispersés sur son corps, qui révèlent bientôt une conspiration de grande ampleur..."
+            ]
         },
         {
             "id": "burn_notice",
             "titre": "Burn Notice",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/o2fnD3SNiQjGVgA2C3ezaeh2HK.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:04.999Z",
+            "tmdbId": 2919,
+            "tmdbUrl": "https://www.themoviedb.org/tv/2919",
+            "titreTmdb": "Burn Notice",
+            "anneeTmdb": "2007",
+            "descriptionTmdb": "Lorsqu'un agent secret est viré, il ne reçoit pas une lettre des ressources humaines, mais une \"Burn Notice\". Sans en connaître la raison, l'ex-espion Michael Weston en a été victime et le gouvernement en a fait un indésirable. Aidé de son ex petite amie et de son ancien partenaire, Michael cherche à savoir pourquoi il a été mis sur la touche, pourquoi il a été ainsi éliminé. Pour parvenir à ses fins, il ne peut employer les méthodes habituelles et doit éviter à tout prix d'attirer l'attention de ses anciens collègues espions. Afin de financer son enquête personnelle, il propose ses services à ceux que le police ne peut pas, ou ne veut pas, aider...",
             "saisons": [
                 {
                     "numero": 1,
@@ -4982,14 +4993,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:04.999Z"
+            ]
         },
         {
             "id": "covert_affairs",
             "titre": "Covert Affairs",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/pRWUGSGdByQHW93DH2braqkRjZa.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.139Z",
+            "tmdbId": 31631,
+            "tmdbUrl": "https://www.themoviedb.org/tv/31631",
+            "titreTmdb": "Covert Affairs",
+            "anneeTmdb": "2010",
+            "descriptionTmdb": "Une jeune stagiaire polyglotte de la CIA, Annie Walker, est subitement promue agent de terrain. Alors qu'elle pense le devoir à ses capacités linguistiques, la véritable raison semble être pour la CIA d'attirer et de capturer Ben, l'homme dont elle était tombée amoureuse, qui lui a brisé le cœur, et dont elle ignore finalement tout. Pour l'aider dans ses nouvelles fonctions, elle est épaulée par August « Auggie » Anderson, un officier de la CIA ayant perdu la vue en Irak, toujours prêt à l'aider et l'appuyer, et de Jai Willcox, fils d'un ancien ponte de la CIA.",
             "saisons": [
                 {
                     "numero": 1,
@@ -5756,14 +5772,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.139Z"
+            ]
         },
         {
             "id": "deception",
             "titre": "Deception",
             "image": "https://image.tmdb.org/t/p/w342/hmpIXlk4r78i48gGRXVx9CYGK9F.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.255Z",
+            "tmdbId": 71722,
+            "tmdbUrl": "https://www.themoviedb.org/tv/71722",
+            "titreTmdb": "Cameron Black : L'Illusionniste",
+            "anneeTmdb": "2018",
+            "descriptionTmdb": "Cameron Black est le plus grand illusionniste du monde. Au moins, c'est ainsi que les gens le considéraient avant que son plus grand secret ne soit révélé et que sa carrière ne soit détruite. Pire encore, Cameron a de bonnes raisons de croire que ce n'était pas un accident.",
             "saisons": [
                 {
                     "numero": 1,
@@ -5775,7 +5796,7 @@
                             "nomFichier": "Deception.2018.S01E01.FRENCH.HDTV.XviD-EXTREME.avi",
                             "taille": 377730516,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.255Z"
                         },
                         {
@@ -5795,7 +5816,7 @@
                             "nomFichier": "Deception.2018.S01E02.FRENCH.HDTV.XviD-EXTREME..avi",
                             "taille": 374923156,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.257Z"
                         },
                         {
@@ -5815,7 +5836,7 @@
                             "nomFichier": "Deception.2018.S01E03.FRENCH.HDTV.XviD-EXTREME.avi",
                             "taille": 327688634,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.258Z"
                         },
                         {
@@ -5835,7 +5856,7 @@
                             "nomFichier": "Deception.2018.S01E04.FRENCH.HDTV.XviD-EXTREME.avi",
                             "taille": 374494144,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.259Z"
                         },
                         {
@@ -5855,7 +5876,7 @@
                             "nomFichier": "Deception.2018.S01E05.FRENCH.HDTV.XviD-EXTREME.avi",
                             "taille": 369191644,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.261Z"
                         },
                         {
@@ -5875,7 +5896,7 @@
                             "nomFichier": "Deception.2018.S01E06.FRENCH.HDTV.XviD-EXTREME.avi",
                             "taille": 376646518,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.262Z"
                         },
                         {
@@ -5895,7 +5916,7 @@
                             "nomFichier": "Deception.2018.S01E07.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367587136,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.263Z"
                         },
                         {
@@ -5915,7 +5936,7 @@
                             "nomFichier": "Deception.2018.S01E08.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367090128,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.264Z"
                         },
                         {
@@ -5935,7 +5956,7 @@
                             "nomFichier": "Deception.2018.S01E09.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367500626,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.265Z"
                         },
                         {
@@ -5955,7 +5976,7 @@
                             "nomFichier": "Deception.2018.S01E10.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367457767,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.266Z"
                         },
                         {
@@ -5975,7 +5996,7 @@
                             "nomFichier": "Deception.2018.S01E11.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367474979,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.267Z"
                         },
                         {
@@ -5995,7 +6016,7 @@
                             "nomFichier": "Deception.2018.S01E12.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367466805,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.267Z"
                         },
                         {
@@ -6015,7 +6036,7 @@
                             "nomFichier": "Deception.2018.S01E13.FiNAL.FRENCH.HDTV.XviD-ZT.avi",
                             "taille": 367502561,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.268Z"
                         },
                         {
@@ -6030,19 +6051,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.255Z",
-            "tmdbId": 71722,
-            "tmdbUrl": "https://www.themoviedb.org/tv/71722",
-            "titreTmdb": "Cameron Black : L'Illusionniste",
-            "anneeTmdb": "2018",
-            "descriptionTmdb": "Cameron Black est le plus grand illusionniste du monde. Au moins, c'est ainsi que les gens le considéraient avant que son plus grand secret ne soit révélé et que sa carrière ne soit détruite. Pire encore, Cameron a de bonnes raisons de croire que ce n'était pas un accident."
+            ]
         },
         {
             "id": "frequency",
             "titre": "Frequency",
             "image": "https://image.tmdb.org/t/p/w342/o8A0dLBJn7JkxJpu8M7wwfLe9Kd.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.283Z",
+            "tmdbId": 66894,
+            "tmdbUrl": "https://www.themoviedb.org/tv/66894",
+            "titreTmdb": "Frequency",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Une jeune femme, inspecteur de police, découvre qu'elle peut communiquer  avec son père, mort 20 ans plus tôt, grâce à un transmetteur de radio.",
             "saisons": [
                 {
                     "numero": 1,
@@ -6179,19 +6200,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.283Z",
-            "tmdbId": 66894,
-            "tmdbUrl": "https://www.themoviedb.org/tv/66894",
-            "titreTmdb": "Frequency",
-            "anneeTmdb": "2016",
-            "descriptionTmdb": "Une jeune femme, inspecteur de police, découvre qu'elle peut communiquer  avec son père, mort 20 ans plus tôt, grâce à un transmetteur de radio."
+            ]
         },
         {
             "id": "hawkeye",
             "titre": "Hawkeye",
             "image": "https://image.tmdb.org/t/p/w342/cybZ7FoeBoBJPieKvSp4wh2yCMR.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.295Z",
+            "tmdbId": 88329,
+            "tmdbUrl": "https://www.themoviedb.org/tv/88329",
+            "titreTmdb": "Hawkeye",
+            "anneeTmdb": "2021",
+            "descriptionTmdb": "L’ancien Avenger Clint Barton a une mission apparemment simple : retourner dans sa famille pour Noël. Possible ? Peut-être avec l’aide de Kate Bishop, une archère de 22 ans qui rêve de devenir une super-héroïne. Ils vont devoir faire équipe alors qu’une présence du passé de Barton menace de faire dérailler l’esprit festif.",
             "saisons": [
                 {
                     "numero": 1,
@@ -6258,19 +6279,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.295Z",
-            "tmdbId": 88329,
-            "tmdbUrl": "https://www.themoviedb.org/tv/88329",
-            "titreTmdb": "Hawkeye",
-            "anneeTmdb": "2021",
-            "descriptionTmdb": "L’ancien Avenger Clint Barton a une mission apparemment simple : retourner dans sa famille pour Noël. Possible ? Peut-être avec l’aide de Kate Bishop, une archère de 22 ans qui rêve de devenir une super-héroïne. Ils vont devoir faire équipe alors qu’une présence du passé de Barton menace de faire dérailler l’esprit festif."
+            ]
         },
         {
             "id": "human_target",
             "titre": "Human Target",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/28DQmHuzVetpvq3dcK0snfEXflG.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.303Z",
+            "tmdbId": 18653,
+            "tmdbUrl": "https://www.themoviedb.org/tv/18653",
+            "titreTmdb": "Human Target : La Cible",
+            "anneeTmdb": "2010",
+            "descriptionTmdb": "Christopher Chance est un mystérieux garde du corps qui travaille à son compte et qui prend différentes identités afin de protéger ses clients en danger de mort.",
             "saisons": [
                 {
                     "numero": 1,
@@ -6532,14 +6553,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.303Z"
+            ]
         },
         {
             "id": "legends",
             "titre": "Legends",
             "image": "https://image.tmdb.org/t/p/w342/gXZbSYN3i2DjHKJORZiBf8P9LDF.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.336Z",
+            "tmdbId": 60855,
+            "tmdbUrl": "https://www.themoviedb.org/tv/60855",
+            "titreTmdb": "Legends",
+            "anneeTmdb": "2014",
+            "descriptionTmdb": "Martin Odum, agent de la CIA, a un don pour les \"légendes\", c'est-à-dire les fausses identités. Il est ainsi envoyé dans une grande variété de missions et finit par se demander si sa propre identité ne serait pas, elle aussi, une légende...",
             "saisons": [
                 {
                     "numero": 1,
@@ -6751,19 +6777,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.336Z",
-            "tmdbId": 60855,
-            "tmdbUrl": "https://www.themoviedb.org/tv/60855",
-            "titreTmdb": "Legends",
-            "anneeTmdb": "2014",
-            "descriptionTmdb": "Martin Odum, agent de la CIA, a un don pour les \"légendes\", c'est-à-dire les fausses identités. Il est ainsi envoyé dans une grande variété de missions et finit par se demander si sa propre identité ne serait pas, elle aussi, une légende..."
+            ]
         },
         {
             "id": "lethal_weapon",
             "titre": "Lethal Weapon",
             "image": "https://image.tmdb.org/t/p/w342/4KZmrzWtsLy9TikPSiOvHaxOcuo.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.362Z",
+            "tmdbId": 67116,
+            "tmdbUrl": "https://www.themoviedb.org/tv/67116",
+            "titreTmdb": "L'Arme fatale",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Martin Riggs, flic texan et ancien de la Marine, perd sa femme et son bébé et déménage à Los Angeles pour repartir de zéro. Il devient le co-équipier du détective Roger Murtaugh, qui a récemment subi une crise cardiaque « bénigne » et doit à tout prix éviter les situations de stress. Un duo de choc qui risque de faire des étincelles.Adaptation de la célèbre franchise cinématographique L'Arme fatale avec Mel Gibson et Danny Glover.",
             "saisons": [
                 {
                     "numero": 1,
@@ -7195,7 +7221,7 @@
                             "nomFichier": "Lethal.Weapon.S03E02.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 351527236,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.439Z"
                         },
                         {
@@ -7215,7 +7241,7 @@
                             "nomFichier": "Lethal.Weapon.S03E03.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 354246852,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.439Z"
                         },
                         {
@@ -7235,7 +7261,7 @@
                             "nomFichier": "Lethal.Weapon.S03E04.VOSTFR.WEBRip.XviD-EXTREME.avi",
                             "taille": 399732812,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.440Z"
                         },
                         {
@@ -7265,7 +7291,7 @@
                             "nomFichier": "Lethal.Weapon.S03E06.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ] (2).avi",
                             "taille": 389423382,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.442Z"
                         },
                         {
@@ -7295,7 +7321,7 @@
                             "nomFichier": "Lethal.Weapon.S03E08.720p.WEB.x265-MiNX[eztv].mkv",
                             "taille": 241039738,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.444Z"
                         },
                         {
@@ -7345,7 +7371,7 @@
                             "nomFichier": "Lethal.Weapon.S03E12.The.Roger.and.Me.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 388947974,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.448Z"
                         },
                         {
@@ -7375,7 +7401,7 @@
                             "nomFichier": "lethal.weapon.s03e14.web.x264-tbs.mkv",
                             "taille": 371859039,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.450Z"
                         },
                         {
@@ -7395,7 +7421,7 @@
                             "nomFichier": "lethal.weapon.s03e15.web.x264-tbs[eztv].mkv",
                             "taille": 373001586,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.451Z"
                         },
                         {
@@ -7410,19 +7436,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.362Z",
-            "tmdbId": 67116,
-            "tmdbUrl": "https://www.themoviedb.org/tv/67116",
-            "titreTmdb": "L'Arme fatale",
-            "anneeTmdb": "2016",
-            "descriptionTmdb": "Martin Riggs, flic texan et ancien de la Marine, perd sa femme et son bébé et déménage à Los Angeles pour repartir de zéro. Il devient le co-équipier du détective Roger Murtaugh, qui a récemment subi une crise cardiaque « bénigne » et doit à tout prix éviter les situations de stress. Un duo de choc qui risque de faire des étincelles.Adaptation de la célèbre franchise cinématographique L'Arme fatale avec Mel Gibson et Danny Glover."
+            ]
         },
         {
             "id": "leverage",
             "titre": "Leverage",
             "image": "https://image.tmdb.org/t/p/w342/t5KJXooBqJLKUClpvYuSKNrcYGy.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.455Z",
+            "tmdbId": 7482,
+            "tmdbUrl": "https://www.themoviedb.org/tv/7482",
+            "titreTmdb": "Leverage",
+            "anneeTmdb": "2008",
+            "descriptionTmdb": "Des escrocs de haute-volée allient leurs forces pour dépouiller les criminels les plus riches et les grands patrons corrompus. Leverage est une version moderne de Robin des Bois, engagé dans une lutte perpétuelle pour éradiquer le mal qui sévit sur cette planète. Ford, qui est animé par une inextinguible soif de vengeance (qu’il noie dans de grands godets de whisky), décide un jour de ramener un peu de morale dans ce monde où les financiers et les puissants s’estiment au-dessus des lois et agissent en ne suivant que leur bon plaisir, avec un solide goût pour l’argent. Un goût, pour toujours plus d’argent. Ford va donc s’en prendre aux PDG peu scrupuleux, aux magnats de Wall Street et aux argentiers arrogants.",
             "saisons": [
                 {
                     "numero": 1,
@@ -7434,7 +7460,7 @@
                             "nomFichier": "101 leverage.101.le.coup.des.nigerians.avi",
                             "taille": 369676288,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.455Z"
                         },
                         {
@@ -7454,7 +7480,7 @@
                             "nomFichier": "102 Leverage.S01E02.Le Coup du soldat.avi",
                             "taille": 374554206,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.456Z"
                         },
                         {
@@ -7474,7 +7500,7 @@
                             "nomFichier": "103 leverage.Le Coup des chevaux.avi",
                             "taille": 370952822,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.456Z"
                         },
                         {
@@ -7494,7 +7520,7 @@
                             "nomFichier": "104 leverage.Le Coup du miracle.avi",
                             "taille": 372933660,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.457Z"
                         },
                         {
@@ -7514,7 +7540,7 @@
                             "nomFichier": "105 leverage.Le Coup du braquage.avi",
                             "taille": 370528294,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.457Z"
                         },
                         {
@@ -7534,7 +7560,7 @@
                             "nomFichier": "106 leverage.le.coup.de.l'horphelinat.avi",
                             "taille": 366287800,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.458Z"
                         },
                         {
@@ -7554,7 +7580,7 @@
                             "nomFichier": "107 leverage.Le coup du mariage.avi",
                             "taille": 374024624,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.458Z"
                         },
                         {
@@ -7574,7 +7600,7 @@
                             "nomFichier": "108 leverage.Le coup de la bombe dans l avion.avi",
                             "taille": 371242144,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.459Z"
                         },
                         {
@@ -7594,7 +7620,7 @@
                             "nomFichier": "109 leverage.109.le.coup.des.maisons.spoliees.avi",
                             "taille": 366531808,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.459Z"
                         },
                         {
@@ -7614,7 +7640,7 @@
                             "nomFichier": "110 leverage.110.le.coup.de.la.therapie.avi",
                             "taille": 368943310,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.460Z"
                         },
                         {
@@ -7634,7 +7660,7 @@
                             "nomFichier": "111 leverage.111.le.coup.du.procès.avi",
                             "taille": 372037224,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.460Z"
                         },
                         {
@@ -7654,7 +7680,7 @@
                             "nomFichier": "112 leverage.112.le.coup.du.premier.david.avi",
                             "taille": 365467532,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.461Z"
                         },
                         {
@@ -7674,7 +7700,7 @@
                             "nomFichier": "113 leverage.113.le.coup.du.second.david.avi",
                             "taille": 366147100,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.461Z"
                         },
                         {
@@ -7709,7 +7735,7 @@
                             "nomFichier": "Leverage.S02E02.Les lutteurs.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 363854288,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.462Z"
                         },
                         {
@@ -7729,7 +7755,7 @@
                             "nomFichier": "Leverage.S02E03.La fausse épidémieFRENCH.LD.DVDRip.XviD.avi",
                             "taille": 366664320,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.463Z"
                         },
                         {
@@ -7749,7 +7775,7 @@
                             "nomFichier": "Leverage.S02E04.A l ecole avec le FBI.avi",
                             "taille": 363258396,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.464Z"
                         },
                         {
@@ -7769,7 +7795,7 @@
                             "nomFichier": "Leverage.S02E05.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 364661734,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.465Z"
                         },
                         {
@@ -7789,7 +7815,7 @@
                             "nomFichier": "Leverage.S02E06.Le magicien.XviD.avi",
                             "taille": 364881398,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.465Z"
                         },
                         {
@@ -7809,7 +7835,7 @@
                             "nomFichier": "Leverage.S02E07.Mona Lisa.avi",
                             "taille": 365565768,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.466Z"
                         },
                         {
@@ -7829,7 +7855,7 @@
                             "nomFichier": "Leverage.S02E08.Les diamants russes.avi",
                             "taille": 369458138,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.466Z"
                         },
                         {
@@ -7849,7 +7875,7 @@
                             "nomFichier": "Leverage.S02E09.Gigi La daltonnienne.avi",
                             "taille": 364662592,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.467Z"
                         },
                         {
@@ -7869,7 +7895,7 @@
                             "nomFichier": "Leverage.S02E10.La haute Couture.avi",
                             "taille": 366268948,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.467Z"
                         },
                         {
@@ -7889,7 +7915,7 @@
                             "nomFichier": "Leverage.S02E11.La veillée irlandaise.avi",
                             "taille": 367353368,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.468Z"
                         },
                         {
@@ -7909,7 +7935,7 @@
                             "nomFichier": "Leverage.S02E12.Maggie et l oeuf de Fabergé.avi",
                             "taille": 364757622,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.468Z"
                         },
                         {
@@ -7929,7 +7955,7 @@
                             "nomFichier": "Leverage.S02E13.La voyante.avi",
                             "taille": 364053822,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.469Z"
                         },
                         {
@@ -7949,7 +7975,7 @@
                             "nomFichier": "Leverage.S02E14. Le maire et les armes 1.avi",
                             "taille": 367581260,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.470Z"
                         },
                         {
@@ -7969,7 +7995,7 @@
                             "nomFichier": "Leverage.S02E15.Le maire et les armes 2.avi",
                             "taille": 364443552,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.470Z"
                         },
                         {
@@ -7994,7 +8020,7 @@
                             "nomFichier": "Leverage.S03E01.Nathan en prison.XviD.avi",
                             "taille": 370761364,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.471Z"
                         },
                         {
@@ -8014,7 +8040,7 @@
                             "nomFichier": "Leverage.S03E02.Manticore.XviD.avi",
                             "taille": 370729756,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.471Z"
                         },
                         {
@@ -8034,7 +8060,7 @@
                             "nomFichier": "Leverage.S03E03.Archie et Sterenko.DVDRip.XviD.avi",
                             "taille": 370394824,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.472Z"
                         },
                         {
@@ -8054,7 +8080,7 @@
                             "nomFichier": "Leverage.S03E04.Stradivarius.XviD.avi",
                             "taille": 319287516,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.473Z"
                         },
                         {
@@ -8074,7 +8100,7 @@
                             "nomFichier": "Leverage.S03E05.Vioplex.XviD.avi",
                             "taille": 370145324,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.473Z"
                         },
                         {
@@ -8094,7 +8120,7 @@
                             "nomFichier": "Leverage.S03E06.Country music.DVDRip.XviD.avi",
                             "taille": 331864402,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.474Z"
                         },
                         {
@@ -8114,7 +8140,7 @@
                             "nomFichier": "Leverage.S03E07.La milice.DVDRip.XviD.avi",
                             "taille": 370881296,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.474Z"
                         },
                         {
@@ -8134,7 +8160,7 @@
                             "nomFichier": "Leverage.S03E08.Voitures volées.DVDRip.XviD.avi",
                             "taille": 370598698,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.475Z"
                         },
                         {
@@ -8154,7 +8180,7 @@
                             "nomFichier": "Leverage.S03E09.Le père et les russes.DVDRip.XviD.avi",
                             "taille": 368926970,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.476Z"
                         },
                         {
@@ -8174,7 +8200,7 @@
                             "nomFichier": "Leverage.S03E10.La mine.DVDRip.XviD.avi",
                             "taille": 353482524,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.476Z"
                         },
                         {
@@ -8194,7 +8220,7 @@
                             "nomFichier": "Leverage.S03E11.La dague d Aquabi.XviD.avi",
                             "taille": 289532142,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.477Z"
                         },
                         {
@@ -8214,7 +8240,7 @@
                             "nomFichier": "Leverage.S03E12.Hardisson Faussaire.XviD.avi",
                             "taille": 371076002,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.477Z"
                         },
                         {
@@ -8234,7 +8260,7 @@
                             "nomFichier": "Leverage.S03E13.Il voit rouge.XviD.avi",
                             "taille": 370951418,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.478Z"
                         },
                         {
@@ -8254,7 +8280,7 @@
                             "nomFichier": "Leverage.S03E14.Le père Noël.XviD.avi",
                             "taille": 370537654,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.478Z"
                         },
                         {
@@ -8274,7 +8300,7 @@
                             "nomFichier": "Leverage.S03E15.FINAL.Damien Moreau Part 1.XviD.avi",
                             "taille": 354481386,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.480Z"
                         },
                         {
@@ -8293,8 +8319,8 @@
                             "fichier": "Z:\\Series\\Leverage\\VF\\Saison 3 1-16 VF\\Leverage.S03E16 FINAL VOstFR HDTV By PlaneteDDL.com.avi",
                             "nomFichier": "Leverage.S03E16 FINAL VOstFR HDTV By PlaneteDDL.com.avi",
                             "taille": 367011840,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.481Z"
                         },
                         {
@@ -8319,7 +8345,7 @@
                             "nomFichier": "Leverage.S04E01.La montagne.avi",
                             "taille": 365822766,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.481Z"
                         },
                         {
@@ -8339,7 +8365,7 @@
                             "nomFichier": "Leverage.S04E02.Le Meurtre Mystere.avi",
                             "taille": 365649708,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.482Z"
                         },
                         {
@@ -8359,7 +8385,7 @@
                             "nomFichier": "Leverage.S04E03.Les feux de la rampe.XviD.avi",
                             "taille": 366137062,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.483Z"
                         },
                         {
@@ -8379,7 +8405,7 @@
                             "nomFichier": "Leverage.S04E04.La patinoire.XviD.avi",
                             "taille": 365983636,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.483Z"
                         },
                         {
@@ -8399,7 +8425,7 @@
                             "nomFichier": "Leverage.S04E05.La super Patate.XviD.avi",
                             "taille": 378267301,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.484Z"
                         },
                         {
@@ -8419,7 +8445,7 @@
                             "nomFichier": "Leverage.S04E06.La fête foraine.XviD.avi",
                             "taille": 377323493,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.484Z"
                         },
                         {
@@ -8439,7 +8465,7 @@
                             "nomFichier": "Leverage.S04E07.Les cercueils.XviD.avi",
                             "taille": 377171622,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.485Z"
                         },
                         {
@@ -8459,7 +8485,7 @@
                             "nomFichier": "Leverage.S04E08.Le Mako.avi",
                             "taille": 376155298,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.486Z"
                         },
                         {
@@ -8479,7 +8505,7 @@
                             "nomFichier": "Leverage.S04E09.Crabarama.XviD.avi",
                             "taille": 379287772,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.486Z"
                         },
                         {
@@ -8499,7 +8525,7 @@
                             "nomFichier": "Leverage.S04E10.Sterling et les échecs.XviD.avi",
                             "taille": 377186880,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.487Z"
                         },
                         {
@@ -8519,7 +8545,7 @@
                             "nomFichier": "Leverage.S04E11.VOSTFR.The Experimental Job[WWW.VOSERIES.COM].avi",
                             "taille": 367231484,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.488Z"
                         },
                         {
@@ -8549,7 +8575,7 @@
                             "nomFichier": "Leverage.S04E13.Le retour des Tacos - Sophie et Tara.avi",
                             "taille": 379535256,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.488Z"
                         },
                         {
@@ -8579,7 +8605,7 @@
                             "nomFichier": "Leverage.S04E14.Le retour de Tacos Les garçons.XviD.avi",
                             "taille": 365679730,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.489Z"
                         },
                         {
@@ -8619,7 +8645,7 @@
                             "nomFichier": "Leverage.S04E16.Les voleurs d or.XviD.avi",
                             "taille": 365896526,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.491Z"
                         },
                         {
@@ -8639,7 +8665,7 @@
                             "nomFichier": "Leverage.S04E17.Le brevet.XviD.avi",
                             "taille": 379982954,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.491Z"
                         },
                         {
@@ -8659,7 +8685,7 @@
                             "nomFichier": "Leverage.S04E18.La vengeance de Nathan.XviD.avi",
                             "taille": 377006900,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.492Z"
                         },
                         {
@@ -8684,7 +8710,7 @@
                             "nomFichier": "Leverage.S05E01.Big Bird.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367610822,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.492Z"
                         },
                         {
@@ -8704,7 +8730,7 @@
                             "nomFichier": "Leverage.S05E02.Hockey.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367697920,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.493Z"
                         },
                         {
@@ -8724,7 +8750,7 @@
                             "nomFichier": "Leverage.S05E03.First contact.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367708160,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.493Z"
                         },
                         {
@@ -8744,7 +8770,7 @@
                             "nomFichier": "Leverage.S05E04.Les Truffes.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367710208,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.494Z"
                         },
                         {
@@ -8764,7 +8790,7 @@
                             "nomFichier": "Leverage.S05E05.Pom Pom Girls.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367472640,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.494Z"
                         },
                         {
@@ -8784,7 +8810,7 @@
                             "nomFichier": "Leverage.S05E06.DB Cooper.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367708160,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.495Z"
                         },
                         {
@@ -8804,7 +8830,7 @@
                             "nomFichier": "Leverage.S05E07.Voitures anciennes.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367702016,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.495Z"
                         },
                         {
@@ -8824,7 +8850,7 @@
                             "nomFichier": "Leverage.S05E08.La béquille de Parker.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367704064,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.496Z"
                         },
                         {
@@ -8844,7 +8870,7 @@
                             "nomFichier": "Leverage.S05E09.La peste.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 368218622,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.498Z"
                         },
                         {
@@ -8864,7 +8890,7 @@
                             "nomFichier": "Leverage.S05E10.Mon Mystère.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367685438,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.498Z"
                         },
                         {
@@ -8884,7 +8910,7 @@
                             "nomFichier": "Leverage.S05E11.Hyper Marché.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367280856,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.499Z"
                         },
                         {
@@ -8914,7 +8940,7 @@
                             "nomFichier": "Leverage.S05E12.Reves et Patience.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367359654,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.500Z"
                         },
                         {
@@ -8944,7 +8970,7 @@
                             "nomFichier": "Leverage.S05E13.Vignoble.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 368934084,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.500Z"
                         },
                         {
@@ -8974,7 +9000,7 @@
                             "nomFichier": "Leverage.S05E14.Bebe double face.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 367783412,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.501Z"
                         },
                         {
@@ -9004,7 +9030,7 @@
                             "nomFichier": "Leverage.S05E15.Accident et Liste noire.FiNAL.FRENCH.LD.DVDRip.XviD.avi",
                             "taille": 365853422,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.501Z"
                         },
                         {
@@ -9029,19 +9055,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.455Z",
-            "tmdbId": 7482,
-            "tmdbUrl": "https://www.themoviedb.org/tv/7482",
-            "titreTmdb": "Leverage",
-            "anneeTmdb": "2008",
-            "descriptionTmdb": "Des escrocs de haute-volée allient leurs forces pour dépouiller les criminels les plus riches et les grands patrons corrompus. Leverage est une version moderne de Robin des Bois, engagé dans une lutte perpétuelle pour éradiquer le mal qui sévit sur cette planète. Ford, qui est animé par une inextinguible soif de vengeance (qu’il noie dans de grands godets de whisky), décide un jour de ramener un peu de morale dans ce monde où les financiers et les puissants s’estiment au-dessus des lois et agissent en ne suivant que leur bon plaisir, avec un solide goût pour l’argent. Un goût, pour toujours plus d’argent. Ford va donc s’en prendre aux PDG peu scrupuleux, aux magnats de Wall Street et aux argentiers arrogants."
+            ]
         },
         {
             "id": "leverage_redemption",
             "titre": "Leverage Redemption",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/i3Evib4bHONndY7pZ9gbznYUcGj.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.558Z",
+            "tmdbId": 106502,
+            "tmdbUrl": "https://www.themoviedb.org/tv/106502",
+            "titreTmdb": "Leverage: Redemption",
+            "anneeTmdb": "2021",
+            "descriptionTmdb": "Le frappeur, le pirate informatique, l'escroc et le voleur sont à nouveau réunis, cette fois avec l'aide d'un nouveau génie de la technologie et d'un réparateur d'entreprise, pour affronter un nouveau type de méchant. De l'homme qui a créé une crise d'opioïdes dans le confort de sa salle de réunion à la société de sécurité obscure qui aide à cacher des secrets dangereux pour un prix - quand quelqu'un a besoin d'aide, ils fournissent... Un effet de levier.",
             "saisons": [
                 {
                     "numero": 1,
@@ -9052,8 +9078,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E01.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E01.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 388360282,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.558Z"
                         },
                         {
@@ -9072,8 +9098,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E02.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E02.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 354639371,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.559Z"
                         },
                         {
@@ -9092,8 +9118,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E03.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E03.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 363694435,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.559Z"
                         },
                         {
@@ -9112,8 +9138,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E04.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E04.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 320666526,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.560Z"
                         },
                         {
@@ -9132,8 +9158,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E05.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E05.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 317883865,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.560Z"
                         },
                         {
@@ -9152,8 +9178,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E06.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E06.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 425517129,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.561Z"
                         },
                         {
@@ -9172,8 +9198,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E07.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E07.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 336567702,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.561Z"
                         },
                         {
@@ -9192,8 +9218,8 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E08.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E08.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 384057215,
-                            "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonExact": true,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.562Z"
                         },
                         {
@@ -9423,14 +9449,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.558Z"
+            ]
         },
         {
             "id": "lie_to_me",
             "titre": "Lie To Me",
             "image": "https://image.tmdb.org/t/p/w342/2xpQxwsGYtdGDrmLvCosTZ0I54R.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.583Z",
+            "tmdbId": 8358,
+            "tmdbUrl": "https://www.themoviedb.org/tv/8358",
+            "titreTmdb": "Lie to Me",
+            "anneeTmdb": "2009",
+            "descriptionTmdb": "Le chercheur de file au niveau mondial en détection de tromperie, le Dr Cal Lightman, étudie l'expression faciale, le langage corporel et le ton de la voix pour déterminer lorsqu'une personne ment et leur raison, ce qui aide la police et les agences gouvernementales à découvrir la vérité. Mais ses habiletés font aussi en sorte qu'il est facile pour lui de tromper les autres.",
             "saisons": [
                 {
                     "numero": 1,
@@ -9927,19 +9958,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.583Z",
-            "tmdbId": 8358,
-            "tmdbUrl": "https://www.themoviedb.org/tv/8358",
-            "titreTmdb": "Lie to Me",
-            "anneeTmdb": "2009",
-            "descriptionTmdb": "Le chercheur de file au niveau mondial en détection de tromperie, le Dr Cal Lightman, étudie l'expression faciale, le langage corporel et le ton de la voix pour déterminer lorsqu'une personne ment et leur raison, ce qui aide la police et les agences gouvernementales à découvrir la vérité. Mais ses habiletés font aussi en sorte qu'il est facile pour lui de tromper les autres."
+            ]
         },
         {
             "id": "magnum_pi",
             "titre": "Magnum PI",
             "image": "https://image.tmdb.org/t/p/w342/kQpHMcmjX54oY0QuVYKR39VC7C2.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.609Z",
+            "tmdbId": 79593,
+            "tmdbUrl": "https://www.themoviedb.org/tv/79593",
+            "titreTmdb": "Magnum",
+            "anneeTmdb": "2018",
+            "descriptionTmdb": "A son retour d'Afghanistan, Thomas Magnum, officier décoré de l'unité d'élite des SEAL de la Marine américaine, s'installe à Hawaï. Tout en assurant la sécurité du domaine du richissime Robin Master, Magnum, hébergé sur la propriété dans la maison des invités, officie en tant que détective privé. Pour l'aider à résoudre ses enquêtes, le jeune homme peut compter sur ses frères d'armes, TC et Rick. Quant à Juliet Higgins, la majordome du domaine, accompagnée de ses dobermans Zeus et Apollon, elle se charge de garder un œil sur Magnum en veillant à ce qu'il n'abuse pas de la générosité de Robin Master.",
             "saisons": [
                 {
                     "numero": 1,
@@ -9951,7 +9982,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E01.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 479731550,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.609Z"
                         },
                         {
@@ -9971,7 +10002,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E02.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 455631019,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.610Z"
                         },
                         {
@@ -9991,7 +10022,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E03.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 439068861,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.610Z"
                         },
                         {
@@ -10011,7 +10042,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E04.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 386879991,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.611Z"
                         },
                         {
@@ -10031,7 +10062,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E05.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 432482301,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.611Z"
                         },
                         {
@@ -10051,7 +10082,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E06.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 438422271,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.612Z"
                         },
                         {
@@ -10071,7 +10102,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E07.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 440904665,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.614Z"
                         },
                         {
@@ -10091,7 +10122,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E08.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 482999661,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.615Z"
                         },
                         {
@@ -10111,7 +10142,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E09.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 459688901,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.616Z"
                         },
                         {
@@ -10131,7 +10162,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E10.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 441169558,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.617Z"
                         },
                         {
@@ -10151,7 +10182,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E11.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 519558717,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.617Z"
                         },
                         {
@@ -10171,7 +10202,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E12.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 503146968,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.618Z"
                         },
                         {
@@ -10191,7 +10222,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E13.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 409456048,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.619Z"
                         },
                         {
@@ -10211,7 +10242,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E14.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 425988265,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.619Z"
                         },
                         {
@@ -10231,7 +10262,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E15.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 450828864,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.620Z"
                         },
                         {
@@ -10251,7 +10282,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E16.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 474345987,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.620Z"
                         },
                         {
@@ -10271,7 +10302,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E17.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 444428690,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.621Z"
                         },
                         {
@@ -10291,7 +10322,7 @@
                             "nomFichier": "Magnum.P.I.2018.S01E18.720p.AMZN.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 468555065,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.621Z"
                         },
                         {
@@ -10901,19 +10932,14 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.609Z",
-            "tmdbId": 79593,
-            "tmdbUrl": "https://www.themoviedb.org/tv/79593",
-            "titreTmdb": "Magnum",
-            "anneeTmdb": "2018",
-            "descriptionTmdb": "A son retour d'Afghanistan, Thomas Magnum, officier décoré de l'unité d'élite des SEAL de la Marine américaine, s'installe à Hawaï. Tout en assurant la sécurité du domaine du richissime Robin Master, Magnum, hébergé sur la propriété dans la maison des invités, officie en tant que détective privé. Pour l'aider à résoudre ses enquêtes, le jeune homme peut compter sur ses frères d'armes, TC et Rick. Quant à Juliet Higgins, la majordome du domaine, accompagnée de ses dobermans Zeus et Apollon, elle se charge de garder un œil sur Magnum en veillant à ce qu'il n'abuse pas de la générosité de Robin Master."
+            ]
         },
         {
             "id": "person_of_interest",
             "titre": "Person of interest",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.670Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -11950,14 +11976,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.670Z"
+            ]
         },
         {
             "id": "quantico",
             "titre": "Quantico",
             "image": "https://image.tmdb.org/t/p/w342/3ofY2mALEiE0QDyRlVOV3sDNMYC.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.751Z",
+            "tmdbId": 62816,
+            "tmdbUrl": "https://www.themoviedb.org/tv/62816",
+            "titreTmdb": "Quantico",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "De jeunes recrues du FBI se battent de toutes leurs forces sur le camp d'entraînement de Quantico en Virginie, entre tests d'endurance physique, cours de tir et maîtrise de l'art de l'enquête et de l'interrogatoire. Ils ont 50% de chances d'échouer, la compétition fait rage. 9 mois plus tard, l'un d'entre eux est suspecté d'avoir commis la pus grosse attaque terroriste sur le sol Américain depuis le 11 Septembre 2001...",
             "saisons": [
                 {
                     "numero": 1,
@@ -12409,7 +12440,7 @@
                             "nomFichier": "Quantico.S03E01.SUBFRENCH.WEBRip.XviD-EXTREME.avi",
                             "taille": 392900358,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.792Z"
                         },
                         {
@@ -12429,7 +12460,7 @@
                             "nomFichier": "Quantico.S03E02.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "taille": 392192026,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.792Z"
                         },
                         {
@@ -12449,7 +12480,7 @@
                             "nomFichier": "Quantico.S03E03.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "taille": 366589354,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.793Z"
                         },
                         {
@@ -12469,7 +12500,7 @@
                             "nomFichier": "Quantico.S03E04.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "taille": 392950214,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.794Z"
                         },
                         {
@@ -12489,7 +12520,7 @@
                             "nomFichier": "Quantico.S03E05.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "taille": 390694380,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.795Z"
                         },
                         {
@@ -12509,7 +12540,7 @@
                             "nomFichier": "Quantico.S03E06.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "taille": 367405558,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.797Z"
                         },
                         {
@@ -12529,7 +12560,7 @@
                             "nomFichier": "Quantico.S03E07.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "taille": 367199924,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.798Z"
                         },
                         {
@@ -12549,7 +12580,7 @@
                             "nomFichier": "Quantico.S03E08.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 342818592,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.799Z"
                         },
                         {
@@ -12569,7 +12600,7 @@
                             "nomFichier": "Quantico.S03E09.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 345346544,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.801Z"
                         },
                         {
@@ -12589,7 +12620,7 @@
                             "nomFichier": "Quantico.S03E10.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "taille": 346909894,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.802Z"
                         },
                         {
@@ -12609,7 +12640,7 @@
                             "nomFichier": "Quantico.S03E11.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 334416738,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.803Z"
                         },
                         {
@@ -12629,7 +12660,7 @@
                             "nomFichier": "Quantico.S03E12.SUBFRENCH.HDTV.XviD-EXTREME.avi",
                             "taille": 387512674,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.804Z"
                         },
                         {
@@ -12649,7 +12680,7 @@
                             "nomFichier": "Quantico.S03E13.Who.Are.You.FRENCH.WEBRip.XviD-EXTREME.avi",
                             "taille": 393107354,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.805Z"
                         },
                         {
@@ -12664,19 +12695,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.751Z",
-            "tmdbId": 62816,
-            "tmdbUrl": "https://www.themoviedb.org/tv/62816",
-            "titreTmdb": "Quantico",
-            "anneeTmdb": "2015",
-            "descriptionTmdb": "De jeunes recrues du FBI se battent de toutes leurs forces sur le camp d'entraînement de Quantico en Virginie, entre tests d'endurance physique, cours de tir et maîtrise de l'art de l'enquête et de l'interrogatoire. Ils ont 50% de chances d'échouer, la compétition fait rage. 9 mois plus tard, l'un d'entre eux est suspecté d'avoir commis la pus grosse attaque terroriste sur le sol Américain depuis le 11 Septembre 2001..."
+            ]
         },
         {
             "id": "scorpion",
             "titre": "Scorpion",
             "image": "https://image.tmdb.org/t/p/w342/hzeirSF6bRjssDh5JFrm5WRwFLd.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.818Z",
+            "tmdbId": 60797,
+            "tmdbUrl": "https://www.themoviedb.org/tv/60797",
+            "titreTmdb": "Scorpion",
+            "anneeTmdb": "2014",
+            "descriptionTmdb": "Le ministère de l'Intérieur engage un génie et son équipe hétéroclite de prodiges pour protéger la nation d'une nouvelle génération sophistiquée de terroristes.",
             "saisons": [
                 {
                     "numero": 1,
@@ -13503,7 +13534,7 @@
                             "nomFichier": "Scorpion.S04E11.FASTSUB.VOSTFR.XviD-EXTREME.WwW.Torrent9.tv.avi",
                             "taille": 383101576,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.890Z"
                         },
                         {
@@ -13638,19 +13669,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.818Z",
-            "tmdbId": 60797,
-            "tmdbUrl": "https://www.themoviedb.org/tv/60797",
-            "titreTmdb": "Scorpion",
-            "anneeTmdb": "2014",
-            "descriptionTmdb": "Le ministère de l'Intérieur engage un génie et son équipe hétéroclite de prodiges pour protéger la nation d'une nouvelle génération sophistiquée de terroristes."
+            ]
         },
         {
             "id": "seal_team",
             "titre": "Seal Team",
             "image": "https://image.tmdb.org/t/p/w342/rQJKfadORdmznHxKmM2g8Qti6DU.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.902Z",
+            "tmdbId": 71789,
+            "tmdbUrl": "https://www.themoviedb.org/tv/71789",
+            "titreTmdb": "SEAL Team",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Le quotidien professionnel et personnel des membres de la plus haute unité d'élite des Navy SEALs, qui s’entraînent, planifient et exécutent les missions les plus dangereuses à la demande du gouvernement américain.",
             "saisons": [
                 {
                     "numero": 1,
@@ -14342,19 +14373,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.902Z",
-            "tmdbId": 71789,
-            "tmdbUrl": "https://www.themoviedb.org/tv/71789",
-            "titreTmdb": "SEAL Team",
-            "anneeTmdb": "2017",
-            "descriptionTmdb": "Le quotidien professionnel et personnel des membres de la plus haute unité d'élite des Navy SEALs, qui s’entraînent, planifient et exécutent les missions les plus dangereuses à la demande du gouvernement américain."
+            ]
         },
         {
             "id": "sherlock",
             "titre": "Sherlock",
             "image": "https://image.tmdb.org/t/p/w342/nBRtABdAHf4SWSAWHelXz0H6tY9.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.956Z",
+            "tmdbId": 19885,
+            "tmdbUrl": "https://www.themoviedb.org/tv/19885",
+            "titreTmdb": "Sherlock",
+            "anneeTmdb": "2010",
+            "descriptionTmdb": "Les aventures de Sherlock Holmes et de son acolyte de toujours, le docteur Watson, sont transposées au XXIème siècle...",
             "saisons": [
                 {
                     "numero": 1,
@@ -14436,19 +14467,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.956Z",
-            "tmdbId": 19885,
-            "tmdbUrl": "https://www.themoviedb.org/tv/19885",
-            "titreTmdb": "Sherlock",
-            "anneeTmdb": "2010",
-            "descriptionTmdb": "Les aventures de Sherlock Holmes et de son acolyte de toujours, le docteur Watson, sont transposées au XXIème siècle..."
+            ]
         },
         {
             "id": "shooter",
             "titre": "Shooter",
             "image": "https://image.tmdb.org/t/p/w342/3yNdTnt8OQXQHXQbHjFS5G8g2zN.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.959Z",
+            "tmdbId": 66857,
+            "tmdbUrl": "https://www.themoviedb.org/tv/66857",
+            "titreTmdb": "Shooter",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Un ancien tireur d'élite reprend du service pour déjouer un complot imminent contre le Président des États-Unis, mais se retrouve accusé de tentative de meurtre.",
             "saisons": [
                 {
                     "numero": 1,
@@ -14775,19 +14806,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.959Z",
-            "tmdbId": 66857,
-            "tmdbUrl": "https://www.themoviedb.org/tv/66857",
-            "titreTmdb": "Shooter",
-            "anneeTmdb": "2016",
-            "descriptionTmdb": "Un ancien tireur d'élite reprend du service pour déjouer un complot imminent contre le Président des États-Unis, mais se retrouve accusé de tentative de meurtre."
+            ]
         },
         {
             "id": "taken",
             "titre": "Taken",
             "image": "https://image.tmdb.org/t/p/w342/5TgdridU2w1pVsbQB2pt1xvazBX.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.979Z",
+            "tmdbId": 68006,
+            "tmdbUrl": "https://www.themoviedb.org/tv/68006",
+            "titreTmdb": "Taken",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Après une tragédie personnelle, Bryan Mills est engagé par la CIA pour mener une opération mortelle. Un travail qui va lui apprendre un ensemble de compétences très particulier et très dangereux.",
             "saisons": [
                 {
                     "numero": 1,
@@ -15059,19 +15090,14 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.979Z",
-            "tmdbId": 68006,
-            "tmdbUrl": "https://www.themoviedb.org/tv/68006",
-            "titreTmdb": "Taken",
-            "anneeTmdb": "2017",
-            "descriptionTmdb": "Après une tragédie personnelle, Bryan Mills est engagé par la CIA pour mener une opération mortelle. Un travail qui va lui apprendre un ensemble de compétences très particulier et très dangereux."
+            ]
         },
         {
             "id": "the_brave",
             "titre": "The Brave",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:05.996Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -15079,143 +15105,148 @@
                         {
                             "numero": 1,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E01.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E01.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E01 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E01 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 328900208,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.996Z"
+                            "dateAjout": "2026-08-18T16:51:44.853Z"
                         },
                         {
                             "numero": 2,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E02.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E02.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E02 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E02 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 324874207,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.998Z"
+                            "dateAjout": "2026-08-18T16:51:44.855Z"
                         },
                         {
                             "numero": 3,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E03.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E03.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E03 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E03 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 295776901,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.999Z"
+                            "dateAjout": "2026-08-18T16:51:44.856Z"
                         },
                         {
                             "numero": 4,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E04.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E04.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E04 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E04 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 375553576,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.000Z"
+                            "dateAjout": "2026-08-18T16:51:44.856Z"
                         },
                         {
                             "numero": 5,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E05.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E05.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E05 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E05 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 282748821,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.000Z"
+                            "dateAjout": "2026-08-18T16:51:44.857Z"
                         },
                         {
                             "numero": 6,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E06.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E06.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E06 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E06 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 261166125,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.001Z"
+                            "dateAjout": "2026-08-18T16:51:44.857Z"
                         },
                         {
                             "numero": 7,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E07.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E07.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E07 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E07 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 307191731,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.002Z"
+                            "dateAjout": "2026-08-18T16:51:44.857Z"
                         },
                         {
                             "numero": 8,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E08.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E08.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E08 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E08 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 460830281,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.002Z"
+                            "dateAjout": "2026-08-18T16:51:44.858Z"
                         },
                         {
                             "numero": 9,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E09.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E09.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E09 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E09 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 307581094,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.003Z"
+                            "dateAjout": "2026-08-18T16:51:44.859Z"
                         },
                         {
                             "numero": 10,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E10.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E10.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E10 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E10 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 284679670,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.003Z"
+                            "dateAjout": "2026-08-18T16:51:44.859Z"
                         },
                         {
                             "numero": 11,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E11.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E11.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E11 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E11 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 303173606,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.004Z"
+                            "dateAjout": "2026-08-18T16:51:44.860Z"
                         },
                         {
                             "numero": 12,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E12.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E12.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E12 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E12 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 268993959,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.004Z"
+                            "dateAjout": "2026-08-18T16:51:44.860Z"
                         },
                         {
                             "numero": 13,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Brave\\The.Brave.S01E13.HDTV.x264-KILLERS[eztv].mkv",
-                            "nomFichier": "The.Brave.S01E13.HDTV.x264-KILLERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\The Brave\\The Brave S01E13 HDTV x264-KILLERS[eztv].mkv",
+                            "nomFichier": "The Brave S01E13 HDTV x264-KILLERS[eztv].mkv",
                             "taille": 253642644,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.005Z"
+                            "dateAjout": "2026-08-18T16:51:44.861Z"
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:05.996Z"
+            ]
         },
         {
             "id": "the_falcon_and_the_winter_soldier",
             "titre": "The Falcon And The Winter Soldier",
             "image": "https://image.tmdb.org/t/p/w342/6NrUwEWDxZI2XffOnw3nuibukmX.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.006Z",
+            "tmdbId": 88396,
+            "tmdbUrl": "https://www.themoviedb.org/tv/88396",
+            "titreTmdb": "Falcon et le Soldat de l'hiver",
+            "anneeTmdb": "2021",
+            "descriptionTmdb": "Sam Wilson, alias Falcon, et Bucky Barnes, le Soldat de l’hiver, se lancent dans une aventure autour du monde qui va mettre leurs ressources – et leur patience – à rude épreuve. La série se déroule après les événements d'Avengers : Endgame.",
             "saisons": [
                 {
                     "numero": 1,
@@ -15223,108 +15254,103 @@
                         {
                             "numero": 1,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\The.Falcon.and.the.Winter.Soldier.S01E01.1080p.HEVC.x265-MeGusta[eztv.re].mkv",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\The.Falcon.and.the.Winter.Soldier.S01E01.1080p.HEVC.x265-MeGusta[eztv.re].mkv",
                             "nomFichier": "The.Falcon.and.the.Winter.Soldier.S01E01.1080p.HEVC.x265-MeGusta[eztv.re].mkv",
                             "taille": 638339027,
                             "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.006Z"
+                            "doublonProbable": true,
+                            "dateAjout": "2026-08-18T16:51:44.862Z"
                         },
                         {
                             "numero": 1,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\[ OxTorrent.tv ] The.Falcon.And.The.Winter.Soldier.2021.S01E01.VOSTFR.WEBRip.x264-WEEDS.mp4",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\[ OxTorrent.tv ] The.Falcon.And.The.Winter.Soldier.2021.S01E01.VOSTFR.WEBRip.x264-WEEDS.mp4",
                             "nomFichier": "[ OxTorrent.tv ] The.Falcon.And.The.Winter.Soldier.2021.S01E01.VOSTFR.WEBRip.x264-WEEDS.mp4",
                             "taille": 357261933,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:06.008Z"
+                            "dateAjout": "2026-08-18T16:51:44.864Z"
                         },
                         {
                             "numero": 2,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\The.Falcon.and.The.Winter.Soldier.S01E02.720p.WEB.h264-KOGi[eztv.re].mkv",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\The.Falcon.and.The.Winter.Soldier.S01E02.720p.WEB.h264-KOGi[eztv.re].mkv",
                             "nomFichier": "The.Falcon.and.The.Winter.Soldier.S01E02.720p.WEB.h264-KOGi[eztv.re].mkv",
                             "taille": 1512031339,
                             "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.006Z"
+                            "doublonProbable": true,
+                            "dateAjout": "2026-08-18T16:51:44.862Z"
                         },
                         {
                             "numero": 2,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\[ OxTorrent.tv ] The.Falcon.And.The.Winter.Soldier.2021.S01E02.VOSTFR.WEBRip.x264-WEEDS.mp4",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\[ OxTorrent.tv ] The.Falcon.And.The.Winter.Soldier.2021.S01E02.VOSTFR.WEBRip.x264-WEEDS.mp4",
                             "nomFichier": "[ OxTorrent.tv ] The.Falcon.And.The.Winter.Soldier.2021.S01E02.VOSTFR.WEBRip.x264-WEEDS.mp4",
                             "taille": 362400318,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:06.008Z"
+                            "dateAjout": "2026-08-18T16:51:44.864Z"
                         },
                         {
                             "numero": 3,
                             "langue": null,
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\The.Falcon.and.The.Winter.Soldier.S01E03.720p.HEVC.x265-MeGusta[eztv.re].mkv",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\The.Falcon.and.The.Winter.Soldier.S01E03.720p.HEVC.x265-MeGusta[eztv.re].mkv",
                             "nomFichier": "The.Falcon.and.The.Winter.Soldier.S01E03.720p.HEVC.x265-MeGusta[eztv.re].mkv",
                             "taille": 492192134,
                             "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.007Z"
+                            "doublonProbable": true,
+                            "dateAjout": "2026-08-18T16:51:44.863Z"
                         },
                         {
                             "numero": 3,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\[ OxTorrent.tv ] The.Falcon.and.The.Winter.Soldier.S01E03.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\[ OxTorrent.tv ] The.Falcon.and.The.Winter.Soldier.S01E03.VOSTFR.WEB.XviD-EXTREME.avi",
                             "nomFichier": "[ OxTorrent.tv ] The.Falcon.and.The.Winter.Soldier.S01E03.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 543807180,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:06.009Z"
+                            "dateAjout": "2026-08-18T16:51:44.865Z"
                         },
                         {
                             "numero": 4,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E04.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E04.VOSTFR.WEB.XviD-EXTREME.avi",
                             "nomFichier": "[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E04.VOSTFR.WEB.XviD-EXTREME.avi",
                             "taille": 559411248,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.010Z"
+                            "dateAjout": "2026-08-18T16:51:44.866Z"
                         },
                         {
                             "numero": 5,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E05.VOSTFR.WEB.x264-EXTREME.mkv",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E05.VOSTFR.WEB.x264-EXTREME.mkv",
                             "nomFichier": "[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E05.VOSTFR.WEB.x264-EXTREME.mkv",
                             "taille": 373417539,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.010Z"
+                            "dateAjout": "2026-08-18T16:51:44.866Z"
                         },
                         {
                             "numero": 6,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\The Falcon And.The.Winter.Soldier\\[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E06.VOSTFR.WEB.x264-EXTREME.mkv",
+                            "fichier": "Z:\\Series\\The Falcon And The Winter Soldier\\[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E06.VOSTFR.WEB.x264-EXTREME.mkv",
                             "nomFichier": "[ OxTorrent.tv ] The.Falcon.and.the.Winter.Soldier.S01E06.VOSTFR.WEB.x264-EXTREME.mkv",
                             "taille": 381035728,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.011Z"
+                            "dateAjout": "2026-08-18T16:51:44.867Z"
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.006Z",
-            "tmdbId": 88396,
-            "tmdbUrl": "https://www.themoviedb.org/tv/88396",
-            "titreTmdb": "Falcon et le Soldat de l'hiver",
-            "anneeTmdb": "2021",
-            "descriptionTmdb": "Sam Wilson, alias Falcon, et Bucky Barnes, le Soldat de l’hiver, se lancent dans une aventure autour du monde qui va mettre leurs ressources – et leur patience – à rude épreuve. La série se déroule après les événements d'Avengers : Endgame."
+            ]
         },
         {
             "id": "the_queen_s_gambit",
             "titre": "The Queen s Gambit",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.012Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -15391,14 +15417,14 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.012Z"
+            ]
         },
         {
             "id": "the_rookie",
             "titre": "The Rookie",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.017Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -16130,14 +16156,14 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.017Z"
+            ]
         },
         {
             "id": "the_unit",
             "titre": "The Unit",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.073Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -16849,14 +16875,19 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.073Z"
+            ]
         },
         {
             "id": "timeless",
             "titre": "Timeless",
             "image": "https://image.tmdb.org/t/p/w342/wFaS9kROwztTWNxIKBbOLwIgApV.jpg",
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.132Z",
+            "tmdbId": 66786,
+            "tmdbUrl": "https://www.themoviedb.org/tv/66786",
+            "titreTmdb": "Timeless",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Un criminel mystérieux vole une machine à voyager dans le temps top-secrète. Il veut détruire les États-Unis en modifiant le passé. Le seul espoir est dans une petite équipe formée d’un scientifique, d’un soldat, et d’une historienne. Ils doivent utiliser un prototype de la machine pour poursuivre le fugitif, mais faire attention à ne pas changer l’histoire à leur tour.",
             "saisons": [
                 {
                     "numero": 1,
@@ -17113,7 +17144,7 @@
                             "nomFichier": "Timeless.S02E11.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 367870142,
                             "doublonExact": false,
-                            "doublonProbable": false,
+                            "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:06.142Z"
                         },
                         {
@@ -17138,19 +17169,14 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.132Z",
-            "tmdbId": 66786,
-            "tmdbUrl": "https://www.themoviedb.org/tv/66786",
-            "titreTmdb": "Timeless",
-            "anneeTmdb": "2016",
-            "descriptionTmdb": "Un criminel mystérieux vole une machine à voyager dans le temps top-secrète. Il veut détruire les États-Unis en modifiant le passé. Le seul espoir est dans une petite équipe formée d’un scientifique, d’un soldat, et d’une historienne. Ils doivent utiliser un prototype de la machine pour poursuivre le fugitif, mais faire attention à ne pas changer l’histoire à leur tour."
+            ]
         },
         {
             "id": "whiskey_cavalier",
             "titre": "Whiskey Cavalier",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.158Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -17287,14 +17313,14 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.158Z"
+            ]
         },
         {
             "id": "white_collar",
             "titre": "White Collar",
             "image": null,
             "imdbId": null,
+            "dateAjout": "2026-08-17T21:37:06.167Z",
             "saisons": [
                 {
                     "numero": 1,
@@ -18136,72 +18162,7 @@
                         }
                     ]
                 }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.167Z"
-        },
-        {
-            "id": "wwog",
-            "titre": "WWOG",
-            "image": null,
-            "imdbId": null,
-            "saisons": [
-                {
-                    "numero": 1,
-                    "episodes": [
-                        {
-                            "numero": 90,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\WWOG\\Vus\\2021 03 14 TRANSFORMING 3 Rooms Into 1_ 190 sqft.mp4",
-                            "nomFichier": "2021 03 14 TRANSFORMING 3 Rooms Into 1_ 190 sqft.mp4",
-                            "taille": 207876714,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.380Z"
-                        }
-                    ]
-                },
-                {
-                    "numero": 3,
-                    "episodes": [
-                        {
-                            "numero": 28,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\WWOG\\A voir\\2023 11 14 Building a 13x28 BLOCK SAFE ROOM In One Week (part 1.) _ A-Frame Cabin Addition.mp4",
-                            "nomFichier": "2023 11 14 Building a 13x28 BLOCK SAFE ROOM In One Week (part 1.) _ A-Frame Cabin Addition.mp4",
-                            "taille": 105651584,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.257Z"
-                        },
-                        {
-                            "numero": 28,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\WWOG\\A voir\\2024 06 15 Our 13x28 CONCRETE SAFE ROOM Ceiling.mp4",
-                            "nomFichier": "2024 06 15 Our 13x28 CONCRETE SAFE ROOM Ceiling.mp4",
-                            "taille": 497252325,
-                            "doublonExact": false,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:06.268Z"
-                        }
-                    ]
-                },
-                {
-                    "numero": 6,
-                    "episodes": [
-                        {
-                            "numero": 25,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\WWOG\\Vus\\2021 07 14 ADDING STAIRS To Our 625 sqft Deck.mp4",
-                            "nomFichier": "2021 07 14 ADDING STAIRS To Our 625 sqft Deck.mp4",
-                            "taille": 125114016,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.391Z"
-                        }
-                    ]
-                }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.257Z"
+            ]
         }
     ]
 }

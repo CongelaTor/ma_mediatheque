@@ -24,6 +24,7 @@ function showSerieDetails(serie, requestedSeasonNumber = null) {
     }
     window.scrollTo(0, 0);
     setText('seriesTitle', serie.titre);
+    renderSerieInfoCard(serie);
     const backButton = document.getElementById('backToSeriesButton');
     if (backButton) {
         backButton.classList.remove('hidden');
@@ -73,6 +74,33 @@ function showSerieDetails(serie, requestedSeasonNumber = null) {
     const selectedSeason = sortedSeasons.find(saison => saison.numero === requestedSeasonNumber) || sortedSeasons[0];
     renderSeason(selectedSeason);
 }
+
+function renderSerieInfoCard(serie) {
+    const card = document.getElementById('serieInfoCard');
+    if (!card) {
+        return;
+    }
+    const imageZone = card.querySelector('.serie-info-image');
+    imageZone.innerHTML = '';
+    imageZone.appendChild(createPosterContent(serie.image, serie.titre, serie.id));
+    setText('serieInfoTitle', serie.titreTmdb || serie.titre);
+    setText('serieInfoYear', serie.anneeTmdb || '');
+    setText('serieInfoDescription', serie.descriptionTmdb || 'Aucune description disponible.');
+    const button = document.getElementById('serieTmdbButton');
+    if (serie.tmdbId) {
+        button.textContent = 'TMDB';
+        button.onclick = () => {
+            window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
+        };
+    } else {
+        button.textContent = 'Associer TMDB';
+        button.onclick = () => {
+            showTmdbSerieSearch(serie);
+        };
+    }
+    card.classList.remove('hidden');
+}
+
 function createEpisodeCard(serie, saison, episode) {
     const card = document.createElement('article');
     card.className = 'media-card';

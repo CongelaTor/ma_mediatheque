@@ -107,7 +107,9 @@ async function associateTmdbSerie(serie, result) {
         return;
     }
     if (typeof renderSeries === 'function') {
+        const currentScrollY = window.scrollY;
         renderSeries();
+        window.scrollTo(0, currentScrollY);
     }
 }
 function closeTmdbModal() {
