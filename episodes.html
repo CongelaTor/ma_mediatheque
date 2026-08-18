@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail série - Médiathèque</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <header class="topbar">
+    <a class="brand">
+        <div class="brand-icon"><span>🎬</span></div>
+        <div class="brand-title">Médiathèque</div>
+    </a>
+    <nav class="main-nav">
+        <a class="nav-button" data-page="home" href="index.html">Accueil</a>
+        <a class="nav-button" data-page="films" href="films.html">Films</a>
+        <a class="nav-button active" data-page="series" href="series.html">Séries</a>
+    </nav>
+    <div class="top-actions">
+        <input id="searchInput" class="search-input" type="text" placeholder="Filtrer..." oninput="handleSearch()">
+    </div>
+</header>
+    <main>
+        <section id="page-series" class="page active">
+            <div class="layout">
+                <aside class="sidebar">
+                    <div class="sidebar-title">Navigation</div>
+                    <a class="sidebar-link active" href="series.html">Retour aux séries</a>
+                    <a class="sidebar-link" href="films.html">Films</a>
+                    <div class="sidebar-section">
+                        <div class="sidebar-title">Statistiques</div>
+                        <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
+                        <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
+                        <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
+                    </div>
+                </aside>
+                <section class="content">
+                    <div class="content-header">
+                        <div>
+                            <h1 id="seriesTitle">Série</h1>
+                            <p id="seriesCount">0 épisode</p>
+                        </div>
+                        <a id="backToSeriesButton" class="secondary-button" href="series.html">← Retour aux séries</a>
+                    </div>
+                    <button id="resumeSerieButton" class="resume-button hidden" onclick="resumeSerie()">▶ Reprendre : <span id="resumeSerieText"></span></button>
+                    <div id="languageFilters" class="language-filters">
+    <button class="language-button active" data-language="VO">VO</button>
+    <button class="language-button active" data-language="VF">VF</button>
+    <button class="language-button active" data-language="VOST">VOST</button>
+    <button class="language-button active" data-language="VOSTFR">VOSTFR</button>
+</div>
+                    <div id="episodesPanel" class="episodes-panel"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+</div>
+<div id="tmdbModal" class="tmdb-modal hidden">
+    <div class="tmdb-modal-panel">
+        <div class="tmdb-modal-header">
+            <h2 id="tmdbModalTitle">Résultats TMDB</h2>
+            <button class="tmdb-modal-close" onclick="closeTmdbModal()">×</button>
+        </div>
+        <div id="tmdbResults" class="tmdb-results"></div>
+    </div>
+</div>
+    <script src="js/state.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/playback.js"></script>
+    <script src="js/tmdb.js"></script>
+    <script src="js/series.js"></script>
+    <script src="js/serie-detail.js"></script>
+    <script src="js/app-init.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", initSerieDetailPage);
+    </script>
+</body>
+</html>

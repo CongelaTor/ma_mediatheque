@@ -9938,7 +9938,7 @@
         {
             "id": "magnum_pi",
             "titre": "Magnum PI",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/kQpHMcmjX54oY0QuVYKR39VC7C2.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -10902,7 +10902,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.609Z"
+            "dateAjout": "2026-08-17T21:37:05.609Z",
+            "tmdbId": 79593,
+            "tmdbUrl": "https://www.themoviedb.org/tv/79593",
+            "titreTmdb": "Magnum",
+            "anneeTmdb": "2018",
+            "descriptionTmdb": "A son retour d'Afghanistan, Thomas Magnum, officier décoré de l'unité d'élite des SEAL de la Marine américaine, s'installe à Hawaï. Tout en assurant la sécurité du domaine du richissime Robin Master, Magnum, hébergé sur la propriété dans la maison des invités, officie en tant que détective privé. Pour l'aider à résoudre ses enquêtes, le jeune homme peut compter sur ses frères d'armes, TC et Rick. Quant à Juliet Higgins, la majordome du domaine, accompagnée de ses dobermans Zeus et Apollon, elle se charge de garder un œil sur Magnum en veillant à ce qu'il n'abuse pas de la générosité de Robin Master."
         },
         {
             "id": "person_of_interest",
@@ -11951,7 +11956,7 @@
         {
             "id": "quantico",
             "titre": "Quantico",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/3ofY2mALEiE0QDyRlVOV3sDNMYC.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -12660,12 +12665,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.751Z"
+            "dateAjout": "2026-08-17T21:37:05.751Z",
+            "tmdbId": 62816,
+            "tmdbUrl": "https://www.themoviedb.org/tv/62816",
+            "titreTmdb": "Quantico",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "De jeunes recrues du FBI se battent de toutes leurs forces sur le camp d'entraînement de Quantico en Virginie, entre tests d'endurance physique, cours de tir et maîtrise de l'art de l'enquête et de l'interrogatoire. Ils ont 50% de chances d'échouer, la compétition fait rage. 9 mois plus tard, l'un d'entre eux est suspecté d'avoir commis la pus grosse attaque terroriste sur le sol Américain depuis le 11 Septembre 2001..."
         },
         {
             "id": "scorpion",
             "titre": "Scorpion",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/hzeirSF6bRjssDh5JFrm5WRwFLd.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -13629,12 +13639,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.818Z"
+            "dateAjout": "2026-08-17T21:37:05.818Z",
+            "tmdbId": 60797,
+            "tmdbUrl": "https://www.themoviedb.org/tv/60797",
+            "titreTmdb": "Scorpion",
+            "anneeTmdb": "2014",
+            "descriptionTmdb": "Le ministère de l'Intérieur engage un génie et son équipe hétéroclite de prodiges pour protéger la nation d'une nouvelle génération sophistiquée de terroristes."
         },
         {
             "id": "seal_team",
             "titre": "Seal Team",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/rQJKfadORdmznHxKmM2g8Qti6DU.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -14328,12 +14343,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.902Z"
+            "dateAjout": "2026-08-17T21:37:05.902Z",
+            "tmdbId": 71789,
+            "tmdbUrl": "https://www.themoviedb.org/tv/71789",
+            "titreTmdb": "SEAL Team",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Le quotidien professionnel et personnel des membres de la plus haute unité d'élite des Navy SEALs, qui s’entraînent, planifient et exécutent les missions les plus dangereuses à la demande du gouvernement américain."
         },
         {
             "id": "sherlock",
             "titre": "Sherlock",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/nBRtABdAHf4SWSAWHelXz0H6tY9.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -14417,12 +14437,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.956Z"
+            "dateAjout": "2026-08-17T21:37:05.956Z",
+            "tmdbId": 19885,
+            "tmdbUrl": "https://www.themoviedb.org/tv/19885",
+            "titreTmdb": "Sherlock",
+            "anneeTmdb": "2010",
+            "descriptionTmdb": "Les aventures de Sherlock Holmes et de son acolyte de toujours, le docteur Watson, sont transposées au XXIème siècle..."
         },
         {
             "id": "shooter",
             "titre": "Shooter",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/3yNdTnt8OQXQHXQbHjFS5G8g2zN.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -14751,12 +14776,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.959Z"
+            "dateAjout": "2026-08-17T21:37:05.959Z",
+            "tmdbId": 66857,
+            "tmdbUrl": "https://www.themoviedb.org/tv/66857",
+            "titreTmdb": "Shooter",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Un ancien tireur d'élite reprend du service pour déjouer un complot imminent contre le Président des États-Unis, mais se retrouve accusé de tentative de meurtre."
         },
         {
             "id": "taken",
             "titre": "Taken",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/5TgdridU2w1pVsbQB2pt1xvazBX.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -15030,7 +15060,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.979Z"
+            "dateAjout": "2026-08-17T21:37:05.979Z",
+            "tmdbId": 68006,
+            "tmdbUrl": "https://www.themoviedb.org/tv/68006",
+            "titreTmdb": "Taken",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Après une tragédie personnelle, Bryan Mills est engagé par la CIA pour mener une opération mortelle. Un travail qui va lui apprendre un ensemble de compétences très particulier et très dangereux."
         },
         {
             "id": "the_brave",
@@ -15179,7 +15214,7 @@
         {
             "id": "the_falcon_and_the_winter_soldier",
             "titre": "The Falcon And The Winter Soldier",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/6NrUwEWDxZI2XffOnw3nuibukmX.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -15278,7 +15313,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:06.006Z"
+            "dateAjout": "2026-08-17T21:37:06.006Z",
+            "tmdbId": 88396,
+            "tmdbUrl": "https://www.themoviedb.org/tv/88396",
+            "titreTmdb": "Falcon et le Soldat de l'hiver",
+            "anneeTmdb": "2021",
+            "descriptionTmdb": "Sam Wilson, alias Falcon, et Bucky Barnes, le Soldat de l’hiver, se lancent dans une aventure autour du monde qui va mettre leurs ressources – et leur patience – à rude épreuve. La série se déroule après les événements d'Avengers : Endgame."
         },
         {
             "id": "the_queen_s_gambit",
@@ -16815,7 +16855,7 @@
         {
             "id": "timeless",
             "titre": "Timeless",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/wFaS9kROwztTWNxIKBbOLwIgApV.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -17099,141 +17139,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:06.132Z"
-        },
-        {
-            "id": "travelers",
-            "titre": "Travelers",
-            "image": null,
-            "imdbId": null,
-            "saisons": [
-                {
-                    "numero": 1,
-                    "episodes": [
-                        {
-                            "numero": 1,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
-                            "nomFichier": "Travelers.S01E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
-                            "taille": 427465542,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.151Z"
-                        },
-                        {
-                            "numero": 2,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E02.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
-                            "nomFichier": "Travelers.S01E02.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
-                            "taille": 393458794,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.151Z"
-                        },
-                        {
-                            "numero": 3,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E03.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
-                            "nomFichier": "Travelers.S01E03.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
-                            "taille": 390869488,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.152Z"
-                        },
-                        {
-                            "numero": 4,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E04.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.ws.avi",
-                            "nomFichier": "Travelers.S01E04.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.ws.avi",
-                            "taille": 390456756,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.152Z"
-                        },
-                        {
-                            "numero": 5,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E05.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
-                            "nomFichier": "Travelers.S01E05.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
-                            "taille": 363318666,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.153Z"
-                        },
-                        {
-                            "numero": 6,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E06.FASTSUB.VOSTFR.HDTV.x264-otm.www.torrent9.biz.mkv",
-                            "nomFichier": "Travelers.S01E06.FASTSUB.VOSTFR.HDTV.x264-otm.www.torrent9.biz.mkv",
-                            "taille": 259156903,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.153Z"
-                        },
-                        {
-                            "numero": 7,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E07.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Travelers.S01E07.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
-                            "taille": 368121240,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.154Z"
-                        },
-                        {
-                            "numero": 8,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E08.HDTV.VOSTFR.x264-EXTREME.www.torrent9.biz.mkv",
-                            "nomFichier": "Travelers.S01E08.HDTV.VOSTFR.x264-EXTREME.www.torrent9.biz.mkv",
-                            "taille": 220979059,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.154Z"
-                        },
-                        {
-                            "numero": 9,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E09.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Travelers.S01E09.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
-                            "taille": 368039900,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.155Z"
-                        },
-                        {
-                            "numero": 10,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E10.VOSTFR.HDTV.XVID-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Travelers.S01E10.VOSTFR.HDTV.XVID-EXTREME.www.torrent9.biz.avi",
-                            "taille": 385085308,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.156Z"
-                        },
-                        {
-                            "numero": 11,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E11.VOSTFR.WEBRip.XViD-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Travelers.S01E11.VOSTFR.WEBRip.XViD-EXTREME.www.torrent9.biz.avi",
-                            "taille": 368878236,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.156Z"
-                        },
-                        {
-                            "numero": 12,
-                            "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Travelers\\Travelers.S01E12.FiNAL.VOSTFR.WEBRip.XViD-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Travelers.S01E12.FiNAL.VOSTFR.WEBRip.XViD-EXTREME.www.torrent9.biz.avi",
-                            "taille": 362150782,
-                            "doublonExact": false,
-                            "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:06.157Z"
-                        }
-                    ]
-                }
-            ],
-            "dateAjout": "2026-08-17T21:37:06.151Z"
+            "dateAjout": "2026-08-17T21:37:06.132Z",
+            "tmdbId": 66786,
+            "tmdbUrl": "https://www.themoviedb.org/tv/66786",
+            "titreTmdb": "Timeless",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Un criminel mystérieux vole une machine à voyager dans le temps top-secrète. Il veut détruire les États-Unis en modifiant le passé. Le seul espoir est dans une petite équipe formée d’un scientifique, d’un soldat, et d’une historienne. Ils doivent utiliser un prototype de la machine pour poursuivre le fugitif, mais faire attention à ne pas changer l’histoire à leur tour."
         },
         {
             "id": "whiskey_cavalier",

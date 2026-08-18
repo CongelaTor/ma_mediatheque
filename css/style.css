@@ -88,6 +88,9 @@ input {
 }
 
 .nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 70px;
     padding: 0 22px;
     border: none;
@@ -96,6 +99,7 @@ input {
     color: var(--muted);
     font-size: 15px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-button:hover,
@@ -135,7 +139,14 @@ input {
     color: var(--text);
     padding: 0 14px;
     cursor: pointer;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .icon-button:hover,
 .secondary-button:hover {
@@ -247,7 +258,7 @@ input {
     display: block;
     width: 240px;
     height: 42px;
-    margin: 0 auto;
+    margin: 0 auto 24px auto;
     border: none;
     border-radius: 10px;
     background: var(--blue-dark);
@@ -608,6 +619,13 @@ input {
     color: white;
     font-size: 24px;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    line-height: 1;
 }
 
 .tmdb-results {
@@ -690,4 +708,45 @@ input {
     color: var(--muted);
     padding: 20px;
     text-align: center;
+}
+
+.tmdb-result-link {
+    display: inline-block;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tmdb-result-link:visited {
+    color: white;
+}
+
+.tmdb-result-link:hover {
+    color: #1683ff;
+}
+
+.brand,
+.brand:visited,
+.brand:hover,
+.brand:active {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-button,
+.nav-button:visited,
+.nav-button:hover,
+.nav-button:active {
+    text-decoration: none;
+}
+
+.refresh-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.refresh-icon {
+    font-size: 1.5em;
+    font-weight: bold;
 }

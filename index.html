@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Vidéothèque</title>
+    <title>Médiathèque</title>
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎬</text></svg>">
-    <link rel="stylesheet" href="css/style.css">
+        href="data:image/svg+xml,
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎬</text></svg>">
+    <link rel=" stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,20 +19,21 @@
             <div class="brand" onclick="showPage('home')">
                 <div class="brand-icon">
                     <span>🎬</span>
-                </div>node
+                </div>
                 <div class="brand-title">Médiathèque</div>
             </div>
 
             <nav class="main-nav">
-                <button class="nav-button active" data-page="home" onclick="showPage('home')">Accueil</button>
-                <button class="nav-button" data-page="films" onclick="showPage('films')">Films</button>
-                <button class="nav-button" data-page="series" onclick="showPage('series')">Séries</button>
+                <a class="nav-button" data-page="home" href="index.html">Accueil</a>
+                <a class="nav-button" data-page="films" href="films.html">Films</a>
+                <a class="nav-button active" data-page="series" href="series.html">Séries</a>
             </nav>
 
             <div class="top-actions">
-                <input id="searchInput" class="search-input" type="text" placeholder="Rechercher..."
-                    oninput="handleSearch()">
-                <button class="icon-button" onclick="reloadCatalog()" title="Actualiser">⟳</button>
+                <button class="icon-button refresh-button" onclick="reloadCatalog()">
+                    <span class="refresh-icon">↻</span>
+                    <span>Scan disques</span>
+                </button>
             </div>
         </header>
 
@@ -48,7 +50,7 @@
 
                 <div class="home-cards">
 
-                    <article class="home-card home-card-films" onclick="showPage('films')">
+                    <article class="home-card home-card-films" onclick="window.location.href='films.html'">
                         <div class="home-card-image film-hero"></div>
                         <div class="home-card-icon">🎬</div>
                         <h2>Films</h2>
@@ -56,7 +58,7 @@
                         <button type="button">Accéder aux films ›</button>
                     </article>
 
-                    <article class="home-card home-card-series" onclick="showPage('series')">
+                    <article class="home-card home-card-series" onclick="window.location.href='series.html'">
                         <div class="home-card-image serie-hero"></div>
                         <div class="home-card-icon purple">📺</div>
                         <h2>Séries</h2>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films - Médiathèque</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <header class="topbar">
+    <a class="brand">
+        <div class="brand-icon"><span>🎬</span></div>
+        <div class="brand-title">Médiathèque</div>
+    </a>
+    <nav class="main-nav">
+        <a class="nav-button" data-page="home" href="index.html">Accueil</a>
+        <a class="nav-button active" data-page="films" href="films.html">Films</a>
+        <a class="nav-button" data-page="series" href="series.html">Séries</a>
+    </nav>
+    <div class="top-actions">
+        <input id="searchInput" class="search-input" type="text" placeholder="Filtrer..." oninput="handleSearch()">
+    </div>
+</header>
+    <main>
+        <section id="page-films" class="page active">
+            <div class="layout">
+                <aside class="sidebar">
+                    <div class="sidebar-title">Genre</div>
+                    <button class="sidebar-link active" data-genre="all" onclick="selectGenre('all')">Tous les films</button>
+                    <button class="sidebar-link" data-genre="Action" onclick="selectGenre('Action')">Action</button>
+                    <button class="sidebar-link" data-genre="Aventure" onclick="selectGenre('Aventure')">Aventure</button>
+                    <button class="sidebar-link" data-genre="Comédie" onclick="selectGenre('Comédie')">Comédie</button>
+                    <button class="sidebar-link" data-genre="Science-Fiction" onclick="selectGenre('Science-Fiction')">Science-Fiction</button>
+                    <button class="sidebar-link" data-genre="Drame" onclick="selectGenre('Drame')">Drame</button>
+                    <button class="sidebar-link" data-genre="Fantastique" onclick="selectGenre('Fantastique')">Fantastique</button>
+                    <button class="sidebar-link" data-genre="Thriller" onclick="selectGenre('Thriller')">Thriller</button>
+                    <button class="sidebar-link" data-genre="Documentaire" onclick="selectGenre('Documentaire')">Documentaire</button>
+                    <button class="sidebar-link" data-genre="Animation" onclick="selectGenre('Animation')">Animation</button>
+                    <div class="sidebar-section">
+                        <div class="sidebar-title">Statistiques</div>
+                        <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
+                        <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
+                        <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
+                    </div>
+                </aside>
+                <section class="content">
+                    <div class="content-header">
+                        <div>
+                            <h1>Films</h1>
+                            <p id="filmsCount">0 film</p>
+                        </div>
+                        <div class="sort-label">Tri : Titre A-Z</div>
+                    </div>
+                    <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">▶ Reprendre : <span id="resumeFilmText"></span></button>
+                    <div id="filmsGrid" class="cards-grid"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+</div>
+    <script src="js/state.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/playback.js"></script>
+    <script src="js/tmdb.js"></script>
+    <script src="js/films.js"></script>
+    <script src="js/app-init.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", initFilmsPage);
+    </script>
+</body>
+</html>
