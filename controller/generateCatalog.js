@@ -9,7 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('=== Ma vidéothèque ===');
+console.log('=== Ma Mediathèque ===');
 
 const rootDir = path.join(__dirname, '..');
 

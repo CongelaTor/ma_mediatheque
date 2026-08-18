@@ -1,7 +1,7 @@
 {
   "name": "ma_videotheque",
   "version": "1.0.0",
-  "description": "Générateur de catalogue pour Ma vidéothèque",
+  "description": "Générateur de catalogue pour ma médiathèque",
   "main": "controller/generateCatalog.js",
   "scripts": {
     "generate": "node controller/generateCatalog.js"
