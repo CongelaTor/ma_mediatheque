@@ -3,20 +3,10 @@ let catalog = null;
 let currentPage = 'home';
 let currentGenre = 'all';
 let currentSearch = '';
+let activeLanguages = new Set(['VO', 'VF', 'VOST', 'VOSTFR']);
 
 const tmdbBaseUrl = 'https://www.themoviedb.org';
 const tmdbSearchBaseUrl = 'https://www.themoviedb.org/search';
-
-const missingPosterColors = [
-    '#f97316',
-    '#eab308',
-    '#14b8a6',
-    '#8b5cf6',
-    '#ef4444',
-    '#22c55e',
-    '#06b6d4',
-    '#f43f5e'
-];
 
 document.addEventListener('DOMContentLoaded', initApp);
 
