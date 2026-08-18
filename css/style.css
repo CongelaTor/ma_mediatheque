@@ -409,7 +409,8 @@ input {
 }
 
 .poster-zone {
-    height: 245px;
+    aspect-ratio: 2 / 3;
+    height: auto;
     position: relative;
     background: #182235;
     cursor: pointer;
@@ -493,56 +494,200 @@ input {
 }
 
 .seasons-bar {
-
     display: flex;
-
     gap: 12px;
-
     margin-top: 16px;
     margin-bottom: 20px;
-
     flex-wrap: wrap;
 }
 
 .season-button {
 
     border: none;
-
     padding: 10px 18px;
-
     border-radius: 14px;
-
     background:
         linear-gradient(135deg,
             #243d5a 0%,
             #294668 45%,
             #2c4a6e 100%);
-
     color: white;
-
     font-size: 15px;
-
     cursor: pointer;
-
     white-space: nowrap;
-
     transition: .15s;
 }
 
 .season-button:hover {
-
     border-color: #1683ff;
-
     transform: translateY(-1px);
-
 }
 
 .season-button.active {
-
-    outline: 2px solid #1683ff;
-
+    outline: 1px solid #1683ff;
 }
 
 .hidden {
     display: none !important;
+}
+
+.language-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.language-button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 14px;
+    background:
+        linear-gradient(135deg,
+            #243d5a 0%,
+            #294668 45%,
+            #2c4a6e 100%);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .15s;
+}
+
+.language-button:hover {
+    border-color: #1683ff;
+    transform: translateY(-1px);
+}
+
+.language-button.active {
+    outline: 1px solid #1683ff;
+}
+
+.tmdb-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.tmdb-modal-panel {
+    width: min(900px, 96vw);
+    max-height: 88vh;
+    overflow: hidden;
+    background: #0e1625;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+}
+
+.tmdb-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.tmdb-modal-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.tmdb-modal-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #17263d;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.tmdb-results {
+    padding: 18px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tmdb-result-card {
+    display: grid;
+    grid-template-columns: 94px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.tmdb-result-card img {
+    width: 94px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #182235;
+}
+
+.tmdb-result-placeholder {
+    width: 94px;
+    height: 140px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1b3045, #284060);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px;
+}
+
+.tmdb-result-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.tmdb-result-year {
+    color: var(--blue);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.tmdb-result-description {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+    max-height: 78px;
+    overflow: hidden;
+}
+
+.tmdb-associate-button {
+    border: none;
+    border-radius: 14px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #243d5a 0%, #294668 45%, #2c4a6e 100%);
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.tmdb-associate-button:hover {
+    transform: translateY(-1px);
+}
+
+.tmdb-empty {
+    color: var(--muted);
+    padding: 20px;
+    text-align: center;
 }

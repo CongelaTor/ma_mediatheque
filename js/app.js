@@ -1,9 +1,13 @@
 let catalog = null;
-
+const tmdbApiKey = '7f5ccb60f02be23a0abc64fdd5070eba';
 let currentPage = 'home';
+let currentSerie = null;
+let currentSeason = null;
 let currentGenre = 'all';
 let currentSearch = '';
-let activeLanguages = new Set(['VO', 'VF', 'VOST', 'VOSTFR']);
+let activeSeriesLanguages = new Set(['VO', 'VF', 'VOST', 'VOSTFR']);
+let activeDetailLanguage = null;
+const languageOrder = ['VO', 'VF', 'VOST', 'VOSTFR'];
 
 const tmdbBaseUrl = 'https://www.themoviedb.org';
 const tmdbSearchBaseUrl = 'https://www.themoviedb.org/search';
@@ -11,14 +15,12 @@ const tmdbSearchBaseUrl = 'https://www.themoviedb.org/search';
 document.addEventListener('DOMContentLoaded', initApp);
 
 async function initApp() {
-
     await loadCatalog();
-
+    initializeLanguageFilters();
     updateStats();
     updateResumeButtons();
     renderFilms();
     renderSeries();
-
 }
 
 async function loadCatalog() {
@@ -198,44 +200,120 @@ function createFilmCard(film) {
     };
     posterZone.appendChild(playButton);
 
-    if (film.doublonExact || film.doublonProbable) {
-        const duplicateBadge = document.createElement('div');
-        duplicateBadge.className = 'duplicate-badge';
-        duplicateBadge.textContent = film.doublonExact ? 'Doublon exact' : 'Doublon probable';
-        info.appendChild(duplicateBadge);
-    }
+    // if (film.doublonExact || film.doublonProbable) {
+    //     const duplicateBadge = document.createElement('div');
+    //     duplicateBadge.className = 'duplicate-badge';
+    //     duplicateBadge.textContent = film.doublonExact ? 'Doublon exact' : 'Doublon probable';
+    //     info.appendChild(duplicateBadge);
+    // }
 
     card.appendChild(posterZone);
     return card;
 
 }
 
-function renderSeries() {
+function initializeLanguageFilters() {
+    document.querySelectorAll('#languageFilters .language-button').forEach(button => {
+        button.onclick = () => handleLanguageButtonClick(button);
+    });
+}
+function handleLanguageButtonClick(button) {
+    const language = button.dataset.language;
+    if (button.classList.contains('hidden')) {
+        return;
+    }
+    if (currentSerie) {
+        activeDetailLanguage = language;
+        updateLanguageButtons();
+        showSerieDetails(currentSerie, currentSeason);
+        return;
+    }
+    if (button.classList.contains('active')) {
+        if (activeSeriesLanguages.size === 1) {
+            return;
+        }
+        activeSeriesLanguages.delete(language);
+    } else {
+        activeSeriesLanguages.add(language);
+    }
+    updateLanguageButtons();
+    if (currentPage === 'series') {
+        renderSeries();
+    }
+}
+function getSerieLanguages(serie) {
+    const languages = new Set();
+    for (const saison of serie.saisons) {
+        for (const episode of saison.episodes) {
+            if (episode.langue) {
+                languages.add(episode.langue);
+            }
+        }
+    }
+    return languageOrder.filter(language => languages.has(language));
+}
+function updateLanguageButtons() {
+    if (currentSerie) {
+        updateDetailLanguageButtons();
+        return;
+    }
+    updateSeriesLanguageButtons();
+}
+function updateSeriesLanguageButtons() {
+    document.querySelectorAll('#languageFilters .language-button').forEach(button => {
+        const language = button.dataset.language;
+        button.classList.remove('hidden');
+        button.classList.toggle('active', activeSeriesLanguages.has(language));
+    });
+}
+function updateDetailLanguageButtons() {
+    const availableLanguages = getSerieLanguages(currentSerie);
+    if (availableLanguages.length > 0 && !availableLanguages.includes(activeDetailLanguage)) {
+        activeDetailLanguage = availableLanguages[0];
+    }
+    document.querySelectorAll('#languageFilters .language-button').forEach(button => {
+        const language = button.dataset.language;
+        const isVisible = availableLanguages.includes(language);
+        button.classList.toggle('hidden', !isVisible);
+        button.classList.toggle('active', isVisible && language === activeDetailLanguage);
+    });
+}
+function episodeMatchesDetailLanguage(episode) {
+    return episode.langue === activeDetailLanguage;
+}
+function serieMatchesSeriesLanguages(serie) {
+    for (const saison of serie.saisons) {
+        for (const episode of saison.episodes) {
+            if (episode.langue && activeSeriesLanguages.has(episode.langue)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
+function renderSeries() {
+    currentSerie = null;
+    currentSeason = null;
+    activeDetailLanguage = null;
+    updateLanguageButtons();
     const grid = document.getElementById('seriesGrid');
     const episodesPanel = document.getElementById('episodesPanel');
-
     grid.classList.remove('hidden');
     episodesPanel.classList.add('hidden');
     episodesPanel.innerHTML = '';
-
     document.getElementById('backToSeriesButton').classList.add('hidden');
     setText('seriesTitle', 'Séries');
-
     grid.innerHTML = '';
-
     const series = catalog.series
+        .filter(serie => serieMatchesSeriesLanguages(serie))
         .filter(serie => matchesSearch(serie.titre))
         .sort((a, b) => a.titre.localeCompare(b.titre, 'fr'));
-
     setText('seriesCount', `${series.length} série${series.length > 1 ? 's' : ''}`);
-
     for (const serie of series) {
         grid.appendChild(createSerieCard(serie));
     }
-
     updateResumeButtons();
-
 }
 
 function createSerieCard(serie) {
@@ -245,72 +323,89 @@ function createSerieCard(serie) {
 
     const posterZone = document.createElement('div');
     posterZone.className = 'poster-zone';
-    posterZone.onclick = () => showSerieDetails(serie);
+    posterZone.onclick = () => {
+        if (serie.tmdbId) {
+            openTmdbForSerie(serie);
+        } else {
+            showTmdbSerieSearch(serie);
+        }
+    };
     posterZone.appendChild(createPosterContent(serie.image, serie.titre, serie.id));
 
     const playButton = document.createElement('button');
-
     playButton.className = 'play-button';
-
     playButton.innerHTML =
         '<span class="play-icon">▶</span>';
-
     playButton.onclick = event => {
         event.stopPropagation();
-        playFirstSerieEpisode(serie);
+        showSerieDetails(serie);
     };
     posterZone.appendChild(playButton);
-    card.appendChild(posterZone);
 
+    card.appendChild(posterZone);
     return card;
 }
 
-function showSerieDetails(serie) {
+function episodeMatchesLanguage(episode) {
+    if (!episode.langue) {
+        return true;
+    }
+    return activeLanguages.has(episode.langue);
+}
+
+function showSerieDetails(serie, requestedSeasonNumber = null) {
+    currentSerie = serie;
+    const serieLanguages = getSerieLanguages(serie);
+
+    if (activeSeriesLanguages.size === 1) {
+
+        const selectedLanguage =
+            [...activeSeriesLanguages][0];
+
+        if (serieLanguages.includes(selectedLanguage)) {
+            activeDetailLanguage = selectedLanguage;
+        }
+
+    }
 
     const grid = document.getElementById('seriesGrid');
     const episodesPanel = document.getElementById('episodesPanel');
-
     grid.classList.add('hidden');
     episodesPanel.classList.remove('hidden');
     window.scrollTo(0, 0);
-
     setText('seriesTitle', serie.titre);
-    setText('seriesCount', `${countSerieEpisodes(serie)} épisode${countSerieEpisodes(serie) > 1 ? 's' : ''}`);
     document.getElementById('backToSeriesButton').classList.remove('hidden');
     episodesPanel.innerHTML = '';
-
+    updateLanguageButtons();
     const sortedSeasons = [...serie.saisons].sort((a, b) => a.numero - b.numero);
-
     if (sortedSeasons.length === 0) {
+        setText('seriesCount', '0 épisode');
         return;
     }
-
     const seasonsBar = document.createElement('div');
     seasonsBar.className = 'seasons-bar';
-
     const episodesGrid = document.createElement('div');
     episodesGrid.className = 'cards-grid';
     episodesPanel.appendChild(seasonsBar);
     episodesPanel.appendChild(episodesGrid);
-
     function renderSeason(selectedSeason) {
-
+        currentSeason = selectedSeason.numero;
         seasonsBar.querySelectorAll('.season-button').forEach(button => {
             button.classList.remove('active');
         });
-
         const activeButton = seasonsBar.querySelector(`[data-season="${selectedSeason.numero}"]`);
         if (activeButton) {
             activeButton.classList.add('active');
         }
         episodesGrid.innerHTML = '';
-
-        const sortedEpisodes = [...selectedSeason.episodes].sort((a, b) => a.numero - b.numero);
+        const sortedEpisodes = [...selectedSeason.episodes]
+            .filter(episode => episodeMatchesDetailLanguage(episode))
+            .sort((a, b) => a.numero - b.numero);
+        setText('seriesCount', `${sortedEpisodes.length} épisode${sortedEpisodes.length > 1 ? 's' : ''}`);
         for (const episode of sortedEpisodes) {
             episodesGrid.appendChild(createEpisodeCard(serie, selectedSeason, episode));
         }
     }
-
     for (const saison of sortedSeasons) {
         const button = document.createElement('button');
         button.className = 'season-button';
@@ -321,7 +416,8 @@ function showSerieDetails(serie) {
         };
         seasonsBar.appendChild(button);
     }
-    renderSeason(sortedSeasons[0]);
+    const selectedSeason = sortedSeasons.find(saison => saison.numero === requestedSeasonNumber) || sortedSeasons[0];
+    renderSeason(selectedSeason);
 }
 
 function createEpisodeCard(serie, saison, episode) {
@@ -580,25 +676,111 @@ function getResumeSerie() {
 }
 
 function openTmdbForFilm(film) {
-
     if (film.tmdbId) {
-        window.open(`${tmdbBaseUrl}/movie/${film.tmdbId}`, '_blank');
+        window.location.href = `${tmdbBaseUrl}/movie/${film.tmdbId}`;
         return;
     }
 
-    window.open(`${tmdbSearchBaseUrl}?query=${encodeURIComponent(film.titre)}`, '_blank');
-
+    window.location.href =
+        `${tmdbSearchBaseUrl}?query=${encodeURIComponent(film.titre)}`;
 }
 
 function openTmdbForSerie(serie) {
-
     if (serie.tmdbId) {
-        window.open(`${tmdbBaseUrl}/tv/${serie.tmdbId}`, '_blank');
+        window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
         return;
     }
+    showTmdbSerieSearch(serie);
+}
 
-    window.open(`${tmdbSearchBaseUrl}?query=${encodeURIComponent(serie.titre)}`, '_blank');
+async function showTmdbSerieSearch(serie) {
+    const modal = document.getElementById('tmdbModal');
+    const title = document.getElementById('tmdbModalTitle');
+    const resultsContainer = document.getElementById('tmdbResults');
+    title.textContent = `Résultats TMDB pour ${serie.titre}`;
+    resultsContainer.innerHTML = '<div class="tmdb-empty">Recherche en cours...</div>';
+    modal.classList.remove('hidden');
+    const results = await searchTmdbSerie(serie.titre);
+    renderTmdbSerieResults(serie, results);
+}
+function renderTmdbSerieResults(serie, results) {
+    const resultsContainer = document.getElementById('tmdbResults');
+    resultsContainer.innerHTML = '';
+    if (!results || results.length === 0) {
+        resultsContainer.innerHTML = '<div class="tmdb-empty">Aucun résultat trouvé.</div>';
+        return;
+    }
+    for (const result of results) {
+        const card = document.createElement('article');
+        card.className = 'tmdb-result-card';
+        const imageZone = document.createElement('div');
+        if (result.image) {
+            const img = document.createElement('img');
+            img.src = result.image;
+            img.alt = result.titre;
+            imageZone.appendChild(img);
+        } else {
+            const placeholder = document.createElement('div');
+            placeholder.className = 'tmdb-result-placeholder';
+            placeholder.textContent = 'Sans affiche';
+            imageZone.appendChild(placeholder);
+        }
+        const info = document.createElement('div');
+        const title = document.createElement('div');
+        title.className = 'tmdb-result-title';
+        title.textContent = result.titre;
+        const year = document.createElement('div');
+        year.className = 'tmdb-result-year';
+        year.textContent = result.annee || 'Année inconnue';
+        const description = document.createElement('div');
+        description.className = 'tmdb-result-description';
+        description.textContent = result.description || 'Aucune description disponible.';
+        info.appendChild(title);
+        info.appendChild(year);
+        info.appendChild(description);
+        const button = document.createElement('button');
+        button.className = 'tmdb-associate-button';
+        button.textContent = 'Associer';
+        button.onclick = () => associateTmdbSerie(serie, result);
+        card.appendChild(imageZone);
+        card.appendChild(info);
+        card.appendChild(button);
+        resultsContainer.appendChild(card);
+    }
+}
 
+async function associateTmdbSerie(serie, result) {
+    const response = await fetch('http://localhost:9876/associate-tmdb-serie', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            serieId: serie.id,
+            tmdbId: result.tmdbId,
+            tmdbUrl: result.tmdbUrl,
+            image: result.image,
+            titreTmdb: result.titre,
+            anneeTmdb: result.annee,
+            descriptionTmdb: result.description
+        })
+    });
+    if (!response.ok) {
+        console.error(await response.text());
+        return;
+    }
+    serie.tmdbId = result.tmdbId;
+    serie.tmdbUrl = result.tmdbUrl;
+    serie.image = result.image;
+    serie.titreTmdb = result.titre;
+    serie.anneeTmdb = result.annee;
+    serie.descriptionTmdb = result.description;
+    closeTmdbModal();
+    renderSeries();
+}
+
+function closeTmdbModal() {
+    document.getElementById('tmdbModal').classList.add('hidden');
 }
 
 function countSerieEpisodes(serie) {
@@ -649,5 +831,34 @@ function hashCode(value) {
     }
 
     return hash;
+
+}
+
+async function searchTmdbSerie(title) {
+
+    const response = await fetch(
+        `https://api.themoviedb.org/3/search/tv?api_key=${tmdbApiKey}&language=fr-FR&query=${encodeURIComponent(title)}`
+    );
+    const data = await response.json();
+
+    if (!data.results) {
+        console.error(data);
+        return [];
+    }
+
+    return data.results.map(item => ({
+        tmdbId: item.id,
+        titre: item.name,
+        annee: item.first_air_date
+            ? item.first_air_date.substring(0, 4)
+            : '',
+        description: item.overview,
+        image: item.poster_path
+            ? `https://image.tmdb.org/t/p/w342${item.poster_path}`
+            : null,
+        tmdbUrl:
+            `https://www.themoviedb.org/tv/${item.id}`
+
+    }));
 
 }

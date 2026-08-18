@@ -2423,7 +2423,7 @@
         {
             "id": "agent_x",
             "titre": "Agent X",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/7KYgoZgXuk1EkUkV797MXh8ik5k.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -2532,7 +2532,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:04.894Z"
+            "dateAjout": "2026-08-17T21:37:04.894Z",
+            "tmdbId": 63645,
+            "tmdbUrl": "https://www.themoviedb.org/tv/63645",
+            "titreTmdb": "Agent X",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "Première femme Vice-Présidente des Etats-Unis, Natalie Maccabee découvre que son statut lui confère le pouvoir d'intervenir en temps de crise pour protéger son pays. Pour accomplir ce devoir en toute discrétion, elle a à sa disposition un mystérieux Agent X..."
         },
         {
             "id": "almost_paradise",
@@ -2651,7 +2656,7 @@
         {
             "id": "apb",
             "titre": "APB",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/6nobSVxOse1XFO43CLyH6r6u5DN.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -2780,12 +2785,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:04.933Z"
+            "dateAjout": "2026-08-17T21:37:04.933Z",
+            "tmdbId": 67129,
+            "tmdbUrl": "https://www.themoviedb.org/tv/67129",
+            "titreTmdb": "A.P.B. : Alerte d'urgence",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Après avoir été aux premières loges d'un crime violent, un génie milliardaire rachète un commissariat de police délaissé pour mettre en place une force de police privée plus efficace, renforcée par de nouveaux outils high tech et des idées novatrices."
         },
         {
             "id": "blindspot",
             "titre": "Blindspot",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/jKm93ft0kBKrRgYGF7cPvztpx4p.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -3844,7 +3854,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:04.939Z"
+            "dateAjout": "2026-08-17T21:37:04.939Z",
+            "tmdbId": 62710,
+            "tmdbUrl": "https://www.themoviedb.org/tv/62710",
+            "titreTmdb": "Blindspot",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "Une jeune femme amnésique est retrouvée totalement nue en plein milieu de Times Square à New York, recouverte de tatouages mystérieux, fraîchement réalisés. Un agent du FBI, chargé de l'enquête, suit les indices dispersés sur son corps, qui révèlent bientôt une conspiration de grande ampleur..."
         },
         {
             "id": "burn_notice",
@@ -5747,7 +5762,7 @@
         {
             "id": "deception",
             "titre": "Deception",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/hmpIXlk4r78i48gGRXVx9CYGK9F.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -6016,12 +6031,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.255Z"
+            "dateAjout": "2026-08-17T21:37:05.255Z",
+            "tmdbId": 71722,
+            "tmdbUrl": "https://www.themoviedb.org/tv/71722",
+            "titreTmdb": "Cameron Black : L'Illusionniste",
+            "anneeTmdb": "2018",
+            "descriptionTmdb": "Cameron Black est le plus grand illusionniste du monde. Au moins, c'est ainsi que les gens le considéraient avant que son plus grand secret ne soit révélé et que sa carrière ne soit détruite. Pire encore, Cameron a de bonnes raisons de croire que ce n'était pas un accident."
         },
         {
             "id": "frequency",
             "titre": "Frequency",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/o8A0dLBJn7JkxJpu8M7wwfLe9Kd.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -6160,12 +6180,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.283Z"
+            "dateAjout": "2026-08-17T21:37:05.283Z",
+            "tmdbId": 66894,
+            "tmdbUrl": "https://www.themoviedb.org/tv/66894",
+            "titreTmdb": "Frequency",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Une jeune femme, inspecteur de police, découvre qu'elle peut communiquer  avec son père, mort 20 ans plus tôt, grâce à un transmetteur de radio."
         },
         {
             "id": "hawkeye",
             "titre": "Hawkeye",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/cybZ7FoeBoBJPieKvSp4wh2yCMR.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -6234,7 +6259,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.295Z"
+            "dateAjout": "2026-08-17T21:37:05.295Z",
+            "tmdbId": 88329,
+            "tmdbUrl": "https://www.themoviedb.org/tv/88329",
+            "titreTmdb": "Hawkeye",
+            "anneeTmdb": "2021",
+            "descriptionTmdb": "L’ancien Avenger Clint Barton a une mission apparemment simple : retourner dans sa famille pour Noël. Possible ? Peut-être avec l’aide de Kate Bishop, une archère de 22 ans qui rêve de devenir une super-héroïne. Ils vont devoir faire équipe alors qu’une présence du passé de Barton menace de faire dérailler l’esprit festif."
         },
         {
             "id": "human_target",
@@ -6508,7 +6538,7 @@
         {
             "id": "legends",
             "titre": "Legends",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/gXZbSYN3i2DjHKJORZiBf8P9LDF.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -6722,12 +6752,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.336Z"
+            "dateAjout": "2026-08-17T21:37:05.336Z",
+            "tmdbId": 60855,
+            "tmdbUrl": "https://www.themoviedb.org/tv/60855",
+            "titreTmdb": "Legends",
+            "anneeTmdb": "2014",
+            "descriptionTmdb": "Martin Odum, agent de la CIA, a un don pour les \"légendes\", c'est-à-dire les fausses identités. Il est ainsi envoyé dans une grande variété de missions et finit par se demander si sa propre identité ne serait pas, elle aussi, une légende..."
         },
         {
             "id": "lethal_weapon",
             "titre": "Lethal Weapon",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/4KZmrzWtsLy9TikPSiOvHaxOcuo.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -7376,12 +7411,17 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.362Z"
+            "dateAjout": "2026-08-17T21:37:05.362Z",
+            "tmdbId": 67116,
+            "tmdbUrl": "https://www.themoviedb.org/tv/67116",
+            "titreTmdb": "L'Arme fatale",
+            "anneeTmdb": "2016",
+            "descriptionTmdb": "Martin Riggs, flic texan et ancien de la Marine, perd sa femme et son bébé et déménage à Los Angeles pour repartir de zéro. Il devient le co-équipier du détective Roger Murtaugh, qui a récemment subi une crise cardiaque « bénigne » et doit à tout prix éviter les situations de stress. Un duo de choc qui risque de faire des étincelles.Adaptation de la célèbre franchise cinématographique L'Arme fatale avec Mel Gibson et Danny Glover."
         },
         {
             "id": "leverage",
             "titre": "Leverage",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/t5KJXooBqJLKUClpvYuSKNrcYGy.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -8990,7 +9030,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.455Z"
+            "dateAjout": "2026-08-17T21:37:05.455Z",
+            "tmdbId": 7482,
+            "tmdbUrl": "https://www.themoviedb.org/tv/7482",
+            "titreTmdb": "Leverage",
+            "anneeTmdb": "2008",
+            "descriptionTmdb": "Des escrocs de haute-volée allient leurs forces pour dépouiller les criminels les plus riches et les grands patrons corrompus. Leverage est une version moderne de Robin des Bois, engagé dans une lutte perpétuelle pour éradiquer le mal qui sévit sur cette planète. Ford, qui est animé par une inextinguible soif de vengeance (qu’il noie dans de grands godets de whisky), décide un jour de ramener un peu de morale dans ce monde où les financiers et les puissants s’estiment au-dessus des lois et agissent en ne suivant que leur bon plaisir, avec un solide goût pour l’argent. Un goût, pour toujours plus d’argent. Ford va donc s’en prendre aux PDG peu scrupuleux, aux magnats de Wall Street et aux argentiers arrogants."
         },
         {
             "id": "leverage_redemption",
@@ -9384,7 +9429,7 @@
         {
             "id": "lie_to_me",
             "titre": "Lie To Me",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/2xpQxwsGYtdGDrmLvCosTZ0I54R.jpg",
             "imdbId": null,
             "saisons": [
                 {
@@ -9883,7 +9928,12 @@
                     ]
                 }
             ],
-            "dateAjout": "2026-08-17T21:37:05.583Z"
+            "dateAjout": "2026-08-17T21:37:05.583Z",
+            "tmdbId": 8358,
+            "tmdbUrl": "https://www.themoviedb.org/tv/8358",
+            "titreTmdb": "Lie to Me",
+            "anneeTmdb": "2009",
+            "descriptionTmdb": "Le chercheur de file au niveau mondial en détection de tromperie, le Dr Cal Lightman, étudie l'expression faciale, le langage corporel et le ton de la voix pour déterminer lorsqu'une personne ment et leur raison, ce qui aide la police et les agences gouvernementales à découvrir la vérité. Mais ses habiletés font aussi en sorte qu'il est facile pour lui de tromper les autres."
         },
         {
             "id": "magnum_pi",
