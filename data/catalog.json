@@ -10937,7 +10937,7 @@
         {
             "id": "person_of_interest",
             "titre": "Person of interest",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/6FuKOyJgViZXgMDOq9djFJLWPqX.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:05.670Z",
             "saisons": [
@@ -11976,7 +11976,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 1411,
+            "tmdbUrl": "https://www.themoviedb.org/tv/1411",
+            "titreTmdb": "Person of Interest",
+            "anneeTmdb": "2011",
+            "descriptionTmdb": "Un agent paramilitaire de la CIA, présumé mort, est recruté par un millionnaire reclu pour travailler sur un projet top-secret : prévenir le crime avant qu'il ne se produise ! Un ingénieux programme élaboré par Finch identifie chaque jour des personnes qui vont être impliquées dans un crime. Victime ou coupable ? Reese va devoir mener l'enquête pour découvrir qui est en danger et empêcher qu'un nouveau meurtre soit commis…"
         },
         {
             "id": "quantico",
@@ -15095,7 +15100,7 @@
         {
             "id": "the_brave",
             "titre": "The Brave",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/lkc4PkMhxsQUTs9NnM8hmYNP4M1.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:05.996Z",
             "saisons": [
@@ -15234,7 +15239,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 71714,
+            "tmdbUrl": "https://www.themoviedb.org/tv/71714",
+            "titreTmdb": "The Brave",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Patricia Campbell, directrice adjointe de la D.I.A , et son équipe d'analystes maîtrisent la technologie de surveillance la plus avancée au monde depuis le quartier général de Washington. Ils aident Adam Dalton et son équipe des forces spéciales à sauver des vies innocentes, en exécutant des missions à haut risque dans les endroits les plus dangereux du monde."
         },
         {
             "id": "the_falcon_and_the_winter_soldier",
@@ -15348,7 +15358,7 @@
         {
             "id": "the_queen_s_gambit",
             "titre": "The Queen s Gambit",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/jPHoAsRKtGKmjB28QgBWEtLJHRi.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:06.012Z",
             "saisons": [
@@ -15417,12 +15427,17 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 87739,
+            "tmdbUrl": "https://www.themoviedb.org/tv/87739",
+            "titreTmdb": "Le Jeu de la dame",
+            "anneeTmdb": "2020",
+            "descriptionTmdb": "Dans les années 1950, une jeune orpheline qui révèle un talent étonnant pour les échecs s'envole vers une gloire improbable tout en se battant contre ses addictions."
         },
         {
             "id": "the_rookie",
             "titre": "The Rookie",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/aOXBLBRg7M5D2Zrs5luKD5cDB8O.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:06.017Z",
             "saisons": [
@@ -16156,12 +16171,17 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 79744,
+            "tmdbUrl": "https://www.themoviedb.org/tv/79744",
+            "titreTmdb": "The Rookie : Le Flic de Los Angeles",
+            "anneeTmdb": "2018",
+            "descriptionTmdb": "John Nolan, le rookie le plus âgé du LAPD, utilise son expérience de vie, sa détermination et son sens de l’humour pour suivre des recrues âgées de 20 ans de moins que lui."
         },
         {
             "id": "the_unit",
             "titre": "The Unit",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/ftwhXqizcVRo4pgqFnTysR9tAIM.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:06.073Z",
             "saisons": [
@@ -16875,7 +16895,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 2321,
+            "tmdbUrl": "https://www.themoviedb.org/tv/2321",
+            "titreTmdb": "The Unit : Commando d'élite",
+            "anneeTmdb": "2006",
+            "descriptionTmdb": "Jonas Blane dirige un contingent spécial de l'armée chargé de missions ultra-secrètes et délicates. L'existence même de ces hommes d'élite est un des secrets les mieux gardés. Leurs épouses, elles aussi contraintes de vivre dans l'ombre, doivent également donner l'apparence d'une vie de famille normale et donner le change tous les jours en tremblant chaque seconde pour la sécurité de leurs maris partis risquer leur vie pour sauver celle des autres."
         },
         {
             "id": "timeless",
@@ -17174,7 +17199,7 @@
         {
             "id": "whiskey_cavalier",
             "titre": "Whiskey Cavalier",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/rwWJ4xyihPjIOEwJRtBwcR8Oq0c.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:06.158Z",
             "saisons": [
@@ -17313,12 +17338,17 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 82094,
+            "tmdbUrl": "https://www.themoviedb.org/tv/82094",
+            "titreTmdb": "Whiskey Cavalier",
+            "anneeTmdb": "2019",
+            "descriptionTmdb": "Un agent du FBI Will Chase (nom de code : Whiskey Cavalier) doit faire équipe avec l'agent de la CIA Francesca \"Frankie\" Trowbridge (nom de code : Fiery Tribune) afin de sauver le monde... une mission à la fois !"
         },
         {
             "id": "white_collar",
             "titre": "White Collar",
-            "image": null,
+            "image": "https://image.tmdb.org/t/p/w342/oTMMYWjfbs43FLD3hUrs7POmrj.jpg",
             "imdbId": null,
             "dateAjout": "2026-08-17T21:37:06.167Z",
             "saisons": [
@@ -18162,7 +18192,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "tmdbId": 21510,
+            "tmdbUrl": "https://www.themoviedb.org/tv/21510",
+            "titreTmdb": "FBI : Duo très spécial",
+            "anneeTmdb": "2009",
+            "descriptionTmdb": "L'association inattendue entre un agent du FBI et son pire ennemi, un malfaiteur-gentleman qu'il poursuit depuis des années ! Quand Neal Caffrey s'échappe d'une prison de haute sécurité pour retrouver son amour perdu, l'agent du FBI Peter Burke l'arrête à nouveau. Pour éviter de retourner en prison, Neal propose à son rival une alternative : sa liberté en échange de son aide pour traquer d'autres criminels..."
         }
     ]
 }

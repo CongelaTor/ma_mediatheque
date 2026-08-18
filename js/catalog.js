@@ -24,7 +24,7 @@ async function reloadCatalog() {
     if (currentPage === 'series' && typeof renderSeries === 'function') {
         renderSeries();
     }
-    if (currentPage === 'serie-detail' && currentSerie && typeof showSerieDetails === 'function') {
+    if (currentPage === 'episodes' && currentSerie && typeof showSerieDetails === 'function') {
         showSerieDetails(currentSerie, currentSeason);
     }
     document.getElementById('scanLog').textContent = log;

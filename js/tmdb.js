@@ -102,14 +102,16 @@ async function associateTmdbSerie(serie, result) {
     serie.anneeTmdb = result.annee;
     serie.descriptionTmdb = result.description;
     closeTmdbModal();
-    if (currentPage === 'serie-detail' && typeof showSerieDetails === 'function') {
+    if (currentPage === 'episodes' && typeof showSerieDetails === 'function') {
         showSerieDetails(serie, currentSeason);
         return;
     }
     if (typeof renderSeries === 'function') {
         const currentScrollY = window.scrollY;
         renderSeries();
-        window.scrollTo(0, currentScrollY);
+        setTimeout(() => {
+            window.scrollTo(0, currentScrollY);
+        }, 0);
     }
 }
 function closeTmdbModal() {
