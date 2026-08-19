@@ -1,267 +1,295 @@
 async function initSerieDetailPage() {
-    currentPage = 'episodes';
-    await loadCatalog();
-    initializeLanguageFilters();
-    updateStats();
-    updateResumeButtons();
-    const serieId = new URLSearchParams(window.location.search).get('id');
-    const serie = catalog.series.find(item => item.id === serieId);
-    if (!serie) {
-        setText('seriesTitle', 'Série introuvable');
-        setText('seriesCount', '0 épisode');
-        return;
-    }
-    showSerieDetails(serie);
+  currentPage = "episodes";
+  await loadCatalog();
+  initializeLanguageFilters();
+  updateStats();
+  updateResumeButtons();
+  const serieId = new URLSearchParams(window.location.search).get("id");
+  const serie = catalog.series.find((item) => item.id === serieId);
+  if (!serie) {
+    setText("seriesTitle", "Série introuvable");
+    setText("seriesCount", "0 épisode");
+    return;
+  }
+  showSerieDetails(serie);
 }
 
 async function sendMissingEpisodeFlags(serieId, missingSeasonNumbers) {
-    await fetch('http://localhost:9876/save-missing-episode-flags', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            serieId: serieId,
-            missingSeasonNumbers: [...missingSeasonNumbers]
-        })
-    });
+  await fetch("http://localhost:9876/save-missing-episode-flags", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      serieId: serieId,
+      missingSeasonNumbers: [...missingSeasonNumbers],
+    }),
+  });
 }
 
 async function showSerieDetails(serie, requestedSeasonNumber = null) {
-    currentSerie = serie;
-    const serieLanguages = getSerieLanguages(serie);
-    if (activeSeriesLanguages.size === 1) {
-        const selectedLanguage = [...activeSeriesLanguages][0];
-        if (serieLanguages.includes(selectedLanguage)) {
-            activeDetailLanguage = selectedLanguage;
-        }
+  currentSerie = serie;
+  const serieLanguages = getSerieLanguages(serie);
+  if (activeSeriesLanguages.size === 1) {
+    const selectedLanguage = [...activeSeriesLanguages][0];
+    if (serieLanguages.includes(selectedLanguage)) {
+      activeDetailLanguage = selectedLanguage;
     }
-    window.scrollTo(0, 0);
-    setText('seriesTitle', serie.titre);
-    renderSerieInfoCard(serie);
-    const backButton = document.getElementById('backToSeriesButton');
-    if (backButton) {
-        backButton.classList.remove('hidden');
+  }
+  window.scrollTo(0, 0);
+  setText("seriesTitle", serie.titre);
+  renderSerieInfoCard(serie);
+  const backButton = document.getElementById("backToSeriesButton");
+  if (backButton) {
+    backButton.classList.remove("hidden");
+  }
+
+  const episodesPanel = document.getElementById("episodesPanel");
+  episodesPanel.innerHTML = "";
+
+  updateLanguageButtons();
+
+  const missingEpisodesButton = document.getElementById(
+    "missingEpisodesButton",
+  );
+  if (missingEpisodesButton) {
+    missingEpisodesButton.onclick = () => {
+      showMissingEpisodesOnly = !showMissingEpisodesOnly;
+      missingEpisodesButton.classList.toggle("active", showMissingEpisodesOnly);
+      renderSeason(
+        currentSerie.saisons.find((s) => s.numero === currentSeason),
+      );
+    };
+  }
+
+  const sortedSeasons = [...serie.saisons].sort((a, b) => a.numero - b.numero);
+  if (sortedSeasons.length === 0) {
+    setText("seriesCount", "0 épisode");
+    return;
+  }
+  const seasonsBar = document.createElement("div");
+  seasonsBar.className = "seasons-bar";
+
+  const episodesGrid = document.createElement("div");
+  episodesGrid.className = "episode-list";
+  episodesPanel.appendChild(seasonsBar);
+  episodesPanel.appendChild(episodesGrid);
+
+  async function renderSeason(selectedSeason) {
+    currentSeason = selectedSeason.numero;
+    seasonsBar.querySelectorAll(".season-button").forEach((button) => {
+      button.classList.remove("active");
+    });
+    const activeButton = seasonsBar.querySelector(
+      `[data-season="${selectedSeason.numero}"]`,
+    );
+    if (activeButton) {
+      activeButton.classList.add("active");
     }
+    episodesGrid.innerHTML = "";
+    const tmdbEpisodes = await getTmdbSeasonEpisodes(
+      serie,
+      selectedSeason.numero,
+    );
+    const sortedEpisodes = [...selectedSeason.episodes]
+      .filter((episode) => episodeMatchesDetailLanguage(episode))
+      .sort((a, b) => a.numero - b.numero);
+    setText(
+      "seriesCount",
+      `${sortedEpisodes.length} épisode${sortedEpisodes.length > 1 ? "s" : ""}`,
+    );
 
-    const episodesPanel = document.getElementById('episodesPanel');
-    episodesPanel.innerHTML = '';
-
-    updateLanguageButtons();
-
-    const missingEpisodesButton = document.getElementById('missingEpisodesButton');
-    if (missingEpisodesButton) {
-        missingEpisodesButton.onclick = () => {
-            showMissingEpisodesOnly = !showMissingEpisodesOnly;
-            missingEpisodesButton.classList.toggle('active', showMissingEpisodesOnly);
-            renderSeason(currentSerie.saisons.find(s => s.numero === currentSeason));
-        };
-    }
-
-    const sortedSeasons = [...serie.saisons].sort((a, b) => a.numero - b.numero);
-    if (sortedSeasons.length === 0) {
-        setText('seriesCount', '0 épisode');
-        return;
-    }
-    const seasonsBar = document.createElement('div');
-    seasonsBar.className = 'seasons-bar';
-
-    const episodesGrid = document.createElement('div');
-    episodesGrid.className = 'episode-list';
-    episodesPanel.appendChild(seasonsBar);
-    episodesPanel.appendChild(episodesGrid);
-
-    async function renderSeason(selectedSeason) {
-        currentSeason = selectedSeason.numero;
-        seasonsBar.querySelectorAll('.season-button').forEach(button => {
-            button.classList.remove('active');
-        });
-        const activeButton = seasonsBar.querySelector(`[data-season="${selectedSeason.numero}"]`);
-        if (activeButton) {
-            activeButton.classList.add('active');
-        }
-        episodesGrid.innerHTML = '';
-        const tmdbEpisodes = await getTmdbSeasonEpisodes(serie, selectedSeason.numero);
-        const sortedEpisodes = [...selectedSeason.episodes].filter(episode => episodeMatchesDetailLanguage(episode)).sort((a, b) => a.numero - b.numero);
-        setText('seriesCount', `${sortedEpisodes.length} épisode${sortedEpisodes.length > 1 ? 's' : ''}`);
-
-        const allEpisodes = [];
-        for (const episode of sortedEpisodes) {
-            allEpisodes.push({
-                numero: episode.numero,
-                episode: episode,
-                tmdbEpisode: tmdbEpisodes.get(episode.numero)
-            });
-        }
-
-        for (const [episodeNumber, tmdbEpisode] of tmdbEpisodes) {
-            const existsLocally =
-                sortedEpisodes.some(
-                    episode => episode.numero === episodeNumber
-                );
-            if (existsLocally) {
-                continue;
-            }
-            allEpisodes.push({
-                numero: episodeNumber,
-                episode: {
-                    numero: episodeNumber,
-                    missing: true
-                },
-                tmdbEpisode: tmdbEpisode
-            });
-        }
-
-        allEpisodes.sort((a, b) => a.numero - b.numero);
-        for (const item of allEpisodes) {
-            if (showMissingEpisodesOnly && !item.episode.missing) { continue; }
-            episodesGrid.appendChild(
-                createEpisodeCard(
-                    serie,
-                    selectedSeason,
-                    item.episode,
-                    item.tmdbEpisode
-                )
-            );
-
-        }
+    const allEpisodes = [];
+    for (const episode of sortedEpisodes) {
+      allEpisodes.push({
+        numero: episode.numero,
+        episode: episode,
+        tmdbEpisode: tmdbEpisodes.get(episode.numero),
+      });
     }
 
-    const missingSeasonNumbers = new Set();
-    for (const saison of sortedSeasons) {
-        const tmdbEpisodes = await getTmdbSeasonEpisodes(serie, saison.numero);
-        const localEpisodeNumbers = new Set(saison.episodes.map(episode => episode.numero));
-        for (const episodeNumber of tmdbEpisodes.keys()) {
-            if (!localEpisodeNumbers.has(episodeNumber)) {
-                missingSeasonNumbers.add(saison.numero);
-                break;
-            }
-        }
+    for (const [episodeNumber, tmdbEpisode] of tmdbEpisodes) {
+      const existsLocally = sortedEpisodes.some(
+        (episode) => episode.numero === episodeNumber,
+      );
+      if (existsLocally) {
+        continue;
+      }
+      allEpisodes.push({
+        numero: episodeNumber,
+        episode: {
+          numero: episodeNumber,
+          missing: true,
+        },
+        tmdbEpisode: tmdbEpisode,
+      });
     }
 
-    sendMissingEpisodeFlags(serie.id, missingSeasonNumbers);
-    serie.hasMissingEpisodes = missingSeasonNumbers.size > 0;
-    for (const saison of serie.saisons) {
-        saison.hasMissingEpisodes = missingSeasonNumbers.has(saison.numero);
+    allEpisodes.sort((a, b) => a.numero - b.numero);
+    for (const item of allEpisodes) {
+      if (showMissingEpisodesOnly && !item.episode.missing) {
+        continue;
+      }
+      episodesGrid.appendChild(
+        createEpisodeCard(
+          serie,
+          selectedSeason,
+          item.episode,
+          item.tmdbEpisode,
+        ),
+      );
     }
+  }
 
-    for (const saison of sortedSeasons) {
-        const button = document.createElement('button');
-        button.className = 'season-button';
-        button.dataset.season = saison.numero;
-        button.textContent = `Saison ${saison.numero}`;
-        if (missingSeasonNumbers.has(saison.numero)) {
-            const dot = document.createElement('span');
-            dot.className = 'season-missing-dot';
-            button.appendChild(dot);
-        }
-        button.onclick = () => {
-            renderSeason(saison);
-        };
-        seasonsBar.appendChild(button);
+  const missingSeasonNumbers = new Set();
+  for (const saison of sortedSeasons) {
+    const tmdbEpisodes = await getTmdbSeasonEpisodes(serie, saison.numero);
+    const localEpisodeNumbers = new Set(
+      saison.episodes.map((episode) => episode.numero),
+    );
+    for (const episodeNumber of tmdbEpisodes.keys()) {
+      if (!localEpisodeNumbers.has(episodeNumber)) {
+        missingSeasonNumbers.add(saison.numero);
+        break;
+      }
     }
-    const selectedSeason = sortedSeasons.find(saison => saison.numero === requestedSeasonNumber) || sortedSeasons[0];
-    renderSeason(selectedSeason);
+  }
+
+  sendMissingEpisodeFlags(serie.id, missingSeasonNumbers);
+  serie.hasMissingEpisodes = missingSeasonNumbers.size > 0;
+  for (const saison of serie.saisons) {
+    saison.hasMissingEpisodes = missingSeasonNumbers.has(saison.numero);
+  }
+
+  for (const saison of sortedSeasons) {
+    const button = document.createElement("button");
+    button.className = "season-button";
+    button.dataset.season = saison.numero;
+    button.textContent = `Saison ${saison.numero}`;
+    if (missingSeasonNumbers.has(saison.numero)) {
+      const dot = document.createElement("span");
+      dot.className = "season-missing-dot";
+      button.appendChild(dot);
+    }
+    button.onclick = () => {
+      renderSeason(saison);
+    };
+    seasonsBar.appendChild(button);
+  }
+  const selectedSeason =
+    sortedSeasons.find((saison) => saison.numero === requestedSeasonNumber) ||
+    sortedSeasons[0];
+  renderSeason(selectedSeason);
 }
 
 function renderSerieInfoCard(serie) {
-    const card = document.getElementById('serieInfoCard');
-    if (!card) {
-        return;
-    }
-    const imageZone = card.querySelector('.serie-info-image');
-    imageZone.innerHTML = '';
-    imageZone.appendChild(createPosterContent(serie.image, serie.titre, serie.id));
-    setText('serieInfoTitle', serie.titreTmdb || serie.titre);
-    setText('serieInfoYear', serie.anneeTmdb || '');
-    setText('serieInfoDescription', serie.descriptionTmdb || 'Aucune description disponible.');
-    const button = document.getElementById('serieTmdbButton');
-    if (serie.tmdbId) {
-        button.textContent = 'TMDB';
-        button.onclick = () => {
-            window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
-        };
-    } else {
-        button.textContent = 'Associer TMDB';
-        button.onclick = () => {
-            showTmdbSerieSearch(serie);
-        };
-    }
-    card.classList.remove('hidden');
+  const card = document.getElementById("serieInfoCard");
+  if (!card) {
+    return;
+  }
+  const imageZone = card.querySelector(".serie-info-image");
+  imageZone.innerHTML = "";
+  imageZone.appendChild(
+    createPosterContent(serie.image, serie.titre, serie.id),
+  );
+  setText("serieInfoTitle", serie.titreTmdb || serie.titre);
+  setText("serieInfoYear", serie.anneeTmdb || "");
+  setText(
+    "serieInfoDescription",
+    serie.descriptionTmdb || "Aucune description disponible.",
+  );
+  const button = document.getElementById("serieTmdbButton");
+  if (serie.tmdbId) {
+    button.textContent = "TMDB";
+    button.onclick = () => {
+      window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
+    };
+  } else {
+    button.textContent = "Associer TMDB";
+    button.onclick = () => {
+      showTmdbSerieSearch(serie);
+    };
+  }
+  card.classList.remove("hidden");
 }
 
 function createEpisodeCard(serie, saison, episode, tmdbEpisode = null) {
+  const card = document.createElement("article");
+  card.className = "episode-card";
 
-    const card = document.createElement('article');
-    card.className = 'episode-card';
+  const imageZone = document.createElement("div");
+  imageZone.className = "episode-image-zone";
+  if (!episode.missing) {
+    imageZone.onclick = () => playEpisode(serie, saison, episode);
+  }
+  if (tmdbEpisode && tmdbEpisode.image) {
+    const img = document.createElement("img");
+    img.src = tmdbEpisode.image;
+    img.alt = tmdbEpisode.titre || `Épisode ${episode.numero}`;
+    imageZone.appendChild(img);
+  } else {
+    imageZone.appendChild(createMissingPoster(`Épisode ${episode.numero}`));
+  }
 
-    const imageZone = document.createElement('div');
-    imageZone.className = 'episode-image-zone';
-    if (!episode.missing) {
-        imageZone.onclick = () => playEpisode(serie, saison, episode);
-    }
-    if (tmdbEpisode && tmdbEpisode.image) {
-        const img = document.createElement('img');
-        img.src = tmdbEpisode.image;
-        img.alt = tmdbEpisode.titre || `Épisode ${episode.numero}`;
-        imageZone.appendChild(img);
-    } else {
-        imageZone.appendChild(createMissingPoster(`Épisode ${episode.numero}`));
-    }
-
-    if (episode.missing) {
-        const warningButton = document.createElement('button');
-        warningButton.className = 'episode-warning-button';
-        warningButton.innerHTML = '<span class="play-icon"></span>';
-        warningButton.title = 'Épisode absent du disque';
-        imageZone.appendChild(warningButton);
-    } else {
-        const playButton = document.createElement('button');
-        playButton.className = 'play-button';
-        playButton.innerHTML = '<span class="play-icon">▶</span>';
-        playButton.onclick = event => {
-            event.stopPropagation();
-            playEpisode(serie, saison, episode);
-        };
-        imageZone.appendChild(playButton);
-    }
-    const info = document.createElement('div');
-    info.className = 'episode-info';
-
-    const title = document.createElement('div');
-    title.className = 'episode-title';
-    title.textContent = tmdbEpisode && tmdbEpisode.titre ? `Épisode ${episode.numero} - ${tmdbEpisode.titre}` : `Épisode ${episode.numero}`;
-
-    const meta = document.createElement('div');
-    meta.className = 'episode-meta';
-
-    const metaParts = [];
-    if (tmdbEpisode && tmdbEpisode.dateDiffusion) {
-        metaParts.push(formatFrenchDate(tmdbEpisode.dateDiffusion));
-    }
-    if (tmdbEpisode && tmdbEpisode.duree) {
-        metaParts.push(`${tmdbEpisode.duree} min`);
-    }
-    meta.textContent = metaParts.join(' • ');
-    const description = document.createElement('div');
-    description.className = 'episode-description';
-    description.textContent = tmdbEpisode && tmdbEpisode.description ? tmdbEpisode.description : 'Aucune description disponible.';
-    info.appendChild(title);
-    info.appendChild(meta);
-    info.appendChild(description);
-    const actions = document.createElement('div');
-    actions.className = 'episode-actions';
-    const tmdbButton = document.createElement('button');
-    tmdbButton.className = 'tmdb-associate-button';
-    tmdbButton.textContent = 'TMDB';
-    tmdbButton.onclick = () => {
-        if (tmdbEpisode && tmdbEpisode.tmdbUrl) {
-            window.location.href = tmdbEpisode.tmdbUrl;
-        }
+  if (episode.missing) {
+    const warningButton = document.createElement("button");
+    warningButton.className = "episode-warning-button";
+    warningButton.innerHTML = '<span class="play-icon"></span>';
+    warningButton.title = "Épisode absent du disque";
+    imageZone.appendChild(warningButton);
+  } else {
+    const playButton = document.createElement("button");
+    playButton.className = "play-button";
+    playButton.innerHTML = '<span class="play-icon">▶</span>';
+    playButton.onclick = (event) => {
+      event.stopPropagation();
+      playEpisode(serie, saison, episode);
     };
-    actions.appendChild(tmdbButton);
-    card.appendChild(imageZone);
-    card.appendChild(info);
-    card.appendChild(actions);
-    return card;
+    imageZone.appendChild(playButton);
+  }
+  const info = document.createElement("div");
+  info.className = "episode-info";
+
+  const title = document.createElement("div");
+  title.className = "episode-title";
+  title.textContent =
+    tmdbEpisode && tmdbEpisode.titre
+      ? `Épisode ${episode.numero} - ${tmdbEpisode.titre}`
+      : `Épisode ${episode.numero}`;
+
+  const meta = document.createElement("div");
+  meta.className = "episode-meta";
+
+  const metaParts = [];
+  if (tmdbEpisode && tmdbEpisode.dateDiffusion) {
+    metaParts.push(formatFrenchDate(tmdbEpisode.dateDiffusion));
+  }
+  if (tmdbEpisode && tmdbEpisode.duree) {
+    metaParts.push(`${tmdbEpisode.duree} min`);
+  }
+  meta.textContent = metaParts.join(" • ");
+  const description = document.createElement("div");
+  description.className = "episode-description";
+  description.textContent =
+    tmdbEpisode && tmdbEpisode.description
+      ? tmdbEpisode.description
+      : "Aucune description disponible.";
+  info.appendChild(title);
+  info.appendChild(meta);
+  info.appendChild(description);
+  const actions = document.createElement("div");
+  actions.className = "episode-actions";
+  const tmdbButton = document.createElement("button");
+  tmdbButton.className = "tmdb-associate-button";
+  tmdbButton.textContent = "TMDB";
+  tmdbButton.onclick = () => {
+    if (tmdbEpisode && tmdbEpisode.tmdbUrl) {
+      window.location.href = tmdbEpisode.tmdbUrl;
+    }
+  };
+  actions.appendChild(tmdbButton);
+  card.appendChild(imageZone);
+  card.appendChild(info);
+  card.appendChild(actions);
+  return card;
 }

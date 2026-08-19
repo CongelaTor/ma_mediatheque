@@ -5,13 +5,13 @@
 //     "films": [],
 //     "series": []
 // }
-const fs = require('fs');
-const path = require('path');
-console.log('=== Ma médiathèque ===');
-const rootDir = path.join(__dirname, '..');
-const configPath = path.join(rootDir, 'config', 'config.json');
-const ignoreWordsPath = path.join(rootDir, 'config', 'ignoreWords.json');
-const catalogPath = path.join(rootDir, 'data', 'catalog.json');
+const fs = require("fs");
+const path = require("path");
+console.log("=== Ma médiathèque ===");
+const rootDir = path.join(__dirname, "..");
+const configPath = path.join(rootDir, "config", "config.json");
+const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
+const catalogPath = path.join(rootDir, "data", "catalog.json");
 const config = readJson(configPath);
 const ignoreWordsConfig = readJson(ignoreWordsPath);
 const existingCatalog = readJson(catalogPath);
@@ -21,10 +21,10 @@ const existingFilmByPath = buildExistingFilmByPath(existingCatalog);
 const existingEpisodeByPath = buildExistingEpisodeByPath(existingCatalog);
 const existingSerieByKey = buildExistingSerieByKey(existingCatalog);
 const syncedCatalog = {
-    version: existingCatalog.version || 1,
-    dateDernierScan: null,
-    films: [],
-    series: []
+  version: existingCatalog.version || 1,
+  dateDernierScan: null,
+  films: [],
+  series: [],
 };
 let totalVideos = 0;
 let totalNewFilms = 0;
@@ -32,43 +32,43 @@ let totalNewEpisodes = 0;
 let totalKeptFilms = 0;
 let totalKeptEpisodes = 0;
 for (const source of config.sources) {
-    console.log('');
-    console.log(`Scan de : ${source.path}`);
-    if (!fs.existsSync(source.path)) {
-        console.log(`Dossier introuvable : ${source.path}`);
-        continue;
+  console.log("");
+  console.log(`Scan de : ${source.path}`);
+  if (!fs.existsSync(source.path)) {
+    console.log(`Dossier introuvable : ${source.path}`);
+    continue;
+  }
+  const fichiers = scanDirectory(source.path, config.extensions);
+  console.log(`${fichiers.length} vidéo(s) trouvée(s)`);
+  totalVideos += fichiers.length;
+  for (const fichier of fichiers) {
+    const analyse = analyzeVideoFile(fichier, source);
+    if (analyse.type === "film") {
+      const result = syncFilm(syncedCatalog, analyse);
+      if (result === "new") {
+        totalNewFilms++;
+      }
+      if (result === "kept") {
+        totalKeptFilms++;
+      }
+    } else if (analyse.type === "serie") {
+      const result = syncEpisode(syncedCatalog, analyse);
+      if (result === "new") {
+        totalNewEpisodes++;
+      }
+      if (result === "kept") {
+        totalKeptEpisodes++;
+      }
     }
-    const fichiers = scanDirectory(source.path, config.extensions);
-    console.log(`${fichiers.length} vidéo(s) trouvée(s)`);
-    totalVideos += fichiers.length;
-    for (const fichier of fichiers) {
-        const analyse = analyzeVideoFile(fichier, source);
-        if (analyse.type === 'film') {
-            const result = syncFilm(syncedCatalog, analyse);
-            if (result === 'new') {
-                totalNewFilms++;
-            }
-            if (result === 'kept') {
-                totalKeptFilms++;
-            }
-        } else if (analyse.type === 'serie') {
-            const result = syncEpisode(syncedCatalog, analyse);
-            if (result === 'new') {
-                totalNewEpisodes++;
-            }
-            if (result === 'kept') {
-                totalKeptEpisodes++;
-            }
-        }
-    }
+  }
 }
 removeEmptySeries(syncedCatalog);
 recomputeDuplicates(syncedCatalog);
 sortCatalog(syncedCatalog);
 syncedCatalog.dateDernierScan = new Date().toISOString();
 writeJson(catalogPath, syncedCatalog);
-console.log('');
-console.log('Résumé :');
+console.log("");
+console.log("Résumé :");
 console.log(`Vidéos analysées : ${totalVideos}`);
 console.log(`Films conservés : ${totalKeptFilms}`);
 console.log(`Nouveaux films ajoutés : ${totalNewFilms}`);
@@ -76,398 +76,449 @@ console.log(`Épisodes conservés : ${totalKeptEpisodes}`);
 console.log(`Nouveaux épisodes ajoutés : ${totalNewEpisodes}`);
 console.log(`Films au catalogue : ${syncedCatalog.films.length}`);
 console.log(`Séries au catalogue : ${syncedCatalog.series.length}`);
-console.log('');
-console.log('catalog.json synchronisé.');
+console.log("");
+console.log("catalog.json synchronisé.");
 function readJson(filePath) {
-    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 function writeJson(filePath, data) {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 4), 'utf8');
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 4), "utf8");
 }
 function normalizeIgnoreWordsConfig(ignoreWordsConfig) {
-    ignoreWordsConfig.ignoreWords = normalizeList(ignoreWordsConfig.ignoreWords || []);
-    ignoreWordsConfig.patterns = normalizeList(ignoreWordsConfig.patterns || []);
+  ignoreWordsConfig.ignoreWords = normalizeList(
+    ignoreWordsConfig.ignoreWords || [],
+  );
+  ignoreWordsConfig.patterns = normalizeList(ignoreWordsConfig.patterns || []);
 }
 function normalizeList(list) {
-    return [...new Set(list.map(item => item.toUpperCase().trim()).filter(item => item.length > 0))].sort();
+  return [
+    ...new Set(
+      list
+        .map((item) => item.toUpperCase().trim())
+        .filter((item) => item.length > 0),
+    ),
+  ].sort();
 }
 function buildExistingFilmByPath(catalog) {
-    const map = new Map();
-    for (const film of catalog.films || []) {
-        if (film.fichier) {
-            map.set(pathKey(film.fichier), film);
-        }
+  const map = new Map();
+  for (const film of catalog.films || []) {
+    if (film.fichier) {
+      map.set(pathKey(film.fichier), film);
     }
-    return map;
+  }
+  return map;
 }
 function buildExistingEpisodeByPath(catalog) {
-    const map = new Map();
-    for (const serie of catalog.series || []) {
-        for (const saison of serie.saisons || []) {
-            for (const episode of saison.episodes || []) {
-                if (episode.fichier) {
-                    map.set(pathKey(episode.fichier), episode);
-                }
-            }
+  const map = new Map();
+  for (const serie of catalog.series || []) {
+    for (const saison of serie.saisons || []) {
+      for (const episode of saison.episodes || []) {
+        if (episode.fichier) {
+          map.set(pathKey(episode.fichier), episode);
         }
+      }
     }
-    return map;
+  }
+  return map;
 }
 function buildExistingSerieByKey(catalog) {
-    const map = new Map();
-    for (const serie of catalog.series || []) {
-        map.set(normalizeKey(serie.titre), serie);
-    }
-    return map;
+  const map = new Map();
+  for (const serie of catalog.series || []) {
+    map.set(normalizeKey(serie.titre), serie);
+  }
+  return map;
 }
 function scanDirectory(directory, extensions, results = []) {
-    const entries = fs.readdirSync(directory, { withFileTypes: true });
-    for (const entry of entries) {
-        const fullPath = path.join(directory, entry.name);
-        if (entry.isDirectory()) {
-            scanDirectory(fullPath, extensions, results);
-        } else {
-            const extension = path.extname(entry.name).toLowerCase();
-            if (extensions.includes(extension)) {
-                results.push({
-                    fichier: fullPath,
-                    nom: entry.name,
-                    taille: fs.statSync(fullPath).size
-                });
-            }
-        }
+  const entries = fs.readdirSync(directory, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      scanDirectory(fullPath, extensions, results);
+    } else {
+      const extension = path.extname(entry.name).toLowerCase();
+      if (extensions.includes(extension)) {
+        results.push({
+          fichier: fullPath,
+          nom: entry.name,
+          taille: fs.statSync(fullPath).size,
+        });
+      }
     }
-    return results;
+  }
+  return results;
 }
 function analyzeVideoFile(fichier, source) {
-    const nomSansExtension = path.parse(fichier.nom).name;
-    const episodeInfo = detectEpisode(nomSansExtension);
-    const annee = detectYear(nomSansExtension);
-    const langue = detectLanguage(fichier.fichier);
-    let titreBrut = nomSansExtension;
-    if (source.type === 'serie') {
-        titreBrut = getSeriesTitleFromPath(fichier.fichier, source.path) || nomSansExtension;
-    } else if (source.type === 'film' && annee) {
-        titreBrut = nomSansExtension.replace(String(annee), ' ');
-    }
-    const titre = cleanTitle(titreBrut);
+  const nomSansExtension = path.parse(fichier.nom).name;
+  const episodeInfo = detectEpisode(nomSansExtension);
+  const annee = detectYear(nomSansExtension);
+  const langue = detectLanguage(fichier.fichier);
+  let titreBrut = nomSansExtension;
+  if (source.type === "serie") {
+    titreBrut =
+      getSeriesTitleFromPath(fichier.fichier, source.path) || nomSansExtension;
+  } else if (source.type === "film" && annee) {
+    titreBrut = nomSansExtension.replace(String(annee), " ");
+  }
+  const titre = cleanTitle(titreBrut);
 
-    return {
-        type: source.type,
-        id: buildId(titre, annee),
-        titre: titre,
-        annee: annee,
-        langue: langue,
-        saison: episodeInfo ? episodeInfo.saison : null,
-        episode: episodeInfo ? episodeInfo.episode : null,
-        nomFichier: fichier.nom,
-        fichier: fichier.fichier,
-        taille: fichier.taille,
-        image: findAssociatedImage(fichier.fichier)
-    };
+  return {
+    type: source.type,
+    id: buildId(titre, annee),
+    titre: titre,
+    annee: annee,
+    langue: langue,
+    saison: episodeInfo ? episodeInfo.saison : null,
+    episode: episodeInfo ? episodeInfo.episode : null,
+    nomFichier: fichier.nom,
+    fichier: fichier.fichier,
+    taille: fichier.taille,
+    image: findAssociatedImage(fichier.fichier),
+  };
 }
 function getSeriesTitleFromPath(videoPath, sourcePath) {
-    const directory = path.dirname(videoPath);
-    const relativePath = path.relative(sourcePath, directory);
-    const parts = relativePath.split(path.sep).filter(part => part && part !== '.');
-    for (const part of parts) {
-        if (isSeriesTechnicalFolder(part)) {
-            continue;
-        }
-        return part;
+  const directory = path.dirname(videoPath);
+  const relativePath = path.relative(sourcePath, directory);
+  const parts = relativePath
+    .split(path.sep)
+    .filter((part) => part && part !== ".");
+  for (const part of parts) {
+    if (isSeriesTechnicalFolder(part)) {
+      continue;
     }
-    return null;
+    return part;
+  }
+  return null;
 }
 function isSeriesTechnicalFolder(value) {
-    const normalized = cleanTitle(value).toUpperCase();
-    if (['VO', 'VF', 'VOST', 'VOSTFR'].includes(normalized)) {
-        return true;
-    }
-    if (/^S\d{1,2}/i.test(normalized)) {
-        return true;
-    }
-    if (/^SAISON\s+\d+/i.test(normalized)) {
-        return true;
-    }
-    return false;
+  const normalized = cleanTitle(value).toUpperCase();
+  if (["VO", "VF", "VOST", "VOSTFR"].includes(normalized)) {
+    return true;
+  }
+  if (/^S\d{1,2}/i.test(normalized)) {
+    return true;
+  }
+  if (/^SAISON\s+\d+/i.test(normalized)) {
+    return true;
+  }
+  return false;
 }
 function detectLanguage(filePath) {
-    const upperPath = filePath.toUpperCase();
-    const match = upperPath.match(/(^|[^A-Z0-9])(VOSTFR|VOST|VF|VO)([^A-Z0-9]|$)/);
-    if (!match) {
-        return 'TBD';
-    }
-    return match[2];
+  const upperPath = filePath.toUpperCase();
+  const match = upperPath.match(
+    /(^|[^A-Z0-9])(VOSTFR|VOST|VF|VO)([^A-Z0-9]|$)/,
+  );
+  if (!match) {
+    return "TBD";
+  }
+  return match[2];
 }
 function detectYear(value) {
-    const matchAnnee = value.match(/\b(19|20)\d{2}\b/);
-    if (!matchAnnee) {
-        return null;
-    }
-    return parseInt(matchAnnee[0], 10);
+  const matchAnnee = value.match(/\b(19|20)\d{2}\b/);
+  if (!matchAnnee) {
+    return null;
+  }
+  return parseInt(matchAnnee[0], 10);
 }
 function detectEpisode(value) {
-    const matchSxxExx = value.match(/S(\d{2})E(\d{2})/i);
-    if (matchSxxExx) {
-        return {
-            pattern: matchSxxExx[0],
-            index: matchSxxExx.index,
-            saison: parseInt(matchSxxExx[1], 10),
-            episode: parseInt(matchSxxExx[2], 10)
-        };
-    }
-    const matchX = value.match(/(\d)x(\d{2})/i);
-    if (matchX) {
-        return {
-            pattern: matchX[0],
-            index: matchX.index,
-            saison: parseInt(matchX[1], 10),
-            episode: parseInt(matchX[2], 10)
-        };
-    }
-    const match3Digits = value.match(/\b([1-9])(\d{2})\b/);
-    if (match3Digits) {
-        return {
-            pattern: match3Digits[0],
-            index: match3Digits.index,
-            saison: parseInt(match3Digits[1], 10),
-            episode: parseInt(match3Digits[2], 10)
-        };
-    }
-    return null;
+  const matchSxxExx = value.match(/S(\d{2})E(\d{2})/i);
+  if (matchSxxExx) {
+    return {
+      pattern: matchSxxExx[0],
+      index: matchSxxExx.index,
+      saison: parseInt(matchSxxExx[1], 10),
+      episode: parseInt(matchSxxExx[2], 10),
+    };
+  }
+  const matchX = value.match(/(\d)x(\d{2})/i);
+  if (matchX) {
+    return {
+      pattern: matchX[0],
+      index: matchX.index,
+      saison: parseInt(matchX[1], 10),
+      episode: parseInt(matchX[2], 10),
+    };
+  }
+  const match3Digits = value.match(/\b([1-9])(\d{2})\b/);
+  if (match3Digits) {
+    return {
+      pattern: match3Digits[0],
+      index: match3Digits.index,
+      saison: parseInt(match3Digits[1], 10),
+      episode: parseInt(match3Digits[2], 10),
+    };
+  }
+  return null;
 }
 function cleanTitle(value) {
-    value = value.replace(/\[[^\]]*\]/g, ' ').replace(/^\d+\s+(.+)$/g, '$1').replace(/\s+/g, ' ').trim();
-    const words = cleanSeparators(value).split(' ').filter(word => word.trim().length > 0);
-    const cleanedWords = [];
-    for (const word of words) {
-        const upperWord = word.toUpperCase();
-        if (ignoreWordsConfig.ignoreWords.includes(upperWord)) {
-            continue;
-        }
-        if (wordMatchesPattern(upperWord, ignoreWordsConfig.patterns)) {
-            continue;
-        }
-        cleanedWords.push(word);
+  value = value
+    .replace(/\[[^\]]*\]/g, " ")
+    .replace(/^\d+\s+(.+)$/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+  const words = cleanSeparators(value)
+    .split(" ")
+    .filter((word) => word.trim().length > 0);
+  const cleanedWords = [];
+  for (const word of words) {
+    const upperWord = word.toUpperCase();
+    if (ignoreWordsConfig.ignoreWords.includes(upperWord)) {
+      continue;
     }
-    return cleanedWords.join(' ').trim();
+    if (wordMatchesPattern(upperWord, ignoreWordsConfig.patterns)) {
+      continue;
+    }
+    cleanedWords.push(word);
+  }
+  return cleanedWords.join(" ").trim();
 }
 function cleanSeparators(value) {
-    return value.replace(/[._-]/g, ' ').replace(/\s+/g, ' ').trim();
+  return value.replace(/[._-]/g, " ").replace(/\s+/g, " ").trim();
 }
 function wordMatchesPattern(word, patterns) {
-    for (const pattern of patterns) {
-        const regex = patternToRegex(pattern);
-        if (regex.test(word)) {
-            return true;
-        }
+  for (const pattern of patterns) {
+    const regex = patternToRegex(pattern);
+    if (regex.test(word)) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 function patternToRegex(pattern) {
-    const escapedPattern = pattern.replace(/[.*+^${}()|[\]\\]/g, '\\$&').replace(/\?/g, '.');
-    return new RegExp(`^${escapedPattern}$`, 'i');
+  const escapedPattern = pattern
+    .replace(/[.*+^${}()|[\]\\]/g, "\\$&")
+    .replace(/\?/g, ".");
+  return new RegExp(`^${escapedPattern}$`, "i");
 }
 function buildId(titre, annee) {
-    let base = removeAccents(titre).toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
-    if (annee) {
-        base += '_' + annee;
-    }
-    return base;
+  let base = removeAccents(titre)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+  if (annee) {
+    base += "_" + annee;
+  }
+  return base;
 }
 function removeAccents(value) {
-    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 function findAssociatedImage(videoPath) {
-    const directory = path.dirname(videoPath);
-    const baseName = path.parse(videoPath).name;
-    for (const extension of config.imageExtensions) {
-        const imagePath = path.join(directory, baseName + extension);
-        if (fs.existsSync(imagePath)) {
-            return imagePath;
-        }
+  const directory = path.dirname(videoPath);
+  const baseName = path.parse(videoPath).name;
+  for (const extension of config.imageExtensions) {
+    const imagePath = path.join(directory, baseName + extension);
+    if (fs.existsSync(imagePath)) {
+      return imagePath;
     }
-    return null;
+  }
+  return null;
 }
 function syncFilm(catalog, analyse) {
-    const existing = existingFilmByPath.get(pathKey(analyse.fichier));
-    if (existing) {
-        catalog.films.push({
-            ...existing,
-            id: existing.id || analyse.id,
-            titre: existing.titre || analyse.titre,
-            annee: existing.annee ?? analyse.annee,
-            langue: existing.langue ?? analyse.langue,
-            fichier: analyse.fichier,
-            nomFichier: analyse.nomFichier,
-            taille: analyse.taille,
-            image: existing.image || analyse.image
-        });
-        return 'kept';
-    }
+  const existing = existingFilmByPath.get(pathKey(analyse.fichier));
+  if (existing) {
     catalog.films.push({
-        id: analyse.id,
+      ...existing,
+      id: existing.id || analyse.id,
+      titre: existing.titre || analyse.titre,
+      annee: existing.annee ?? analyse.annee,
+      langue: existing.langue ?? analyse.langue,
+      fichier: analyse.fichier,
+      nomFichier: analyse.nomFichier,
+      taille: analyse.taille,
+      image: existing.image || analyse.image,
+    });
+    return "kept";
+  }
+  catalog.films.push({
+    id: analyse.id,
+    titre: analyse.titre,
+    annee: analyse.annee,
+    genre: null,
+    langue: analyse.langue,
+    fichier: analyse.fichier,
+    nomFichier: analyse.nomFichier,
+    taille: analyse.taille,
+    image: analyse.image,
+    imdbId: null,
+    tmdbId: null,
+    tmdbUrl: null,
+    doublonExact: false,
+    doublonProbable: false,
+    groupeDoublon: null,
+    dateAjout: new Date().toISOString(),
+  });
+  return "new";
+}
+function syncEpisode(catalog, analyse) {
+  if (!analyse.saison || !analyse.episode) {
+    return false;
+  }
+  const serieKey = normalizeKey(analyse.titre);
+  let serie = catalog.series.find(
+    (item) => normalizeKey(item.titre) === serieKey,
+  );
+  if (!serie) {
+    const existingSerie = existingSerieByKey.get(serieKey);
+    if (existingSerie) {
+      const { saisons, ...serieMetadata } = existingSerie;
+      serie = {
+        ...serieMetadata,
+        id: existingSerie.id || buildId(analyse.titre, null),
+        titre: existingSerie.titre || analyse.titre,
+        saisons: [],
+      };
+    } else {
+      serie = {
+        id: buildId(analyse.titre, null),
         titre: analyse.titre,
-        annee: analyse.annee,
-        genre: null,
-        langue: analyse.langue,
-        fichier: analyse.fichier,
-        nomFichier: analyse.nomFichier,
-        taille: analyse.taille,
-        image: analyse.image,
+        image: null,
         imdbId: null,
         tmdbId: null,
         tmdbUrl: null,
-        doublonExact: false,
-        doublonProbable: false,
-        groupeDoublon: null,
-        dateAjout: new Date().toISOString()
-    });
-    return 'new';
-}
-function syncEpisode(catalog, analyse) {
-    if (!analyse.saison || !analyse.episode) {
-        return false;
+        saisons: [],
+        dateAjout: new Date().toISOString(),
+      };
     }
-    const serieKey = normalizeKey(analyse.titre);
-    let serie = catalog.series.find(item => normalizeKey(item.titre) === serieKey);
-    if (!serie) {
-        const existingSerie = existingSerieByKey.get(serieKey);
-        if (existingSerie) {
-            const { saisons, ...serieMetadata } = existingSerie;
-            serie = {
-                ...serieMetadata,
-                id: existingSerie.id || buildId(analyse.titre, null),
-                titre: existingSerie.titre || analyse.titre,
-                saisons: []
-            };
-        } else {
-            serie = {
-                id: buildId(analyse.titre, null),
-                titre: analyse.titre,
-                image: null,
-                imdbId: null,
-                tmdbId: null,
-                tmdbUrl: null,
-                saisons: [],
-                dateAjout: new Date().toISOString()
-            };
-        }
-        catalog.series.push(serie);
-    }
-    let saison = serie.saisons.find(item => item.numero === analyse.saison);
-    if (!saison) {
-        saison = {
-            numero: analyse.saison,
-            episodes: []
-        };
-        serie.saisons.push(saison);
-    }
-    const existing = existingEpisodeByPath.get(pathKey(analyse.fichier));
-    if (existing) {
-        saison.episodes.push({
-            ...existing,
-            numero: analyse.episode,
-            langue: existing.langue ?? analyse.langue,
-            fichier: analyse.fichier,
-            nomFichier: analyse.nomFichier,
-            taille: analyse.taille
-        });
-        return 'kept';
-    }
+    catalog.series.push(serie);
+  }
+  let saison = serie.saisons.find((item) => item.numero === analyse.saison);
+  if (!saison) {
+    saison = {
+      numero: analyse.saison,
+      episodes: [],
+    };
+    serie.saisons.push(saison);
+  }
+  const existing = existingEpisodeByPath.get(pathKey(analyse.fichier));
+  if (existing) {
     saison.episodes.push({
-        numero: analyse.episode,
-        langue: analyse.langue,
-        fichier: analyse.fichier,
-        nomFichier: analyse.nomFichier,
-        taille: analyse.taille,
-        doublonExact: false,
-        doublonProbable: false,
-        dateAjout: new Date().toISOString()
+      ...existing,
+      numero: analyse.episode,
+      langue: existing.langue ?? analyse.langue,
+      fichier: analyse.fichier,
+      nomFichier: analyse.nomFichier,
+      taille: analyse.taille,
     });
-    return 'new';
+    return "kept";
+  }
+  saison.episodes.push({
+    numero: analyse.episode,
+    langue: analyse.langue,
+    fichier: analyse.fichier,
+    nomFichier: analyse.nomFichier,
+    taille: analyse.taille,
+    doublonExact: false,
+    doublonProbable: false,
+    dateAjout: new Date().toISOString(),
+  });
+  return "new";
 }
 function removeEmptySeries(catalog) {
-    catalog.series = catalog.series.filter(serie => {
-        serie.saisons = serie.saisons.filter(saison => saison.episodes.length > 0);
-        return serie.saisons.length > 0;
-    });
+  catalog.series = catalog.series.filter((serie) => {
+    serie.saisons = serie.saisons.filter(
+      (saison) => saison.episodes.length > 0,
+    );
+    return serie.saisons.length > 0;
+  });
 }
 function recomputeDuplicates(catalog) {
-    for (const film of catalog.films) {
-        film.doublonExact = false;
-        film.doublonProbable = false;
-        film.groupeDoublon = null;
+  for (const film of catalog.films) {
+    film.doublonExact = false;
+    film.doublonProbable = false;
+    film.groupeDoublon = null;
+  }
+  for (let index = 0; index < catalog.films.length; index++) {
+    for (
+      let compareIndex = index + 1;
+      compareIndex < catalog.films.length;
+      compareIndex++
+    ) {
+      const film = catalog.films[index];
+      const other = catalog.films[compareIndex];
+      const sameFileName =
+        film.nomFichier &&
+        other.nomFichier &&
+        film.nomFichier.toLowerCase() === other.nomFichier.toLowerCase();
+      const sameSize = film.taille === other.taille;
+      const sameTitle = normalizeKey(film.titre) === normalizeKey(other.titre);
+      const sameYear =
+        film.annee === other.annee ||
+        film.annee === null ||
+        other.annee === null;
+      if (sameFileName && sameSize) {
+        film.doublonExact = true;
+        other.doublonExact = true;
+      }
+      if (sameTitle && sameYear) {
+        const group = normalizeKey(film.titre);
+        film.doublonProbable = true;
+        other.doublonProbable = true;
+        film.groupeDoublon = group;
+        other.groupeDoublon = group;
+      }
     }
-    for (let index = 0; index < catalog.films.length; index++) {
-        for (let compareIndex = index + 1; compareIndex < catalog.films.length; compareIndex++) {
-            const film = catalog.films[index];
-            const other = catalog.films[compareIndex];
-            const sameFileName = film.nomFichier && other.nomFichier && film.nomFichier.toLowerCase() === other.nomFichier.toLowerCase();
-            const sameSize = film.taille === other.taille;
-            const sameTitle = normalizeKey(film.titre) === normalizeKey(other.titre);
-            const sameYear = film.annee === other.annee || film.annee === null || other.annee === null;
-            if (sameFileName && sameSize) {
-                film.doublonExact = true;
-                other.doublonExact = true;
-            }
-            if (sameTitle && sameYear) {
-                const group = normalizeKey(film.titre);
-                film.doublonProbable = true;
-                other.doublonProbable = true;
-                film.groupeDoublon = group;
-                other.groupeDoublon = group;
-            }
-        }
+  }
+  for (const serie of catalog.series) {
+    for (const saison of serie.saisons) {
+      for (const episode of saison.episodes) {
+        episode.doublonExact = false;
+        episode.doublonProbable = false;
+      }
     }
-    for (const serie of catalog.series) {
-        for (const saison of serie.saisons) {
-            for (const episode of saison.episodes) {
-                episode.doublonExact = false;
-                episode.doublonProbable = false;
-            }
-        }
-        const allEpisodes = [];
-        for (const saison of serie.saisons) {
-            for (const episode of saison.episodes) {
-                allEpisodes.push({ saison, episode });
-            }
-        }
-        for (let index = 0; index < allEpisodes.length; index++) {
-            for (let compareIndex = index + 1; compareIndex < allEpisodes.length; compareIndex++) {
-                const current = allEpisodes[index];
-                const other = allEpisodes[compareIndex];
-                const sameFileName = current.episode.nomFichier && other.episode.nomFichier && current.episode.nomFichier.toLowerCase() === other.episode.nomFichier.toLowerCase();
-                const sameSize = current.episode.taille === other.episode.taille;
-                const sameEpisode = current.saison.numero === other.saison.numero && current.episode.numero === other.episode.numero;
-                if (sameFileName && sameSize) {
-                    current.episode.doublonExact = true;
-                    other.episode.doublonExact = true;
-                }
-                if (sameEpisode) {
-                    current.episode.doublonProbable = true;
-                    other.episode.doublonProbable = true;
-                }
-            }
-        }
+    const allEpisodes = [];
+    for (const saison of serie.saisons) {
+      for (const episode of saison.episodes) {
+        allEpisodes.push({ saison, episode });
+      }
     }
+    for (let index = 0; index < allEpisodes.length; index++) {
+      for (
+        let compareIndex = index + 1;
+        compareIndex < allEpisodes.length;
+        compareIndex++
+      ) {
+        const current = allEpisodes[index];
+        const other = allEpisodes[compareIndex];
+        const sameFileName =
+          current.episode.nomFichier &&
+          other.episode.nomFichier &&
+          current.episode.nomFichier.toLowerCase() ===
+            other.episode.nomFichier.toLowerCase();
+        const sameSize = current.episode.taille === other.episode.taille;
+        const sameEpisode =
+          current.saison.numero === other.saison.numero &&
+          current.episode.numero === other.episode.numero;
+        if (sameFileName && sameSize) {
+          current.episode.doublonExact = true;
+          other.episode.doublonExact = true;
+        }
+        if (sameEpisode) {
+          current.episode.doublonProbable = true;
+          other.episode.doublonProbable = true;
+        }
+      }
+    }
+  }
 }
 function sortCatalog(catalog) {
-    catalog.films.sort((a, b) => a.titre.localeCompare(b.titre, 'fr'));
-    catalog.series.sort((a, b) => a.titre.localeCompare(b.titre, 'fr'));
-    for (const serie of catalog.series) {
-        serie.saisons.sort((a, b) => a.numero - b.numero);
-        for (const saison of serie.saisons) {
-            saison.episodes.sort((a, b) => a.numero - b.numero);
-        }
+  catalog.films.sort((a, b) => a.titre.localeCompare(b.titre, "fr"));
+  catalog.series.sort((a, b) => a.titre.localeCompare(b.titre, "fr"));
+  for (const serie of catalog.series) {
+    serie.saisons.sort((a, b) => a.numero - b.numero);
+    for (const saison of serie.saisons) {
+      saison.episodes.sort((a, b) => a.numero - b.numero);
     }
+  }
 }
 function normalizeKey(value) {
-    return removeAccents(value).toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+  return removeAccents(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
 }
 function samePath(path1, path2) {
-    return pathKey(path1) === pathKey(path2);
+  return pathKey(path1) === pathKey(path2);
 }
 function pathKey(value) {
-    return path.normalize(value).toLowerCase();
+  return path.normalize(value).toLowerCase();
 }
