@@ -32,6 +32,10 @@ http.createServer((request, response) => {
                 saveSerieTmdbData(data, response);
                 return;
             }
+            if (request.url === '/save-missing-episode-flags') {
+                saveMissingEpisodeFlags(data, response);
+                return;
+            }
             if (request.url === '/refresh-catalog') {
                 refreshCatalog(response);
                 return;
@@ -110,4 +114,33 @@ function refreshCatalog(response) {
             response.end(stdout || 'Catalogue synchronisé');
         }
     );
+}
+
+function saveMissingEpisodeFlags(data, response) {
+    console.log('SAVE MISSING EPISODES');
+    console.log(data);
+    const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+    const serie = catalog.series.find(item => item.id === data.serieId);
+    if (!serie) {
+        response.writeHead(404, {
+            'Content-Type': 'text/plain; charset=utf-8'
+        });
+        response.end('Série introuvable dans catalog.json');
+        return;
+    }
+    let serieHasMissingEpisodes = false;
+    for (const saison of serie.saisons) {
+        const hasMissingEpisodes = data.missingSeasonNumbers.includes(saison.numero);
+        saison.hasMissingEpisodes = hasMissingEpisodes;
+        if (hasMissingEpisodes) {
+            serieHasMissingEpisodes = true;
+        }
+    }
+    serie.hasMissingEpisodes = serieHasMissingEpisodes;
+    console.log(JSON.stringify(serie, null, 4));
+    fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), 'utf8');
+    response.writeHead(200, {
+        'Content-Type': 'text/plain; charset=utf-8'
+    });
+    response.end('Indicateurs épisodes manquants enregistrés');
 }

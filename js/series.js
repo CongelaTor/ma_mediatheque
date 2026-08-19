@@ -126,6 +126,11 @@ function createSerieCard(serie) {
             serie.id
         )
     );
+    if (serie.hasMissingEpisodes) {
+        const missingDot = document.createElement('span');
+        missingDot.className = 'serie-missing-dot';
+        posterZone.appendChild(missingDot);
+    }
     card.appendChild(posterZone);
     return card;
 }

@@ -13,7 +13,21 @@ async function initSerieDetailPage() {
     }
     showSerieDetails(serie);
 }
-function showSerieDetails(serie, requestedSeasonNumber = null) {
+
+async function sendMissingEpisodeFlags(serieId, missingSeasonNumbers) {
+    await fetch('http://localhost:9876/save-missing-episode-flags', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            serieId: serieId,
+            missingSeasonNumbers: [...missingSeasonNumbers]
+        })
+    });
+}
+
+async function showSerieDetails(serie, requestedSeasonNumber = null) {
     currentSerie = serie;
     const serieLanguages = getSerieLanguages(serie);
     if (activeSeriesLanguages.size === 1) {
@@ -102,11 +116,34 @@ function showSerieDetails(serie, requestedSeasonNumber = null) {
         }
     }
 
+    const missingSeasonNumbers = new Set();
+    for (const saison of sortedSeasons) {
+        const tmdbEpisodes = await getTmdbSeasonEpisodes(serie, saison.numero);
+        const localEpisodeNumbers = new Set(saison.episodes.map(episode => episode.numero));
+        for (const episodeNumber of tmdbEpisodes.keys()) {
+            if (!localEpisodeNumbers.has(episodeNumber)) {
+                missingSeasonNumbers.add(saison.numero);
+                break;
+            }
+        }
+    }
+    
+    sendMissingEpisodeFlags(serie.id, missingSeasonNumbers);
+    serie.hasMissingEpisodes = missingSeasonNumbers.size > 0;
+    for (const saison of serie.saisons) {
+        saison.hasMissingEpisodes = missingSeasonNumbers.has(saison.numero);
+    }
+
     for (const saison of sortedSeasons) {
         const button = document.createElement('button');
         button.className = 'season-button';
         button.dataset.season = saison.numero;
         button.textContent = `Saison ${saison.numero}`;
+        if (missingSeasonNumbers.has(saison.numero)) {
+            const dot = document.createElement('span');
+            dot.className = 'season-missing-dot';
+            button.appendChild(dot);
+        }
         button.onclick = () => {
             renderSeason(saison);
         };

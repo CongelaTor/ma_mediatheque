@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-08-19T10:00:06.607Z",
+    "dateDernierScan": "2026-08-19T12:17:22.954Z",
     "films": [
         {
             "id": "_2008",
@@ -2431,6 +2431,7 @@
             "titreTmdb": "Agent X",
             "anneeTmdb": "2015",
             "descriptionTmdb": "Première femme Vice-Présidente des Etats-Unis, Natalie Maccabee découvre que son statut lui confère le pouvoir d'intervenir en temps de crise pour protéger son pays. Pour accomplir ce devoir en toute discrétion, elle a à sa disposition un mystérieux Agent X...",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -2550,6 +2551,7 @@
             "titreTmdb": "Almost Paradise",
             "anneeTmdb": "2020",
             "descriptionTmdb": "Alex Walker, un des meilleurs agents de la DEA, a été contraint de prendre une retraite anticipée. La trahison de son partenaire et son hypertension l'ont amené à s'expatrier sur une petite île de l'archipel des Philippines où il est le gérant d'une boutique de souvenirs dans un hôtel de luxe. Si le cadre idyllique séduit les riches et les puissants, il attire aussi l'élite des criminels venus des quatre coins du monde. Malgré tous ses efforts pour mener une vie tranquille, Alex n'a pas son pareil pour se retrouver dans les situations les plus périlleuses. Et il aime ça !",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -2669,6 +2671,7 @@
             "titreTmdb": "A.P.B. : Alerte d'urgence",
             "anneeTmdb": "2017",
             "descriptionTmdb": "Après avoir été aux premières loges d'un crime violent, un génie milliardaire rachète un commissariat de police délaissé pour mettre en place une force de police privée plus efficace, renforcée par de nouveaux outils high tech et des idées novatrices.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -2808,6 +2811,7 @@
             "titreTmdb": "Blindspot",
             "anneeTmdb": "2015",
             "descriptionTmdb": "Une jeune femme amnésique est retrouvée totalement nue en plein milieu de Times Square à New York, recouverte de tatouages mystérieux, fraîchement réalisés. Un agent du FBI, chargé de l'enquête, suit les indices dispersés sur son corps, qui révèlent bientôt une conspiration de grande ampleur...",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -3136,6 +3140,36 @@
                             "doublonExact": false,
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:04.956Z"
+                        },
+                        {
+                            "numero": 10,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Blindspot\\Saison 2\\Blindspot.S02E10.FASTSUB.VOSTFR.HDTV.x264-FDS.flv",
+                            "nomFichier": "Blindspot.S02E10.FASTSUB.VOSTFR.HDTV.x264-FDS.flv",
+                            "taille": 196844281,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.105Z"
+                        },
+                        {
+                            "numero": 11,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Blindspot\\Saison 2\\Blindspot.S02E11.FASTSUB.VOSTFR.HDTV.XviD.flv",
+                            "nomFichier": "Blindspot.S02E11.FASTSUB.VOSTFR.HDTV.XviD.flv",
+                            "taille": 177063903,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.108Z"
+                        },
+                        {
+                            "numero": 12,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Blindspot\\Saison 2\\Blindspot.S02E12.FASTSUB.VOSTFR.HDTV.x264-FDS.flv",
+                            "nomFichier": "Blindspot.S02E12.FASTSUB.VOSTFR.HDTV.x264-FDS.flv",
+                            "taille": 177002017,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.109Z"
                         },
                         {
                             "numero": 13,
@@ -3877,6 +3911,7 @@
             "titreTmdb": "Burn Notice",
             "anneeTmdb": "2007",
             "descriptionTmdb": "Lorsqu'un agent secret est viré, il ne reçoit pas une lettre des ressources humaines, mais une \"Burn Notice\". Sans en connaître la raison, l'ex-espion Michael Weston en a été victime et le gouvernement en a fait un indésirable. Aidé de son ex petite amie et de son ancien partenaire, Michael cherche à savoir pourquoi il a été mis sur la touche, pourquoi il a été ainsi éliminé. Pour parvenir à ses fins, il ne peut employer les méthodes habituelles et doit éviter à tout prix d'attirer l'attention de ses anciens collègues espions. Afin de financer son enquête personnelle, il propose ses services à ceux que le police ne peut pas, ou ne veut pas, aider...",
+            "hasMissingEpisodes": true,
             "saisons": [
                 {
                     "numero": 1,
@@ -5006,6 +5041,7 @@
             "titreTmdb": "Covert Affairs",
             "anneeTmdb": "2010",
             "descriptionTmdb": "Une jeune stagiaire polyglotte de la CIA, Annie Walker, est subitement promue agent de terrain. Alors qu'elle pense le devoir à ses capacités linguistiques, la véritable raison semble être pour la CIA d'attirer et de capturer Ben, l'homme dont elle était tombée amoureuse, qui lui a brisé le cœur, et dont elle ignore finalement tout. Pour l'aider dans ses nouvelles fonctions, elle est épaulée par August « Auggie » Anderson, un officier de la CIA ayant perdu la vue en Irak, toujours prêt à l'aider et l'appuyer, et de Jai Willcox, fils d'un ancien ponte de la CIA.",
+            "hasMissingEpisodes": true,
             "saisons": [
                 {
                     "numero": 1,
@@ -5785,6 +5821,7 @@
             "titreTmdb": "Cameron Black : L'Illusionniste",
             "anneeTmdb": "2018",
             "descriptionTmdb": "Cameron Black est le plus grand illusionniste du monde. Au moins, c'est ainsi que les gens le considéraient avant que son plus grand secret ne soit révélé et que sa carrière ne soit détruite. Pire encore, Cameron a de bonnes raisons de croire que ce n'était pas un accident.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -6064,6 +6101,7 @@
             "titreTmdb": "Frequency",
             "anneeTmdb": "2016",
             "descriptionTmdb": "Une jeune femme, inspecteur de police, découvre qu'elle peut communiquer  avec son père, mort 20 ans plus tôt, grâce à un transmetteur de radio.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -6213,6 +6251,7 @@
             "titreTmdb": "Hawkeye",
             "anneeTmdb": "2021",
             "descriptionTmdb": "L’ancien Avenger Clint Barton a une mission apparemment simple : retourner dans sa famille pour Noël. Possible ? Peut-être avec l’aide de Kate Bishop, une archère de 22 ans qui rêve de devenir une super-héroïne. Ils vont devoir faire équipe alors qu’une présence du passé de Barton menace de faire dérailler l’esprit festif.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -6292,6 +6331,7 @@
             "titreTmdb": "Human Target : La Cible",
             "anneeTmdb": "2010",
             "descriptionTmdb": "Christopher Chance est un mystérieux garde du corps qui travaille à son compte et qui prend différentes identités afin de protéger ses clients en danger de mort.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -6566,6 +6606,7 @@
             "titreTmdb": "Legends",
             "anneeTmdb": "2014",
             "descriptionTmdb": "Martin Odum, agent de la CIA, a un don pour les \"légendes\", c'est-à-dire les fausses identités. Il est ainsi envoyé dans une grande variété de missions et finit par se demander si sa propre identité ne serait pas, elle aussi, une légende...",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -6790,6 +6831,7 @@
             "titreTmdb": "L'Arme fatale",
             "anneeTmdb": "2016",
             "descriptionTmdb": "Martin Riggs, flic texan et ancien de la Marine, perd sa femme et son bébé et déménage à Los Angeles pour repartir de zéro. Il devient le co-équipier du détective Roger Murtaugh, qui a récemment subi une crise cardiaque « bénigne » et doit à tout prix éviter les situations de stress. Un duo de choc qui risque de faire des étincelles.Adaptation de la célèbre franchise cinématographique L'Arme fatale avec Mel Gibson et Danny Glover.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -6797,182 +6839,182 @@
                         {
                             "numero": 1,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E01.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E01.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E01 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E01 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
                             "taille": 419683722,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.362Z"
+                            "dateAjout": "2026-08-19T12:09:55.092Z"
                         },
                         {
                             "numero": 2,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E02.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E02.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E02 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E02 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
                             "taille": 368004922,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.363Z"
+                            "dateAjout": "2026-08-19T12:09:55.093Z"
                         },
                         {
                             "numero": 3,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E03.SUBFRENCH.HDTV.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S01E03.SUBFRENCH.HDTV.XviD-EXTREME.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E03 VOSTFR HDTV XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S01E03 VOSTFR HDTV XviD-EXTREME.avi",
                             "taille": 375761872,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.364Z"
+                            "dateAjout": "2026-08-19T12:09:55.093Z"
                         },
                         {
                             "numero": 4,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E04.SUBFRENCH.WEB-DL.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S01E04.SUBFRENCH.WEB-DL.XviD-ZT.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E04 VOSTFR WEB-DL XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S01E04 VOSTFR WEB-DL XviD-ZT.avi",
                             "taille": 381786492,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.365Z"
+                            "dateAjout": "2026-08-19T12:09:55.094Z"
                         },
                         {
                             "numero": 5,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E05.SUBFRENCH.WEB-DL.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S01E05.SUBFRENCH.WEB-DL.XviD-ZT.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E05 VOSTFR WEB-DL XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S01E05 VOSTFR WEB-DL XviD-ZT.avi",
                             "taille": 383297272,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.366Z"
+                            "dateAjout": "2026-08-19T12:09:55.094Z"
                         },
                         {
                             "numero": 6,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E06.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.ws.avi",
-                            "nomFichier": "Lethal.Weapon.S01E06.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.ws.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E06 VOSTFR VOSTFR HDTV XviD-ZT www torrent9 ws.avi",
+                            "nomFichier": "Lethal Weapon S01E06 VOSTFR VOSTFR HDTV XviD-ZT www torrent9 ws.avi",
                             "taille": 385820408,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.380Z"
+                            "dateAjout": "2026-08-19T12:09:55.095Z"
                         },
                         {
                             "numero": 7,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E07.SUBFRENCH.WEB-DL.XviD-ZT.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E07.SUBFRENCH.WEB-DL.XviD-ZT.www.torrent9.biz.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E07 VOSTFR WEB-DL XviD-ZT www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E07 VOSTFR WEB-DL XviD-ZT www torrent9 biz.avi",
                             "taille": 377157684,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.383Z"
+                            "dateAjout": "2026-08-19T12:09:55.095Z"
                         },
                         {
                             "numero": 8,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E08.SUBFRENCH.WEB-DL.x264-ARK01.www.torrent9.biz.mp4",
-                            "nomFichier": "Lethal.Weapon.S01E08.SUBFRENCH.WEB-DL.x264-ARK01.www.torrent9.biz.mp4",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E08 VOSTFR WEB-DL x264-ARK01 www torrent9 biz.mp4",
+                            "nomFichier": "Lethal Weapon S01E08 VOSTFR WEB-DL x264-ARK01 www torrent9 biz.mp4",
                             "taille": 345196426,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.384Z"
+                            "dateAjout": "2026-08-19T12:09:55.096Z"
                         },
                         {
                             "numero": 9,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E09.SUBFRENCH.WEB-DL.x264-ARK01.www.torrent9.biz.mp4",
-                            "nomFichier": "Lethal.Weapon.S01E09.SUBFRENCH.WEB-DL.x264-ARK01.www.torrent9.biz.mp4",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E09 VOSTFR WEB-DL x264-ARK01 www torrent9 biz.mp4",
+                            "nomFichier": "Lethal Weapon S01E09 VOSTFR WEB-DL x264-ARK01 www torrent9 biz.mp4",
                             "taille": 356615497,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.385Z"
+                            "dateAjout": "2026-08-19T12:09:55.096Z"
                         },
                         {
                             "numero": 10,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E10.VOSTFR.HDTV.Xvid-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E10.VOSTFR.HDTV.Xvid-EXTREME.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E10 VOSTFR HDTV Xvid-EXTREME www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E10 VOSTFR HDTV Xvid-EXTREME www torrent9 biz.avi",
                             "taille": 380375276,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.388Z"
+                            "dateAjout": "2026-08-19T12:09:55.097Z"
                         },
                         {
                             "numero": 11,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E11.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E11.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E11 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E11 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
                             "taille": 367310538,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.389Z"
+                            "dateAjout": "2026-08-19T12:09:55.097Z"
                         },
                         {
                             "numero": 12,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E12.SUBFRENCH.WEB-DL.XViD-EXTREME.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E12.SUBFRENCH.WEB-DL.XViD-EXTREME.www.torrent9.biz.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E12 VOSTFR WEB-DL XViD-EXTREME www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E12 VOSTFR WEB-DL XViD-EXTREME www torrent9 biz.avi",
                             "taille": 367976370,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.390Z"
+                            "dateAjout": "2026-08-19T12:09:55.098Z"
                         },
                         {
                             "numero": 13,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E13.VOSTFR.WEB-DL.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E13.VOSTFR.WEB-DL.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E13 VOSTFR WEB-DL XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E13 VOSTFR WEB-DL XviD-T9 www torrent9 biz.avi",
                             "taille": 367172952,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.392Z"
+                            "dateAjout": "2026-08-19T12:09:55.098Z"
                         },
                         {
                             "numero": 14,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E14.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E14.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E14 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E14 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
                             "taille": 367356004,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.393Z"
+                            "dateAjout": "2026-08-19T12:09:55.098Z"
                         },
                         {
                             "numero": 15,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E15.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E15.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E15 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E15 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
                             "taille": 367027562,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.394Z"
+                            "dateAjout": "2026-08-19T12:09:55.099Z"
                         },
                         {
                             "numero": 16,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E16.VOSTFR.WEB-DL.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E16.VOSTFR.WEB-DL.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E16 VOSTFR WEB-DL XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E16 VOSTFR WEB-DL XviD-T9 www torrent9 biz.avi",
                             "taille": 366789932,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.396Z"
+                            "dateAjout": "2026-08-19T12:09:55.099Z"
                         },
                         {
                             "numero": 17,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E17.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E17.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E17 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E17 VOSTFR HDTV XviD-T9 www torrent9 biz.avi",
                             "taille": 367245178,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.397Z"
+                            "dateAjout": "2026-08-19T12:09:55.100Z"
                         },
                         {
                             "numero": 18,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal.Weapon.S01E18.SUBFRENCH.WEB-DL.XVID-T9.www.torrent9.biz.avi",
-                            "nomFichier": "Lethal.Weapon.S01E18.SUBFRENCH.WEB-DL.XVID-T9.www.torrent9.biz.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S01\\Lethal Weapon S01E18 VOSTFR WEB-DL XVID-T9 www torrent9 biz.avi",
+                            "nomFichier": "Lethal Weapon S01E18 VOSTFR WEB-DL XVID-T9 www torrent9 biz.avi",
                             "taille": 419532032,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.398Z"
+                            "dateAjout": "2026-08-19T12:09:55.101Z"
                         }
                     ]
                 },
@@ -6982,222 +7024,222 @@
                         {
                             "numero": 1,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E01.VOSTFR.HDTV.XViD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S02E01.VOSTFR.HDTV.XViD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E01 VOSTFR HDTV XViD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S02E01 VOSTFR HDTV XViD-EXTREME.avi",
                             "taille": 397333270,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.401Z"
+                            "dateAjout": "2026-08-19T12:09:55.101Z"
                         },
                         {
                             "numero": 2,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E02.SUBFRENCH.WEB-DL.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S02E02.SUBFRENCH.WEB-DL.XviD-ZT.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E02 VOSTFR WEB-DL XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S02E02 VOSTFR WEB-DL XviD-ZT.avi",
                             "taille": 366638470,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.404Z"
+                            "dateAjout": "2026-08-19T12:09:55.101Z"
                         },
                         {
                             "numero": 3,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E03.SUBFRENCH.WEB-DL.xvid-FDS.avi",
-                            "nomFichier": "Lethal.Weapon.S02E03.SUBFRENCH.WEB-DL.xvid-FDS.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E03 VOSTFR WEB-DL xvid-FDS.avi",
+                            "nomFichier": "Lethal Weapon S02E03 VOSTFR WEB-DL xvid-FDS.avi",
                             "taille": 367466854,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.405Z"
+                            "dateAjout": "2026-08-19T12:09:55.102Z"
                         },
                         {
                             "numero": 4,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E04.SUBFRENCH.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S02E04.SUBFRENCH.WEB.XviD-EXTREME.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E04 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S02E04 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 385294230,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.407Z"
+                            "dateAjout": "2026-08-19T12:09:55.102Z"
                         },
                         {
                             "numero": 5,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E05.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.tv.avi",
-                            "nomFichier": "Lethal.Weapon.S02E05.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.tv.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E05 VOSTFR WEB-DL XviD-ZT WwW Torrent9 tv.avi",
+                            "nomFichier": "Lethal Weapon S02E05 VOSTFR WEB-DL XviD-ZT WwW Torrent9 tv.avi",
                             "taille": 367472382,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.409Z"
+                            "dateAjout": "2026-08-19T12:09:55.103Z"
                         },
                         {
                             "numero": 6,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E06.VOSTFR.HDTV.XviD-EXTREME.WwW.Torrent9.tv.avi",
-                            "nomFichier": "Lethal.Weapon.S02E06.VOSTFR.HDTV.XviD-EXTREME.WwW.Torrent9.tv.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E06 VOSTFR HDTV XviD-EXTREME WwW Torrent9 tv.avi",
+                            "nomFichier": "Lethal Weapon S02E06 VOSTFR HDTV XviD-EXTREME WwW Torrent9 tv.avi",
                             "taille": 384289274,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.414Z"
+                            "dateAjout": "2026-08-19T12:09:55.103Z"
                         },
                         {
                             "numero": 7,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E07.VOSTFR.WEB.XviD-EXTREME.WwW.Torrent9.tv.avi",
-                            "nomFichier": "Lethal.Weapon.S02E07.VOSTFR.WEB.XviD-EXTREME.WwW.Torrent9.tv.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E07 VOSTFR WEB XviD-EXTREME WwW Torrent9 tv.avi",
+                            "nomFichier": "Lethal Weapon S02E07 VOSTFR WEB XviD-EXTREME WwW Torrent9 tv.avi",
                             "taille": 393140596,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.417Z"
+                            "dateAjout": "2026-08-19T12:09:55.104Z"
                         },
                         {
                             "numero": 8,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E08.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.tv.avi",
-                            "nomFichier": "Lethal.Weapon.S02E08.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.tv.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E08 VOSTFR WEB-DL XviD-ZT WwW Torrent9 tv.avi",
+                            "nomFichier": "Lethal Weapon S02E08 VOSTFR WEB-DL XviD-ZT WwW Torrent9 tv.avi",
                             "taille": 366347750,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.419Z"
+                            "dateAjout": "2026-08-19T12:09:55.104Z"
                         },
                         {
                             "numero": 9,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E09.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.tv.avi",
-                            "nomFichier": "Lethal.Weapon.S02E09.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.tv.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E09 VOSTFR WEB-DL XviD-ZT WwW Torrent9 tv.avi",
+                            "nomFichier": "Lethal Weapon S02E09 VOSTFR WEB-DL XviD-ZT WwW Torrent9 tv.avi",
                             "taille": 367544064,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.420Z"
+                            "dateAjout": "2026-08-19T12:09:55.105Z"
                         },
                         {
                             "numero": 10,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E10.VOSTFR.HDTV.XviD-EXTREME.WwW.Torrent9.pe.avi",
-                            "nomFichier": "Lethal.Weapon.S02E10.VOSTFR.HDTV.XviD-EXTREME.WwW.Torrent9.pe.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E10 VOSTFR HDTV XviD-EXTREME WwW Torrent9 pe.avi",
+                            "nomFichier": "Lethal Weapon S02E10 VOSTFR HDTV XviD-EXTREME WwW Torrent9 pe.avi",
                             "taille": 402277668,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.421Z"
+                            "dateAjout": "2026-08-19T12:09:55.105Z"
                         },
                         {
                             "numero": 11,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E11.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.pe.avi",
-                            "nomFichier": "Lethal.Weapon.S02E11.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.pe.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E11 VOSTFR WEB-DL XviD-ZT WwW Torrent9 pe.avi",
+                            "nomFichier": "Lethal Weapon S02E11 VOSTFR WEB-DL XviD-ZT WwW Torrent9 pe.avi",
                             "taille": 367682492,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.422Z"
+                            "dateAjout": "2026-08-19T12:09:55.106Z"
                         },
                         {
                             "numero": 12,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E12.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.pe.avi",
-                            "nomFichier": "Lethal.Weapon.S02E12.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.pe.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E12 VOSTFR WEB-DL XviD-ZT WwW Torrent9 pe.avi",
+                            "nomFichier": "Lethal Weapon S02E12 VOSTFR WEB-DL XviD-ZT WwW Torrent9 pe.avi",
                             "taille": 367571872,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.423Z"
+                            "dateAjout": "2026-08-19T12:09:55.106Z"
                         },
                         {
                             "numero": 13,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E13.VOSTFR.AMZN.WEB-DL.XviD-EXTREME.WwW.Torrent9.pe.avi",
-                            "nomFichier": "Lethal.Weapon.S02E13.VOSTFR.AMZN.WEB-DL.XviD-EXTREME.WwW.Torrent9.pe.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E13 VOSTFR AMZN WEB-DL XviD-EXTREME WwW Torrent9 pe.avi",
+                            "nomFichier": "Lethal Weapon S02E13 VOSTFR AMZN WEB-DL XviD-EXTREME WwW Torrent9 pe.avi",
                             "taille": 392524440,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.424Z"
+                            "dateAjout": "2026-08-19T12:09:55.107Z"
                         },
                         {
                             "numero": 14,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E14.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.pe.avi",
-                            "nomFichier": "Lethal.Weapon.S02E14.SUBFRENCH.WEB-DL.XviD-ZT.WwW.Torrent9.pe.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E14 VOSTFR WEB-DL XviD-ZT WwW Torrent9 pe.avi",
+                            "nomFichier": "Lethal Weapon S02E14 VOSTFR WEB-DL XviD-ZT WwW Torrent9 pe.avi",
                             "taille": 367494274,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.424Z"
+                            "dateAjout": "2026-08-19T12:09:55.107Z"
                         },
                         {
                             "numero": 15,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E15.SUBFRENCH.WEB-DL.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S02E15.SUBFRENCH.WEB-DL.XviD-ZT.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E15 VOSTFR WEB-DL XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S02E15 VOSTFR WEB-DL XviD-ZT.avi",
                             "taille": 367648450,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.425Z"
+                            "dateAjout": "2026-08-19T12:09:55.107Z"
                         },
                         {
                             "numero": 16,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E16.VOSTFR.HDTV.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S02E16.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E16 VOSTFR HDTV XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S02E16 VOSTFR HDTV XviD-EXTREME.avi",
                             "taille": 394226162,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.426Z"
+                            "dateAjout": "2026-08-19T12:09:55.108Z"
                         },
                         {
                             "numero": 17,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E17.SUBFRENCH.WEB-DL.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S02E17.SUBFRENCH.WEB-DL.XviD-ZT.avi",
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E17 VOSTFR WEB-DL XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S02E17 VOSTFR WEB-DL XviD-ZT.avi",
                             "taille": 367683420,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.431Z"
+                            "dateAjout": "2026-08-19T12:09:55.108Z"
                         },
                         {
                             "numero": 18,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E18.VOSTFR.HDTV.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S02E18.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E18 VOSTFR HDTV XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S02E18 VOSTFR HDTV XviD-ZT.avi",
                             "taille": 362816246,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.433Z"
+                            "dateAjout": "2026-08-19T12:09:55.109Z"
                         },
                         {
                             "numero": 19,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E19.VOSTFR.WEBRip.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S02E19.VOSTFR.WEBRip.XviD-ZT.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E19 VOSTFR WEBRip XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S02E19 VOSTFR WEBRip XviD-ZT.avi",
                             "taille": 367482168,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.434Z"
+                            "dateAjout": "2026-08-19T12:09:55.109Z"
                         },
                         {
                             "numero": 20,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E20.VOSTFR.HDTV.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S02E20.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E20 VOSTFR HDTV XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S02E20 VOSTFR HDTV XviD-EXTREME.avi",
                             "taille": 393796384,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.435Z"
+                            "dateAjout": "2026-08-19T12:09:55.110Z"
                         },
                         {
                             "numero": 21,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E21.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S02E21.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E21 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S02E21 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 354387970,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.436Z"
+                            "dateAjout": "2026-08-19T12:09:55.110Z"
                         },
                         {
                             "numero": 22,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal.Weapon.S02E22.FiNAL.VOSTFR.WEBRip.XviD-ZT.avi",
-                            "nomFichier": "Lethal.Weapon.S02E22.FiNAL.VOSTFR.WEBRip.XviD-ZT.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S02\\Lethal Weapon S02E22 FiNAL VOSTFR WEBRip XviD-ZT.avi",
+                            "nomFichier": "Lethal Weapon S02E22 FiNAL VOSTFR WEBRip XviD-ZT.avi",
                             "taille": 367683180,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.437Z"
+                            "dateAjout": "2026-08-19T12:09:55.111Z"
                         }
                     ]
                 },
@@ -7207,232 +7249,232 @@
                         {
                             "numero": 1,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E01.FASTSUB.VOSTFR.WEBRip.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S03E01.FASTSUB.VOSTFR.WEBRip.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E01 VOSTFR VOSTFR WEBRip XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S03E01 VOSTFR VOSTFR WEBRip XviD-EXTREME.avi",
                             "taille": 401993226,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.438Z"
+                            "dateAjout": "2026-08-19T12:09:55.111Z"
                         },
                         {
                             "numero": 2,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E02.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S03E02.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E02 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S03E02 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 351527236,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.439Z"
+                            "dateAjout": "2026-08-19T12:09:55.111Z"
                         },
                         {
                             "numero": 2,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www.Torrent9.PH ] Lethal.Weapon.S03E02.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "[ www.Torrent9.PH ] Lethal.Weapon.S03E02.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www Torrent9 PH ] Lethal Weapon S03E02 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "[ www Torrent9 PH ] Lethal Weapon S03E02 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 351527236,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.451Z"
+                            "dateAjout": "2026-08-19T12:09:55.119Z"
                         },
                         {
                             "numero": 3,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E03.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S03E03.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E03 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S03E03 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 354246852,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.439Z"
+                            "dateAjout": "2026-08-19T12:09:55.112Z"
                         },
                         {
                             "numero": 3,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www.Torrent9.PH ] Lethal.Weapon.S03E03.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "[ www.Torrent9.PH ] Lethal.Weapon.S03E03.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www Torrent9 PH ] Lethal Weapon S03E03 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "[ www Torrent9 PH ] Lethal Weapon S03E03 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 354246852,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.452Z"
+                            "dateAjout": "2026-08-19T12:09:55.120Z"
                         },
                         {
                             "numero": 4,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E04.VOSTFR.WEBRip.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S03E04.VOSTFR.WEBRip.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E04 VOSTFR WEBRip XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S03E04 VOSTFR WEBRip XviD-EXTREME.avi",
                             "taille": 399732812,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.440Z"
+                            "dateAjout": "2026-08-19T12:09:55.112Z"
                         },
                         {
                             "numero": 4,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www.Torrent9.PH ] Lethal.Weapon.S03E04.VOSTFR.WEBRip.XviD-EXTREME.avi",
-                            "nomFichier": "[ www.Torrent9.PH ] Lethal.Weapon.S03E04.VOSTFR.WEBRip.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www Torrent9 PH ] Lethal Weapon S03E04 VOSTFR WEBRip XviD-EXTREME.avi",
+                            "nomFichier": "[ www Torrent9 PH ] Lethal Weapon S03E04 VOSTFR WEBRip XviD-EXTREME.avi",
                             "taille": 399732812,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.452Z"
+                            "dateAjout": "2026-08-19T12:09:55.120Z"
                         },
                         {
                             "numero": 5,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E05.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ].avi",
-                            "nomFichier": "Lethal.Weapon.S03E05.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ].avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E05 VOSTFR WEBRip XviD-EXTREME [ www Torrent9 PH ].avi",
+                            "nomFichier": "Lethal Weapon S03E05 VOSTFR WEBRip XviD-EXTREME [ www Torrent9 PH ].avi",
                             "taille": 395516986,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.441Z"
+                            "dateAjout": "2026-08-19T12:09:55.113Z"
                         },
                         {
                             "numero": 6,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E06.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ] (2).avi",
-                            "nomFichier": "Lethal.Weapon.S03E06.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ] (2).avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E06 VOSTFR WEBRip XviD-EXTREME [ www Torrent9 PH ] (2).avi",
+                            "nomFichier": "Lethal Weapon S03E06 VOSTFR WEBRip XviD-EXTREME [ www Torrent9 PH ] (2).avi",
                             "taille": 389423382,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.442Z"
+                            "dateAjout": "2026-08-19T12:09:55.113Z"
                         },
                         {
                             "numero": 6,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E06.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ].avi",
-                            "nomFichier": "Lethal.Weapon.S03E06.VOSTFR.WEBRip.XviD-EXTREME [ www.Torrent9.PH ].avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E06 VOSTFR WEBRip XviD-EXTREME [ www Torrent9 PH ].avi",
+                            "nomFichier": "Lethal Weapon S03E06 VOSTFR WEBRip XviD-EXTREME [ www Torrent9 PH ].avi",
                             "taille": 389423382,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.442Z"
+                            "dateAjout": "2026-08-19T12:09:55.114Z"
                         },
                         {
                             "numero": 7,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E07.FASTSUB.VOSTFR.WEB.x264-GOLD.mkv",
-                            "nomFichier": "Lethal.Weapon.S03E07.FASTSUB.VOSTFR.WEB.x264-GOLD.mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E07 VOSTFR VOSTFR WEB x264-GOLD.mkv",
+                            "nomFichier": "Lethal Weapon S03E07 VOSTFR VOSTFR WEB x264-GOLD.mkv",
                             "taille": 372992335,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.443Z"
+                            "dateAjout": "2026-08-19T12:09:55.114Z"
                         },
                         {
                             "numero": 8,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E08.720p.WEB.x265-MiNX[eztv].mkv",
-                            "nomFichier": "Lethal.Weapon.S03E08.720p.WEB.x265-MiNX[eztv].mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E08 720p WEB x265-MiNX[eztv].mkv",
+                            "nomFichier": "Lethal Weapon S03E08 720p WEB x265-MiNX[eztv].mkv",
                             "taille": 241039738,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.444Z"
+                            "dateAjout": "2026-08-19T12:09:55.115Z"
                         },
                         {
                             "numero": 8,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www.Torrent9.uno ] Lethal.Weapon.S03E08.FASTSUB.VOSTFR.WEBRip.XviD-ZT.avi",
-                            "nomFichier": "[ www.Torrent9.uno ] Lethal.Weapon.S03E08.FASTSUB.VOSTFR.WEBRip.XviD-ZT.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www Torrent9 uno ] Lethal Weapon S03E08 VOSTFR VOSTFR WEBRip XviD-ZT.avi",
+                            "nomFichier": "[ www Torrent9 uno ] Lethal Weapon S03E08 VOSTFR VOSTFR WEBRip XviD-ZT.avi",
                             "taille": 367721463,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.453Z"
+                            "dateAjout": "2026-08-19T12:09:55.121Z"
                         },
                         {
                             "numero": 9,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E09.HDTV.x264-CRAVERS[eztv].mkv",
-                            "nomFichier": "Lethal.Weapon.S03E09.HDTV.x264-CRAVERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E09 HDTV x264-CRAVERS[eztv].mkv",
+                            "nomFichier": "Lethal Weapon S03E09 HDTV x264-CRAVERS[eztv].mkv",
                             "taille": 330774141,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.444Z"
+                            "dateAjout": "2026-08-19T12:09:55.115Z"
                         },
                         {
                             "numero": 10,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E10.HDTV.x264-CRAVERS[eztv].mkv",
-                            "nomFichier": "Lethal.Weapon.S03E10.HDTV.x264-CRAVERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E10 HDTV x264-CRAVERS[eztv].mkv",
+                            "nomFichier": "Lethal Weapon S03E10 HDTV x264-CRAVERS[eztv].mkv",
                             "taille": 325506217,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.445Z"
+                            "dateAjout": "2026-08-19T12:09:55.116Z"
                         },
                         {
                             "numero": 11,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E11.HDTV.x264-CRAVERS[eztv].mkv",
-                            "nomFichier": "Lethal.Weapon.S03E11.HDTV.x264-CRAVERS[eztv].mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E11 HDTV x264-CRAVERS[eztv].mkv",
+                            "nomFichier": "Lethal Weapon S03E11 HDTV x264-CRAVERS[eztv].mkv",
                             "taille": 300105398,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.447Z"
+                            "dateAjout": "2026-08-19T12:09:55.116Z"
                         },
                         {
                             "numero": 12,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E12.The.Roger.and.Me.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S03E12.The.Roger.and.Me.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E12 The Roger and Me VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S03E12 The Roger and Me VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 388947974,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.448Z"
+                            "dateAjout": "2026-08-19T12:09:55.117Z"
                         },
                         {
                             "numero": 12,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E12.web.x264-tbs[eztv].mkv",
-                            "nomFichier": "Lethal.Weapon.S03E12.web.x264-tbs[eztv].mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E12 web x264-tbs[eztv].mkv",
+                            "nomFichier": "Lethal Weapon S03E12 web x264-tbs[eztv].mkv",
                             "taille": 362366373,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.449Z"
+                            "dateAjout": "2026-08-19T12:09:55.117Z"
                         },
                         {
                             "numero": 13,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal.Weapon.S03E13.VOSTFR.AMZN.WEB-DL.XviD.EXTREME.avi",
-                            "nomFichier": "Lethal.Weapon.S03E13.VOSTFR.AMZN.WEB-DL.XviD.EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\Lethal Weapon S03E13 VOSTFR AMZN WEB-DL XviD EXTREME.avi",
+                            "nomFichier": "Lethal Weapon S03E13 VOSTFR AMZN WEB-DL XviD EXTREME.avi",
                             "taille": 367521684,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-08-17T21:37:05.449Z"
+                            "dateAjout": "2026-08-19T12:09:55.118Z"
                         },
                         {
                             "numero": 14,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\lethal.weapon.s03e14.web.x264-tbs.mkv",
-                            "nomFichier": "lethal.weapon.s03e14.web.x264-tbs.mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\lethal weapon s03e14 web x264-tbs.mkv",
+                            "nomFichier": "lethal weapon s03e14 web x264-tbs.mkv",
                             "taille": 371859039,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.450Z"
+                            "dateAjout": "2026-08-19T12:09:55.118Z"
                         },
                         {
                             "numero": 14,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www.Torrent9.uno ] Lethal.Weapon.S03E14.FASTSUB.VOSTFR.WEBRip.XviD-ZT.avi",
-                            "nomFichier": "[ www.Torrent9.uno ] Lethal.Weapon.S03E14.FASTSUB.VOSTFR.WEBRip.XviD-ZT.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www Torrent9 uno ] Lethal Weapon S03E14 VOSTFR VOSTFR WEBRip XviD-ZT.avi",
+                            "nomFichier": "[ www Torrent9 uno ] Lethal Weapon S03E14 VOSTFR VOSTFR WEBRip XviD-ZT.avi",
                             "taille": 367699488,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.454Z"
+                            "dateAjout": "2026-08-19T12:09:55.121Z"
                         },
                         {
                             "numero": 15,
                             "langue": null,
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\lethal.weapon.s03e15.web.x264-tbs[eztv].mkv",
-                            "nomFichier": "lethal.weapon.s03e15.web.x264-tbs[eztv].mkv",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\lethal weapon s03e15 web x264-tbs[eztv].mkv",
+                            "nomFichier": "lethal weapon s03e15 web x264-tbs[eztv].mkv",
                             "taille": 373001586,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.451Z"
+                            "dateAjout": "2026-08-19T12:09:55.119Z"
                         },
                         {
                             "numero": 15,
                             "langue": "VOSTFR",
-                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www.Torrent9.uno ] Lethal.Weapon.S03E15.VOSTFR.WEB.XviD-EXTREME.avi",
-                            "nomFichier": "[ www.Torrent9.uno ] Lethal.Weapon.S03E15.VOSTFR.WEB.XviD-EXTREME.avi",
+                            "fichier": "Z:\\Series\\Lethal Weapon\\S03\\[ www Torrent9 uno ] Lethal Weapon S03E15 VOSTFR WEB XviD-EXTREME.avi",
+                            "nomFichier": "[ www Torrent9 uno ] Lethal Weapon S03E15 VOSTFR WEB XviD-EXTREME.avi",
                             "taille": 388245460,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.454Z"
+                            "dateAjout": "2026-08-19T12:09:55.122Z"
                         }
                     ]
                 }
@@ -7449,6 +7491,7 @@
             "titreTmdb": "Leverage",
             "anneeTmdb": "2008",
             "descriptionTmdb": "Des escrocs de haute-volée allient leurs forces pour dépouiller les criminels les plus riches et les grands patrons corrompus. Leverage est une version moderne de Robin des Bois, engagé dans une lutte perpétuelle pour éradiquer le mal qui sévit sur cette planète. Ford, qui est animé par une inextinguible soif de vengeance (qu’il noie dans de grands godets de whisky), décide un jour de ramener un peu de morale dans ce monde où les financiers et les puissants s’estiment au-dessus des lois et agissent en ne suivant que leur bon plaisir, avec un solide goût pour l’argent. Un goût, pour toujours plus d’argent. Ford va donc s’en prendre aux PDG peu scrupuleux, aux magnats de Wall Street et aux argentiers arrogants.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -9068,6 +9111,7 @@
             "titreTmdb": "Leverage: Redemption",
             "anneeTmdb": "2021",
             "descriptionTmdb": "Le frappeur, le pirate informatique, l'escroc et le voleur sont à nouveau réunis, cette fois avec l'aide d'un nouveau génie de la technologie et d'un réparateur d'entreprise, pour affronter un nouveau type de méchant. De l'homme qui a créé une crise d'opioïdes dans le confort de sa salle de réunion à la société de sécurité obscure qui aide à cacher des secrets dangereux pour un prix - quand quelqu'un a besoin d'aide, ils fournissent... Un effet de levier.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -9078,19 +9122,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E01.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E01.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 388360282,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.558Z"
-                        },
-                        {
-                            "numero": 1,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E01.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E01.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 388360282,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.569Z"
                         },
                         {
                             "numero": 2,
@@ -9098,19 +9132,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E02.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E02.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 354639371,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.559Z"
-                        },
-                        {
-                            "numero": 2,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E02.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E02.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 354639371,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.569Z"
                         },
                         {
                             "numero": 3,
@@ -9118,19 +9142,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E03.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E03.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 363694435,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.559Z"
-                        },
-                        {
-                            "numero": 3,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E03.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E03.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 363694435,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.570Z"
                         },
                         {
                             "numero": 4,
@@ -9138,19 +9152,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E04.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E04.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 320666526,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.560Z"
-                        },
-                        {
-                            "numero": 4,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E04.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E04.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 320666526,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.570Z"
                         },
                         {
                             "numero": 5,
@@ -9158,19 +9162,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E05.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E05.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 317883865,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.560Z"
-                        },
-                        {
-                            "numero": 5,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E05.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E05.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 317883865,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.571Z"
                         },
                         {
                             "numero": 6,
@@ -9178,19 +9172,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E06.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E06.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 425517129,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.561Z"
-                        },
-                        {
-                            "numero": 6,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E06.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E06.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 425517129,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.572Z"
                         },
                         {
                             "numero": 7,
@@ -9198,19 +9182,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E07.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E07.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 336567702,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.561Z"
-                        },
-                        {
-                            "numero": 7,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E07.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E07.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 336567702,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.572Z"
                         },
                         {
                             "numero": 8,
@@ -9218,19 +9192,9 @@
                             "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.FINAL.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E08.720p.WEBRip.x264-GalaxyTV.mkv",
                             "nomFichier": "Leverage.Redemption.S01E08.720p.WEBRip.x264-GalaxyTV.mkv",
                             "taille": 384057215,
-                            "doublonExact": true,
-                            "doublonProbable": true,
+                            "doublonExact": false,
+                            "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.562Z"
-                        },
-                        {
-                            "numero": 8,
-                            "langue": null,
-                            "fichier": "Z:\\Series\\Leverage Redemption\\Leverage.Redemption.S01.COMPLETE.REPACK.720p.WEBRip.x264-GalaxyTV[TGx]\\Leverage.Redemption.S01E08.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "nomFichier": "Leverage.Redemption.S01E08.720p.WEBRip.x264-GalaxyTV.mkv",
-                            "taille": 384057215,
-                            "doublonExact": true,
-                            "doublonProbable": true,
-                            "dateAjout": "2026-08-17T21:37:05.573Z"
                         },
                         {
                             "numero": 9,
@@ -9462,6 +9426,7 @@
             "titreTmdb": "Lie to Me",
             "anneeTmdb": "2009",
             "descriptionTmdb": "Le chercheur de file au niveau mondial en détection de tromperie, le Dr Cal Lightman, étudie l'expression faciale, le langage corporel et le ton de la voix pour déterminer lorsqu'une personne ment et leur raison, ce qui aide la police et les agences gouvernementales à découvrir la vérité. Mais ses habiletés font aussi en sorte qu'il est facile pour lui de tromper les autres.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -9596,7 +9561,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.589Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -9821,7 +9787,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.602Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -9956,7 +9923,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.609Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -12304,6 +12272,16 @@
                             "dateAjout": "2026-08-17T21:37:05.780Z"
                         },
                         {
+                            "numero": 9,
+                            "langue": null,
+                            "fichier": "Z:\\Series\\Quantico\\S02\\Quantico.S02E09.SUBFRENCH.WEB-DL.x264-ARK01.flv",
+                            "nomFichier": "Quantico.S02E09.SUBFRENCH.WEB-DL.x264-ARK01.flv",
+                            "taille": 282732711,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.525Z"
+                        },
+                        {
                             "numero": 10,
                             "langue": "VOSTFR",
                             "fichier": "Z:\\Series\\Quantico\\S02\\Quantico.S02E10.VOSTFR.WEB-DL.XviD-T9.avi",
@@ -14396,6 +14374,26 @@
                     "numero": 1,
                     "episodes": [
                         {
+                            "numero": 1,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Sherlock\\Sherlock S01E01 VOSTFR.flv",
+                            "nomFichier": "Sherlock S01E01 VOSTFR.flv",
+                            "taille": 463069663,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.614Z"
+                        },
+                        {
+                            "numero": 2,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Sherlock\\Sherlock S01E02 VOSTFR.flv",
+                            "nomFichier": "Sherlock S01E02 VOSTFR.flv",
+                            "taille": 315039044,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.614Z"
+                        },
+                        {
                             "numero": 3,
                             "langue": "VOSTFR",
                             "fichier": "Z:\\Series\\Sherlock\\Sherlock S01E03.HDTV.VOSTFR.Gillop.avi",
@@ -14411,6 +14409,16 @@
                     "numero": 2,
                     "episodes": [
                         {
+                            "numero": 1,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Sherlock\\Sherlock S02E01 VOSTFR.flv",
+                            "nomFichier": "Sherlock S02E01 VOSTFR.flv",
+                            "taille": 285283833,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.615Z"
+                        },
+                        {
                             "numero": 2,
                             "langue": "VOSTFR",
                             "fichier": "Z:\\Series\\Sherlock\\Sherlock S02E02.FASTSUB.VOSTFR.HDTV.XviD-Smart.avi",
@@ -14419,12 +14427,32 @@
                             "doublonExact": false,
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.956Z"
+                        },
+                        {
+                            "numero": 3,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Sherlock\\Sherlock S02E03 VOSTFR.flv",
+                            "nomFichier": "Sherlock S02E03 VOSTFR.flv",
+                            "taille": 310292660,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.616Z"
                         }
                     ]
                 },
                 {
                     "numero": 3,
                     "episodes": [
+                        {
+                            "numero": 1,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Sherlock\\Sherlock S03E01.VOSTFR.flv",
+                            "nomFichier": "Sherlock S03E01.VOSTFR.flv",
+                            "taille": 309047837,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.616Z"
+                        },
                         {
                             "numero": 2,
                             "langue": "VOSTFR",
@@ -14434,6 +14462,16 @@
                             "doublonExact": false,
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.957Z"
+                        },
+                        {
+                            "numero": 3,
+                            "langue": "VOSTFR",
+                            "fichier": "Z:\\Series\\Sherlock\\Sherlock S03E03.VOSTFR.flv",
+                            "nomFichier": "Sherlock S03E03.VOSTFR.flv",
+                            "taille": 308055276,
+                            "doublonExact": false,
+                            "doublonProbable": false,
+                            "dateAjout": "2026-08-19T12:00:33.617Z"
                         }
                     ]
                 },
@@ -15366,6 +15404,7 @@
             "titreTmdb": "Le Jeu de la dame",
             "anneeTmdb": "2020",
             "descriptionTmdb": "Dans les années 1950, une jeune orpheline qui révèle un talent étonnant pour les échecs s'envole vers une gloire improbable tout en se battant contre ses addictions.",
+            "hasMissingEpisodes": true,
             "saisons": [
                 {
                     "numero": 1,

@@ -11,6 +11,7 @@
   ],
   "extensions": [
     ".avi",
+    ".flv",
     ".mkv",
     ".mp4"
   ],

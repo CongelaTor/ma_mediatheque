@@ -837,8 +837,8 @@ input {
     justify-content: center;
     right: 10px;
     bottom: 10px;
-    width: 42px;
-    height: 42px;
+    width: 20px;
+    height: 20px;
     border: none;
     border-radius: 50%;
     background: #f97316;
@@ -846,4 +846,31 @@ input {
     font-size: 20px;
     cursor: default;
     z-index: 10;
+}
+
+.season-button {
+    position: relative;
+}
+
+.season-missing-dot {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f97316;
+    box-shadow: 0 0 8px rgba(249, 115, 22, 0.75);
+}
+
+.serie-missing-dot {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f97316;
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.45);
+    z-index: 3;
 }
