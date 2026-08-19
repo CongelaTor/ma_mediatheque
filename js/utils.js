@@ -31,3 +31,18 @@ function hashCode(value) {
     }
     return hash;
 }
+
+function formatFrenchDate(value) {
+    if (!value) {
+        return '';
+    }
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+        return value;
+    }
+    return date.toLocaleDateString('fr-FR', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+    });
+}
