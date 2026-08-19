@@ -48,6 +48,16 @@ async function showSerieDetails(serie, requestedSeasonNumber = null) {
     episodesPanel.innerHTML = '';
 
     updateLanguageButtons();
+
+    const missingEpisodesButton = document.getElementById('missingEpisodesButton');
+    if (missingEpisodesButton) {
+        missingEpisodesButton.onclick = () => {
+            showMissingEpisodesOnly = !showMissingEpisodesOnly;
+            missingEpisodesButton.classList.toggle('active', showMissingEpisodesOnly);
+            renderSeason(currentSerie.saisons.find(s => s.numero === currentSeason));
+        };
+    }
+
     const sortedSeasons = [...serie.saisons].sort((a, b) => a.numero - b.numero);
     if (sortedSeasons.length === 0) {
         setText('seriesCount', '0 épisode');
@@ -104,6 +114,7 @@ async function showSerieDetails(serie, requestedSeasonNumber = null) {
 
         allEpisodes.sort((a, b) => a.numero - b.numero);
         for (const item of allEpisodes) {
+            if (showMissingEpisodesOnly && !item.episode.missing) { continue; }
             episodesGrid.appendChild(
                 createEpisodeCard(
                     serie,
@@ -127,7 +138,7 @@ async function showSerieDetails(serie, requestedSeasonNumber = null) {
             }
         }
     }
-    
+
     sendMissingEpisodeFlags(serie.id, missingSeasonNumbers);
     serie.hasMissingEpisodes = missingSeasonNumbers.size > 0;
     for (const saison of serie.saisons) {

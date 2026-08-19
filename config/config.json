@@ -10,6 +10,8 @@
     }
   ],
   "extensions": [
+    ".jpg",
+    ".webp",
     ".avi",
     ".flv",
     ".mkv",

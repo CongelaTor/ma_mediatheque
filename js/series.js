@@ -60,13 +60,14 @@ function updateDetailLanguageButtons() {
     }
     document.querySelectorAll('#languageFilters .language-button').forEach(button => {
         const language = button.dataset.language;
-        const isVisible = availableLanguages.includes(language);
+        const isVisible = button.id === 'missingEpisodesButton'
+            || availableLanguages.includes(language);
         button.classList.toggle('hidden', !isVisible);
         button.classList.toggle('active', isVisible && language === activeDetailLanguage);
     });
 }
 function episodeMatchesDetailLanguage(episode) {
-    return episode.langue === activeDetailLanguage;
+    return episode.langue == null || episode.langue === activeDetailLanguage;
 }
 function serieMatchesSeriesLanguages(serie) {
     let hasLanguage = false;
@@ -94,6 +95,7 @@ function renderSeries() {
     currentSeason = null;
     activeDetailLanguage = null;
     updateLanguageButtons();
+
     const grid = document.getElementById('seriesGrid');
     grid.innerHTML = '';
     const series = catalog.series

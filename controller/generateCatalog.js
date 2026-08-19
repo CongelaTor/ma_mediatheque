@@ -148,9 +148,10 @@ function analyzeVideoFile(fichier, source) {
     if (source.type === 'serie') {
         titreBrut = getSeriesTitleFromPath(fichier.fichier, source.path) || nomSansExtension;
     } else if (source.type === 'film' && annee) {
-        titreBrut = nomSansExtension.substring(0, nomSansExtension.indexOf(annee));
+        titreBrut = nomSansExtension.replace(String(annee), ' ');
     }
     const titre = cleanTitle(titreBrut);
+
     return {
         type: source.type,
         id: buildId(titre, annee),
@@ -194,7 +195,7 @@ function detectLanguage(filePath) {
     const upperPath = filePath.toUpperCase();
     const match = upperPath.match(/(^|[^A-Z0-9])(VOSTFR|VOST|VF|VO)([^A-Z0-9]|$)/);
     if (!match) {
-        return null;
+        return 'TBD';
     }
     return match[2];
 }
