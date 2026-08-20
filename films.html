@@ -32,29 +32,43 @@
                 <div class="layout">
                     <aside class="sidebar">
                         <div class="sidebar-title">Statistiques</div>
-                        <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
-                        <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
-                        <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
+                            <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
+                            <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
+                            <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
                         <div class="sidebar-section"></div>
+
+                        <div class="sidebar-title">Ajouts</div>
+                            <button class="sidebar-link active" data-ajouts="all" 
+                                onclick="selectAjouts('all')">Tous les films</button>
+                            <button class="sidebar-link" data-ajouts="Nouveautés" 
+                                onclick="selectAjouts('Nouveautés')">Nouveautés</button>
+                            <button class="sidebar-link" data-ajouts="Récents"
+                                onclick="selectAjouts('Récents')">Récents</button>
+                        <div class="sidebar-section"></div>
+
                         <div class="sidebar-title">Genre</div>
-                        <button class="sidebar-link active" data-genre="all" onclick="selectGenre('all')">Tous les
-                            films</button>
-                        <button class="sidebar-link" data-genre="Action" onclick="selectGenre('Action')">Action</button>
-                        <button class="sidebar-link" data-genre="Aventure"
-                            onclick="selectGenre('Aventure')">Aventure</button>
-                        <button class="sidebar-link" data-genre="Comédie"
-                            onclick="selectGenre('Comédie')">Comédie</button>
-                        <button class="sidebar-link" data-genre="Science-Fiction"
-                            onclick="selectGenre('Science-Fiction')">Science-Fiction</button>
-                        <button class="sidebar-link" data-genre="Drame" onclick="selectGenre('Drame')">Drame</button>
-                        <button class="sidebar-link" data-genre="Fantastique"
-                            onclick="selectGenre('Fantastique')">Fantastique</button>
-                        <button class="sidebar-link" data-genre="Thriller"
-                            onclick="selectGenre('Thriller')">Thriller</button>
-                        <button class="sidebar-link" data-genre="Documentaire"
-                            onclick="selectGenre('Documentaire')">Documentaire</button>
-                        <button class="sidebar-link" data-genre="Animation"
-                            onclick="selectGenre('Animation')">Animation</button>
+                            <button class="sidebar-link active" data-genre="all" 
+                                onclick="selectGenre('all')">Tous les films</button>
+                            <button class="sidebar-link" data-genre="Action" 
+                                onclick="selectGenre('Action')">Action</button>
+                            <button class="sidebar-link" data-genre="Aventure"
+                                onclick="selectGenre('Aventure')">Aventure</button>
+                            <button class="sidebar-link" data-genre="Comédie"
+                                onclick="selectGenre('Comédie')">Comédie</button>
+                            <button class="sidebar-link" data-genre="Science-Fiction"
+                                onclick="selectGenre('Science-Fiction')">Science-Fiction</button>
+                            <button class="sidebar-link" data-genre="Drame" 
+                                onclick="selectGenre('Drame')">Drame</button>
+                            <button class="sidebar-link" data-genre="Fantastique"
+                                onclick="selectGenre('Fantastique')">Fantastique</button>
+                            <button class="sidebar-link" data-genre="Thriller"
+                                onclick="selectGenre('Thriller')">Thriller</button>
+                            <button class="sidebar-link" data-genre="Documentaire"
+                                onclick="selectGenre('Documentaire')">Documentaire</button>
+                            <button class="sidebar-link" data-genre="Animation"
+                                onclick="selectGenre('Animation')">Animation</button>
+                            <button class="sidebar-link" data-genre="Animation"
+                                onclick="selectGenre('Animation')">Anime</button>
                     </aside>
                     <section class="content">
                         <div class="content-header">
@@ -71,6 +85,26 @@
                 </div>
             </section>
         </main>
+    </div>
+    <div id="tmdbModal" class="tmdb-modal hidden">
+        <div class="tmdb-modal-panel">
+            <div class="tmdb-modal-header">
+                <h2 id="tmdbModalTitle">Résultats TMDB</h2>
+                <button class="tmdb-modal-close" onclick="closeTmdbModal()">×</button>
+            </div>
+
+            <div class="tmdb-search-zone">
+                <input
+                    id="tmdbSearchInput"
+                    class="tmdb-search-input"
+                    type="text"
+                    placeholder="Recherche TMDB">
+            </div>
+
+            <div id="tmdbSearchTokens" class="tmdb-search-tokens"></div>
+
+            <div id="tmdbResults" class="tmdb-results"></div>
+        </div>
     </div>
     <script src="js/state.js"></script>
     <script src="js/catalog.js"></script>

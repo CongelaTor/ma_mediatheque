@@ -1,26 +1,35 @@
 {
     "ignoreWords": [
         "AC3",
+        "ACOOL",
+        "AVITECH",
         "BLURAY",
         "DTS",
         "DVDRIP",
         "FASTSUB",
+        "HDLIGHT",
         "HDTV",
         "HEVC",
         "LOL",
+        "MULTI",
         "NEWZT",
+        "SSM",
         "TORRENT9",
+        "TRUEFRENCH",
         "TRUEHD",
+        "VF2",
         "VOSTFR",
         "WEB-DL",
         "WEBRIP",
         "WWW",
         "X264",
         "X265",
-        "XVID"
+        "XVID",
+        "ZONE80"
     ],
     "patterns": [
         "????P",
+        "???P",
         "?X??",
         "AAC?",
         "S??E??"

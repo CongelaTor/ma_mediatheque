@@ -258,6 +258,10 @@ function cleanTitle(value) {
   const words = cleanSeparators(value)
     .split(" ")
     .filter((word) => word.trim().length > 0);
+  if (words.includes("TRUEFRENCH")) {
+    console.log(words);
+  }
+
   const cleanedWords = [];
   for (const word of words) {
     const upperWord = word.toUpperCase();
@@ -319,7 +323,8 @@ function syncFilm(catalog, analyse) {
     catalog.films.push({
       ...existing,
       id: existing.id || analyse.id,
-      titre: existing.titre || analyse.titre,
+      titre: analyse.titre,
+      // titre: existing.titre || analyse.titre,
       annee: existing.annee ?? analyse.annee,
       langue: existing.langue ?? analyse.langue,
       fichier: analyse.fichier,

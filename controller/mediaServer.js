@@ -6,6 +6,7 @@ const PORT = 9876;
 const VLC = "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe";
 const rootDir = path.join(__dirname, "..");
 const catalogPath = path.join(rootDir, "data", "catalog.json");
+const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
 
 http
   .createServer((request, response) => {
@@ -29,6 +30,10 @@ http
     request.on("end", () => {
       try {
         const data = JSON.parse(body || "{}");
+        if (request.url === "/associate-tmdb-film") {
+          saveFilmTmdbData(data, response);
+          return;
+        }
         if (request.url === "/associate-tmdb-serie") {
           saveSerieTmdbData(data, response);
           return;
@@ -39,6 +44,14 @@ http
         }
         if (request.url === "/refresh-catalog") {
           refreshCatalog(response);
+          return;
+        }
+        if (request.url === "/get-ignore-words") {
+          getIgnoreWords(response);
+          return;
+        }
+        if (request.url === "/set-ignore-word") {
+          setIgnoreWord(data, response);
           return;
         }
         launchVlc(data, response);
@@ -84,6 +97,38 @@ function saveSerieTmdbData(data, response) {
   response.writeHead(200, {
     "Content-Type": "text/plain; charset=utf-8",
   });
+  response.end("Association TMDB enregistrée");
+}
+
+function saveFilmTmdbData(data, response) {
+  const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+
+  const film = catalog.films.find((item) => item.id === data.filmId);
+
+  if (!film) {
+    response.writeHead(404, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end("Film introuvable dans catalog.json");
+    return;
+  }
+
+  film.tmdbId = data.tmdbId;
+  film.tmdbUrl = data.tmdbUrl;
+  film.image = data.image;
+  film.titreTmdb = data.titreTmdb;
+  film.anneeTmdb = data.anneeTmdb;
+  film.descriptionTmdb = data.descriptionTmdb;
+  film.genre = data.genre;
+  film.collectionId = data.collectionId;
+  film.collectionNom = data.collectionNom;
+
+  fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), "utf8");
+
+  response.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+  });
+
   response.end("Association TMDB enregistrée");
 }
 
@@ -146,4 +191,51 @@ function saveMissingEpisodeFlags(data, response) {
     "Content-Type": "text/plain; charset=utf-8",
   });
   response.end("Indicateurs épisodes manquants enregistrés");
+}
+function getIgnoreWords(response) {
+  const config = JSON.parse(fs.readFileSync(ignoreWordsPath, "utf8"));
+
+  response.writeHead(200, {
+    "Content-Type": "application/json; charset=utf-8",
+  });
+
+  response.end(JSON.stringify(config.ignoreWords || []));
+}
+
+function setIgnoreWord(data, response) {
+  const config = JSON.parse(fs.readFileSync(ignoreWordsPath, "utf8"));
+  const word = String(data.word || "")
+    .trim()
+    .toUpperCase();
+  const ignoreWords = config.ignoreWords || [];
+
+  if (!word) {
+    response.writeHead(400, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end("Mot invalide");
+    return;
+  }
+
+  const existingIndex = ignoreWords.findIndex(
+    (item) => item.toUpperCase() === word,
+  );
+
+  if (data.ignored && existingIndex === -1) {
+    ignoreWords.push(word);
+  }
+
+  if (!data.ignored && existingIndex !== -1) {
+    ignoreWords.splice(existingIndex, 1);
+  }
+
+  config.ignoreWords = ignoreWords.sort((a, b) => a.localeCompare(b, "fr"));
+
+  fs.writeFileSync(ignoreWordsPath, JSON.stringify(config, null, 4), "utf8");
+
+  response.writeHead(200, {
+    "Content-Type": "application/json; charset=utf-8",
+  });
+
+  response.end(JSON.stringify(config.ignoreWords));
 }

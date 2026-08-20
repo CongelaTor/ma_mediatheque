@@ -1,3 +1,6 @@
+let tmdbSearchWords = [];
+let tmdbCurrentFilm = null;
+
 function openTmdbForFilm(film) {
   if (film.tmdbId) {
     window.location.href = `${tmdbBaseUrl}/movie/${film.tmdbId}`;
@@ -28,6 +31,98 @@ async function showTmdbSerieSearch(serie) {
   const results = await searchTmdbSerie(serie.titre);
   renderTmdbSerieResults(serie, results);
 }
+async function showTmdbFilmSearch(film) {
+  tmdbCurrentFilm = film;
+
+  const modal = document.getElementById("tmdbModal");
+  const title = document.getElementById("tmdbModalTitle");
+  const input = document.getElementById("tmdbSearchInput");
+  const tokensContainer = document.getElementById("tmdbSearchTokens");
+  const resultsContainer = document.getElementById("tmdbResults");
+
+  title.textContent = `Résultats TMDB`;
+
+  tmdbSearchWords = film.titre
+    .split(/\s+/)
+    .filter((word) => word.trim() !== "")
+    .map((word) => ({
+      text: word,
+      active: true,
+    }));
+
+  input.value = film.titre;
+  tokensContainer.innerHTML = "";
+  resultsContainer.innerHTML = "<p>Recherche en cours...</p>";
+
+  renderTmdbFilmSearchTokens();
+
+  input.onkeydown = (event) => {
+    if (event.key === "Enter") {
+      searchTmdbFilmFromInput();
+    }
+  };
+
+  modal.classList.remove("hidden");
+
+  modal.onclick = (event) => {
+    if (event.target === modal) {
+      closeTmdbModal();
+    }
+  };
+
+  await searchTmdbFilmFromInput();
+}
+
+function renderTmdbFilmSearchTokens() {
+  const tokensContainer = document.getElementById("tmdbSearchTokens");
+  tokensContainer.innerHTML = "";
+
+  for (const word of tmdbSearchWords) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = word.active
+      ? "tmdb-search-token active"
+      : "tmdb-search-token inactive";
+    button.textContent = word.active ? `${word.text} ×` : word.text;
+
+    button.onclick = async () => {
+      word.active = !word.active;
+      updateTmdbFilmSearchInputFromTokens();
+      renderTmdbFilmSearchTokens();
+      await searchTmdbFilmFromInput();
+    };
+
+    tokensContainer.appendChild(button);
+  }
+}
+
+function updateTmdbFilmSearchInputFromTokens() {
+  const input = document.getElementById("tmdbSearchInput");
+
+  input.value = tmdbSearchWords
+    .filter((word) => word.active)
+    .map((word) => word.text)
+    .join(" ");
+}
+
+async function searchTmdbFilmFromInput() {
+  const input = document.getElementById("tmdbSearchInput");
+  const resultsContainer = document.getElementById("tmdbResults");
+  const searchText = input.value.trim();
+
+  if (!searchText) {
+    resultsContainer.innerHTML =
+      '<div class="tmdb-empty">Saisissez une recherche.</div>';
+    return;
+  }
+
+  resultsContainer.innerHTML = "<p>Recherche en cours...</p>";
+
+  const results = await searchTmdbFilm(searchText);
+
+  renderTmdbFilmResults(tmdbCurrentFilm, results);
+}
+
 function renderTmdbSerieResults(serie, results) {
   const resultsContainer = document.getElementById("tmdbResults");
   resultsContainer.innerHTML = "";
@@ -78,6 +173,70 @@ function renderTmdbSerieResults(serie, results) {
     resultsContainer.appendChild(card);
   }
 }
+
+function renderTmdbFilmResults(film, results) {
+  const resultsContainer = document.getElementById("tmdbResults");
+  resultsContainer.innerHTML = "";
+
+  if (!results || results.length === 0) {
+    resultsContainer.innerHTML =
+      '<div class="tmdb-empty">Aucun résultat trouvé.</div>';
+    return;
+  }
+
+  for (const result of results) {
+    const card = document.createElement("article");
+    card.className = "tmdb-result-card";
+
+    const imageZone = document.createElement("div");
+
+    if (result.image) {
+      const img = document.createElement("img");
+      img.src = result.image;
+      img.alt = result.titre;
+      imageZone.appendChild(img);
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "tmdb-result-placeholder";
+      placeholder.textContent = "Sans affiche";
+      imageZone.appendChild(placeholder);
+    }
+
+    const info = document.createElement("div");
+
+    const title = document.createElement("a");
+    title.className = "tmdb-result-title tmdb-result-link";
+    title.textContent = result.titre;
+    title.href = result.tmdbUrl;
+    title.target = "_self";
+    title.rel = "noopener noreferrer";
+
+    const year = document.createElement("div");
+    year.className = "tmdb-result-year";
+    year.textContent = result.annee || "Année inconnue";
+
+    const description = document.createElement("div");
+    description.className = "tmdb-result-description";
+    description.textContent =
+      result.description || "Aucune description disponible.";
+
+    info.appendChild(title);
+    info.appendChild(year);
+    info.appendChild(description);
+
+    const button = document.createElement("button");
+    button.className = "tmdb-associate-button";
+    button.textContent = "Associer";
+    button.onclick = () => associateTmdbFilm(film, result);
+
+    card.appendChild(imageZone);
+    card.appendChild(info);
+    card.appendChild(button);
+
+    resultsContainer.appendChild(card);
+  }
+}
+
 async function associateTmdbSerie(serie, result) {
   const response = await fetch("http://localhost:9876/associate-tmdb-serie", {
     method: "POST",
@@ -117,6 +276,68 @@ async function associateTmdbSerie(serie, result) {
     }, 0);
   }
 }
+
+async function associateTmdbFilm(film, result) {
+  const detailsResponse = await fetch(
+    `https://api.themoviedb.org/3/movie/${result.tmdbId}?api_key=${tmdbApiKey}&language=fr-FR`,
+  );
+
+  const details = await detailsResponse.json();
+
+  const genres = details.genres
+    ? details.genres.map((genre) => genre.name)
+    : [];
+
+  const collectionId = details.belongs_to_collection
+    ? details.belongs_to_collection.id
+    : null;
+
+  const collectionNom = details.belongs_to_collection
+    ? details.belongs_to_collection.name
+    : null;
+
+  const response = await fetch("http://localhost:9876/associate-tmdb-film", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      filmId: film.id,
+      tmdbId: result.tmdbId,
+      tmdbUrl: result.tmdbUrl,
+      image: result.image,
+      titreTmdb: result.titre,
+      anneeTmdb: result.annee,
+      descriptionTmdb: result.description,
+      genre: genres,
+      collectionId: collectionId,
+      collectionNom: collectionNom,
+    }),
+  });
+
+  if (!response.ok) {
+    console.error(await response.text());
+    return;
+  }
+
+  film.tmdbId = result.tmdbId;
+  film.tmdbUrl = result.tmdbUrl;
+  film.image = result.image;
+  film.titreTmdb = result.titre;
+  film.anneeTmdb = result.annee;
+  film.descriptionTmdb = result.description;
+
+  closeTmdbModal();
+
+  if (typeof renderFilms === "function") {
+    const currentScrollY = window.scrollY;
+    renderFilms();
+    setTimeout(() => {
+      window.scrollTo(0, currentScrollY);
+    }, 0);
+  }
+}
+
 function closeTmdbModal() {
   document.getElementById("tmdbModal").classList.add("hidden");
 }
@@ -167,6 +388,30 @@ async function getTmdbSeasonEpisodes(serie, seasonNumber) {
     });
   }
   return episodes;
+}
+
+async function searchTmdbFilm(title) {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&language=fr-FR&query=${encodeURIComponent(title)}`,
+  );
+
+  const data = await response.json();
+
+  if (!data.results) {
+    console.error(data);
+    return [];
+  }
+
+  return data.results.map((item) => ({
+    tmdbId: item.id,
+    titre: item.title,
+    annee: item.release_date ? item.release_date.substring(0, 4) : "",
+    description: item.overview,
+    image: item.poster_path
+      ? `https://image.tmdb.org/t/p/w342${item.poster_path}`
+      : null,
+    tmdbUrl: `https://www.themoviedb.org/movie/${item.id}`,
+  }));
 }
 
 document.addEventListener("keydown", (event) => {
