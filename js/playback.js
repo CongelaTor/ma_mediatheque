@@ -29,10 +29,11 @@ function requestLocalPlay(payload) {
     .catch((error) => console.error(error));
 }
 function saveResumeFilm(film) {
+  const title = film.titreTmdb || film.titre;
   localStorage.setItem(
     "maVideotheque.resumeFilm",
     JSON.stringify({
-      titre: film.titre,
+      titre: title,
       fichier: film.fichier,
       date: new Date().toISOString(),
     }),

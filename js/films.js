@@ -165,6 +165,10 @@ function createFilmCard(film) {
   const posterZone = document.createElement("div");
   posterZone.className = "poster-zone";
   posterZone.onclick = () => {
+    if (film.titreTmdb) {
+      window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
+      return;
+    }
     playFilm(film);
     return;
   };
@@ -177,11 +181,12 @@ function createFilmCard(film) {
     : '<span class="play-icon">▶</span>';
   playButton.onclick = (event) => {
     event.stopPropagation();
-    if (film.titreTmdb) {
-      window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
-      return;
-    }
+    // if (film.titreTmdb) {
+    //   window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
+    //   return;
+    // }
     playFilm(film);
+    return;
   };
   posterZone.appendChild(playButton);
   card.appendChild(posterZone);

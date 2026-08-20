@@ -398,6 +398,8 @@ async function associateTmdbFilm(film, result) {
     ? details.belongs_to_collection.name
     : null;
 
+  const dureeTmdb = details.runtime || null;
+
   const response = await fetch("http://localhost:9876/associate-tmdb-film", {
     method: "POST",
     headers: {
@@ -408,14 +410,16 @@ async function associateTmdbFilm(film, result) {
 
       titreTmdb: result.titre,
       anneeTmdb: result.annee,
-      collectionNom: collectionNom,
+      dureeTmdb: dureeTmdb,
       genre: genres,
-      descriptionTmdb: result.description,
+
+      collectionId: collectionId,
+      collectionNom: collectionNom,
 
       tmdbId: result.tmdbId,
       tmdbUrl: result.tmdbUrl,
-      collectionId: collectionId,
       image: result.image,
+      descriptionTmdb: result.description,
     }),
   });
 
@@ -424,15 +428,26 @@ async function associateTmdbFilm(film, result) {
     return;
   }
 
+  film.titreTmdb = result.titre;
+  film.anneeTmdb = result.annee;
+  film.dureeTmdb = dureeTmdb;
+  film.genre = genres;
+
+  film.collectionId = collectionId;
+  film.collectionNom = collectionNom;
+
   film.tmdbId = result.tmdbId;
   film.tmdbUrl = result.tmdbUrl;
   film.image = result.image;
-  film.titreTmdb = result.titre;
-  film.anneeTmdb = result.annee;
   film.descriptionTmdb = result.description;
 
   closeTmdbModal();
 
+  if (currentPage === "film-detail") {
+    window.location.reload();
+    return;
+  }
+  
   if (typeof renderFilms === "function") {
     const currentScrollY = window.scrollY;
     renderFilms();

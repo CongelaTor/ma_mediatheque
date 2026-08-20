@@ -54,6 +54,11 @@ http
           setIgnoreWord(data, response);
           return;
         }
+        if (request.url === "/open-file-location") {
+          openFileLocation(data, response);
+          return;
+        }
+
         launchVlc(data, response);
       } catch (error) {
         response.writeHead(500, {
@@ -66,6 +71,7 @@ http
   .listen(PORT, () => {
     console.log(`MediaServer actif sur http://localhost:${PORT}`);
   });
+
 function launchVlc(data, response) {
   execFile(VLC, [data.fichier], (error) => {
     if (error) {
@@ -77,6 +83,30 @@ function launchVlc(data, response) {
   });
   response.end("OK");
 }
+
+function openFileLocation(data, response) {
+  if (!data.fichier) {
+    response.writeHead(400, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+
+    response.end("Fichier non renseigné");
+    return;
+  }
+
+  execFile("explorer.exe", ["/select,", data.fichier], (error) => {
+    if (error) {
+      console.error(error);
+    }
+  });
+
+  response.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+  });
+
+  response.end("Emplacement ouvert");
+}
+
 function saveSerieTmdbData(data, response) {
   const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
   const serie = catalog.series.find((item) => item.id === data.serieId);
@@ -118,11 +148,11 @@ function saveFilmTmdbData(data, response) {
   film.image = data.image;
   film.titreTmdb = data.titreTmdb;
   film.anneeTmdb = data.anneeTmdb;
+  film.dureeTmdb = data.dureeTmdb;
   film.descriptionTmdb = data.descriptionTmdb;
   film.genre = data.genre;
   film.collectionId = data.collectionId;
   film.collectionNom = data.collectionNom;
-
   fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), "utf8");
 
   response.writeHead(200, {

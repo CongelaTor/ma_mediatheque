@@ -621,6 +621,7 @@ input {
 
     padding: 0;
     line-height: 1;
+    padding-bottom: 6px;
 }
 
 .tmdb-results {
@@ -936,4 +937,68 @@ input {
 .tmdb-search-token-pin {
     font-size: 14px;
     filter: grayscale(100%);
+}
+.film-file-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.film-file-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-width: 0;
+}
+
+.film-file-title {
+    min-width: 0;
+    overflow: hidden;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.film-file-folder {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.film-file-meta {
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.film-file-action-button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.film-link-icon svg {
+    display: block;
+    transform: translate(-1px, 2px) rotate(45deg);
+}
+
+.film-open-icon {
+    display: inline-block;
+    transform: scale(1.15);
 }
