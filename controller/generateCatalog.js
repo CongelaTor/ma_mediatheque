@@ -1,25 +1,27 @@
-// REINIT du fichier catalog
-// {
-//     "version": 1,
-//     "dateDernierScan": null,
-//     "films": [],
-//     "series": []
-// }
 const fs = require("fs");
 const path = require("path");
-console.log("=== Ma médiathèque ===");
 const rootDir = path.join(__dirname, "..");
 const configPath = path.join(rootDir, "config", "config.json");
 const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
+const languageAliasesPath = path.join(
+  rootDir,
+  "config",
+  "languageAliases.json",
+);
 const catalogPath = path.join(rootDir, "data", "catalog.json");
+
 const config = readJson(configPath);
 const ignoreWordsConfig = readJson(ignoreWordsPath);
+const languageAliases = readJson(languageAliasesPath);
 const existingCatalog = readJson(catalogPath);
+
 normalizeIgnoreWordsConfig(ignoreWordsConfig);
 writeJson(ignoreWordsPath, ignoreWordsConfig);
+
 const existingFilmByPath = buildExistingFilmByPath(existingCatalog);
 const existingEpisodeByPath = buildExistingEpisodeByPath(existingCatalog);
 const existingSerieByKey = buildExistingSerieByKey(existingCatalog);
+
 const syncedCatalog = {
   version: existingCatalog.version || 1,
   dateDernierScan: null,
@@ -204,13 +206,15 @@ function isSeriesTechnicalFolder(value) {
 }
 function detectLanguage(filePath) {
   const upperPath = filePath.toUpperCase();
-  const match = upperPath.match(
-    /(^|[^A-Z0-9])(VOSTFR|VOST|VF|VO)([^A-Z0-9]|$)/,
-  );
-  if (!match) {
-    return "TBD";
+
+  for (const [keyword, languages] of Object.entries(languageAliases)) {
+    const regex = new RegExp(`(^|[^A-Z0-9])${keyword}([^A-Z0-9]|$)`);
+
+    if (regex.test(upperPath)) {
+      return languages;
+    }
   }
-  return match[2];
+  return ["TBD"];
 }
 function detectYear(value) {
   const matchAnnee = value.match(/\b(19|20)\d{2}\b/);
@@ -327,10 +331,10 @@ function syncFilm(catalog, analyse) {
       // titre: existing.titre || analyse.titre,
       annee: existing.annee ?? analyse.annee,
       langue: existing.langue ?? analyse.langue,
-      fichier: analyse.fichier,
-      nomFichier: analyse.nomFichier,
       taille: analyse.taille,
       image: existing.image || analyse.image,
+      fichier: analyse.fichier,
+      nomFichier: analyse.nomFichier,
     });
     return "kept";
   }
@@ -338,12 +342,13 @@ function syncFilm(catalog, analyse) {
     id: analyse.id,
     titre: analyse.titre,
     annee: analyse.annee,
-    genre: null,
     langue: analyse.langue,
+    taille: analyse.taille,
+    genre: null,
+    image: analyse.image,
     fichier: analyse.fichier,
     nomFichier: analyse.nomFichier,
-    taille: analyse.taille,
-    image: analyse.image,
+
     imdbId: null,
     tmdbId: null,
     tmdbUrl: null,

@@ -574,9 +574,9 @@ input {
     z-index: 200;
     background: rgba(0, 0, 0, 0.68);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 24px;
+    padding-top: 20px;
 }
 
 .tmdb-modal-panel {
@@ -589,6 +589,7 @@ input {
     box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
     display: flex;
     flex-direction: column;
+    margin-top: 120px;
 }
 
 .tmdb-modal-header {
@@ -901,20 +902,38 @@ input {
 }
 
 .tmdb-search-token {
-  border: 1px solid #2d4263;
-  border-radius: 999px;
-  padding: 6px 10px;
-  cursor: pointer;
-  font-size: 0.9rem;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .tmdb-search-token.active {
-  background: #2563eb;
-  color: #ffffff;
+    background: linear-gradient(135deg, #243d5a 0%, #294668 45%, #2c4a6e 100%);
+    color: white;
 }
 
-.tmdb-search-token.inactive {
-  background: #1f2937;
-  color: #9ca3af;
-  text-decoration: line-through;
+.tmdb-search-token.inactive,
+.tmdb-search-token.pinned {
+    background: #d6d8dc79;
+    color: #222;
+}
+
+.tmdb-search-token.year-pinned {
+    background: #ffffff;
+    color: #222222;
+}
+
+.tmdb-search-token:hover {
+    transform: translateY(-1px);
+}
+
+.tmdb-search-token-pin {
+    font-size: 14px;
+    filter: grayscale(100%);
 }

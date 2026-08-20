@@ -1,0 +1,11 @@
+{
+    "VO": ["VO"],
+    "VF": ["VF"],
+    "VOST": ["VOST"],
+    "VOSTFR": ["VOSTFR"],
+
+    "TRUEFRENCH": ["VF"],
+    "FRENCH": ["VF"],
+
+    "MULTI": ["VO", "VF"]
+}

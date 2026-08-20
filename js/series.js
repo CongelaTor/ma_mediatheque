@@ -21,13 +21,18 @@ function handleLanguageButtonClick(button) {
       return;
     }
     activeSeriesLanguages.delete(language);
+    if (language === "VO") {
+      activeSeriesLanguages.delete("VOST");
+      activeSeriesLanguages.delete("VOSTFR");
+    }
   } else {
     activeSeriesLanguages.add(language);
+    if (language === "VO") {
+      activeSeriesLanguages.add("VOST");
+      activeSeriesLanguages.add("VOSTFR");
+    }
   }
-  sessionStorage.setItem(
-    "maMediatheque.activeSeriesLanguages",
-    JSON.stringify([...activeSeriesLanguages]),
-  );
+  saveSeriesViewState();
   updateLanguageButtons();
   if (currentPage === "series") {
     renderSeries();

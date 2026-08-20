@@ -2,7 +2,7 @@ let tmdbSearchWords = [];
 let tmdbCurrentFilm = null;
 
 function openTmdbForFilm(film) {
-  if (film.tmdbId) {
+  if (film.titreTmdb) {
     window.location.href = `${tmdbBaseUrl}/movie/${film.tmdbId}`;
     return;
   }
@@ -20,8 +20,7 @@ async function showTmdbSerieSearch(serie) {
   const title = document.getElementById("tmdbModalTitle");
   const resultsContainer = document.getElementById("tmdbResults");
   title.textContent = `Résultats TMDB pour ${serie.titre}`;
-  resultsContainer.innerHTML =
-    '<div class="tmdb-empty">Recherche en cours...</div>';
+  resultsContainer.innerHTML = '<div class="tmdb-empty">div>';
   modal.classList.remove("hidden");
   modal.onclick = (event) => {
     if (event.target === modal) {
@@ -40,20 +39,72 @@ async function showTmdbFilmSearch(film) {
   const tokensContainer = document.getElementById("tmdbSearchTokens");
   const resultsContainer = document.getElementById("tmdbResults");
 
-  title.textContent = `Résultats TMDB`;
+  title.textContent = "Résultats TMDB";
+  tokensContainer.innerHTML = "";
+  resultsContainer.innerHTML = "";
 
-  tmdbSearchWords = film.titre
-    .split(/\s+/)
+  const ignoreWordsResponse = await fetch(
+    "http://localhost:9876/get-ignore-words",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: "{}",
+    },
+  );
+
+  const ignoreWords = ignoreWordsResponse.ok
+    ? await ignoreWordsResponse.json()
+    : [];
+
+  const ignoredWordsSet = new Set(
+    ignoreWords.map((word) => word.toUpperCase()),
+  );
+
+  const sourceTitle = (film.nomFichier || film.titre)
+    .replace(/\.[^.]+$/, "")
+    .replace(/[._-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  tmdbSearchWords = sourceTitle
+    .split(" ")
     .filter((word) => word.trim() !== "")
     .map((word) => ({
       text: word,
-      active: true,
+      state: ignoredWordsSet.has(word.toUpperCase()) ? "pinned" : "active",
     }));
 
-  input.value = film.titre;
-  tokensContainer.innerHTML = "";
-  resultsContainer.innerHTML = "<p>Recherche en cours...</p>";
+  const firstPinnedAtEnd = findFirstPinnedWordAtEnd();
 
+  let leftPinnedIndex = firstPinnedAtEnd - 1;
+
+  while (
+    leftPinnedIndex >= 0 &&
+    tmdbSearchWords[leftPinnedIndex].state === "active"
+  ) {
+    leftPinnedIndex--;
+  }
+
+  if (
+    leftPinnedIndex > 0 &&
+    tmdbSearchWords[leftPinnedIndex].state === "pinned"
+  ) {
+    for (let index = leftPinnedIndex + 1; index < firstPinnedAtEnd; index++) {
+      const wordToPin = tmdbSearchWords[index];
+
+      if (
+        wordToPin.state === "active" &&
+        !/^[A-Za-z0-9]$/.test(wordToPin.text)
+      ) {
+        wordToPin.state = "pinned";
+        await setTmdbIgnoreWord(wordToPin.text, true);
+      }
+    }
+  }
+
+  updateTmdbFilmSearchInputFromTokens();
   renderTmdbFilmSearchTokens();
 
   input.onkeydown = (event) => {
@@ -73,6 +124,16 @@ async function showTmdbFilmSearch(film) {
   await searchTmdbFilmFromInput();
 }
 
+function findFirstPinnedWordAtEnd() {
+  let index = tmdbSearchWords.length - 1;
+
+  while (index >= 0 && tmdbSearchWords[index].state === "pinned") {
+    index--;
+  }
+
+  return index + 1;
+}
+
 function renderTmdbFilmSearchTokens() {
   const tokensContainer = document.getElementById("tmdbSearchTokens");
   tokensContainer.innerHTML = "";
@@ -80,13 +141,37 @@ function renderTmdbFilmSearchTokens() {
   for (const word of tmdbSearchWords) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = word.active
-      ? "tmdb-search-token active"
-      : "tmdb-search-token inactive";
-    button.textContent = word.active ? `${word.text} ×` : word.text;
+
+    const isYear = word.state === "pinned" && /^(19|20)\d{2}$/.test(word.text);
+    button.className =
+      `tmdb-search-token ${word.state}` + (isYear ? " year-pinned" : "");
+
+    const wordText = document.createElement("span");
+    wordText.textContent = word.text;
+    button.appendChild(wordText);
+
+    if (word.state === "pinned") {
+      const pinnedIcon = document.createElement("span");
+      pinnedIcon.className = "tmdb-search-token-pin";
+      pinnedIcon.textContent = "📌";
+      button.appendChild(pinnedIcon);
+    }
 
     button.onclick = async () => {
-      word.active = !word.active;
+      if (word.state === "active") {
+        if (/^[A-Za-z0-9]$/.test(word.text)) {
+          word.state = "inactive";
+        } else {
+          word.state = "pinned";
+          await setTmdbIgnoreWord(word.text, true);
+        }
+      } else if (word.state === "pinned") {
+        word.state = "inactive";
+        await setTmdbIgnoreWord(word.text, false);
+      } else {
+        word.state = "active";
+      }
+
       updateTmdbFilmSearchInputFromTokens();
       renderTmdbFilmSearchTokens();
       await searchTmdbFilmFromInput();
@@ -100,9 +185,26 @@ function updateTmdbFilmSearchInputFromTokens() {
   const input = document.getElementById("tmdbSearchInput");
 
   input.value = tmdbSearchWords
-    .filter((word) => word.active)
+    .filter((word) => word.state === "active")
     .map((word) => word.text)
     .join(" ");
+}
+
+async function setTmdbIgnoreWord(word, ignored) {
+  const response = await fetch("http://localhost:9876/set-ignore-word", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      word,
+      ignored,
+    }),
+  });
+
+  if (!response.ok) {
+    console.error(await response.text());
+  }
 }
 
 async function searchTmdbFilmFromInput() {
@@ -116,7 +218,7 @@ async function searchTmdbFilmFromInput() {
     return;
   }
 
-  resultsContainer.innerHTML = "<p>Recherche en cours...</p>";
+  resultsContainer.innerHTML = "";
 
   const results = await searchTmdbFilm(searchText);
 
@@ -245,12 +347,12 @@ async function associateTmdbSerie(serie, result) {
     },
     body: JSON.stringify({
       serieId: serie.id,
-      tmdbId: result.tmdbId,
-      tmdbUrl: result.tmdbUrl,
-      image: result.image,
       titreTmdb: result.titre,
       anneeTmdb: result.annee,
       descriptionTmdb: result.description,
+      tmdbId: result.tmdbId,
+      tmdbUrl: result.tmdbUrl,
+      image: result.image,
     }),
   });
   if (!response.ok) {
@@ -303,15 +405,17 @@ async function associateTmdbFilm(film, result) {
     },
     body: JSON.stringify({
       filmId: film.id,
-      tmdbId: result.tmdbId,
-      tmdbUrl: result.tmdbUrl,
-      image: result.image,
+
       titreTmdb: result.titre,
       anneeTmdb: result.annee,
-      descriptionTmdb: result.description,
-      genre: genres,
-      collectionId: collectionId,
       collectionNom: collectionNom,
+      genre: genres,
+      descriptionTmdb: result.description,
+
+      tmdbId: result.tmdbId,
+      tmdbUrl: result.tmdbUrl,
+      collectionId: collectionId,
+      image: result.image,
     }),
   });
 
@@ -350,6 +454,7 @@ async function searchTmdbSerie(title) {
     console.error(data);
     return [];
   }
+
   return data.results.map((item) => ({
     tmdbId: item.id,
     titre: item.name,

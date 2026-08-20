@@ -23,7 +23,7 @@
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
-                <input id="searchInput" class="search-input" type="text" placeholder="Filtrer..."
+                <input id="searchInput" class="search-input" type="search" placeholder="Filtrer..."
                     oninput="handleSearch()">
             </div>
         </header>
@@ -76,10 +76,23 @@
                                 <h1>Films</h1>
                                 <p id="filmsCount">0 film</p>
                             </div>
-                            <div class="sort-label">Tri : Titre A-Z</div>
                         </div>
-                        <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">▶ Reprendre :
-                            <span id="resumeFilmText"></span></button>
+
+                        <button id="resumeFilmButton" 
+                                class="resume-button hidden" 
+                                onclick="resumeFilm()">
+                            ▶ Reprendre :
+                            <span id="resumeFilmText"></span>
+                        </button>
+
+                                                <div id="languageFilters" class="language-filters">
+                            <button class="language-button active" data-language="VO">VO</button>
+                            <button class="language-button active" data-language="VF">VF</button>
+                            <button class="language-button active" data-language="VOST">VOST</button>
+                            <button class="language-button active" data-language="VOSTFR">VOSTFR</button>
+                            <button class="language-button active" data-language="TBD">TBD</button>
+                        </div>
+
                         <div id="filmsGrid" class="cards-grid"></div>
                     </section>
                 </div>
