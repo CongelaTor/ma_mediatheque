@@ -76,17 +76,21 @@ function renderFilms() {
   const groupedFilms = new Map();
 
   for (const film of catalog.films) {
-    if (!film.tmdbId) {
-      groupedFilms.set(`file:${film.id}`, film);
-      continue;
-    }
+    const groupKey = film.tmdbId ? `tmdb:${film.tmdbId}` : `file:${film.id}`;
 
-    if (!groupedFilms.has(film.tmdbId)) {
-      groupedFilms.set(film.tmdbId, film);
+    if (!groupedFilms.has(groupKey)) {
+      groupedFilms.set(groupKey, {
+        film,
+        fileCount: 0,
+      });
     }
+    groupedFilms.get(groupKey).fileCount++;
   }
-
   let films = [...groupedFilms.values()]
+    .map((group) => {
+      group.film.fileCount = group.fileCount;
+      return group.film;
+    })
     .filter((film) => filmMatchesAjouts(film))
     .filter((film) => filmMatchesGenre(film))
     .filter((film) => filmMatchesLanguage(film))
@@ -169,26 +173,19 @@ function createFilmCard(film) {
       window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
       return;
     }
-    playFilm(film);
-    return;
+    showTmdbFilmSearch(film);
   };
   posterZone.appendChild(createPosterContent(film.image, film.titre, film.id));
 
-  const playButton = document.createElement("button");
-  playButton.className = "play-button";
-  playButton.innerHTML = film.titreTmdb
-    ? '<span class="play-icon">🔎</span>'
-    : '<span class="play-icon">▶</span>';
-  playButton.onclick = (event) => {
-    event.stopPropagation();
-    // if (film.titreTmdb) {
-    //   window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
-    //   return;
-    // }
-    playFilm(film);
-    return;
-  };
-  posterZone.appendChild(playButton);
+  if (film.fileCount > 1) {
+    const badge = document.createElement("button");
+
+    badge.className = "play-button";
+    badge.textContent = film.fileCount;
+
+    posterZone.appendChild(badge);
+  }
+
   card.appendChild(posterZone);
   return card;
 }

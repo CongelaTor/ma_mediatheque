@@ -30,9 +30,9 @@
             </nav>
 
             <div class="top-actions">
-                <button class="icon-button refresh-button" onclick="reloadCatalog()">
+                <button class="icon-button refresh-button" onclick="reloadCatalog('all')">
                     <span class="refresh-icon">↻</span>
-                    <span>Scan disques</span>
+                    <span>Scan des disques</span>
                 </button>
             </div>
         </header>
@@ -177,7 +177,7 @@
     <div id="scanModal" class="tmdb-modal hidden">
         <div class="tmdb-modal-panel">
             <div class="tmdb-modal-header">
-                <h2>Scan des disques</h2>
+                <h2 id="scanTitle">Scan des disques</h2>
             </div>
 
             <div id="scanLog" class="tmdb-results"></div>

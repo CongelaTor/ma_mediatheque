@@ -23,8 +23,18 @@
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
-                <input id="searchInput" class="search-input" type="search" placeholder="Filtrer..."
+                <input id="searchInput" 
+                    class="search-input" 
+                    type="search" 
+                    placeholder="Filtrer..."
                     oninput="handleSearch()">
+
+                    <button
+                    class="icon-button refresh-button"
+                    onclick="reloadCatalog('films')">
+                    <span class="refresh-icon">↻</span>
+                    <span>Scan des films</span>
+                </button>
             </div>
         </header>
         <main>
@@ -119,6 +129,23 @@
             <div id="tmdbResults" class="tmdb-results"></div>
         </div>
     </div>
+
+    <div id="scanModal" class="tmdb-modal hidden">
+        <div class="tmdb-modal-panel">
+            <div class="tmdb-modal-header">
+                <h2 id="scanTitle">Scan des films</h2>
+            </div>
+
+            <div id="scanLog" class="tmdb-results"></div>
+
+            <div style="padding:16px;text-align:right">
+                <button class="secondary-button" onclick="closeScanModal()">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/state.js"></script>
     <script src="js/catalog.js"></script>
     <script src="js/utils.js"></script>

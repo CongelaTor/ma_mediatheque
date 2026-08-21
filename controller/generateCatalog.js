@@ -1,3 +1,6 @@
+const scanType = process.argv[2] || "all";
+console.log("SCAN TYPE =", scanType);
+
 const fs = require("fs");
 const path = require("path");
 const rootDir = path.join(__dirname, "..");
@@ -22,18 +25,31 @@ const existingFilmByPath = buildExistingFilmByPath(existingCatalog);
 const existingEpisodeByPath = buildExistingEpisodeByPath(existingCatalog);
 const existingSerieByKey = buildExistingSerieByKey(existingCatalog);
 
+// --------------------------------------
+//  conserver la partie du catalog qui n'est pas rescannée
+// --------------------------------------
 const syncedCatalog = {
   version: existingCatalog.version || 1,
   dateDernierScan: null,
-  films: [],
-  series: [],
+  films: scanType === "series" ? [...(existingCatalog.films || [])] : [],
+  series: scanType === "films" ? [...(existingCatalog.series || [])] : [],
 };
+
 let totalVideos = 0;
 let totalNewFilms = 0;
 let totalNewEpisodes = 0;
 let totalKeptFilms = 0;
 let totalKeptEpisodes = 0;
-for (const source of config.sources) {
+
+const sourcesToScan = config.sources.filter((source) => {
+  if (scanType === "all") {
+    return true;
+  }
+
+  return source.type === scanType.slice(0, -1);
+});
+
+for (const source of sourcesToScan) {
   console.log("");
   console.log(`Scan de : ${source.path}`);
   if (!fs.existsSync(source.path)) {
@@ -69,17 +85,37 @@ recomputeDuplicates(syncedCatalog);
 sortCatalog(syncedCatalog);
 syncedCatalog.dateDernierScan = new Date().toISOString();
 writeJson(catalogPath, syncedCatalog);
+function logStat(label, value) {
+  console.log(`${label.padEnd(20)} : ${value}`);
+}
 console.log("");
-console.log("Résumé :");
-console.log(`Vidéos analysées : ${totalVideos}`);
-console.log(`Films conservés : ${totalKeptFilms}`);
-console.log(`Nouveaux films ajoutés : ${totalNewFilms}`);
-console.log(`Épisodes conservés : ${totalKeptEpisodes}`);
-console.log(`Nouveaux épisodes ajoutés : ${totalNewEpisodes}`);
-console.log(`Films au catalogue : ${syncedCatalog.films.length}`);
-console.log(`Séries au catalogue : ${syncedCatalog.series.length}`);
-console.log("");
-console.log("catalog.json synchronisé.");
+if (scanType === "films") {
+  logStat("Vidéos analysées", totalVideos);
+  console.log("");
+  logStat("Films ajoutés", totalNewFilms);
+  logStat("Films conservés", totalKeptFilms);
+  logStat("Films au catalogue", syncedCatalog.films.length);
+  console.log("");
+} else if (scanType === "series") {
+  logStat("Vidéos analysées", totalVideos);
+  console.log("");
+  logStat("Épisodes ajoutés", totalNewEpisodes);
+  logStat("Épisodes conservés", totalKeptEpisodes);
+  logStat("Séries au catalogue", syncedCatalog.series.length);
+  console.log("");
+} else {
+  logStat("Vidéos analysées", totalVideos);
+  console.log("");
+  logStat("Films ajoutés", totalNewFilms);
+  logStat("Films conservés", totalKeptFilms);
+  logStat("Films au catalogue", syncedCatalog.films.length);
+  console.log("");
+  logStat("Épisodes ajoutés", totalNewEpisodes);
+  logStat("Épisodes conservés", totalKeptEpisodes);
+  logStat("Séries au catalogue", syncedCatalog.series.length);
+  console.log("");
+}
+console.log("Catalogue synchronisé.");
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
@@ -262,9 +298,6 @@ function cleanTitle(value) {
   const words = cleanSeparators(value)
     .split(" ")
     .filter((word) => word.trim().length > 0);
-  if (words.includes("TRUEFRENCH")) {
-    console.log(words);
-  }
 
   const cleanedWords = [];
   for (const word of words) {

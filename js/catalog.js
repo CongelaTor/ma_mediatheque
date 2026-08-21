@@ -2,10 +2,26 @@ async function loadCatalog() {
   const response = await fetch("data/catalog.json");
   catalog = await response.json();
 }
-async function reloadCatalog() {
+async function reloadCatalog(type = "all") {
   openScanModal();
+  document.getElementById("scanTitle").textContent =
+    type === "films"
+      ? "Scan des films en cours..."
+      : type === "series"
+        ? "Scan des séries en cours..."
+        : "Scan des disques en cours...";
+
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
+  document.getElementById("scanLog").textContent = "";
   const response = await fetch("http://localhost:9876/refresh-catalog", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      type,
+    }),
   });
   if (!response.ok) {
     const log = await response.text();
@@ -14,6 +30,13 @@ async function reloadCatalog() {
     return;
   }
   const log = await response.text();
+
+  document.getElementById("scanTitle").textContent =
+    type === "films"
+      ? "Scan des films terminé"
+      : type === "series"
+        ? "Scan des séries terminé"
+        : "Scan des disques terminé";
 
   await loadCatalog();
   updateStats();

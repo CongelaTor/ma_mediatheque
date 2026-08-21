@@ -1,9 +1,9 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-08-20T18:00:18.955Z",
+    "dateDernierScan": "2026-08-21T19:02:24.294Z",
     "films": [
         {
-            "id": "avengers_2_age_of_ultron_2015_2015",
+            "id": "a_avengers_2_age_of_ultron_2015",
             "titre": "a Avengers 2 Age of Ultron",
             "annee": 2015,
             "langue": [
@@ -24,44 +24,36 @@
             "doublonExact": false,
             "doublonProbable": false,
             "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.631Z",
+            "dateAjout": "2026-08-21T18:58:59.665Z",
             "titreTmdb": "Avengers : L'Ère d'Ultron",
             "anneeTmdb": "2015",
+            "dureeTmdb": 143,
             "descriptionTmdb": "Alors que Tony Stark tente de relancer un programme de maintien de la paix jusque-là suspendu, les choses tournent mal et les super-héros Iron Man, Captain America, Thor, Hulk, Black Widow et Hawkeye vont devoir à nouveau unir leurs forces pour combattre le plus puissant de leurs adversaires : le terrible Ultron, un être technologique terrifiant qui s’est juré d’éradiquer l’espèce humaine. Afin d’empêcher celui-ci d’accomplir ses sombres desseins, des alliances inattendues se scellent, les entraînant dans une incroyable aventure et une haletante course contre le temps…",
             "collectionId": 86311,
             "collectionNom": "Avengers - Saga"
         },
         {
-            "id": "avengers_age_of_ultron_2015",
+            "id": "a_avengers_age_of_ultron_2015",
             "titre": "a Avengers Age Of Ultron",
             "annee": 2015,
             "langue": [
                 "VF"
             ],
             "taille": 5912660447,
-            "genre": [
-                "Action",
-                "Aventure",
-                "Science-Fiction"
-            ],
-            "image": "https://image.tmdb.org/t/p/w342/A0tw88n1byyR2vodhJMlFPQGQgF.jpg",
+            "genre": null,
+            "image": null,
             "fichier": "Z:\\Films\\Marvel\\2015 a Avengers.Age.Of.Ultron.2015.TRUEFRENCH.720p.BluRay.x264-AViTECH.mkv",
             "nomFichier": "2015 a Avengers.Age.Of.Ultron.2015.TRUEFRENCH.720p.BluRay.x264-AViTECH.mkv",
             "imdbId": null,
-            "tmdbId": 99861,
-            "tmdbUrl": "https://www.themoviedb.org/movie/99861",
+            "tmdbId": null,
+            "tmdbUrl": null,
             "doublonExact": false,
             "doublonProbable": true,
             "groupeDoublon": "a_avengers_age_of_ultron",
-            "dateAjout": "2026-08-20T07:59:53.632Z",
-            "titreTmdb": "Avengers : L'Ère d'Ultron",
-            "anneeTmdb": "2015",
-            "descriptionTmdb": "Alors que Tony Stark tente de relancer un programme de maintien de la paix jusque-là suspendu, les choses tournent mal et les super-héros Iron Man, Captain America, Thor, Hulk, Black Widow et Hawkeye vont devoir à nouveau unir leurs forces pour combattre le plus puissant de leurs adversaires : le terrible Ultron, un être technologique terrifiant qui s’est juré d’éradiquer l’espèce humaine. Afin d’empêcher celui-ci d’accomplir ses sombres desseins, des alliances inattendues se scellent, les entraînant dans une incroyable aventure et une haletante course contre le temps…",
-            "collectionId": 86311,
-            "collectionNom": "Avengers - Saga"
+            "dateAjout": "2026-08-21T18:58:59.666Z"
         },
         {
-            "id": "avengers_age_of_ultron_2015",
+            "id": "a_avengers_age_of_ultron_2015",
             "titre": "a Avengers Age Of Ultron",
             "annee": 2015,
             "langue": [
@@ -78,7 +70,7 @@
             "doublonExact": false,
             "doublonProbable": true,
             "groupeDoublon": "a_avengers_age_of_ultron",
-            "dateAjout": "2026-08-20T07:59:53.633Z"
+            "dateAjout": "2026-08-21T18:58:59.667Z"
         },
         {
             "id": "black_panther_2018_2018",
@@ -289,7 +281,7 @@
         },
         {
             "id": "guardians_of_the_galaxy_vol_2_2017_french_gzr_2017",
-            "titre": "a Guardians of the Vol 2",
+            "titre": "a Guardians of the 2",
             "annee": 2017,
             "langue": [
                 "VF"
@@ -348,7 +340,7 @@
         },
         {
             "id": "iron_man_3_2013_yify_2013",
-            "titre": "a Iron Man 3 YIFY",
+            "titre": "a Iron Man 3",
             "annee": 2013,
             "langue": [
                 "TBD"
@@ -434,6 +426,37 @@
             "collectionNom": "Albator - Saga"
         },
         {
+            "id": "angles_d_attaque_copie",
+            "titre": "Angles d'attaque",
+            "annee": null,
+            "langue": [
+                "VF"
+            ],
+            "taille": 736571392,
+            "genre": [
+                "Drame",
+                "Action",
+                "Thriller",
+                "Crime"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/68aijpvaZoP4TtBhMlYXVraakcE.jpg",
+            "fichier": "Z:\\Films\\Action\\Angles d'attaque - VF - Copie.avi",
+            "nomFichier": "Angles d'attaque - VF - Copie.avi",
+            "imdbId": null,
+            "tmdbId": 7461,
+            "tmdbUrl": "https://www.themoviedb.org/movie/7461",
+            "doublonExact": false,
+            "doublonProbable": true,
+            "groupeDoublon": "angles_d_attaque",
+            "dateAjout": "2026-08-20T14:16:49.871Z",
+            "titreTmdb": "Angles d'attaque",
+            "anneeTmdb": "2008",
+            "dureeTmdb": 99,
+            "descriptionTmdb": "Thomas Barnes et Kent Taylor sont deux agents secrets chargés d'assurer la protection du Président Ashton lors d'une conférence au sommet sur le terrorisme en Espagne. Peu après son arrivée, le président est victime d'une tentative d'assassinat. Dans la foule, un touriste américain a filmé toute la scène. Rex, reporter pour une chaîne de TV américaine, a elle aussi été le témoin privilégié des quinze minutes avant et après le coup de feu. C'est en suivant la reconstitution de ces moments vécus par ces quatre personnages que la terrible vérité qui se cache derrière cet attentat sera révélée.",
+            "collectionId": null,
+            "collectionNom": null
+        },
+        {
             "id": "angles_d_attaque_vf",
             "titre": "Angles d'attaque",
             "annee": null,
@@ -454,34 +477,14 @@
             "tmdbId": 7461,
             "tmdbUrl": "https://www.themoviedb.org/movie/7461",
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "angles_d_attaque",
             "dateAjout": "2026-08-20T07:59:53.577Z",
             "titreTmdb": "Angles d'attaque",
             "anneeTmdb": "2008",
             "descriptionTmdb": "Thomas Barnes et Kent Taylor sont deux agents secrets chargés d'assurer la protection du Président Ashton lors d'une conférence au sommet sur le terrorisme en Espagne. Peu après son arrivée, le président est victime d'une tentative d'assassinat. Dans la foule, un touriste américain a filmé toute la scène. Rex, reporter pour une chaîne de TV américaine, a elle aussi été le témoin privilégié des quinze minutes avant et après le coup de feu. C'est en suivant la reconstitution de ces moments vécus par ces quatre personnages que la terrible vérité qui se cache derrière cet attentat sera révélée.",
             "collectionId": null,
             "collectionNom": null
-        },
-        {
-            "id": "angles_d_attaque_copie",
-            "titre": "Angles d'attaque Copie",
-            "annee": null,
-            "langue": [
-                "VF"
-            ],
-            "taille": 736571392,
-            "genre": null,
-            "image": null,
-            "fichier": "Z:\\Films\\Action\\Angles d'attaque - VF - Copie.avi",
-            "nomFichier": "Angles d'attaque - VF - Copie.avi",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
-            "dateAjout": "2026-08-20T14:16:49.871Z"
         },
         {
             "id": "aquaman_2018_2018",
@@ -597,7 +600,8 @@
             "anneeTmdb": "2015",
             "descriptionTmdb": "L'histoire d'Ant-Man est celle d'un petit escroc du nom de Scott Lang. Doté d'une capacité étonnante - celle de rétrécir à volonté tout en démultipliant sa force - ce dernier doit embrasser la part de héros qui est en lui afin d'aider son mentor, le docteur Hank Pym, à protéger d'une nouvelle génération de redoutables menaces le secret du spectaculaire costume d'Ant-Man. Contre des obstacles en apparence insurmontables, Pym et Lang, doivent mettre au point - et réussir - un audacieux cambriolage qui pourrait sauver le monde d'une issue fatale…",
             "collectionId": 422834,
-            "collectionNom": "Ant-Man - Saga"
+            "collectionNom": "Ant-Man - Saga",
+            "dureeTmdb": 118
         },
         {
             "id": "b_ant_man_tatazh_2015",
@@ -1242,7 +1246,7 @@
         },
         {
             "id": "casino_royale_yify_2006",
-            "titre": "Casino Royale YIFY",
+            "titre": "Casino Royale",
             "annee": 2006,
             "langue": [
                 "TBD"
@@ -1548,7 +1552,8 @@
             "anneeTmdb": "2022",
             "descriptionTmdb": "Le Docteur Strange lance un sort interdit qui ouvre le portail du Multivers, incluant des versions alternatives de lui-même. Cette menace à l'humanité est plus puissante que les pouvoirs combinés de Strange, Wong et Wanda Maximoff.",
             "collectionId": 618529,
-            "collectionNom": "Doctor Strange - Saga"
+            "collectionNom": "Doctor Strange - Saga",
+            "dureeTmdb": 126
         },
         {
             "id": "doctor_strange_2_bonus_3_deleted_scenes_t0m_2022",
@@ -1750,7 +1755,7 @@
         },
         {
             "id": "elektra_directors_cut_bokutox_yify_2005",
-            "titre": "Elektra YIFY",
+            "titre": "Elektra",
             "annee": 2005,
             "langue": [
                 "TBD"
@@ -2025,6 +2030,35 @@
             "collectionNom": "Fast and Furious - Saga"
         },
         {
+            "id": "fantastic_four_yify_2005",
+            "titre": "Fantastic Four",
+            "annee": 2005,
+            "langue": [
+                "TBD"
+            ],
+            "taille": 680626817,
+            "genre": [
+                "Action",
+                "Fantastique",
+                "Science-Fiction"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/tnJ3WyJwVbQhBQV5fmFmpcnyi5J.jpg",
+            "fichier": "Z:\\Films\\Marvel\\Fantastic Four (2005)\\Fantastic Four 2005.720p.BrRip.x264.YIFY.mp4",
+            "nomFichier": "Fantastic Four 2005.720p.BrRip.x264.YIFY.mp4",
+            "imdbId": null,
+            "tmdbId": 9738,
+            "tmdbUrl": "https://www.themoviedb.org/movie/9738",
+            "doublonExact": false,
+            "doublonProbable": false,
+            "groupeDoublon": null,
+            "dateAjout": "2026-08-20T07:59:53.663Z",
+            "titreTmdb": "Les 4 Fantastiques",
+            "anneeTmdb": "2005",
+            "descriptionTmdb": "Reed Richards tente de persuader Victor Fatalis, un riche industriel originaire de Latverie, en Europe centrale, de financer une mission au cœur du cosmos pour arriver à percer les mystères de l'origine du monde. Le projet accepté, il embarque avec l'astronaute Ben Grimm, Sue Storm, son ancienne petite amie, et Johnny Storm, le frère de Sue, un pilote casse-cou. Mais une tempête cosmique fonce tout droit sur la station spatiale, répandant un nuage de particules radioactives. Les codes génétiques des astronautes en sont à tout jamais modifiés. De retour sur Terre, ils commencent à muter. La presse les considère comme des super-héros et les baptise « les 4 Fantastiques »...",
+            "collectionId": 9744,
+            "collectionNom": "Les 4 Fantastiques - Saga"
+        },
+        {
             "id": "fantastic_four_rise_of_the_silver_surfer_2007",
             "titre": "Fantastic Four Rise Of The Silver Surfer",
             "annee": 2007,
@@ -2050,35 +2084,6 @@
             "titreTmdb": "Les 4 Fantastiques et le Surfer d'argent",
             "anneeTmdb": "2007",
             "descriptionTmdb": "Alors que le mariage de Mr. Fantastic et de la femme invisible s'annonce comme l'événement de l'année, un mystérieux surfer d'argent surgit de l'espace et provoque d'étranges phénomènes sur la Terre. Rapidement, les quatre fantastiques vont découvrir le dessein secret de cet être aux pouvoirs surprenants et la menace qu'il fait peser sur notre planète, mais ils vont aussi voir ressurgir leur ennemi juré… Face au danger, amis et ennemis vont devoir unir leurs forces comme jamais…",
-            "collectionId": 9744,
-            "collectionNom": "Les 4 Fantastiques - Saga"
-        },
-        {
-            "id": "fantastic_four_yify_2005",
-            "titre": "Fantastic Four YIFY",
-            "annee": 2005,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 680626817,
-            "genre": [
-                "Action",
-                "Fantastique",
-                "Science-Fiction"
-            ],
-            "image": "https://image.tmdb.org/t/p/w342/tnJ3WyJwVbQhBQV5fmFmpcnyi5J.jpg",
-            "fichier": "Z:\\Films\\Marvel\\Fantastic Four (2005)\\Fantastic Four 2005.720p.BrRip.x264.YIFY.mp4",
-            "nomFichier": "Fantastic Four 2005.720p.BrRip.x264.YIFY.mp4",
-            "imdbId": null,
-            "tmdbId": 9738,
-            "tmdbUrl": "https://www.themoviedb.org/movie/9738",
-            "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.663Z",
-            "titreTmdb": "Les 4 Fantastiques",
-            "anneeTmdb": "2005",
-            "descriptionTmdb": "Reed Richards tente de persuader Victor Fatalis, un riche industriel originaire de Latverie, en Europe centrale, de financer une mission au cœur du cosmos pour arriver à percer les mystères de l'origine du monde. Le projet accepté, il embarque avec l'astronaute Ben Grimm, Sue Storm, son ancienne petite amie, et Johnny Storm, le frère de Sue, un pilote casse-cou. Mais une tempête cosmique fonce tout droit sur la station spatiale, répandant un nuage de particules radioactives. Les codes génétiques des astronautes en sont à tout jamais modifiés. De retour sur Terre, ils commencent à muter. La presse les considère comme des super-héros et les baptise « les 4 Fantastiques »...",
             "collectionId": 9744,
             "collectionNom": "Les 4 Fantastiques - Saga"
         },
@@ -2442,7 +2447,7 @@
         },
         {
             "id": "guardians_of_the_galaxy_2014_yify_2014",
-            "titre": "Guardians of the YIFY",
+            "titre": "Guardians of the",
             "annee": 2014,
             "langue": [
                 "TBD"
@@ -2527,37 +2532,8 @@
             "collectionNom": null
         },
         {
-            "id": "iron_man_2_2010_yify_2010",
-            "titre": "Iron Man 2 YIFY",
-            "annee": 2010,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 1722312518,
-            "genre": [
-                "Aventure",
-                "Action",
-                "Science-Fiction"
-            ],
-            "image": "https://image.tmdb.org/t/p/w342/g9DSeSozGi4zpUyeOYZYMNmIv9O.jpg",
-            "fichier": "Z:\\Films\\Marvel\\2010 Iron.Man.2.2010.1080p.BrRip.x264.YIFY.mp4",
-            "nomFichier": "2010 Iron.Man.2.2010.1080p.BrRip.x264.YIFY.mp4",
-            "imdbId": null,
-            "tmdbId": 10138,
-            "tmdbUrl": "https://www.themoviedb.org/movie/10138",
-            "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.625Z",
-            "titreTmdb": "Iron Man 2",
-            "anneeTmdb": "2010",
-            "descriptionTmdb": "Le monde sait désormais que l'inventeur milliardaire Tony Stark et le super-héros Iron Man ne font qu'un. Malgré la pression du gouvernement, de la presse et du public pour qu'il partage sa technologie avec l'armée, Tony n'est pas disposé à divulguer les secrets de son armure, redoutant que l'information atterrisse dans de mauvaises mains. Avec Pepper Potts et James \"Rhodey\" Rhodes à ses côtés, Tony va forger de nouvelles alliances et affronter de nouvelles forces toutes-puissantes...",
-            "collectionId": 131292,
-            "collectionNom": "Iron Man - Saga"
-        },
-        {
             "id": "iron_man_2008_yify_2008",
-            "titre": "Iron Man YIFY",
+            "titre": "Iron Man",
             "annee": 2008,
             "langue": [
                 "TBD"
@@ -2581,6 +2557,35 @@
             "titreTmdb": "Iron Man",
             "anneeTmdb": "2008",
             "descriptionTmdb": "Tony Stark, inventeur de génie, vendeur d'armes et playboy milliardaire, est kidnappé. Forcé par ses ravisseurs de fabriquer une arme redoutable, il construit en secret une armure high-tech révolutionnaire qu'il utilise pour s'échapper. Comprenant la puissance de cette armure, il décide de l'améliorer et de l'utiliser pour faire régner la justice et protéger les innocents.",
+            "collectionId": 131292,
+            "collectionNom": "Iron Man - Saga"
+        },
+        {
+            "id": "iron_man_2_2010_yify_2010",
+            "titre": "Iron Man 2",
+            "annee": 2010,
+            "langue": [
+                "TBD"
+            ],
+            "taille": 1722312518,
+            "genre": [
+                "Aventure",
+                "Action",
+                "Science-Fiction"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/g9DSeSozGi4zpUyeOYZYMNmIv9O.jpg",
+            "fichier": "Z:\\Films\\Marvel\\2010 Iron.Man.2.2010.1080p.BrRip.x264.YIFY.mp4",
+            "nomFichier": "2010 Iron.Man.2.2010.1080p.BrRip.x264.YIFY.mp4",
+            "imdbId": null,
+            "tmdbId": 10138,
+            "tmdbUrl": "https://www.themoviedb.org/movie/10138",
+            "doublonExact": false,
+            "doublonProbable": false,
+            "groupeDoublon": null,
+            "dateAjout": "2026-08-20T07:59:53.625Z",
+            "titreTmdb": "Iron Man 2",
+            "anneeTmdb": "2010",
+            "descriptionTmdb": "Le monde sait désormais que l'inventeur milliardaire Tony Stark et le super-héros Iron Man ne font qu'un. Malgré la pression du gouvernement, de la presse et du public pour qu'il partage sa technologie avec l'armée, Tony n'est pas disposé à divulguer les secrets de son armure, redoutant que l'information atterrisse dans de mauvaises mains. Avec Pepper Potts et James \"Rhodey\" Rhodes à ses côtés, Tony va forger de nouvelles alliances et affronter de nouvelles forces toutes-puissantes...",
             "collectionId": 131292,
             "collectionNom": "Iron Man - Saga"
         },
@@ -3098,8 +3103,8 @@
             "tmdbId": 56292,
             "tmdbUrl": "https://www.themoviedb.org/movie/56292",
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_4_ghost_protocol",
             "dateAjout": "2026-08-20T07:59:53.610Z",
             "titreTmdb": "Mission : Impossible - Protocole Fantôme",
             "anneeTmdb": "2011",
@@ -3109,7 +3114,7 @@
         },
         {
             "id": "mission_impossible_4_ghost_protocol_yify_2011",
-            "titre": "Mission Impossible 4 Ghost Protocol YIFY",
+            "titre": "Mission Impossible 4 Ghost Protocol",
             "annee": 2011,
             "langue": [
                 "TBD"
@@ -3127,12 +3132,40 @@
             "tmdbId": 56292,
             "tmdbUrl": "https://www.themoviedb.org/movie/56292",
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_4_ghost_protocol",
             "dateAjout": "2026-08-20T07:59:53.611Z",
             "titreTmdb": "Mission : Impossible - Protocole Fantôme",
             "anneeTmdb": "2011",
             "descriptionTmdb": "Après avoir été impliquée dans un complot terroriste mondial, l’agence Mission Impossible est contrainte de cesser ses activités. Le « Protocole Fantôme » est mis en place : Ethan Hunt et sa nouvelle équipe doivent opérer dans le secret pour blanchir le nom de leur organisation. Aucune aide, aucun contact, isolation totale. Cette mission va s'avérer être la plus dangereuse et la plus intense qu'ils aient eu à remplir.",
+            "collectionId": 87359,
+            "collectionNom": "Mission : Impossible - Saga"
+        },
+        {
+            "id": "mission_impossible_5_rogue_nation_yify_2015",
+            "titre": "Mission Impossible 5 Rogue Nation",
+            "annee": 2015,
+            "langue": [
+                "TBD"
+            ],
+            "taille": 1982924923,
+            "genre": [
+                "Action",
+                "Aventure"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/v0dj9NVPFTX0bv5NtqxK99i1Ae3.jpg",
+            "fichier": "Z:\\Films\\Action\\Mission Impossible\\Mission Impossible 5 - Rogue.Nation.2015.1080p.BluRay.x264.YIFY.[YTS.AG].mp4",
+            "nomFichier": "Mission Impossible 5 - Rogue.Nation.2015.1080p.BluRay.x264.YIFY.[YTS.AG].mp4",
+            "imdbId": null,
+            "tmdbId": 177677,
+            "tmdbUrl": "https://www.themoviedb.org/movie/177677",
+            "doublonExact": false,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_5_rogue_nation",
+            "dateAjout": "2026-08-20T07:59:53.611Z",
+            "titreTmdb": "Mission : Impossible - Rogue Nation",
+            "anneeTmdb": "2015",
+            "descriptionTmdb": "L'agence Mission Impossible est dissoute et Ethan Hunt se retrouve désormais isolé. Il doit affronter un réseau d’agents spéciaux particulièrement entraînés, le Syndicat. Cette organisation sans scrupules est déterminée à mettre en place un nouvel ordre mondial, à travers des attaques terroristes de plus en plus violentes. Ethan regroupe alors son équipe et fait alliance avec Ilsa Faust, agent britannique révoquée, dont les liens avec le Syndicat restent mystérieux.",
             "collectionId": 87359,
             "collectionNom": "Mission : Impossible - Saga"
         },
@@ -3155,37 +3188,9 @@
             "tmdbId": 177677,
             "tmdbUrl": "https://www.themoviedb.org/movie/177677",
             "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
+            "doublonProbable": true,
+            "groupeDoublon": "mission_impossible_5_rogue_nation",
             "dateAjout": "2026-08-20T07:59:53.612Z",
-            "titreTmdb": "Mission : Impossible - Rogue Nation",
-            "anneeTmdb": "2015",
-            "descriptionTmdb": "L'agence Mission Impossible est dissoute et Ethan Hunt se retrouve désormais isolé. Il doit affronter un réseau d’agents spéciaux particulièrement entraînés, le Syndicat. Cette organisation sans scrupules est déterminée à mettre en place un nouvel ordre mondial, à travers des attaques terroristes de plus en plus violentes. Ethan regroupe alors son équipe et fait alliance avec Ilsa Faust, agent britannique révoquée, dont les liens avec le Syndicat restent mystérieux.",
-            "collectionId": 87359,
-            "collectionNom": "Mission : Impossible - Saga"
-        },
-        {
-            "id": "mission_impossible_5_rogue_nation_yify_2015",
-            "titre": "Mission Impossible 5 Rogue Nation YIFY",
-            "annee": 2015,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 1982924923,
-            "genre": [
-                "Action",
-                "Aventure"
-            ],
-            "image": "https://image.tmdb.org/t/p/w342/v0dj9NVPFTX0bv5NtqxK99i1Ae3.jpg",
-            "fichier": "Z:\\Films\\Action\\Mission Impossible\\Mission Impossible 5 - Rogue.Nation.2015.1080p.BluRay.x264.YIFY.[YTS.AG].mp4",
-            "nomFichier": "Mission Impossible 5 - Rogue.Nation.2015.1080p.BluRay.x264.YIFY.[YTS.AG].mp4",
-            "imdbId": null,
-            "tmdbId": 177677,
-            "tmdbUrl": "https://www.themoviedb.org/movie/177677",
-            "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.611Z",
             "titreTmdb": "Mission : Impossible - Rogue Nation",
             "anneeTmdb": "2015",
             "descriptionTmdb": "L'agence Mission Impossible est dissoute et Ethan Hunt se retrouve désormais isolé. Il doit affronter un réseau d’agents spéciaux particulièrement entraînés, le Syndicat. Cette organisation sans scrupules est déterminée à mettre en place un nouvel ordre mondial, à travers des attaques terroristes de plus en plus violentes. Ethan regroupe alors son équipe et fait alliance avec Ilsa Faust, agent britannique révoquée, dont les liens avec le Syndicat restent mystérieux.",
@@ -3340,7 +3345,7 @@
         },
         {
             "id": "paycheck_yify_2003",
-            "titre": "Paycheck YIFY",
+            "titre": "Paycheck",
             "annee": 2003,
             "langue": [
                 "TBD"
@@ -3604,7 +3609,7 @@
         },
         {
             "id": "the_team_extended_yify_2010",
-            "titre": "The A Team YIFY",
+            "titre": "The A Team",
             "annee": 2010,
             "langue": [
                 "TBD"
@@ -3896,7 +3901,7 @@
         },
         {
             "id": "the_rock_yify_1996",
-            "titre": "The Rock YIFY",
+            "titre": "The Rock",
             "annee": 1996,
             "langue": [
                 "TBD"
@@ -3908,7 +3913,7 @@
                 "Thriller"
             ],
             "image": "https://image.tmdb.org/t/p/w342/5TU2NRk8aP40o7IDck0RF24TCyj.jpg",
-            "fichier": "Z:\\Films\\Action\\The Rock (1996) [1080p]\\The.Rock.1996.1080p.BrRip.x264.YIFY.mp4",
+            "fichier": "Z:\\Films\\Action\\The.Rock.1996.1080p.BrRip.x264.YIFY.mp4",
             "nomFichier": "The.Rock.1996.1080p.BrRip.x264.YIFY.mp4",
             "imdbId": null,
             "tmdbId": 9802,
@@ -3916,9 +3921,10 @@
             "doublonExact": false,
             "doublonProbable": false,
             "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.619Z",
+            "dateAjout": "2026-08-21T14:24:15.941Z",
             "titreTmdb": "Rock",
             "anneeTmdb": "1996",
+            "dureeTmdb": 136,
             "descriptionTmdb": "Excédé par l’injustice de son gouvernement, le Général Hummel se rend maître de l’île d’Alcatraz et menace de lancer un gaz mortel sur San Francisco. Deux hommes sont chargés de le contrer : un expert en armes chimiques, Stanley Goodspeed, et John Patrick Mason, l’unique prisonnier à s’être évadé d’Alcatraz… Ils se rendent ensemble sur l’île afin de stopper les projets destructeurs du Général.",
             "collectionId": null,
             "collectionNom": null
@@ -4067,146 +4073,6 @@
             "descriptionTmdb": "Avant d'être Wonder Woman, elle s'appelait Diana, princesse des Amazones, entraînée pour être une guerrière impossible à conquérir. Elle est élevée sur une île isolée et paradisiaque, mais lorsqu'un pilote américain s'écrase sur leur rivage et annonce qu'un conflit à grande échelle fait rage dans le monde, Diana quitte son foyer, convaincue qu'elle doit arrêter cette menace. Combattant aux côtés de cet homme et des siens pour mettre fin à cette guerre et à toutes les guerres, Diana découvre ses vrais pouvoirs... Et son véritable destin.",
             "collectionId": 468552,
             "collectionNom": "Wonder Woman - Saga"
-        },
-        {
-            "id": "yify_torrents_com",
-            "titre": "WWW YIFY TORRENTS COM",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 130677,
-            "genre": null,
-            "image": "Z:\\Films\\Action\\James Bond\\James Bond Casino Royale (2006) [1080p]\\WWW.YIFY-TORRENTS.COM.jpg",
-            "fichier": "Z:\\Films\\Action\\James Bond\\James Bond Casino Royale (2006) [1080p]\\WWW.YIFY-TORRENTS.COM.jpg",
-            "nomFichier": "WWW.YIFY-TORRENTS.COM.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": true,
-            "doublonProbable": true,
-            "groupeDoublon": "www_yify_torrents_com",
-            "dateAjout": "2026-08-20T07:59:53.598Z"
-        },
-        {
-            "id": "yify_torrents_com",
-            "titre": "WWW YIFY TORRENTS COM",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 130677,
-            "genre": null,
-            "image": "Z:\\Films\\Action\\Paycheck (2003)\\WWW.YIFY-TORRENTS.COM.jpg",
-            "fichier": "Z:\\Films\\Action\\Paycheck (2003)\\WWW.YIFY-TORRENTS.COM.jpg",
-            "nomFichier": "WWW.YIFY-TORRENTS.COM.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": true,
-            "doublonProbable": true,
-            "groupeDoublon": "www_yify_torrents_com",
-            "dateAjout": "2026-08-20T07:59:53.617Z"
-        },
-        {
-            "id": "yify_torrents_com",
-            "titre": "WWW YIFY TORRENTS COM",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 130677,
-            "genre": null,
-            "image": "Z:\\Films\\Action\\The A Team EXTENDED (2010) [1080p]\\WWW.YIFY-TORRENTS.COM.jpg",
-            "fichier": "Z:\\Films\\Action\\The A Team EXTENDED (2010) [1080p]\\WWW.YIFY-TORRENTS.COM.jpg",
-            "nomFichier": "WWW.YIFY-TORRENTS.COM.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": true,
-            "doublonProbable": true,
-            "groupeDoublon": "www_yify_torrents_com",
-            "dateAjout": "2026-08-20T07:59:53.619Z"
-        },
-        {
-            "id": "yify_torrents_com",
-            "titre": "WWW YIFY TORRENTS COM",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 130677,
-            "genre": null,
-            "image": "Z:\\Films\\Action\\The Rock (1996) [1080p]\\WWW.YIFY-TORRENTS.COM.jpg",
-            "fichier": "Z:\\Films\\Action\\The Rock (1996) [1080p]\\WWW.YIFY-TORRENTS.COM.jpg",
-            "nomFichier": "WWW.YIFY-TORRENTS.COM.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": true,
-            "doublonProbable": true,
-            "groupeDoublon": "www_yify_torrents_com",
-            "dateAjout": "2026-08-20T07:59:53.620Z"
-        },
-        {
-            "id": "yify_torrents_com",
-            "titre": "WWW YIFY TORRENTS COM",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 130677,
-            "genre": null,
-            "image": "Z:\\Films\\Marvel\\Fantastic Four (2005)\\WWW.YIFY-TORRENTS.COM.jpg",
-            "fichier": "Z:\\Films\\Marvel\\Fantastic Four (2005)\\WWW.YIFY-TORRENTS.COM.jpg",
-            "nomFichier": "WWW.YIFY-TORRENTS.COM.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": true,
-            "doublonProbable": true,
-            "groupeDoublon": "www_yify_torrents_com",
-            "dateAjout": "2026-08-20T07:59:53.664Z"
-        },
-        {
-            "id": "yts_ag",
-            "titre": "WWW YTS AG",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 105827,
-            "genre": null,
-            "image": "Z:\\Films\\Marvel\\Fantastic Four Rise Of The Silver Surfer (2007) [1080p] [YTS.AG]\\WWW.YTS.AG.jpg",
-            "fichier": "Z:\\Films\\Marvel\\Fantastic Four Rise Of The Silver Surfer (2007) [1080p] [YTS.AG]\\WWW.YTS.AG.jpg",
-            "nomFichier": "WWW.YTS.AG.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.665Z"
-        },
-        {
-            "id": "yts_re",
-            "titre": "WWW YTS RE",
-            "annee": null,
-            "langue": [
-                "TBD"
-            ],
-            "taille": 110514,
-            "genre": null,
-            "image": "Z:\\Films\\Marvel\\Guardians of the Galaxy (2014) [1080p]\\WWW.YTS.RE.jpg",
-            "fichier": "Z:\\Films\\Marvel\\Guardians of the Galaxy (2014) [1080p]\\WWW.YTS.RE.jpg",
-            "nomFichier": "WWW.YTS.RE.jpg",
-            "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
-            "doublonExact": false,
-            "doublonProbable": false,
-            "groupeDoublon": null,
-            "dateAjout": "2026-08-20T07:59:53.666Z"
         },
         {
             "id": "x_men_lkt",
@@ -16435,6 +16301,7 @@
             "titreTmdb": "Shooter",
             "anneeTmdb": "2016",
             "descriptionTmdb": "Un ancien tireur d'élite reprend du service pour déjouer un complot imminent contre le Président des États-Unis, mais se retrouve accusé de tentative de meurtre.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 1,
@@ -16539,8 +16406,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.966Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -16625,8 +16491,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.970Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -16761,11 +16626,9 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.978Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
-            ],
-            "hasMissingEpisodes": false
+            ]
         },
         {
             "id": "taken",

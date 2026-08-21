@@ -43,7 +43,7 @@ http
           return;
         }
         if (request.url === "/refresh-catalog") {
-          refreshCatalog(response);
+          refreshCatalog(data.type || "all", response);
           return;
         }
         if (request.url === "/get-ignore-words") {
@@ -94,7 +94,7 @@ function openFileLocation(data, response) {
     return;
   }
 
-  execFile("explorer.exe", ["/select,", data.fichier], (error) => {
+  execFile("explorer.exe", [data.fichier], (error) => {
     if (error) {
       console.error(error);
     }
@@ -162,13 +162,14 @@ function saveFilmTmdbData(data, response) {
   response.end("Association TMDB enregistrée");
 }
 
-function refreshCatalog(response) {
+function refreshCatalog(type, response) {
   console.log("REFRESH CATALOG");
   const scriptPath = path.join(rootDir, "controller", "generateCatalog.js");
   console.log(scriptPath);
+  console.log("SCAN TYPE =", type);
   execFile(
     process.execPath,
-    [scriptPath],
+    [scriptPath, type],
     { cwd: rootDir },
     (error, stdout, stderr) => {
       console.log("FIN EXECFILE");

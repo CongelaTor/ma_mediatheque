@@ -108,6 +108,12 @@ input {
     border-bottom-color: var(--blue);
 }
 
+.nav-button:hover,
+.nav-button.inactive {
+    color: white;
+    border-bottom-color: var(--grey);
+}
+
 .top-actions {
     margin-left: auto;
     display: flex;
@@ -630,6 +636,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    white-space: pre-wrap;
 }
 
 .tmdb-result-card {
@@ -959,16 +966,6 @@ input {
 .film-file-title {
     min-width: 0;
     overflow: hidden;
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.film-file-folder {
-    min-width: 0;
-    overflow: hidden;
     color: var(--muted);
     font-size: 18px;
     font-weight: 400;
@@ -976,10 +973,26 @@ input {
     white-space: nowrap;
 }
 
+.film-file-folder {
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    margin-left: 8px;
+}
 .film-file-meta {
     color: var(--blue);
     font-size: 18px;
     font-weight: 700;
+    margin-left: 1px;
+}
+.film-file-right-actions {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .film-file-action-button {
@@ -993,6 +1006,10 @@ input {
     justify-content: center;
 }
 
+.film-file-right-actions .film-file-action-button {
+    background: #616A7A;
+}
+
 .film-link-icon svg {
     display: block;
     transform: translate(-1px, 2px) rotate(45deg);
@@ -1001,4 +1018,58 @@ input {
 .film-open-icon {
     display: inline-block;
     transform: scale(1.15);
+}
+.tmdb-no-result {
+    text-align: center;
+}
+
+.tmdb-open-row {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#scanLog {
+    font-family: Consolas, monospace;
+    font-weight: 400;
+}
+
+.film-files-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.film-file-card {
+    min-width: 0;
+}
+
+.film-file-playback-row {
+    display: flex;
+    align-items: center;
+}
+
+.film-file-actions-row {
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    width: 100%;
+}
+
+.film-file-actions-row .film-file-action-button:nth-child(1) {
+    justify-self: start;
+}
+
+.film-file-actions-row .film-file-action-button:nth-child(2) {
+    justify-self: center;
+}
+
+.film-file-actions-row .film-file-action-button:nth-child(3) {
+    justify-self: end;
+}
+
+.film-file-actions-row svg {
+    display: block;
 }

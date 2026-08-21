@@ -281,10 +281,53 @@ function renderTmdbFilmResults(film, results) {
   resultsContainer.innerHTML = "";
 
   if (!results || results.length === 0) {
-    resultsContainer.innerHTML =
-      '<div class="tmdb-empty">Aucun résultat trouvé.</div>';
-    return;
+    resultsContainer.innerHTML = `
+    <div class="tmdb-no-result">
+      <div>Aucun résultat trouvé.</div>
+    </div>
+  `;
   }
+
+  const actionContainer = document.createElement("div");
+  actionContainer.className = "tmdb-no-result";
+
+  const button = document.createElement("button");
+  button.className = "tmdb-associate-button film-file-action-button";
+  button.innerHTML = '<span class="play-icon film-open-icon">🗁</span>';
+  button.title = "Relancer un scan des disques en cas de modification";
+  button.onclick = async () => {
+    const folder = film.fichier.substring(0, film.fichier.lastIndexOf("\\"));
+    const response = await fetch("http://localhost:9876/open-file-location", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fichier: folder,
+      }),
+    });
+
+    if (!response.ok) {
+      console.error(await response.text());
+      return;
+    }
+    closeTmdbModal();
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+  };
+
+  const label = document.createElement("span");
+  label.textContent = "Relancer un scan des disques en cas de modification";
+
+  const openRow = document.createElement("div");
+  openRow.className = "tmdb-open-row";
+  openRow.appendChild(button);
+  openRow.appendChild(label);
+  actionContainer.appendChild(openRow);
+  resultsContainer.appendChild(actionContainer);
+
+  if (!results || results.length === 0) return;
 
   for (const result of results) {
     const card = document.createElement("article");
@@ -447,7 +490,7 @@ async function associateTmdbFilm(film, result) {
     window.location.reload();
     return;
   }
-  
+
   if (typeof renderFilms === "function") {
     const currentScrollY = window.scrollY;
     renderFilms();

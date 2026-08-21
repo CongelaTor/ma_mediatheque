@@ -62,9 +62,3 @@ async function initSeriesPage() {
 
   renderSeries();
 }
-
-// async function initFilmDetailPage() {
-//   currentPage = "film-detail";
-//   await loadCatalog();
-//   updateStats();
-// }

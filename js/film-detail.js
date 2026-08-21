@@ -66,7 +66,7 @@ async function initFilmDetailPage() {
       tmdbUrl: referenceFilm.tmdbUrl,
     }),
   );
-  
+
   setText("filmTitle", referenceFilm.titreTmdb || referenceFilm.titre);
 
   setText(
@@ -129,7 +129,7 @@ function renderFilmFiles(films) {
   );
 
   const filesList = document.createElement("div");
-  filesList.className = "episode-list";
+  filesList.className = "film-files-grid";
 
   for (const film of filteredFilms) {
     filesList.appendChild(createFilmFileCard(film));
@@ -142,16 +142,25 @@ function createFilmFileCard(film) {
   const card = document.createElement("article");
   card.className = "film-file-card";
 
-  const titleRow = document.createElement("div");
-  titleRow.className = "film-file-row";
+  const languages = Array.isArray(film.langue)
+    ? film.langue.join(", ")
+    : film.langue || "TBD";
 
-  const title = document.createElement("div");
-  title.className = "film-file-title";
-  title.textContent = film.nomFichier || "Fichier sans nom";
-  title.title = film.nomFichier || "";
+  const playbackRow = document.createElement("div");
+  playbackRow.className = "film-file-row film-file-playback-row";
 
+  const metadata = document.createElement("div");
+  metadata.className = "film-file-meta";
+  metadata.textContent = `${languages} • ${formatFilmFileSize(film.taille)}`;
+
+  const playButton = document.createElement("button");
+  playButton.className = "tmdb-associate-button film-file-action-button";
+  playButton.innerHTML = '<span class="play-icon">▶</span>';
+  playButton.title = "Lire";
+  playButton.onclick = () => playFilm(film);
   const tmdbButton = document.createElement("button");
   tmdbButton.className = "tmdb-associate-button film-file-action-button";
+
   tmdbButton.innerHTML = `
     <span class="play-icon film-link-icon">
       <svg viewBox="0 0 24 24"
@@ -166,53 +175,57 @@ function createFilmFileCard(film) {
         <path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L13 20"/>
       </svg>
     </span>`;
+
   tmdbButton.title = "Réassocier TMDB";
   tmdbButton.onclick = () => showTmdbFilmSearch(film);
 
-  titleRow.appendChild(title);
-  titleRow.appendChild(tmdbButton);
-
-  const locationRow = document.createElement("div");
-  locationRow.className = "film-file-row";
-
-  const folder = document.createElement("div");
-  folder.className = "film-file-folder";
-  folder.textContent = getFilmFolder(film.fichier);
-  folder.title = getFilmFolder(film.fichier);
-
   const locationButton = document.createElement("button");
   locationButton.className = "tmdb-associate-button film-file-action-button";
+
   locationButton.innerHTML = '<span class="play-icon film-open-icon">🗁</span>';
 
   locationButton.title = "Ouvrir l'emplacement";
   locationButton.onclick = () => openFilmLocation(film);
 
-  locationRow.appendChild(folder);
-  locationRow.appendChild(locationButton);
+  const deleteButton = document.createElement("button");
+  deleteButton.className = "tmdb-associate-button film-file-action-button";
 
-  const playbackRow = document.createElement("div");
-  playbackRow.className = "film-file-row";
+  deleteButton.innerHTML = `
+    <svg viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+      <path d="M3 6h18"/>
+      <path d="M8 6V4h8v2"/>
+      <path d="M19 6l-1 14H6L5 6"/>
+      <path d="M10 11v5"/>
+      <path d="M14 11v5"/>
+    </svg>`;
 
-  const metadata = document.createElement("div");
-  metadata.className = "film-file-meta";
+  deleteButton.title = "Supprimer le fichier";
 
-  const languages = Array.isArray(film.langue)
-    ? film.langue.join(", ")
-    : film.langue || "TBD";
+  const rightActions = document.createElement("div");
+  rightActions.className = "film-file-right-actions";
 
-  metadata.textContent = `${languages} • ${formatFilmFileSize(film.taille)}`;
+  rightActions.appendChild(locationButton);
+  rightActions.appendChild(tmdbButton);
+  rightActions.appendChild(deleteButton);
 
-  const playButton = document.createElement("button");
-  playButton.className = "tmdb-associate-button film-file-action-button";
-  playButton.innerHTML = '<span class="play-icon">▶</span>';
-  playButton.onclick = () => playFilm(film);
-
-  playbackRow.appendChild(metadata);
   playbackRow.appendChild(playButton);
+  playbackRow.appendChild(metadata);
+  playbackRow.appendChild(rightActions);
 
-  card.appendChild(titleRow);
-  card.appendChild(locationRow);
+  const pathInfo = document.createElement("div");
+  pathInfo.className = "film-file-folder";
+
+  pathInfo.textContent = `${getFilmFolder(film.fichier)}\\${film.nomFichier}`;
+
   card.appendChild(playbackRow);
+  card.appendChild(pathInfo);
 
   return card;
 }
@@ -246,15 +259,16 @@ function getFilmFolder(filePath) {
 }
 
 async function openFilmLocation(film) {
-  const response = await fetch("http://localhost:9876/open-file-location", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      fichier: film.fichier,
-    }),
-  });
+  const folder = film.fichier.substring(0, film.fichier.lastIndexOf("\\"));
+    const response = await fetch("http://localhost:9876/open-file-location", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fichier: folder,
+      }),
+    });
 
   if (!response.ok) {
     console.error(await response.text());
