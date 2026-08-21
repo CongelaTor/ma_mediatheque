@@ -131,10 +131,16 @@ function saveSerieTmdbData(data, response) {
 }
 
 function saveFilmTmdbData(data, response) {
+  console.log("saveFilmTmdbData");
   const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 
-  const film = catalog.films.find((item) => item.id === data.filmId);
-
+  console.log("data.fichier =", data.fichier);
+  const film = catalog.films.find((item) => item.fichier === data.fichier);
+  console.log(
+    catalog.films.filter(
+      (item) => item.fichier && item.fichier.includes("Age.Of.Ultron"),
+    ),
+  );
   if (!film) {
     response.writeHead(404, {
       "Content-Type": "text/plain; charset=utf-8",

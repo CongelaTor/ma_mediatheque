@@ -450,6 +450,7 @@ async function associateTmdbFilm(film, result) {
     },
     body: JSON.stringify({
       filmId: film.id,
+      fichier: film.fichier,
 
       titreTmdb: result.titre,
       anneeTmdb: result.annee,

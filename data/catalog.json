@@ -40,17 +40,27 @@
                 "VF"
             ],
             "taille": 5912660447,
-            "genre": null,
-            "image": null,
+            "genre": [
+                "Action",
+                "Aventure",
+                "Science-Fiction"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/A0tw88n1byyR2vodhJMlFPQGQgF.jpg",
             "fichier": "Z:\\Films\\Marvel\\2015 a Avengers.Age.Of.Ultron.2015.TRUEFRENCH.720p.BluRay.x264-AViTECH.mkv",
             "nomFichier": "2015 a Avengers.Age.Of.Ultron.2015.TRUEFRENCH.720p.BluRay.x264-AViTECH.mkv",
             "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
+            "tmdbId": 99861,
+            "tmdbUrl": "https://www.themoviedb.org/movie/99861",
             "doublonExact": false,
             "doublonProbable": true,
             "groupeDoublon": "a_avengers_age_of_ultron",
-            "dateAjout": "2026-08-21T18:58:59.666Z"
+            "dateAjout": "2026-08-21T18:58:59.666Z",
+            "titreTmdb": "Avengers : L'Ère d'Ultron",
+            "anneeTmdb": "2015",
+            "dureeTmdb": 143,
+            "descriptionTmdb": "Alors que Tony Stark tente de relancer un programme de maintien de la paix jusque-là suspendu, les choses tournent mal et les super-héros Iron Man, Captain America, Thor, Hulk, Black Widow et Hawkeye vont devoir à nouveau unir leurs forces pour combattre le plus puissant de leurs adversaires : le terrible Ultron, un être technologique terrifiant qui s’est juré d’éradiquer l’espèce humaine. Afin d’empêcher celui-ci d’accomplir ses sombres desseins, des alliances inattendues se scellent, les entraînant dans une incroyable aventure et une haletante course contre le temps…",
+            "collectionId": 86311,
+            "collectionNom": "Avengers - Saga"
         },
         {
             "id": "a_avengers_age_of_ultron_2015",
@@ -60,17 +70,27 @@
                 "VF"
             ],
             "taille": 1468973065,
-            "genre": null,
-            "image": null,
+            "genre": [
+                "Action",
+                "Aventure",
+                "Science-Fiction"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/A0tw88n1byyR2vodhJMlFPQGQgF.jpg",
             "fichier": "Z:\\Films\\Marvel\\2015 a Avengers.Age.Of.Ultron.2015.TRUEFRENCH.BDRiP.XViD-AViTECH.avi",
             "nomFichier": "2015 a Avengers.Age.Of.Ultron.2015.TRUEFRENCH.BDRiP.XViD-AViTECH.avi",
             "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
+            "tmdbId": 99861,
+            "tmdbUrl": "https://www.themoviedb.org/movie/99861",
             "doublonExact": false,
             "doublonProbable": true,
             "groupeDoublon": "a_avengers_age_of_ultron",
-            "dateAjout": "2026-08-21T18:58:59.667Z"
+            "dateAjout": "2026-08-21T18:58:59.667Z",
+            "titreTmdb": "Avengers : L'Ère d'Ultron",
+            "anneeTmdb": "2015",
+            "dureeTmdb": 143,
+            "descriptionTmdb": "Alors que Tony Stark tente de relancer un programme de maintien de la paix jusque-là suspendu, les choses tournent mal et les super-héros Iron Man, Captain America, Thor, Hulk, Black Widow et Hawkeye vont devoir à nouveau unir leurs forces pour combattre le plus puissant de leurs adversaires : le terrible Ultron, un être technologique terrifiant qui s’est juré d’éradiquer l’espèce humaine. Afin d’empêcher celui-ci d’accomplir ses sombres desseins, des alliances inattendues se scellent, les entraînant dans une incroyable aventure et une haletante course contre le temps…",
+            "collectionId": 86311,
+            "collectionNom": "Avengers - Saga"
         },
         {
             "id": "black_panther_2018_2018",

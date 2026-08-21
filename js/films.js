@@ -69,14 +69,15 @@ function selectGenre(genre) {
 }
 
 function renderFilms() {
-  console.log("currentAjouts =", currentAjouts);
   currentPage = "films";
   const grid = document.getElementById("filmsGrid");
   grid.innerHTML = "";
   const groupedFilms = new Map();
 
   for (const film of catalog.films) {
-    const groupKey = film.tmdbId ? `tmdb:${film.tmdbId}` : `file:${film.id}`;
+    const groupKey = film.tmdbId
+      ? `tmdb:${film.tmdbId}`
+      : `file:${film.fichier}`;
 
     if (!groupedFilms.has(groupKey)) {
       groupedFilms.set(groupKey, {
