@@ -16539,7 +16539,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.966Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -16624,7 +16625,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.970Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -16759,9 +16761,11 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.978Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
-            ]
+            ],
+            "hasMissingEpisodes": false
         },
         {
             "id": "taken",
