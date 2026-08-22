@@ -494,11 +494,16 @@ function recomputeDuplicates(catalog) {
         film.annee === other.annee ||
         film.annee === null ||
         other.annee === null;
-      if (sameFileName && sameSize) {
+      const sameTmdbGroup =
+        film.tmdbId && other.tmdbId
+          ? film.tmdbId === other.tmdbId
+          : !film.tmdbId && !other.tmdbId && sameTitle && sameYear;
+
+      if (sameFileName && sameSize && sameTmdbGroup) {
         film.doublonExact = true;
         other.doublonExact = true;
       }
-      if (sameTitle && sameYear) {
+      if (sameTitle && sameYear && sameTmdbGroup) {
         const group = normalizeKey(film.titre);
         film.doublonProbable = true;
         other.doublonProbable = true;

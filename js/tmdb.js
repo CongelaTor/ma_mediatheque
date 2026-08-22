@@ -73,7 +73,11 @@ async function showTmdbFilmSearch(film) {
     .filter((word) => word.trim() !== "")
     .map((word) => ({
       text: word,
-      state: ignoredWordsSet.has(word.toUpperCase()) ? "pinned" : "active",
+      state: ignoredWordsSet.has(word.toUpperCase())
+        ? "pinned"
+        : word.length === 1
+          ? "inactive"
+          : "active",
     }));
 
   const firstPinnedAtEnd = findFirstPinnedWordAtEnd();
@@ -298,26 +302,32 @@ function renderTmdbFilmResults(film, results) {
   button.innerHTML = '<span class="play-icon film-open-icon">🗁</span>';
   button.title = "Relancer un scan des disques en cas de modification";
   button.onclick = async () => {
-    const folder = film.fichier.substring(0, film.fichier.lastIndexOf("\\"));
-    const response = await fetch("http://localhost:9876/open-file-location", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fichier: folder,
-      }),
-    });
+    const fichiers =
+      Array.isArray(film.groupFiles) && film.groupFiles.length > 0
+        ? film.groupFiles
+        : [film];
 
-    if (!response.ok) {
-      console.error(await response.text());
-      return;
+    for (const currentFilm of fichiers) {
+      const folder = currentFilm.fichier.substring(
+        0,
+        currentFilm.fichier.lastIndexOf("\\"),
+      );
+
+      const response = await fetch("http://localhost:9876/open-file-location", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fichier: folder,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error(await response.text());
+      }
     }
     closeTmdbModal();
-    setTimeout(() => {
-      console.trace("reload");
-      window.location.reload();
-    }, 500);
   };
 
   const label = document.createElement("span");
@@ -446,6 +456,11 @@ async function associateTmdbFilm(film, result) {
 
   const dureeTmdb = details.runtime || null;
 
+  const fichiers =
+    currentPage === "films" && Array.isArray(film.groupFiles)
+      ? film.groupFiles.map((item) => item.fichier)
+      : [film.fichier];
+
   const response = await fetch("http://localhost:9876/associate-tmdb-film", {
     method: "POST",
     headers: {
@@ -453,7 +468,7 @@ async function associateTmdbFilm(film, result) {
     },
     body: JSON.stringify({
       filmId: film.id,
-      fichier: film.fichier,
+      fichiers: fichiers,
 
       titreTmdb: result.titre,
       anneeTmdb: result.annee,
@@ -488,26 +503,29 @@ async function associateTmdbFilm(film, result) {
   film.image = result.image;
   film.descriptionTmdb = result.description;
 
+  sessionStorage.setItem("filmsScrollY", String(window.scrollY));
+
   closeTmdbModal();
 
   if (currentPage === "film-detail") {
-    console.trace("reload");
     window.location.reload();
     return;
   }
 
   if (typeof renderFilms === "function") {
-    const currentScrollY = window.scrollY;
-    console.trace("renderFilms");
     renderFilms();
+
     setTimeout(() => {
-      window.scrollTo(0, currentScrollY);
-    }, 0);
+      const savedScrollY = Number(
+        sessionStorage.getItem("filmsScrollY") || "0",
+      );
+
+      window.scrollTo(0, savedScrollY);
+    }, 100);
   }
 }
 
 function closeTmdbModal() {
-  console.trace("closeTmdbModal");
   document.getElementById("tmdbModal").classList.add("hidden");
 }
 async function searchTmdbSerie(title) {

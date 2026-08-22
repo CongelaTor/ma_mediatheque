@@ -131,40 +131,32 @@ function saveSerieTmdbData(data, response) {
 }
 
 function saveFilmTmdbData(data, response) {
-  console.log("saveFilmTmdbData");
   const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 
-  console.log("data.fichier =", data.fichier);
-  const film = catalog.films.find((item) => item.fichier === data.fichier);
-  console.log(
-    catalog.films.filter(
-      (item) => item.fichier && item.fichier.includes("Age.Of.Ultron"),
-    ),
-  );
-  if (!film) {
-    response.writeHead(404, {
-      "Content-Type": "text/plain; charset=utf-8",
-    });
-    response.end("Film introuvable dans catalog.json");
-    return;
+  const fichiers = data.fichiers ?? [data.fichier];
+  for (const fichier of fichiers) {
+    const film = catalog.films.find((item) => item.fichier === fichier);
+
+    if (!film) {
+      continue;
+    }
+
+    film.tmdbId = data.tmdbId;
+    film.tmdbUrl = data.tmdbUrl;
+    film.image = data.image;
+    film.titreTmdb = data.titreTmdb;
+    film.anneeTmdb = data.anneeTmdb;
+    film.dureeTmdb = data.dureeTmdb;
+    film.descriptionTmdb = data.descriptionTmdb;
+    film.genre = data.genre;
+    film.collectionId = data.collectionId;
+    film.collectionNom = data.collectionNom;
   }
 
-  film.tmdbId = data.tmdbId;
-  film.tmdbUrl = data.tmdbUrl;
-  film.image = data.image;
-  film.titreTmdb = data.titreTmdb;
-  film.anneeTmdb = data.anneeTmdb;
-  film.dureeTmdb = data.dureeTmdb;
-  film.descriptionTmdb = data.descriptionTmdb;
-  film.genre = data.genre;
-  film.collectionId = data.collectionId;
-  film.collectionNom = data.collectionNom;
   fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), "utf8");
-
   response.writeHead(200, {
     "Content-Type": "text/plain; charset=utf-8",
   });
-
   response.end("Association TMDB enregistrée");
 }
 

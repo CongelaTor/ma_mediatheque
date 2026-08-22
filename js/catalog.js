@@ -60,9 +60,18 @@ function updateStats() {
   if (!catalog) {
     return;
   }
-  const filmsCount = catalog.films.length;
+  const groupedFilms = new Set();
+  for (const film of catalog.films) {
+    const groupKey = film.tmdbId
+      ? `tmdb:${film.tmdbId}`
+      : `title:${film.titre}|${film.annee || ""}`;
+    groupedFilms.add(groupKey);
+  }
+  const filmsCount = groupedFilms.size;
+  
   const seriesCount = catalog.series.length;
   const episodesCount = countEpisodes();
+  
   setText("statFilms", filmsCount);
   setText("statSeries", seriesCount);
   setText("statEpisodes", episodesCount);

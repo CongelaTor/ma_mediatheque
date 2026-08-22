@@ -467,12 +467,14 @@ input {
     cursor: pointer;
     z-index: 10;
 }
-
-.play-button:hover {
-
-    background: #1683ff;
-
+.duplicate-badge {
+background: #f97316;
 }
+.play-button:hover {
+    background: #1683ff;
+}
+
+
 
 .missing-poster {
 

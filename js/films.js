@@ -77,19 +77,30 @@ function renderFilms() {
   for (const film of catalog.films) {
     const groupKey = film.tmdbId
       ? `tmdb:${film.tmdbId}`
-      : `file:${film.fichier}`;
+      : `title:${film.titre}|${film.annee || ""}`;
 
     if (!groupedFilms.has(groupKey)) {
       groupedFilms.set(groupKey, {
         film,
-        fileCount: 0,
+        files: [],
+        hasExactDuplicate: false,
       });
     }
-    groupedFilms.get(groupKey).fileCount++;
+
+    const group = groupedFilms.get(groupKey);
+
+    group.files.push(film);
+
+    if (film.doublonExact) {
+      group.hasExactDuplicate = true;
+    }
   }
+
   let films = [...groupedFilms.values()]
     .map((group) => {
-      group.film.fileCount = group.fileCount;
+      group.film.fileCount = group.files.length;
+      group.film.groupFiles = group.files;
+      group.film.hasExactDuplicate = group.hasExactDuplicate;
       return group.film;
     })
     .filter((film) => filmMatchesAjouts(film))
@@ -110,7 +121,6 @@ function renderFilms() {
       return titreA.localeCompare(titreB, "fr");
     });
   }
-
   setText("filmsCount", `${films.length} film${films.length > 1 ? "s" : ""}`);
   for (const film of films) {
     grid.appendChild(createFilmCard(film));
@@ -122,17 +132,17 @@ function filmMatchesAjouts(film) {
   if (currentAjouts === "all") {
     return true;
   }
-
   if (currentAjouts === "Nouveautés") {
     if (!film.titreTmdb) {
       return true;
     }
   }
-
   if (currentAjouts === "Récents") {
     return true;
   }
-
+  if (currentAjouts === "Doublons") {
+    return Boolean(film.hasExactDuplicate);
+  }
   return false;
 }
 
@@ -180,10 +190,10 @@ function createFilmCard(film) {
 
   if (film.fileCount > 1) {
     const badge = document.createElement("button");
-
-    badge.className = "play-button";
+    badge.className = film.hasExactDuplicate
+      ? "play-button duplicate-badge"
+      : "play-button";
     badge.textContent = film.fileCount;
-
     posterZone.appendChild(badge);
   }
 
