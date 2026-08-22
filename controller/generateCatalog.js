@@ -1,6 +1,4 @@
 const scanType = process.argv[2] || "all";
-console.log("SCAN TYPE =", scanType);
-
 const fs = require("fs");
 const path = require("path");
 const rootDir = path.join(__dirname, "..");

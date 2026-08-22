@@ -114,12 +114,14 @@ async function showTmdbFilmSearch(film) {
   };
 
   modal.classList.remove("hidden");
-
   modal.onclick = (event) => {
-    if (event.target === modal) {
-      closeTmdbModal();
-    }
+    console.log("TMDB CLICK =>", event.target);
   };
+  // modal.onclick = (event) => {
+  //   if (event.target === modal) {
+  //     closeTmdbModal();
+  //   }
+  // };
 
   await searchTmdbFilmFromInput();
 }
@@ -313,6 +315,7 @@ function renderTmdbFilmResults(film, results) {
     }
     closeTmdbModal();
     setTimeout(() => {
+      console.trace("reload");
       window.location.reload();
     }, 500);
   };
@@ -488,12 +491,14 @@ async function associateTmdbFilm(film, result) {
   closeTmdbModal();
 
   if (currentPage === "film-detail") {
+    console.trace("reload");
     window.location.reload();
     return;
   }
 
   if (typeof renderFilms === "function") {
     const currentScrollY = window.scrollY;
+    console.trace("renderFilms");
     renderFilms();
     setTimeout(() => {
       window.scrollTo(0, currentScrollY);
@@ -502,6 +507,7 @@ async function associateTmdbFilm(film, result) {
 }
 
 function closeTmdbModal() {
+  console.trace("closeTmdbModal");
   document.getElementById("tmdbModal").classList.add("hidden");
 }
 async function searchTmdbSerie(title) {

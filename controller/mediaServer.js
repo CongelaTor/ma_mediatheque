@@ -169,21 +169,20 @@ function saveFilmTmdbData(data, response) {
 }
 
 function refreshCatalog(type, response) {
-  console.log("REFRESH CATALOG");
   const scriptPath = path.join(rootDir, "controller", "generateCatalog.js");
-  console.log(scriptPath);
-  console.log("SCAN TYPE =", type);
   execFile(
     process.execPath,
     [scriptPath, type],
     { cwd: rootDir },
     (error, stdout, stderr) => {
-      console.log("FIN EXECFILE");
-      console.log("ERROR =", error);
-      console.log("STDOUT =");
-      console.log(stdout);
-      console.log("STDERR =");
-      console.log(stderr);
+      if (error) console.log("ERROR : ", error);
+      if (stdout?.trim()) {
+        console.log(stdout);
+      }
+      if (stderr?.trim()) {
+        console.log("STDERR : ");
+        console.log(stderr);
+      }
       if (error) {
         response.writeHead(500, {
           "Content-Type": "text/plain; charset=utf-8",
