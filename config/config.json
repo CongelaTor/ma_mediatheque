@@ -3,14 +3,12 @@
     {
       "type": "film",
       "paths": [
-        "X:\\Films",
         "Y:\\Films",
         "Z:\\Films"]
     },
     {
       "type": "serie",
        "paths": [
-        "X:\\Series",
         "Y:\\Series",
         "Z:\\Series"]
     }

@@ -19,7 +19,8 @@
             </a>
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
-                <a class="nav-button active" data-page="films" href="films.html">Films</a>
+                <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
+                <a class="nav-button" data-page="films" href="films.html">Films</a>
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
@@ -37,7 +38,7 @@
                 </button>
 
                 <button
-                    class="icon-button refresh-button"
+                    class="icon-button refresh-button hidden"
                     onclick="showDetectionPopup()">
                     <span>Détection</span>
                 </button>
@@ -145,6 +146,8 @@
             </div>
 
             <div id="scanLog" class="tmdb-results"></div>
+
+            <div id="detectionLog" class="tmdb-results hidden"></div>
 
             <div style="padding:16px;text-align:right">
                 <button class="secondary-button" onclick="closeScanModal()">
