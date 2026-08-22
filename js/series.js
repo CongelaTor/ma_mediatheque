@@ -101,7 +101,10 @@ function serieMatchesSeriesLanguages(serie) {
 
       hasLanguage = true;
 
-      if (activeSeriesLanguages.has(episode.langue)) {
+      const langues = Array.isArray(episode.langue)
+        ? episode.langue
+        : [episode.langue];
+      if (langues.some((langue) => activeSeriesLanguages.has(langue))) {
         return true;
       }
     }
@@ -122,7 +125,8 @@ function renderSeries() {
     .filter((serie) => serieMatchesSeriesLanguages(serie))
     .filter((serie) => matchesSearch(serie.titre))
     .sort((a, b) => a.titre.localeCompare(b.titre, "fr"));
-  setText(
+
+    setText(
     "seriesCount",
     `${series.length} série${series.length > 1 ? "s" : ""}`,
   );

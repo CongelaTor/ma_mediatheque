@@ -2,13 +2,13 @@
   "sources": [
     {
       "type": "film",
-      "path": [
+      "paths": [
         "Y:\\Films",
         "Z:\\Films"]
     },
     {
       "type": "serie",
-       "path": [
+       "paths": [
         "Y:\\Series",
         "Z:\\Series"]
     }

@@ -49,37 +49,45 @@ const sourcesToScan = config.sources.filter((source) => {
   return source.type === scanType.slice(0, -1);
 });
 
+// Parcours des disques
 for (const source of sourcesToScan) {
-  console.log("");
-  console.log(`Scan de : ${source.path}`);
-  if (!fs.existsSync(source.path)) {
-    console.log(`Dossier introuvable : ${source.path}`);
-    continue;
-  }
-  const fichiers = scanDirectory(source.path, config.extensions);
-  console.log(`${fichiers.length} vidéo(s) trouvée(s)`);
-  totalVideos += fichiers.length;
-  for (const fichier of fichiers) {
-    const analyse = analyzeVideoFile(fichier, source);
-    if (analyse.type === "film") {
-      const result = syncFilm(syncedCatalog, analyse);
-      if (result === "new") {
-        totalNewFilms++;
-      }
-      if (result === "kept") {
-        totalKeptFilms++;
-      }
-    } else if (analyse.type === "serie") {
-      const result = syncEpisode(syncedCatalog, analyse);
-      if (result === "new") {
-        totalNewEpisodes++;
-      }
-      if (result === "kept") {
-        totalKeptEpisodes++;
+  for (const sourcePath of source.paths) {
+    console.log("");
+    console.log(`Scan de : ${sourcePath}`);
+
+    if (!fs.existsSync(sourcePath)) {
+      console.log(`Dossier introuvable : ${sourcePath}`);
+      continue;
+    }
+    const fichiers = scanDirectory(sourcePath, config.extensions);
+    console.log(`${fichiers.length} vidéo(s) trouvée(s)`);
+    totalVideos += fichiers.length;
+    for (const fichier of fichiers) {
+      const analyse = analyzeVideoFile(fichier, {
+        ...source,
+        path: sourcePath,
+      });
+      if (analyse.type === "film") {
+        const result = syncFilm(syncedCatalog, analyse);
+        if (result === "new") {
+          totalNewFilms++;
+        }
+        if (result === "kept") {
+          totalKeptFilms++;
+        }
+      } else if (analyse.type === "serie") {
+        const result = syncEpisode(syncedCatalog, analyse);
+        if (result === "new") {
+          totalNewEpisodes++;
+        }
+        if (result === "kept") {
+          totalKeptEpisodes++;
+        }
       }
     }
   }
 }
+
 removeEmptySeries(syncedCatalog);
 recomputeDuplicates(syncedCatalog);
 sortCatalog(syncedCatalog);
