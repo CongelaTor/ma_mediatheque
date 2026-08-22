@@ -2,11 +2,15 @@
   "sources": [
     {
       "type": "film",
-      "path": "Z:\\Films"
+      "path": [
+        "Y:\\Films",
+        "Z:\\Films"]
     },
     {
       "type": "serie",
-      "path": "Z:\\Series"
+       "path": [
+        "Y:\\Series",
+        "Z:\\Series"]
     }
   ],
   "extensions": [
