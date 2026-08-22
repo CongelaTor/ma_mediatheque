@@ -207,6 +207,34 @@ function createFilmFileCard(film) {
     </svg>`;
 
   deleteButton.title = "Supprimer le fichier";
+  deleteButton.onclick = async () => {
+    const confirmed = confirm(
+      `Supprimer définitivement ce fichier ?\n\n${film.nomFichier}`,
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    const response = await fetch("http://localhost:9876/delete-film-file", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fichier: film.fichier,
+      }),
+    });
+    if (!response.ok) {
+      showToast(await response.text(), "error");
+      return;
+    }
+    showToast("Fichier supprimé");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
+    window.location.reload();
+  };
 
   const rightActions = document.createElement("div");
   rightActions.className = "film-file-right-actions";
@@ -260,15 +288,15 @@ function getFilmFolder(filePath) {
 
 async function openFilmLocation(film) {
   const folder = film.fichier.substring(0, film.fichier.lastIndexOf("\\"));
-    const response = await fetch("http://localhost:9876/open-file-location", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fichier: folder,
-      }),
-    });
+  const response = await fetch("http://localhost:9876/open-file-location", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      fichier: folder,
+    }),
+  });
 
   if (!response.ok) {
     console.error(await response.text());

@@ -34,6 +34,10 @@ http
           saveFilmTmdbData(data, response);
           return;
         }
+        if (request.url === "/delete-film-file") {
+          deleteFilmFile(data, response);
+          return;
+        }
         if (request.url === "/associate-tmdb-serie") {
           saveSerieTmdbData(data, response);
           return;
@@ -158,6 +162,34 @@ function saveFilmTmdbData(data, response) {
     "Content-Type": "text/plain; charset=utf-8",
   });
   response.end("Association TMDB enregistrée");
+}
+
+function deleteFilmFile(data, response) {
+  try {
+    if (!data.fichier || !fs.existsSync(data.fichier)) {
+      response.writeHead(404, {
+        "Content-Type": "text/plain; charset=utf-8",
+      });
+      response.end("Fichier introuvable");
+      return;
+    }
+    fs.unlinkSync(data.fichier);
+
+    const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+    catalog.films = catalog.films.filter(
+      (film) => film.fichier !== data.fichier,
+    );
+    fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), "utf8");
+    response.writeHead(200, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end("Fichier supprimé");
+  } catch (error) {
+    response.writeHead(500, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end(error.message);
+  }
 }
 
 function refreshCatalog(type, response) {

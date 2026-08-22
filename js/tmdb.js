@@ -327,7 +327,6 @@ function renderTmdbFilmResults(film, results) {
         console.error(await response.text());
       }
     }
-    closeTmdbModal();
   };
 
   const label = document.createElement("span");

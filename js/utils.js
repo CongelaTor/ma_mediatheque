@@ -49,3 +49,23 @@ function formatFrenchDate(value) {
     year: "numeric",
   });
 }
+
+function showToast(message, type = "success") {
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add("visible");
+  });
+
+  setTimeout(() => {
+    toast.classList.remove("visible");
+
+    setTimeout(() => {
+      toast.remove();
+    }, 200);
+  }, 1500);
+}

@@ -29,11 +29,17 @@
                     placeholder="Filtrer..."
                     oninput="handleSearch()">
 
-                    <button
+                <button
                     class="icon-button refresh-button"
                     onclick="reloadCatalog('films')">
                     <span class="refresh-icon">↻</span>
                     <span>Scan des films</span>
+                </button>
+
+                <button
+                    class="icon-button refresh-button"
+                    onclick="showDetectionPopup()">
+                    <span>Détection</span>
                 </button>
             </div>
         </header>
