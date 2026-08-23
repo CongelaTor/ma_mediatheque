@@ -103,6 +103,12 @@ function renderFilms() {
       group.film.hasExactDuplicate = group.hasExactDuplicate;
       return group.film;
     })
+    .filter((film) => {
+      if (!window.selectedCollectionId) {
+        return true;
+      }
+      return String(film.collectionId) === window.selectedCollectionId;
+    })
     .filter((film) => filmMatchesAjouts(film))
     .filter((film) => filmMatchesGenre(film))
     .filter((film) => filmMatchesLanguage(film))
@@ -121,7 +127,16 @@ function renderFilms() {
       return titreA.localeCompare(titreB, "fr");
     });
   }
+
+  const collectionName = sessionStorage.getItem("selectedCollectionName");
+
+  if (collectionName) {
+    document.querySelector("h1").textContent =
+      `Films de la collection "${collectionName}"`;
+  }
+
   setText("filmsCount", `${films.length} film${films.length > 1 ? "s" : ""}`);
+
   for (const film of films) {
     grid.appendChild(createFilmCard(film));
   }

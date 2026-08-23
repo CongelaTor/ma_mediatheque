@@ -17,6 +17,24 @@ async function initFilmsPage() {
   const state = loadFilmsViewState();
   currentAjouts = state.ajouts ?? "all";
   currentGenre = state.genre ?? "all";
+
+  window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
+  window.selectedCollectionName = sessionStorage.getItem(
+    "selectedCollectionName",
+  );
+
+  const backToCollectionsButton = document.getElementById(
+    "backToCollectionsButton",
+  );
+
+  if (window.selectedCollectionId && backToCollectionsButton) {
+    backToCollectionsButton.classList.remove("hidden");
+
+    backToCollectionsButton.onclick = () => {
+      window.location.href = "collections.html";
+    };
+  }
+
   document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
     button.classList.toggle("active", button.dataset.ajouts === currentAjouts);
   });

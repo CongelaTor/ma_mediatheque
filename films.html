@@ -20,7 +20,11 @@
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
                 <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
-                <a class="nav-button" data-page="films" href="films.html">Films</a>
+                <a class="nav-button" data-page="films" href="films.html"
+                    onclick="
+                        sessionStorage.removeItem('selectedCollectionId');
+                        sessionStorage.removeItem('selectedCollectionName');
+                    ">Films</a>
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
@@ -74,6 +78,8 @@
                                 onclick="selectGenre('Aventure')">Aventure</button>
                             <button class="sidebar-link" data-genre="Comédie"
                                 onclick="selectGenre('Comédie')">Comédie</button>
+                            <button class="sidebar-link" data-genre="Comédie musicale"
+                                onclick="selectGenre('Comédie musicale')">Comédie musicale</button>
                             <button class="sidebar-link" data-genre="Science-Fiction"
                                 onclick="selectGenre('Science-Fiction')">Science-Fiction</button>
                             <button class="sidebar-link" data-genre="Drame" 
@@ -89,14 +95,20 @@
                             <button class="sidebar-link" data-genre="Animation"
                                 onclick="selectGenre('Animation')">Anime</button>
                     </aside>
+                    
                     <section class="content">
                         <div class="content-header">
                             <div>
                                 <h1>Films</h1>
                                 <p id="filmsCount">0 film</p>
                             </div>
-                        </div>
 
+                            <button
+                                id="backToCollectionsButton"
+                                class="secondary-button hidden">
+                                ← Retour aux collections
+                            </button>
+                        </div>
                         <button id="resumeFilmButton" 
                                 class="resume-button hidden" 
                                 onclick="resumeFilm()">
@@ -164,6 +176,7 @@
     <script src="js/playback.js"></script>
     <script src="js/tmdb.js"></script>
     <script src="js/films.js"></script>
+    <script src="js/collections.js"></script>
     <script src="js/app-init.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", initFilmsPage);

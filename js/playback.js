@@ -78,10 +78,25 @@ function resumeSerie() {
   });
 }
 function updateResumeButtons() {
+  const resumeCollection = getResumeCollection();
   const resumeFilm = getResumeFilm();
   const resumeSerie = getResumeSerie();
+
+  const resumeCollectionButton = document.getElementById(
+    "resumeCollectionButton",
+  );
   const resumeFilmButton = document.getElementById("resumeFilmButton");
   const resumeSerieButton = document.getElementById("resumeSerieButton");
+
+  if (resumeCollectionButton) {
+    if (resumeCollection) {
+      resumeCollectionButton.classList.remove("hidden");
+      setText("resumeCollectionText", resumeCollection.titre);
+    } else {
+      resumeCollectionButton.classList.add("hidden");
+    }
+  }
+
   if (resumeFilmButton) {
     if (resumeFilm) {
       resumeFilmButton.classList.remove("hidden");
@@ -90,6 +105,7 @@ function updateResumeButtons() {
       resumeFilmButton.classList.add("hidden");
     }
   }
+
   if (resumeSerieButton) {
     if (resumeSerie) {
       resumeSerieButton.classList.remove("hidden");
@@ -101,6 +117,14 @@ function updateResumeButtons() {
       resumeSerieButton.classList.add("hidden");
     }
   }
+}
+
+function getResumeCollection() {
+  const value = localStorage.getItem("maVideotheque.resumeFilm");
+  if (!value) {
+    return null;
+  }
+  return JSON.parse(value);
 }
 function getResumeFilm() {
   const value = localStorage.getItem("maVideotheque.resumeFilm");

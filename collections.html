@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Médiathèque</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <div class="brand-icon"><span>🎬</span></div>
+                <div class="brand-title">Médiathèque</div>
+            </a>
+
+            <nav class="main-nav">
+                <a class="nav-button" data-page="home" href="index.html">Accueil</a>
+                <a class="nav-button active" data-page="collections" href="collections.html">Collections</a>
+                <a class="nav-button" data-page="films" href="films.html">Films</a>
+                <a class="nav-button" data-page="series" href="series.html">Séries</a>
+            </nav>
+
+            <div class="top-actions">
+                <input id="searchInput"
+                    class="search-input"
+                    type="search"
+                    placeholder="Filtrer..."
+                    oninput="handleSearch()">
+            </div>
+        </header>
+
+        <main>
+            <section id="page-collections" class="page active">
+                <div class="layout">
+
+                    <aside class="sidebar">
+                        <div class="sidebar-title">Statistiques</div>
+
+                        <div class="sidebar-stat">
+                            <span id="sideCollections">0</span> Collections
+                        </div>
+
+                        <div class="sidebar-stat">
+                            <span id="sideFilms">0</span> Films
+                        </div>
+
+                        <div class="sidebar-section"></div>
+
+                        <div class="sidebar-title">Collections</div>
+
+                        <button class="sidebar-link active"
+                            onclick="selectCollection('all')">
+                            Toutes les collections
+                        </button>
+                    </aside>
+
+                    <section class="content">
+                        <div class="content-header">
+                            <div>
+                                <h1>Collections</h1>
+                                <p id="collectionsCount">0 collection</p>
+                            </div>
+                        </div>
+
+                        <button
+                            id="resumeCollectionButton"
+                            class="resume-button hidden"
+                            onclick="resumeFilm()">
+                            ▶ Reprendre :
+                            <span id="resumeCollectionText"></span>
+                        </button>
+
+                        <div id="collectionsGrid" class="cards-grid"></div>
+
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/state.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/playback.js"></script>
+    <script src="js/collections.js"></script>
+    <script src="js/app-init.js"></script>
+
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded",
+            initCollectionsPage,
+        );
+    </script>
+</body>
+</html>
