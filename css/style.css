@@ -392,9 +392,9 @@ input {
     width: 100%;
     min-height: 48px;
     margin-bottom: 20px;
-    border: 1px solid rgba(30, 201, 139, 0.5);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    background: linear-gradient(90deg, rgba(30, 201, 139, 0.18), rgba(22, 131, 255, 0.08));
+    background: linear-gradient(90deg, rgba(30, 201, 138, 0.219), rgba(22, 131, 255, 0.08));
     color: white;
     text-align: left;
     padding: 0 18px;
@@ -553,7 +553,7 @@ background: #f97316;
 }
 
 .language-button {
-    border: none;
+    border: 1px solid transparent;
     padding: 10px 18px;
     border-radius: 14px;
     background:
@@ -569,12 +569,11 @@ background: #f97316;
 }
 
 .language-button:hover {
-    border-color: #1683ff;
     transform: translateY(-1px);
 }
 
 .language-button.active {
-    outline: 1px solid #1683ff;
+    border: 1px solid var(--blue);
 }
 
 .tmdb-modal {
