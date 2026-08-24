@@ -18919,7 +18919,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T15:14:56.432Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -19044,7 +19045,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T15:14:56.438Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
