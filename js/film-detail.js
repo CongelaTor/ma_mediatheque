@@ -2,6 +2,14 @@ currentPage = "film-detail";
 
 async function initFilmDetailPage() {
   currentPage = "film-detail";
+  if (sessionStorage.getItem("selectedCollectionId")) {
+    document
+      .querySelector('.nav-button[data-page="films"]')
+      ?.classList.remove("active");
+    document
+      .querySelector('.nav-button[data-page="collections"]')
+      ?.classList.add("active");
+  }
 
   const params = new URLSearchParams(window.location.search);
   const tmdbId = Number(params.get("tmdbId"));

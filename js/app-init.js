@@ -22,7 +22,14 @@ async function initFilmsPage() {
   window.selectedCollectionName = sessionStorage.getItem(
     "selectedCollectionName",
   );
-
+  if (window.selectedCollectionId) {
+    document
+      .querySelector('.nav-button[data-page="films"]')
+      ?.classList.remove("active");
+    document
+      .querySelector('.nav-button[data-page="collections"]')
+      ?.classList.add("active");
+  }
   const backToCollectionsButton = document.getElementById(
     "backToCollectionsButton",
   );
