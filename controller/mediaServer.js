@@ -155,6 +155,9 @@ function saveFilmTmdbData(data, response) {
     film.genre = data.genre;
     film.collectionId = data.collectionId;
     film.collectionNom = data.collectionNom;
+    film.collectionDescription = data.collectionDescription;
+    film.collectionImage = data.collectionImage;
+    film.collectionTmdbUrl = data.collectionTmdbUrl;
   }
 
   fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), "utf8");

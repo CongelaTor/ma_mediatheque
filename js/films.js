@@ -121,6 +121,13 @@ function renderFilms() {
     );
   } else {
     films = films.sort((a, b) => {
+      const anneeA = a.anneeTmdb || a.annee || 0;
+      const anneeB = b.anneeTmdb || b.annee || 0;
+
+      if (anneeA !== anneeB) {
+        return anneeA - anneeB;
+      }
+
       const titreA = a.titreTmdb || a.titre;
       const titreB = b.titreTmdb || b.titre;
 

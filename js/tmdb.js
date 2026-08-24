@@ -436,7 +436,7 @@ async function associateTmdbSerie(serie, result) {
 
 async function associateTmdbFilm(film, result) {
   const detailsResponse = await fetch(
-    `https://api.themoviedb.org/3/movie/${result.tmdbId}?api_key=${tmdbApiKey}&language=fr-FR`,
+    `https://api.themoviedb.org/3/movie/${result.tmdbId}?api_key=${appConstants.tmdbApiKey}&language=fr-FR`,
   );
 
   const details = await detailsResponse.json();
@@ -453,6 +453,24 @@ async function associateTmdbFilm(film, result) {
     ? details.belongs_to_collection.name
     : null;
 
+  let collectionDescription = null;
+  let collectionImage = null;
+  let collectionTmdbUrl = null;
+
+  if (collectionId) {
+    const collectionResponse = await fetch(
+      `https://api.themoviedb.org/3/collection/${collectionId}?api_key=${appConstants.tmdbApiKey}&language=fr-FR`,
+    );
+    if (collectionResponse.ok) {
+      const collectionDetails = await collectionResponse.json();
+      collectionDescription = collectionDetails.overview || null;
+      collectionImage = collectionDetails.poster_path
+        ? `https://image.tmdb.org/t/p/w500${collectionDetails.poster_path}`
+        : null;
+      collectionTmdbUrl = `https://www.themoviedb.org/collection/${collectionId}`;
+    }
+  }
+
   const dureeTmdb = details.runtime || null;
 
   const fichiers =
@@ -468,7 +486,6 @@ async function associateTmdbFilm(film, result) {
     body: JSON.stringify({
       filmId: film.id,
       fichiers: fichiers,
-
       titreTmdb: result.titre,
       anneeTmdb: result.annee,
       dureeTmdb: dureeTmdb,
@@ -476,6 +493,9 @@ async function associateTmdbFilm(film, result) {
 
       collectionId: collectionId,
       collectionNom: collectionNom,
+      collectionDescription: collectionDescription,
+      collectionImage: collectionImage,
+      collectionTmdbUrl: collectionTmdbUrl,
 
       tmdbId: result.tmdbId,
       tmdbUrl: result.tmdbUrl,
@@ -496,6 +516,9 @@ async function associateTmdbFilm(film, result) {
 
   film.collectionId = collectionId;
   film.collectionNom = collectionNom;
+  film.collectionDescription = collectionDescription;
+  film.collectionImage = collectionImage;
+  film.collectionTmdbUrl = collectionTmdbUrl;
 
   film.tmdbId = result.tmdbId;
   film.tmdbUrl = result.tmdbUrl;
@@ -529,7 +552,7 @@ function closeTmdbModal() {
 }
 async function searchTmdbSerie(title) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/search/tv?api_key=${tmdbApiKey}&language=fr-FR&query=${encodeURIComponent(title)}`,
+    `https://api.themoviedb.org/3/search/tv?api_key=${appConstants.tmdbApiKey}&language=fr-FR&query=${encodeURIComponent(title)}`,
   );
   const data = await response.json();
   if (!data.results) {
@@ -554,7 +577,7 @@ async function getTmdbSeasonEpisodes(serie, seasonNumber) {
     return new Map();
   }
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/${serie.tmdbId}/season/${seasonNumber}?api_key=${tmdbApiKey}&language=fr-FR`,
+    `https://api.themoviedb.org/3/tv/${serie.tmdbId}/season/${seasonNumber}?api_key=${appConstants.tmdbApiKey}&language=fr-FR`,
   );
   const data = await response.json();
   if (!data.episodes) {
@@ -579,7 +602,7 @@ async function getTmdbSeasonEpisodes(serie, seasonNumber) {
 
 async function searchTmdbFilm(title) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&language=fr-FR&query=${encodeURIComponent(title)}`,
+    `https://api.themoviedb.org/3/search/movie?api_key=${appConstants.tmdbApiKey}&language=fr-FR&query=${encodeURIComponent(title)}`,
   );
 
   const data = await response.json();

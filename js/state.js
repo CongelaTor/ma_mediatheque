@@ -1,5 +1,4 @@
 let catalog = null;
-const tmdbApiKey = "7f5ccb60f02be23a0abc64fdd5070eba";
 let currentPage = "home";
 let currentSerie = null;
 let currentSeason = null;

@@ -25,7 +25,7 @@ function renderCollections() {
       collections.set(film.collectionId, {
         id: film.collectionId,
         nom: film.collectionNom,
-        image: film.image,
+        image: film.collectionImage || null,
         films: [],
       });
     }
