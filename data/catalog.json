@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-08-22T21:45:31.414Z",
+    "dateDernierScan": "2026-08-24T08:03:03.699Z",
     "films": [
         {
             "id": "08bthe_2017",
@@ -15597,7 +15597,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:04.932Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -15737,7 +15738,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:04.938Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },

@@ -122,7 +122,7 @@ input {
 }
 
 .search-input {
-    width: 300px;
+    width: 200px;
     height: 38px;
     border: 1px solid var(--border);
     border-radius: 10px;
