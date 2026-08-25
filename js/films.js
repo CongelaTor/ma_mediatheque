@@ -139,7 +139,7 @@ function renderFilms() {
 
   if (collectionName) {
     document.querySelector("h1").textContent =
-      `Films de la collection "${collectionName}"`;
+      `${collectionName.replace(/\s*-\s*saga$/i, "")}`;
   }
 
   setText("filmsCount", `${films.length} film${films.length > 1 ? "s" : ""}`);

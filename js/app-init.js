@@ -17,8 +17,23 @@ async function initFilmsPage() {
   const state = loadFilmsViewState();
   currentAjouts = state.ajouts ?? "all";
   currentGenre = state.genre ?? "all";
-
   window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
+
+  document
+    .querySelectorAll(".nav-button")
+    .forEach((button) => button.classList.remove("active"));
+  document
+    .querySelector('.nav-button[data-page="films"]')
+    ?.classList.add("active");
+
+  if (window.selectedCollectionId) {
+    currentSearch = "";
+    document.getElementById("searchInput").value = "";
+  }
+
+  if (window.selectedCollectionId) {
+    currentSearch = "";
+  }
   window.selectedCollectionName = sessionStorage.getItem(
     "selectedCollectionName",
   );
@@ -69,7 +84,12 @@ async function initSeriesPage() {
   updateStats();
   updateResumeButtons();
   document.getElementById("searchInput").value = loadSearchText();
+
   currentSearch = loadSearchText();
+  if (window.selectedCollectionId) {
+    currentSearch = "";
+    document.getElementById("searchInput").value = "";
+  }
 
   const state = loadSeriesViewState();
   if (state.languages) {

@@ -1,4 +1,6 @@
 function initCollectionsPage() {
+  currentPage = "collections";
+
   loadCatalog().then(() => {
     updateResumeButtons();
     renderCollections();
@@ -34,6 +36,7 @@ function renderCollections() {
   }
 
   const collectionList = [...collections.values()]
+    .filter((collection) => matchesSearch(collection.nom))
     .filter((collection) => {
       const uniqueFilms = new Set();
 
@@ -68,13 +71,20 @@ function renderCollections() {
     const card = document.createElement("article");
     card.className = "media-card";
 
+    let collectionName = collection.nom;
+    if (collectionName) {
+    collectionName =
+      `${collectionName.replace(/\s*-\s*saga$/i, "")}`;
+  }
+
     const posterZone = document.createElement("div");
     posterZone.className = "poster-zone";
     posterZone.appendChild(
-      createPosterContent(collection.image, collection.nom, collection.id),
+      createPosterContent(collection.image, collectionName, collection.id),
     );
 
     posterZone.onclick = () => {
+      sessionStorage.setItem("collectionsSearch", currentSearch);
       sessionStorage.setItem("selectedCollectionId", collection.id);
       sessionStorage.setItem("selectedCollectionName", collection.nom);
       sessionStorage.setItem("collectionMode", "true");

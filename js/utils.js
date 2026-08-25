@@ -1,16 +1,27 @@
 function handleSearch() {
   const input = document.getElementById("searchInput");
   currentSearch = input ? input.value.trim().toLowerCase() : "";
+
+if (
+    currentPage === "collections" &&
+    typeof renderCollections === "function"
+  ) {
+    saveSearchText();
+    renderCollections();
+  }
+  
   if (currentPage === "films" && typeof renderFilms === "function") {
     saveFilmsViewState();
     saveSearchText();
     renderFilms();
   }
+  
   if (currentPage === "series" && typeof renderSeries === "function") {
     saveSearchText();
     renderSeries();
   }
 }
+
 function matchesSearch(value) {
   if (!currentSearch) {
     return true;

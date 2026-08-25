@@ -690,8 +690,6 @@ background: #f97316;
     color: var(--muted);
     font-size: 14px;
     line-height: 1.4;
-    max-height: 78px;
-    overflow: hidden;
 }
 
 .tmdb-associate-button {
