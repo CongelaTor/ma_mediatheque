@@ -5,6 +5,7 @@ async function initHomePage() {
 }
 async function initFilmsPage() {
   currentPage = "films";
+  initSidebarToggle();
   await loadCatalog();
   updateStats();
   updateResumeButtons();
@@ -79,6 +80,7 @@ async function initFilmsPage() {
 
 async function initSeriesPage() {
   currentPage = "series";
+  initSidebarToggle();
   await loadCatalog();
   initializeLanguageFilters();
   updateStats();
@@ -106,4 +108,24 @@ async function initSeriesPage() {
   }
 
   renderSeries();
+}
+function initSidebarToggle() {
+  if (
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/"
+  ) {
+    return;
+  }
+
+  if (localStorage.getItem("sidebarHidden") === "true") {
+    document.body.classList.add("sidebar-hidden");
+  }
+
+  document.getElementById("sidebarToggle")?.addEventListener("click", () => {
+    document.body.classList.toggle("sidebar-hidden");
+    localStorage.setItem(
+      "sidebarHidden",
+      document.body.classList.contains("sidebar-hidden"),
+    );
+  });
 }

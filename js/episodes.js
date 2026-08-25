@@ -1,6 +1,7 @@
 async function initSerieDetailPage() {
   currentPage = "episodes";
   await loadCatalog();
+  initSidebarToggle();
   initializeLanguageFilters();
   updateStats();
   updateResumeButtons();

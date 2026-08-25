@@ -325,6 +325,14 @@ input {
     margin: 0 0 12px 0;
 }
 
+.sidebar-hidden .layout {
+    grid-template-columns: 1fr;
+}
+
+.sidebar-hidden .sidebar {
+    display: none;
+}
+
 .sidebar-link {
     width: 100%;
     display: block;

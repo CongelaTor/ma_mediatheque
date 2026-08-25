@@ -14,7 +14,6 @@
 <body>
 
     <div class="app">
-
         <header class="topbar">
             <div class="brand" onclick="showPage('home')">
                 <div class="brand-icon">
@@ -22,7 +21,6 @@
                 </div>
                 <div class="brand-title" href="index.html">Médiathèque v1.0</div>
             </div>
-
             <nav class="main-nav">
                 <a class="nav-button active" data-page="home" href="index.html">Accueil</a>
                 <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
@@ -30,7 +28,6 @@
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
                 <a class="nav-button" data-page="spectacles" href="films.html">Spectacles</a>
             </nav>
-
             <div class="top-actions">
                 <button class="icon-button refresh-button" onclick="reloadCatalog('all')">
                     <span class="refresh-icon">↻</span>
@@ -40,9 +37,7 @@
         </header>
 
         <main>
-
             <section id="page-home" class="page active">
-
                 <div class="home-header">
                     <div>
                         <h1>Bienvenue dans votre médiathèque</h1>
@@ -51,7 +46,6 @@
                 </div>
 
                 <div class="home-cards">
-
                     <article class="home-card home-card-films" onclick="window.location.href='films.html'">
                         <div class="home-card-image film-hero"></div>
                         <div class="home-card-icon">🎬</div>
@@ -67,7 +61,6 @@
                         <p>Retrouvez vos séries organisées par saison et épisode.</p>
                         <button type="button" class="purple-button">Accéder aux séries ›</button>
                     </article>
-
                 </div>
 
                 <div class="stats-row">
@@ -88,9 +81,7 @@
             </section>
 
             <section id="page-films" class="page">
-
                 <div class="layout">
-
                     <aside class="sidebar">
                         <div class="sidebar-title">Statistiques</div>
                         <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
@@ -98,9 +89,7 @@
                         <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
                         <div class="sidebar-section"></div>
                     </aside>
-
                     <section class="content">
-
                         <div class="content-header">
                             <div>
                                 <h1>Films</h1>
@@ -111,19 +100,13 @@
                         <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
                             ▶ Reprendre : <span id="resumeFilmText"></span>
                         </button>
-
                         <div id="filmsGrid" class="cards-grid"></div>
-
                     </section>
-
                 </div>
-
             </section>
 
             <section id="page-series" class="page">
-
                 <div class="layout">
-
                     <aside class="sidebar">
                         <div class="sidebar-title">Navigation</div>
                         <button class="sidebar-link active" onclick="renderSeries()">Toutes les séries</button>
@@ -131,7 +114,6 @@
                     </aside>
 
                     <section class="content">
-
                         <div class="content-header">
                             <div>
                                 <h1 id="seriesTitle">Séries</h1>
@@ -155,15 +137,10 @@
 
                         <div id="seriesGrid" class="cards-grid"></div>
                         <div id="episodesPanel" class="episodes-panel hidden"></div>
-
                     </section>
-
                 </div>
-
             </section>
-
         </main>
-
     </div>
 
     <div id="tmdbModal" class="tmdb-modal hidden">

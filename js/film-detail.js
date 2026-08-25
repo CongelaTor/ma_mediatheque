@@ -2,6 +2,8 @@ currentPage = "film-detail";
 
 async function initFilmDetailPage() {
   currentPage = "film-detail";
+  initSidebarToggle();
+
   if (sessionStorage.getItem("selectedCollectionId")) {
     document
       .querySelector('.nav-button[data-page="films"]')

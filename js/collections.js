@@ -1,6 +1,6 @@
 function initCollectionsPage() {
   currentPage = "collections";
-
+  initSidebarToggle();
   loadCatalog().then(() => {
     updateResumeButtons();
     renderCollections();
@@ -73,9 +73,8 @@ function renderCollections() {
 
     let collectionName = collection.nom;
     if (collectionName) {
-    collectionName =
-      `${collectionName.replace(/\s*-\s*saga$/i, "")}`;
-  }
+      collectionName = `${collectionName.replace(/\s*-\s*saga$/i, "")}`;
+    }
 
     const posterZone = document.createElement("div");
     posterZone.className = "poster-zone";
