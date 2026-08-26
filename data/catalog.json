@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-08-25T17:09:46.502Z",
+    "dateDernierScan": "2026-08-25T21:31:30.516Z",
     "films": [
         {
             "id": "08bthe_2017",
@@ -12586,8 +12586,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:04.932Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -12727,8 +12726,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:04.938Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -15108,7 +15106,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.166Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": true
                 },
                 {
                     "numero": 2,
@@ -15273,7 +15272,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.193Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -15438,7 +15438,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.216Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 4,
@@ -15603,7 +15604,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.231Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 5,
@@ -15768,7 +15770,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.249Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -15908,8 +15911,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T15:14:56.432Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -16034,8 +16036,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T15:14:56.438Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -16327,6 +16328,10 @@
             "tmdbId": 44305,
             "tmdbUrl": "https://www.themoviedb.org/tv/44305",
             "dateAjout": "2026-08-22T08:34:13.464Z",
+            "titreTmdb": "Dragons : Cavaliers de Beurk",
+            "anneeTmdb": "2012",
+            "descriptionTmdb": "La série parle des principaux protagonistes du film Dragons sorti en 2010 et suit leurs aventures entre le 1er et le 2e film. Harold, fils de Stoïck (le chef de la communauté de Beurk), est un adolescent intelligent et solitaire, mais aussi le premier viking à avoir apprivoisé un dragon. Son objectif est de préserver la fragile alliance entre ceux-ci et le peuple viking. Dans sa quête, il est accompagné d'autres vikings adolescents dont Astrid, Rustik, Varek, Kognedur et Kranedur.",
+            "hasMissingEpisodes": false,
             "saisons": [
                 {
                     "numero": 3,
@@ -16487,8 +16492,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T08:34:13.478Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 4,
@@ -16649,8 +16653,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T08:34:13.485Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 5,
@@ -16811,8 +16814,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T08:34:13.493Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 6,
@@ -16973,8 +16975,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T08:34:13.472Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 7,
@@ -17135,8 +17136,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T08:34:13.499Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 8,
@@ -17297,14 +17297,9 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-22T08:34:13.505Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
-            ],
-            "titreTmdb": "Dragons : Cavaliers de Beurk",
-            "anneeTmdb": "2012",
-            "descriptionTmdb": "La série parle des principaux protagonistes du film Dragons sorti en 2010 et suit leurs aventures entre le 1er et le 2e film. Harold, fils de Stoïck (le chef de la communauté de Beurk), est un adolescent intelligent et solitaire, mais aussi le premier viking à avoir apprivoisé un dragon. Son objectif est de préserver la fragile alliance entre ceux-ci et le peuple viking. Dans sa quête, il est accompagné d'autres vikings adolescents dont Astrid, Rustik, Varek, Kognedur et Kranedur.",
-            "hasMissingEpisodes": false
+            ]
         },
         {
             "id": "frequency",
@@ -18972,7 +18967,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.510Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -19267,7 +19263,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.521Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -19592,7 +19589,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.532Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 4,
@@ -19957,7 +19955,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.544Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 5,
@@ -20312,7 +20311,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-08-17T21:37:05.558Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -21944,6 +21944,10 @@
             "tmdbId": 1411,
             "tmdbUrl": "https://www.themoviedb.org/tv/1411",
             "dateAjout": "2026-08-22T12:54:47.970Z",
+            "titreTmdb": "Person of Interest",
+            "anneeTmdb": "2011",
+            "descriptionTmdb": "Un agent paramilitaire de la CIA, présumé mort, est recruté par un millionnaire reclu pour travailler sur un projet top-secret : prévenir le crime avant qu'il ne se produise ! Un ingénieux programme élaboré par Finch identifie chaque jour des personnes qui vont être impliquées dans un crime. Victime ou coupable ? Reese va devoir mener l'enquête pour découvrir qui est en danger et empêcher qu'un nouveau meurtre soit commis…",
+            "hasMissingEpisodes": true,
             "saisons": [
                 {
                     "numero": 1,
@@ -22985,11 +22989,7 @@
                     ],
                     "hasMissingEpisodes": false
                 }
-            ],
-            "titreTmdb": "Person of Interest",
-            "anneeTmdb": "2011",
-            "descriptionTmdb": "Un agent paramilitaire de la CIA, présumé mort, est recruté par un millionnaire reclu pour travailler sur un projet top-secret : prévenir le crime avant qu'il ne se produise ! Un ingénieux programme élaboré par Finch identifie chaque jour des personnes qui vont être impliquées dans un crime. Victime ou coupable ? Reese va devoir mener l'enquête pour découvrir qui est en danger et empêcher qu'un nouveau meurtre soit commis…",
-            "hasMissingEpisodes": true
+            ]
         },
         {
             "id": "quantico",
@@ -24912,8 +24912,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.919Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -25048,8 +25047,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.927Z"
                         }
-                    ],
-                    "hasMissingEpisodes": true
+                    ]
                 },
                 {
                     "numero": 3,
@@ -25244,8 +25242,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.945Z"
                         }
-                    ],
-                    "hasMissingEpisodes": true
+                    ]
                 },
                 {
                     "numero": 4,
@@ -25380,8 +25377,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.954Z"
                         }
-                    ],
-                    "hasMissingEpisodes": true
+                    ]
                 }
             ]
         },
@@ -25655,7 +25651,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.966Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -25740,7 +25737,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.970Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -25875,7 +25873,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:05.978Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -26171,6 +26170,9 @@
             "tmdbId": 71714,
             "tmdbUrl": "https://www.themoviedb.org/tv/71714",
             "dateAjout": "2026-08-22T12:54:48.155Z",
+            "titreTmdb": "The Brave",
+            "anneeTmdb": "2017",
+            "descriptionTmdb": "Patricia Campbell, directrice adjointe de la D.I.A , et son équipe d'analystes maîtrisent la technologie de surveillance la plus avancée au monde depuis le quartier général de Washington. Ils aident Adam Dalton et son équipe des forces spéciales à sauver des vies innocentes, en exécutant des missions à haut risque dans les endroits les plus dangereux du monde.",
             "saisons": [
                 {
                     "numero": 1,
@@ -26307,10 +26309,7 @@
                         }
                     ]
                 }
-            ],
-            "titreTmdb": "The Brave",
-            "anneeTmdb": "2017",
-            "descriptionTmdb": "Patricia Campbell, directrice adjointe de la D.I.A , et son équipe d'analystes maîtrisent la technologie de surveillance la plus avancée au monde depuis le quartier général de Washington. Ils aident Adam Dalton et son équipe des forces spéciales à sauver des vies innocentes, en exécutant des missions à haut risque dans les endroits les plus dangereux du monde."
+            ]
         },
         {
             "id": "the_chicago_code",
@@ -26320,6 +26319,9 @@
             "tmdbId": 32755,
             "tmdbUrl": "https://www.themoviedb.org/tv/32755",
             "dateAjout": "2026-08-22T15:11:17.513Z",
+            "titreTmdb": "Chicago Code",
+            "anneeTmdb": "2011",
+            "descriptionTmdb": "Brillante recrue de la police de Chicago, Teresa Colvin a fait du combat  contre la corruption et le crime son cheval de bataille. Déterminée et  ambitieuse, elle a grimpé les échelons à une vitesse vertigineuse.  Désormais bien placée au sein du département de police, elle est bien  décidée à faire le ménage dans sa ville. Pour l'aider dans cette  difficile tâche, elle peut compter sur Jarek Wysocki, son ancien  partenaire, une légende locale qui a fait ses preuves dans le métier. Le  chemin promet d'être parsemé d'obstacles, avec des implications  politiques colossales. Il leur faudra affronter des adversaires  puissants, qui ne sont pas prêts de se laisser faire...",
             "saisons": [
                 {
                     "numero": 1,
@@ -26482,10 +26484,7 @@
                         }
                     ]
                 }
-            ],
-            "titreTmdb": "Chicago Code",
-            "anneeTmdb": "2011",
-            "descriptionTmdb": "Brillante recrue de la police de Chicago, Teresa Colvin a fait du combat  contre la corruption et le crime son cheval de bataille. Déterminée et  ambitieuse, elle a grimpé les échelons à une vitesse vertigineuse.  Désormais bien placée au sein du département de police, elle est bien  décidée à faire le ménage dans sa ville. Pour l'aider dans cette  difficile tâche, elle peut compter sur Jarek Wysocki, son ancien  partenaire, une légende locale qui a fait ses preuves dans le métier. Le  chemin promet d'être parsemé d'obstacles, avec des implications  politiques colossales. Il leur faudra affronter des adversaires  puissants, qui ne sont pas prêts de se laisser faire..."
+            ]
         },
         {
             "id": "the_falcon_and_the_winter_soldier",
@@ -26495,6 +26494,9 @@
             "tmdbId": 88396,
             "tmdbUrl": "https://www.themoviedb.org/tv/88396",
             "dateAjout": "2026-08-22T12:54:48.161Z",
+            "titreTmdb": "Falcon et le Soldat de l'hiver",
+            "anneeTmdb": "2021",
+            "descriptionTmdb": "Sam Wilson, alias Falcon, et Bucky Barnes, le Soldat de l’hiver, se lancent dans une aventure autour du monde qui va mettre leurs ressources – et leur patience – à rude épreuve. La série se déroule après les événements d'Avengers : Endgame.",
             "saisons": [
                 {
                     "numero": 1,
@@ -26591,10 +26593,7 @@
                         }
                     ]
                 }
-            ],
-            "titreTmdb": "Falcon et le Soldat de l'hiver",
-            "anneeTmdb": "2021",
-            "descriptionTmdb": "Sam Wilson, alias Falcon, et Bucky Barnes, le Soldat de l’hiver, se lancent dans une aventure autour du monde qui va mettre leurs ressources – et leur patience – à rude épreuve. La série se déroule après les événements d'Avengers : Endgame."
+            ]
         },
         {
             "id": "the_queen_s_gambit",
@@ -26604,6 +26603,9 @@
             "tmdbId": 87739,
             "tmdbUrl": "https://www.themoviedb.org/tv/87739",
             "dateAjout": "2026-08-22T12:54:48.166Z",
+            "titreTmdb": "Le Jeu de la dame",
+            "anneeTmdb": "2020",
+            "descriptionTmdb": "Dans les années 1950, une jeune orpheline qui révèle un talent étonnant pour les échecs s'envole vers une gloire improbable tout en se battant contre ses addictions.",
             "saisons": [
                 {
                     "numero": 1,
@@ -26670,10 +26672,7 @@
                         }
                     ]
                 }
-            ],
-            "titreTmdb": "Le Jeu de la dame",
-            "anneeTmdb": "2020",
-            "descriptionTmdb": "Dans les années 1950, une jeune orpheline qui révèle un talent étonnant pour les échecs s'envole vers une gloire improbable tout en se battant contre ses addictions."
+            ]
         },
         {
             "id": "the_rookie",
@@ -26683,6 +26682,10 @@
             "tmdbId": 79744,
             "tmdbUrl": "https://www.themoviedb.org/tv/79744",
             "dateAjout": "2026-08-22T12:54:48.169Z",
+            "titreTmdb": "The Rookie : Le Flic de Los Angeles",
+            "anneeTmdb": "2018",
+            "descriptionTmdb": "John Nolan, le rookie le plus âgé du LAPD, utilise son expérience de vie, sa détermination et son sens de l’humour pour suivre des recrues âgées de 20 ans de moins que lui.",
+            "hasMissingEpisodes": true,
             "saisons": [
                 {
                     "numero": 1,
@@ -26887,8 +26890,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:06.037Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -27093,8 +27095,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:06.051Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -27239,8 +27240,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:06.060Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 4,
@@ -27415,14 +27415,9 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-08-17T21:37:06.072Z"
                         }
-                    ],
-                    "hasMissingEpisodes": true
+                    ]
                 }
-            ],
-            "titreTmdb": "The Rookie : Le Flic de Los Angeles",
-            "anneeTmdb": "2018",
-            "descriptionTmdb": "John Nolan, le rookie le plus âgé du LAPD, utilise son expérience de vie, sa détermination et son sens de l’humour pour suivre des recrues âgées de 20 ans de moins que lui.",
-            "hasMissingEpisodes": true
+            ]
         },
         {
             "id": "the_unit",
@@ -27432,6 +27427,9 @@
             "tmdbId": 2321,
             "tmdbUrl": "https://www.themoviedb.org/tv/2321",
             "dateAjout": "2026-08-22T12:54:48.200Z",
+            "titreTmdb": "The Unit : Commando d'élite",
+            "anneeTmdb": "2006",
+            "descriptionTmdb": "Jonas Blane dirige un contingent spécial de l'armée chargé de missions ultra-secrètes et délicates. L'existence même de ces hommes d'élite est un des secrets les mieux gardés. Leurs épouses, elles aussi contraintes de vivre dans l'ombre, doivent également donner l'apparence d'une vie de famille normale et donner le change tous les jours en tremblant chaque seconde pour la sécurité de leurs maris partis risquer leur vie pour sauver celle des autres.",
             "saisons": [
                 {
                     "numero": 1,
@@ -28143,10 +28141,7 @@
                         }
                     ]
                 }
-            ],
-            "titreTmdb": "The Unit : Commando d'élite",
-            "anneeTmdb": "2006",
-            "descriptionTmdb": "Jonas Blane dirige un contingent spécial de l'armée chargé de missions ultra-secrètes et délicates. L'existence même de ces hommes d'élite est un des secrets les mieux gardés. Leurs épouses, elles aussi contraintes de vivre dans l'ombre, doivent également donner l'apparence d'une vie de famille normale et donner le change tous les jours en tremblant chaque seconde pour la sécurité de leurs maris partis risquer leur vie pour sauver celle des autres."
+            ]
         },
         {
             "id": "timeless",

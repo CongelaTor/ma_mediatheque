@@ -11,7 +11,12 @@ function handleLanguageButtonClick(button) {
     return;
   }
   if (currentSerie) {
-    activeDetailLanguage = language;
+    if (language === "TBD") {
+      button.classList.toggle("active");
+    } else {
+      activeDetailLanguage = language;
+    }
+
     updateLanguageButtons();
     showSerieDetails(currentSerie, currentSeason);
     return;
@@ -83,12 +88,22 @@ function updateDetailLanguageButtons() {
       button.classList.toggle("hidden", !isVisible);
       button.classList.toggle(
         "active",
-        isVisible && language === activeDetailLanguage,
+        isVisible &&
+          (language === activeDetailLanguage ||
+            (language === "TBD" && activeDetailTbd)),
       );
     });
 }
 function episodeMatchesDetailLanguage(episode) {
-  return episode.langue == null || episode.langue === activeDetailLanguage;
+  if (episode.langue === activeDetailLanguage) {
+    return true;
+  }
+
+  if (activeDetailTbd && (episode.langue == null || episode.langue === "TBD")) {
+    return true;
+  }
+
+  return false;
 }
 function serieMatchesSeriesLanguages(serie) {
   let hasLanguage = false;
@@ -126,7 +141,7 @@ function renderSeries() {
     .filter((serie) => matchesSearch(serie.titre))
     .sort((a, b) => a.titre.localeCompare(b.titre, "fr"));
 
-    setText(
+  setText(
     "seriesCount",
     `${series.length} série${series.length > 1 ? "s" : ""}`,
   );

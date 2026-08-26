@@ -13,6 +13,7 @@ let activeSeriesLanguages = savedSeriesLanguages
   ? new Set(JSON.parse(savedSeriesLanguages))
   : new Set(languageOrder);
 let activeDetailLanguage = null;
+let activeDetailTbd = true;
 
 const tmdbBaseUrl = "https://www.themoviedb.org";
 const tmdbSearchBaseUrl = "https://www.themoviedb.org/search";

@@ -50,13 +50,26 @@ async function showSerieDetails(serie, requestedSeasonNumber = null) {
 
   updateLanguageButtons();
 
-  const missingEpisodesButton = document.getElementById(
-    "missingEpisodesButton",
+  const allEpisodesButton = document.getElementById("allEpisodesButton");
+
+  const missingEpisodesMenuButton = document.getElementById(
+    "missingEpisodesMenuButton",
   );
-  if (missingEpisodesButton) {
-    missingEpisodesButton.onclick = () => {
-      showMissingEpisodesOnly = !showMissingEpisodesOnly;
-      missingEpisodesButton.classList.toggle("active", showMissingEpisodesOnly);
+
+  if (allEpisodesButton && missingEpisodesMenuButton) {
+    allEpisodesButton.onclick = () => {
+      showMissingEpisodesOnly = false;
+      allEpisodesButton.classList.add("active");
+      missingEpisodesMenuButton.classList.remove("active");
+      renderSeason(
+        currentSerie.saisons.find((s) => s.numero === currentSeason),
+      );
+    };
+
+    missingEpisodesMenuButton.onclick = () => {
+      showMissingEpisodesOnly = true;
+      missingEpisodesMenuButton.classList.add("active");
+      allEpisodesButton.classList.remove("active");
       renderSeason(
         currentSerie.saisons.find((s) => s.numero === currentSeason),
       );
