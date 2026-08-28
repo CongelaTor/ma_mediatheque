@@ -24,6 +24,12 @@ function resolvePhysicalPath(catalogFile) {
       console.log("catalogFile =", catalogFile);
       console.log("rootName =", rootName);
 
+      if (catalogFile === "/01_reprise_vlc.json" && rootName === "01_Films") {
+        const resolved = `${normalizedRoot}/../01_reprise_vlc.json`;
+        console.log("resolved =", resolved);
+        return resolved;
+      }
+
       if (catalogFile.startsWith(`/${rootName}/`)) {
         const resolved = catalogFile.replace(`/${rootName}`, normalizedRoot);
         console.log("resolved =", resolved);
