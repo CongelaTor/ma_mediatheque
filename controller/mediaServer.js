@@ -4,19 +4,89 @@ const path = require("path");
 const { execFile } = require("child_process");
 const PORT = 9876;
 const VLC = "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe";
+
 const rootDir = path.join(__dirname, "..");
 const catalogPath = path.join(rootDir, "data", "catalog.json");
-const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
 const configPath = path.join(rootDir, "config", "config.json");
+const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
+
+const driveMappings = {
+  "01": null,
+  "02": null,
+};
+detectDriveMappings();
+
+function detectDriveMappings() {
+  const driveLetters = [
+    "Z:",
+    "Y:",
+    "X:",
+    "W:",
+    "V:",
+    "U:",
+    "T:",
+    "S:",
+    "R:",
+    "Q:",
+    "P:",
+    "O:",
+    "N:",
+    "M:",
+    "L:",
+    "K:",
+    "J:",
+    "I:",
+    "H:",
+    "G:",
+    "F:",
+    "E:",
+  ];
+
+  for (const drive of driveLetters) {
+    if (!driveMappings["01"] && fs.existsSync(`${drive}\\01_Films`)) {
+      driveMappings["01"] = drive;
+      console.log("01 trouvé sur", drive);
+    }
+
+    if (!driveMappings["02"] && fs.existsSync(`${drive}\\02_Films`)) {
+      driveMappings["02"] = drive;
+      console.log("02 trouvé sur", drive);
+    }
+
+    if (driveMappings["01"] && driveMappings["02"]) {
+      break;
+    }
+  }
+  console.log("driveMappings =", driveMappings);
+}
 
 function resolvePhysicalPath(catalogFile) {
   if (!catalogFile) {
     return null;
   }
 
+  if (catalogFile.startsWith("/01_")) {
+    console.log(
+      "01 =>",
+      `${driveMappings["01"]}${catalogFile.replaceAll("/", "\\")}`,
+    );
+    return `${driveMappings["01"]}${catalogFile.replaceAll("/", "\\")}`;
+  }
+
+  if (catalogFile.startsWith("/02_")) {
+    console.log(
+      "02 =>",
+      `${driveMappings["02"]}${catalogFile.replaceAll("/", "\\")}`,
+    );
+    return `${driveMappings["02"]}${catalogFile.replaceAll("/", "\\")}`;
+  }
+
   const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 
   for (const source of config.sources) {
+    if (!source.paths) {
+      continue;
+    }
     for (const rootPath of source.paths) {
       const normalizedRoot = rootPath.replaceAll("\\", "/");
       const rootName = normalizedRoot.split("/").pop();
