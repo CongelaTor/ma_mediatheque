@@ -85,8 +85,14 @@ http
           setIgnoreWord(data, response);
           return;
         }
+
         if (request.url === "/open-file-location") {
           openFileLocation(data, response);
+          return;
+        }
+
+        if (request.url === "/resume-playback") {
+          resumePlayback(data, response);
           return;
         }
 
@@ -109,6 +115,7 @@ function launchVlc(data, response) {
   console.log("CATALOG =", data.fichier);
   console.log("PHYSICAL =", physicalPath);
 
+  console.log("physicalPath =", physicalPath);
   execFile(VLC, [physicalPath.replaceAll("/", "\\")], (error) => {
     if (error) {
       console.error(error);
@@ -118,6 +125,59 @@ function launchVlc(data, response) {
     "Content-Type": "text/plain; charset=utf-8",
   });
   response.end("OK");
+}
+
+function resumePlayback(data, response) {
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+  const resumeSource = config.sources.find(
+    (source) => source.type === "reprise_vlc",
+  );
+
+  if (!resumeSource?.path) {
+    response.writeHead(500, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end("Chemin de reprise_vlc.json non configuré");
+    return;
+  }
+  console.log("REQUEST TYPE =", data.type);
+  console.log("RESUME FILE =", resumeSource.path);
+
+  const resumeData = JSON.parse(fs.readFileSync(resumeSource.path, "utf8"));
+  console.log("RESUME DATA =", JSON.stringify(resumeData, null, 2));
+
+  const resume = resumeData[data.type];
+  console.log("RESUME =", resume);
+
+  if (!resume?.catalogPath) {
+    response.writeHead(404, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end("Aucune reprise disponible");
+    return;
+  }
+
+  console.log("resume =", resume);
+  console.log("catalogPath =", resume.catalogPath);
+
+  const resolvedPath = resolvePhysicalPath(resume.catalogPath);
+  console.log("catalogPath =", resume.catalogPath);
+  console.log("resolvedPath =", resolvedPath);
+  const physicalPath = resolvedPath.replaceAll("/", "\\");
+
+  const positionSeconds = Number(resume.positionSeconds) || 0;
+
+  console.log("physicalPath =", physicalPath);
+
+  execFile(VLC, [`--start-time=${positionSeconds}`, physicalPath], (error) => {
+    if (error) {
+      console.error(error);
+    }
+  });
+  response.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+  });
+  response.end("Lecture reprise");
 }
 
 function openFileLocation(data, response) {

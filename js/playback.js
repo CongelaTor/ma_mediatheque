@@ -38,6 +38,21 @@ function requestLocalPlay(payload) {
     .catch((error) => console.error(error));
 }
 
+function requestResumePlayback(type) {
+  fetch("http://localhost:9876/resume-playback", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      type: type,
+    }),
+  })
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+}
+
 function saveResumeFilm(film) {
   const title = film.titreTmdb || film.titre;
   localStorage.setItem(
@@ -63,30 +78,14 @@ function saveResumeSerie(serie, saison, episode) {
   );
   updateResumeButtons();
 }
+
 function resumeFilm() {
-  const resume = getResumeFilm();
-  if (!resume) {
-    return;
-  }
-  requestLocalPlay({
-    type: "film",
-    titre: resume.titre,
-    fichier: resume.fichier,
-  });
+  requestResumePlayback("film");
 }
 function resumeSerie() {
-  const resume = getResumeSerie();
-  if (!resume) {
-    return;
-  }
-  requestLocalPlay({
-    type: "serie",
-    titre: resume.titre,
-    saison: resume.saison,
-    episode: resume.episode,
-    fichier: resume.fichier,
-  });
+  requestResumePlayback("serie");
 }
+
 function updateResumeButtons() {
   const resumeCollection = getResumeCollection();
   const resumeFilm = getResumeFilm();

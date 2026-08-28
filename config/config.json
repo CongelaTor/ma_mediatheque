@@ -4,16 +4,21 @@
       "type": "film",
       "paths": [
         "Y:/02_Films",
-        "Z:/01_Films"]
+        "Z:/01_Films"
+      ]
     },
     {
       "type": "serie",
-       "paths": [
+      "paths": [
         "Y:/02_Series",
-        "Z:/01_Series"]
+        "Z:/01_Series"
+      ]
+    },
+    {
+      "type": "reprise_vlc",
+      "path": "Z:/reprise_vlc.json"
     }
-  ],
-  "extensions": [
+  ],  "extensions": [
     ".jpg",
     ".webp",
     ".avi",
