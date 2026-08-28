@@ -43,6 +43,7 @@ function detectDriveMappings() {
   ];
 
   for (const drive of driveLetters) {
+    console.log("test => ", drive);
     if (!driveMappings["01"] && fs.existsSync(`${drive}\\01_Films`)) {
       driveMappings["01"] = drive;
       console.log("01 trouvé sur", drive);
