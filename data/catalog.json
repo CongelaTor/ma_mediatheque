@@ -8103,17 +8103,30 @@
                 "TBD"
             ],
             "taille": 733935616,
-            "genre": null,
-            "image": null,
+            "genre": [
+                "Action",
+                "Drame",
+                "Familial"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/h6pD4G2ogPnzACofNIdjERsbnTZ.jpg",
             "fichier": "/02_Films/Action/The.Karate.Kid.avi",
             "nomFichier": "The.Karate.Kid.avi",
             "imdbId": null,
-            "tmdbId": null,
-            "tmdbUrl": null,
+            "tmdbId": 1885,
+            "tmdbUrl": "https://www.themoviedb.org/movie/1885",
             "doublonExact": false,
             "doublonProbable": true,
             "groupeDoublon": "karate_kid",
-            "dateAjout": "2026-08-22T08:23:33.561Z"
+            "dateAjout": "2026-08-22T08:23:33.561Z",
+            "titreTmdb": "Karate Kid",
+            "anneeTmdb": "1984",
+            "dureeTmdb": 126,
+            "descriptionTmdb": "Daniel quitte le New Jersey pour s’installer avec sa mère en Californie. À l’école, ses nouveaux camarades de classe l’isolent et le persécutent. Comment faire face ? En se laissant aller à son tour à la violence ? À la haine ? Et ce vieux Japonais plein de sagesse, fera‐t‐il de lui un champion de karaté ? Transformera‐t‐il sa vision de la vie ?",
+            "collectionId": 8580,
+            "collectionNom": "Karate Kid - Saga",
+            "collectionDescription": "Les trois premiers films de la série suivent Daniel LaRusso, qui apprend à maîtriser le karaté pour de bon grâce au mentorat excentrique d'un concierge nommé M. Miyagi. Dans le quatrième et dernier film de la série originale, M. Miyagi devient le gardien de la petite-fille de son ami pour tenter de l'éloigner des ennuis.",
+            "collectionImage": "https://image.tmdb.org/t/p/w500/pexxR6j3i72n9frn7Y1UyCyabnd.jpg",
+            "collectionTmdbUrl": "https://www.themoviedb.org/collection/8580"
         },
         {
             "id": "kirikou_et_la_sorciere",
