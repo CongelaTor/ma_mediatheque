@@ -172,6 +172,25 @@ function buildExistingSerieByKey(catalog) {
   }
   return map;
 }
+
+function buildCatalogPath(fullPath) {
+  const normalizedFullPath = fullPath.replaceAll("\\", "/");
+
+  for (const source of config.sources) {
+    for (const sourcePath of source.paths) {
+      const normalizedSourcePath = sourcePath.replaceAll("\\", "/");
+
+      if (normalizedFullPath.startsWith(`${normalizedSourcePath}/`)) {
+        const rootName = normalizedSourcePath.split("/").pop();
+
+        return `/${rootName}${normalizedFullPath.substring(normalizedSourcePath.length)}`;
+      }
+    }
+  }
+
+  return normalizedFullPath;
+}
+
 function scanDirectory(directory, extensions, results = []) {
   const entries = fs.readdirSync(directory, { withFileTypes: true });
   for (const entry of entries) {
@@ -214,7 +233,7 @@ function analyzeVideoFile(fichier, source) {
     saison: episodeInfo ? episodeInfo.saison : null,
     episode: episodeInfo ? episodeInfo.episode : null,
     nomFichier: fichier.nom,
-    fichier: fichier.fichier,
+    fichier: buildCatalogPath(fichier.fichier),
     taille: fichier.taille,
     image: findAssociatedImage(fichier.fichier),
   };
@@ -570,9 +589,9 @@ function normalizeKey(value) {
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
 }
-function samePath(path1, path2) {
-  return pathKey(path1) === pathKey(path2);
-}
 function pathKey(value) {
   return path.normalize(value).toLowerCase();
+}
+function samePath(path1, path2) {
+  return pathKey(path1) === pathKey(path2);
 }

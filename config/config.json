@@ -3,14 +3,14 @@
     {
       "type": "film",
       "paths": [
-        "Y:\\Films",
-        "Z:\\Films"]
+        "Y:/02_Films",
+        "Z:/01_Films"]
     },
     {
       "type": "serie",
        "paths": [
-        "Y:\\Series",
-        "Z:\\Series"]
+        "Y:/02_Series",
+        "Z:/01_Series"]
     }
   ],
   "extensions": [

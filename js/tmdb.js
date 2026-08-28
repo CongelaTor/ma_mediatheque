@@ -310,7 +310,7 @@ function renderTmdbFilmResults(film, results) {
     for (const currentFilm of fichiers) {
       const folder = currentFilm.fichier.substring(
         0,
-        currentFilm.fichier.lastIndexOf("\\"),
+        currentFilm.fichier.lastIndexOf("/"),
       );
 
       const response = await fetch("http://localhost:9876/open-file-location", {

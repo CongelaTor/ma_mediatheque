@@ -22,7 +22,7 @@ async function initFilmDetailPage() {
   }
 
   await loadCatalog();
-
+  updateStats();
   const films = catalog.films.filter((film) => film.tmdbId === tmdbId);
 
   if (films.length === 0) {
@@ -260,7 +260,7 @@ function createFilmFileCard(film) {
   const pathInfo = document.createElement("div");
   pathInfo.className = "film-file-folder";
 
-  pathInfo.textContent = `${getFilmFolder(film.fichier)}\\${film.nomFichier}`;
+  pathInfo.textContent = `${getFilmFolder(film.fichier)}/${film.nomFichier}`;
 
   card.appendChild(playbackRow);
   card.appendChild(pathInfo);
@@ -288,16 +288,13 @@ function getFilmFolder(filePath) {
     return "Dossier inconnu";
   }
 
-  const separatorIndex = Math.max(
-    filePath.lastIndexOf("\\"),
-    filePath.lastIndexOf("/"),
-  );
+  const separatorIndex = filePath.lastIndexOf("/");
 
   return separatorIndex >= 0 ? filePath.substring(0, separatorIndex) : filePath;
 }
 
 async function openFilmLocation(film) {
-  const folder = film.fichier.substring(0, film.fichier.lastIndexOf("\\"));
+  const folder = film.fichier.substring(0, film.fichier.lastIndexOf("/"));
   const response = await fetch("http://localhost:9876/open-file-location", {
     method: "POST",
     headers: {

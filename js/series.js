@@ -95,11 +95,18 @@ function updateDetailLanguageButtons() {
     });
 }
 function episodeMatchesDetailLanguage(episode) {
-  if (episode.langue === activeDetailLanguage) {
+  const languages = Array.isArray(episode.langue)
+    ? episode.langue
+    : [episode.langue];
+
+  if (activeDetailLanguage && languages.includes(activeDetailLanguage)) {
     return true;
   }
 
-  if (activeDetailTbd && (episode.langue == null || episode.langue === "TBD")) {
+  if (
+    activeDetailTbd &&
+    (episode.langue == null || languages.includes("TBD"))
+  ) {
     return true;
   }
 

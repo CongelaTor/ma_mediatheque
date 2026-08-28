@@ -60,6 +60,31 @@ function updateStats() {
   if (!catalog) {
     return;
   }
+
+  const collections = new Map();
+  for (const film of catalog.films) {
+    if (!film.collectionId || !film.collectionNom) {
+      continue;
+    }
+    if (!collections.has(film.collectionId)) {
+      collections.set(film.collectionId, []);
+    }
+    collections.get(film.collectionId).push(film);
+  }
+  const collectionsCount = [...collections.values()].filter((films) => {
+    const uniqueFilms = new Set();
+
+    for (const film of films) {
+      const key = film.tmdbId
+        ? `tmdb:${film.tmdbId}`
+        : `title:${film.titre}|${film.annee || ""}`;
+
+      uniqueFilms.add(key);
+    }
+
+    return uniqueFilms.size > 1;
+  }).length;
+
   const groupedFilms = new Set();
   for (const film of catalog.films) {
     const groupKey = film.tmdbId
@@ -68,14 +93,18 @@ function updateStats() {
     groupedFilms.add(groupKey);
   }
   const filmsCount = groupedFilms.size;
+  const nouveautesCount = catalog.films.filter((film) => !film.tmdbId).length;
 
   const seriesCount = catalog.series.length;
   const episodesCount = countEpisodes();
 
+  setText("sideCollections", collectionsCount);
   setText("statFilms", filmsCount);
+  setText("statNouveautes", nouveautesCount);
   setText("statSeries", seriesCount);
   setText("statEpisodes", episodesCount);
   setText("sideFilms", filmsCount);
+  setText("sideNouveautes", nouveautesCount);
   setText("sideSeries", seriesCount);
   setText("sideEpisodes", episodesCount);
 }
@@ -99,7 +128,7 @@ function closeScanModal() {
 function showDetectionPopup() {
   const results = [];
   const filmsX = catalog.films.filter((film) =>
-    film.fichier?.startsWith("Z:\\Films\\"),
+    film.fichier?.startsWith("Z:/01_Films/"),
   );
 
   for (const filmX of filmsX) {
@@ -107,7 +136,7 @@ function showDetectionPopup() {
       (film) =>
         film !== filmX &&
         film.taille === filmX.taille &&
-        film.fichier?.startsWith("Y:\\Films\\"),
+        film.fichier?.startsWith("Y:/02_Films/"),
     );
     if (matches.length > 0) {
       results.push(filmX);
@@ -116,45 +145,33 @@ function showDetectionPopup() {
       }
     }
   }
-results.sort((a, b) => {
-  const isAZ = a.fichier.startsWith("Z:\\Films\\");
-  const isBZ = b.fichier.startsWith("Z:\\Films\\");
+  results.sort((a, b) => {
+    const isAZ = a.fichier.startsWith("Z:/01_Films/");
+    const isBZ = b.fichier.startsWith("Z:/01_Films/");
 
-  if (isAZ && isBZ) {
-    const folderA = a.fichier.substring(
-      0,
-      a.fichier.lastIndexOf("\\"),
-    );
+    if (isAZ && isBZ) {
+      const folderA = a.fichier.substring(0, a.fichier.lastIndexOf("/"));
 
-    const folderB = b.fichier.substring(
-      0,
-      b.fichier.lastIndexOf("\\"),
-    );
+      const folderB = b.fichier.substring(0, b.fichier.lastIndexOf("/"));
 
-    const folderCompare = folderA.localeCompare(
-      folderB,
-      "fr",
-    );
+      const folderCompare = folderA.localeCompare(folderB, "fr");
 
-    if (folderCompare !== 0) {
-      return folderCompare;
+      if (folderCompare !== 0) {
+        return folderCompare;
+      }
     }
-  }
 
-  if (a.taille !== b.taille) {
-    return a.taille - b.taille;
-  }
+    if (a.taille !== b.taille) {
+      return a.taille - b.taille;
+    }
 
-  const driveOrder = {
-    Z: 0,
-    Y: 1,
-  };
+    const driveOrder = {
+      Z: 0,
+      Y: 1,
+    };
 
-  return (
-    driveOrder[a.fichier[0]] -
-    driveOrder[b.fichier[0]]
-  );
-});
+    return driveOrder[a.fichier[0]] - driveOrder[b.fichier[0]];
+  });
   let text = "";
   let previousSize = null;
   for (const film of results) {

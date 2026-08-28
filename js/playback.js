@@ -16,6 +16,15 @@ function playEpisode(serie, saison, episode) {
     fichier: episode.fichier,
   });
 }
+function playFilm(film) {
+  saveResumeFilm(film);
+  requestLocalPlay({
+    type: "film",
+    titre: film.titre,
+    fichier: film.fichier,
+  });
+}
+
 function requestLocalPlay(payload) {
   fetch("http://localhost:9876", {
     method: "POST",
@@ -28,6 +37,7 @@ function requestLocalPlay(payload) {
     .then((result) => console.log(result))
     .catch((error) => console.error(error));
 }
+
 function saveResumeFilm(film) {
   const title = film.titreTmdb || film.titre;
   localStorage.setItem(

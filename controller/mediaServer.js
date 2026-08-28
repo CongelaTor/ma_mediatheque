@@ -7,6 +7,33 @@ const VLC = "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe";
 const rootDir = path.join(__dirname, "..");
 const catalogPath = path.join(rootDir, "data", "catalog.json");
 const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
+const configPath = path.join(rootDir, "config", "config.json");
+
+function resolvePhysicalPath(catalogFile) {
+  if (!catalogFile) {
+    return null;
+  }
+
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+
+  for (const source of config.sources) {
+    for (const rootPath of source.paths) {
+      const normalizedRoot = rootPath.replaceAll("\\", "/");
+      const rootName = normalizedRoot.split("/").pop();
+
+      console.log("catalogFile =", catalogFile);
+      console.log("rootName =", rootName);
+
+      if (catalogFile.startsWith(`/${rootName}/`)) {
+        const resolved = catalogFile.replace(`/${rootName}`, normalizedRoot);
+        console.log("resolved =", resolved);
+        return resolved;
+      }
+    }
+  }
+
+  return catalogFile;
+}
 
 http
   .createServer((request, response) => {
@@ -77,7 +104,12 @@ http
   });
 
 function launchVlc(data, response) {
-  execFile(VLC, [data.fichier], (error) => {
+  const physicalPath = resolvePhysicalPath(data.fichier);
+
+  console.log("CATALOG =", data.fichier);
+  console.log("PHYSICAL =", physicalPath);
+
+  execFile(VLC, [physicalPath.replaceAll("/", "\\")], (error) => {
     if (error) {
       console.error(error);
     }
@@ -93,12 +125,12 @@ function openFileLocation(data, response) {
     response.writeHead(400, {
       "Content-Type": "text/plain; charset=utf-8",
     });
-
     response.end("Fichier non renseigné");
     return;
   }
+  const physicalPath = resolvePhysicalPath(data.fichier).replaceAll("/", "\\");
 
-  execFile("explorer.exe", [data.fichier], (error) => {
+  execFile("explorer.exe", [physicalPath], (error) => {
     if (error) {
       console.error(error);
     }
@@ -107,7 +139,6 @@ function openFileLocation(data, response) {
   response.writeHead(200, {
     "Content-Type": "text/plain; charset=utf-8",
   });
-
   response.end("Emplacement ouvert");
 }
 
@@ -169,20 +200,28 @@ function saveFilmTmdbData(data, response) {
 
 function deleteFilmFile(data, response) {
   try {
-    if (!data.fichier || !fs.existsSync(data.fichier)) {
+    const physicalPath = resolvePhysicalPath(data.fichier).replaceAll(
+      "/",
+      "\\",
+    );
+
+    if (!physicalPath || !fs.existsSync(physicalPath)) {
       response.writeHead(404, {
         "Content-Type": "text/plain; charset=utf-8",
       });
       response.end("Fichier introuvable");
       return;
     }
-    fs.unlinkSync(data.fichier);
+
+    fs.unlinkSync(physicalPath);
 
     const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
     catalog.films = catalog.films.filter(
       (film) => film.fichier !== data.fichier,
     );
+
     fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 4), "utf8");
+
     response.writeHead(200, {
       "Content-Type": "text/plain; charset=utf-8",
     });
