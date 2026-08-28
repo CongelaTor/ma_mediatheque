@@ -44,22 +44,18 @@ function detectDriveMappings() {
   ];
 
   for (const drive of driveLetters) {
-    console.log("test => ", drive);
     if (!driveMappings["01"] && fs.existsSync(`${drive}\\01_Films`)) {
       driveMappings["01"] = drive;
-      console.log("01 trouvé sur", drive);
     }
 
     if (!driveMappings["02"] && fs.existsSync(`${drive}\\02_Films`)) {
       driveMappings["02"] = drive;
-      console.log("02 trouvé sur", drive);
     }
 
     if (driveMappings["01"] && driveMappings["02"]) {
       break;
     }
   }
-  console.log("driveMappings =", driveMappings);
 }
 
 function resolvePhysicalPath(catalogFile) {
@@ -68,18 +64,10 @@ function resolvePhysicalPath(catalogFile) {
   }
 
   if (catalogFile.startsWith("/01_")) {
-    console.log(
-      "01 =>",
-      `${driveMappings["01"]}${catalogFile.replaceAll("/", "\\")}`,
-    );
     return `${driveMappings["01"]}${catalogFile.replaceAll("/", "\\")}`;
   }
 
   if (catalogFile.startsWith("/02_")) {
-    console.log(
-      "02 =>",
-      `${driveMappings["02"]}${catalogFile.replaceAll("/", "\\")}`,
-    );
     return `${driveMappings["02"]}${catalogFile.replaceAll("/", "\\")}`;
   }
 
@@ -174,6 +162,11 @@ http
           return;
         }
 
+        if (request.url === "/update-resume-playback") {
+          updateResumePlayback(data, response);
+          return;
+        }
+
         launchVlc(data, response);
       } catch (error) {
         response.writeHead(500, {
@@ -205,6 +198,31 @@ function launchVlc(data, response) {
   response.end("OK");
 }
 
+function updateResumePlayback(data, response) {
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+  const resumeSource = config.sources.find(
+    (source) => source.type === "reprise_vlc",
+  );
+  const resumeFile = resolvePhysicalPath(resumeSource.path);
+  const resumeData = fs.existsSync(resumeFile)
+    ? JSON.parse(fs.readFileSync(resumeFile, "utf8"))
+    : {};
+  resumeData[data.type] = {
+    catalogPath: data.catalogPath,
+    positionSeconds: 0,
+    durationSeconds: 0,
+    lastUpdate: new Date().toISOString(),
+    pcName: require("os").hostname(),
+  };
+
+  fs.writeFileSync(resumeFile, JSON.stringify(resumeData, null, 2), "utf8");
+
+  response.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+  });
+
+  response.end("Resume playback mis à jour");
+}
 function resumePlayback(data, response) {
   const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
   const resumeSource = config.sources.find(
@@ -218,20 +236,13 @@ function resumePlayback(data, response) {
     response.end("Chemin de reprise_vlc.json non configuré");
     return;
   }
-  console.log("REQUEST TYPE =", data.type);
-  console.log("resumeSource.path =", resumeSource.path);
 
   const resumeFile = resolvePhysicalPath(resumeSource.path).replaceAll(
     "/",
     "\\",
   );
   const resumeData = JSON.parse(fs.readFileSync(resumeFile, "utf8"));
-  console.log("RESUME FILE =", resumeSource.path);
-  console.log("RESUME DATA =", JSON.stringify(resumeData, null, 2));
-
   const resume = resumeData[data.type];
-  console.log("RESUME =", resume);
-
   if (!resume?.catalogPath) {
     response.writeHead(404, {
       "Content-Type": "text/plain; charset=utf-8",
@@ -240,17 +251,9 @@ function resumePlayback(data, response) {
     return;
   }
 
-  console.log("resume =", resume);
-  console.log("catalogPath =", resume.catalogPath);
-
   const resolvedPath = resolvePhysicalPath(resume.catalogPath);
-  console.log("catalogPath =", resume.catalogPath);
-  console.log("resolvedPath =", resolvedPath);
   const physicalPath = resolvedPath.replaceAll("/", "\\");
-
   const positionSeconds = Number(resume.positionSeconds) || 0;
-
-  console.log("physicalPath =", physicalPath);
 
   execFile(VLC, [`--start-time=${positionSeconds}`, physicalPath], (error) => {
     if (error) {

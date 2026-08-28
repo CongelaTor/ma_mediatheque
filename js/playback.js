@@ -1,5 +1,6 @@
 function playFilm(film) {
   saveResumeFilm(film);
+  updateResumePlayback("film", film);
   requestLocalPlay({
     type: "film",
     titre: film.titre,
@@ -8,6 +9,7 @@ function playFilm(film) {
 }
 function playEpisode(serie, saison, episode) {
   saveResumeSerie(serie, saison, episode);
+  updateResumePlayback("serie", episode);
   requestLocalPlay({
     type: "serie",
     titre: serie.titre,
@@ -16,15 +18,6 @@ function playEpisode(serie, saison, episode) {
     fichier: episode.fichier,
   });
 }
-function playFilm(film) {
-  saveResumeFilm(film);
-  requestLocalPlay({
-    type: "film",
-    titre: film.titre,
-    fichier: film.fichier,
-  });
-}
-
 function requestLocalPlay(payload) {
   fetch("http://localhost:9876", {
     method: "POST",
@@ -53,6 +46,22 @@ function requestResumePlayback(type) {
     .catch((error) => console.error(error));
 }
 
+function updateResumePlayback(type, media) {
+  console.log("UPDATE RESUME =", media);
+  fetch("http://localhost:9876/update-resume-playback", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      type: type,
+      catalogPath: media.fichier,
+    }),
+  })
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+}
 function saveResumeFilm(film) {
   const title = film.titreTmdb || film.titre;
   localStorage.setItem(
