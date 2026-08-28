@@ -16,7 +16,7 @@
     },
     {
       "type": "reprise_vlc",
-      "path": "Z:/reprise_vlc.json"
+      "path": "/01_reprise_vlc.json"
     }
   ],  "extensions": [
     ".jpg",

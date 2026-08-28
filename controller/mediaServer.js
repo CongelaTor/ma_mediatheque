@@ -141,9 +141,14 @@ function resumePlayback(data, response) {
     return;
   }
   console.log("REQUEST TYPE =", data.type);
-  console.log("RESUME FILE =", resumeSource.path);
+  console.log("resumeSource.path =", resumeSource.path);
 
-  const resumeData = JSON.parse(fs.readFileSync(resumeSource.path, "utf8"));
+  const resumeFile = resolvePhysicalPath(resumeSource.path).replaceAll(
+    "/",
+    "\\",
+  );
+  const resumeData = JSON.parse(fs.readFileSync(resumeFile, "utf8"));
+  console.log("RESUME FILE =", resumeSource.path);
   console.log("RESUME DATA =", JSON.stringify(resumeData, null, 2));
 
   const resume = resumeData[data.type];
