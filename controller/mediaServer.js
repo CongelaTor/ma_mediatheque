@@ -40,6 +40,7 @@ function detectDriveMappings() {
     "G:",
     "F:",
     "E:",
+    "D:",
   ];
 
   for (const drive of driveLetters) {
