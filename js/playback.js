@@ -1,6 +1,7 @@
 function playFilm(film) {
   saveResumeFilm(film);
   updateResumePlayback("film", film);
+  updateResumeButtons();
   requestLocalPlay({
     type: "film",
     titre: film.titre,
@@ -28,6 +29,24 @@ function requestLocalPlay(payload) {
   })
     .then((response) => response.text())
     .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+}
+
+function syncResumePlayback(type) {
+  fetch("http://localhost:9876/sync-resume-playback", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      type: type,
+    }),
+  })
+    .then((response) => response.text())
+    .then((result) => {
+      console.log(result);
+      updateResumeButtons();
+    })
     .catch((error) => console.error(error));
 }
 
@@ -59,7 +78,10 @@ function updateResumePlayback(type, media) {
     }),
   })
     .then((response) => response.text())
-    .then((result) => console.log(result))
+    .then((result) => {
+      console.log(result);
+      updateResumeButtons();
+    })
     .catch((error) => console.error(error));
 }
 function saveResumeFilm(film) {
@@ -96,6 +118,7 @@ function resumeSerie() {
 }
 
 function updateResumeButtons() {
+  console.log("updateResumeButtons");
   const resumeCollection = getResumeCollection();
   const resumeFilm = getResumeFilm();
   const resumeSerie = getResumeSerie();
@@ -105,6 +128,38 @@ function updateResumeButtons() {
   );
   const resumeFilmButton = document.getElementById("resumeFilmButton");
   const resumeSerieButton = document.getElementById("resumeSerieButton");
+
+  console.log("appel get-resume-playback");
+  fetch("http://localhost:9876/get-resume-playback", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: "{}",
+  })
+    .then((response) => {
+      console.log("response =", response.status);
+      return response.json();
+    })
+    .then((resumeData) => {
+      if (resumeFilmButton && resumeData.film) {
+        resumeFilmButton.classList.remove("hidden");
+
+        const duration = new Date(resumeData.film.positionSeconds * 1000)
+          .toISOString()
+          .substring(11, 19);
+
+        const film = catalog.films.find(
+          (item) => item.fichier === resumeData.film.catalogPath,
+        );
+
+        setText(
+          "resumeFilmText",
+          `${film?.titreTmdb || film?.titre || "Film"} (${duration})`,
+        );
+      }
+    })
+    .catch((error) => console.error(error));
 
   if (resumeCollectionButton) {
     if (resumeCollection) {
@@ -116,12 +171,7 @@ function updateResumeButtons() {
   }
 
   if (resumeFilmButton) {
-    if (resumeFilm) {
-      resumeFilmButton.classList.remove("hidden");
-      setText("resumeFilmText", resumeFilm.titre);
-    } else {
-      resumeFilmButton.classList.add("hidden");
-    }
+    resumeFilmButton.classList.add("hidden");
   }
 
   if (resumeSerieButton) {

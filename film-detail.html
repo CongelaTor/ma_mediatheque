@@ -68,9 +68,12 @@
                             </div>
                             <button id="filmTmdbButton" class="tmdb-associate-button">TMDB</button>
                         </div>
-                        <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
-                            ▶ Reprendre : <span id="resumeFilmText"></span>
-                        </button>
+                        <div class="resume-row">
+                            <button id="syncFilmButton" class="sync-button"><span class="sync-icon">🗘</span></button>
+                            <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
+                                ▶ Reprendre : <span id="resumeFilmText"></span>
+                            </button>
+                        </div>
                         <div id="languageFilters" class="language-filters">
                             <button class="language-button active" data-language="VO">VO</button>
                             <button class="language-button active" data-language="VF">VF</button>

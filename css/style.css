@@ -1110,3 +1110,35 @@ background: #f97316;
 .toast.error {
     background: #dc2626;
 }
+
+.resume-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.resume-row .resume-button {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.sync-button {
+    height: 48px;
+    width: 58px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: linear-gradient(-90deg, rgba(30, 201, 138, 0.219), rgba(22, 131, 255, 0.08));
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.sync-button:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+}
+
+.sync-icon {
+    display: inline-block;
+    transform: rotate(90deg);
+}

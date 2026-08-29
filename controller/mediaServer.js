@@ -3,7 +3,13 @@ const fs = require("fs");
 const path = require("path");
 const { execFile } = require("child_process");
 const PORT = 9876;
+
 const VLC = "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe";
+const vlcInterfacePath = path.join(
+  process.env.APPDATA,
+  "vlc",
+  "vlc-qt-interface.ini",
+);
 
 const rootDir = path.join(__dirname, "..");
 const catalogPath = path.join(rootDir, "data", "catalog.json");
@@ -167,6 +173,16 @@ http
           return;
         }
 
+        if (request.url === "/sync-resume-playback") {
+          syncResumePlayback(data, response);
+          return;
+        }
+
+        if (request.url === "/get-resume-playback") {
+          getResumePlayback(data, response);
+          return;
+        }
+
         launchVlc(data, response);
       } catch (error) {
         response.writeHead(500, {
@@ -198,6 +214,87 @@ function launchVlc(data, response) {
   response.end("OK");
 }
 
+function readVlcRecents() {
+  if (!fs.existsSync(vlcInterfacePath)) {
+    return null;
+  }
+  const content = fs.readFileSync(vlcInterfacePath, "utf8");
+  const listMatch = content.match(/list=(.*)/);
+  const timesMatch = content.match(/times=(.*)/);
+  if (!listMatch || !timesMatch) {
+    return null;
+  }
+  const files = listMatch[1].split(", ");
+  const times = timesMatch[1].split(", ");
+  return {
+    files,
+    times,
+  };
+}
+
+console.log("vlcInterfacePath =", vlcInterfacePath);
+const recents = readVlcRecents();
+
+function getLatestVlcPlayback() {
+  const recents = readVlcRecents();
+  if (!recents?.files?.[0]) {
+    return null;
+  }
+  return {
+    physicalPath: decodeURIComponent(
+      recents.files[0].replace(/^file:\/\/\//, ""),
+    ),
+    positionSeconds: Math.max(0, Math.floor(Number(recents.times[0]) / 1000)),
+  };
+}
+
+function getResumePlayback(data, response) {
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+  const resumeSource = config.sources.find(
+    (source) => source.type === "reprise_vlc",
+  );
+  const resumeFile = resolvePhysicalPath(resumeSource.path);
+  const resumeData = fs.existsSync(resumeFile)
+    ? JSON.parse(fs.readFileSync(resumeFile, "utf8"))
+    : {};
+  response.writeHead(200, {
+    "Content-Type": "application/json; charset=utf-8",
+  });
+  response.end(JSON.stringify(resumeData));
+}
+function syncResumePlayback(data, response) {
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+  const resumeSource = config.sources.find(
+    (source) => source.type === "reprise_vlc",
+  );
+  const resumeFile = resolvePhysicalPath(resumeSource.path);
+  const resumeData = fs.existsSync(resumeFile)
+    ? JSON.parse(fs.readFileSync(resumeFile, "utf8"))
+    : {};
+  const latestPlayback = getLatestVlcPlayback();
+  if (!latestPlayback) {
+    response.writeHead(404, {
+      "Content-Type": "text/plain; charset=utf-8",
+    });
+    response.end("Aucune lecture VLC trouvée");
+    return;
+  }
+  const catalogPath = latestPlayback.physicalPath
+    .replace(/^[A-Za-z]:/, "")
+    .replaceAll("\\", "/");
+  resumeData[data.type] = {
+    ...(resumeData[data.type] || {}),
+    catalogPath: catalogPath,
+    positionSeconds: latestPlayback.positionSeconds,
+    lastUpdate: new Date().toISOString(),
+    pcName: require("os").hostname(),
+  };
+  fs.writeFileSync(resumeFile, JSON.stringify(resumeData, null, 2), "utf8");
+  response.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+  });
+  response.end("Synchronisation OK");
+}
 function updateResumePlayback(data, response) {
   const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
   const resumeSource = config.sources.find(
@@ -207,9 +304,11 @@ function updateResumePlayback(data, response) {
   const resumeData = fs.existsSync(resumeFile)
     ? JSON.parse(fs.readFileSync(resumeFile, "utf8"))
     : {};
+
+  const latestPlayback = getLatestVlcPlayback();
   resumeData[data.type] = {
     catalogPath: data.catalogPath,
-    positionSeconds: 0,
+    positionSeconds: latestPlayback?.positionSeconds || 0,
     durationSeconds: 0,
     lastUpdate: new Date().toISOString(),
     pcName: require("os").hostname(),

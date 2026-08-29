@@ -23,8 +23,16 @@ async function initFilmDetailPage() {
 
   await loadCatalog();
   updateStats();
-  const films = catalog.films.filter((film) => film.tmdbId === tmdbId);
+  updateResumeButtons();
 
+  const syncFilmButton = document.getElementById("syncFilmButton");
+  if (syncFilmButton) {
+    syncFilmButton.onclick = () => {
+      syncResumePlayback("film");
+    };
+  }
+
+  const films = catalog.films.filter((film) => film.tmdbId === tmdbId);
   if (films.length === 0) {
     const storedInfo = JSON.parse(
       sessionStorage.getItem("filmDetailInfo") || "{}",
