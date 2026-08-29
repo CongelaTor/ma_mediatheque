@@ -254,37 +254,45 @@ input {
 }
 
 .home-card p {
-    text-align: center;
-    color: var(--muted);
-    margin: 0 auto 24px auto;
-    max-width: 360px;
-    line-height: 1.5;
+text-align: center;
+color: var(--muted);
+margin: 0 auto 18px auto;
+max-width: 360px;
+line-height: 1.5;
 }
 
-.home-card button {
-    display: block;
-    width: 240px;
-    height: 42px;
-    margin: 0 auto 24px auto;
-    border: none;
-    border-radius: 10px;
-    background: var(--blue-dark);
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
+.home-card button:not(.resume-button) {
+width: calc(100% - 48px);
+height: 42px;
+margin: 0 24px 24px 24px;
+border: none;
+border-radius: 10px;
+background: var(--blue-dark);
+color: white;
+cursor: pointer;
+font-size: 15px;
 }
-
+.home-card .resume-button {
+width: calc(100% - 48px);
+height: 42px;
+margin: 0 24px 24px 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 24px;
+}
 .home-card button.purple-button {
     background: var(--purple);
 }
 
 .stats-row {
-    max-width: 1200px;
-    margin: 28px auto;
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+max-width: 1200px;
+margin: 28px auto;
+padding: 0 24px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 26px;
 }
 
 .stat-card {

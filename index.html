@@ -50,34 +50,24 @@
                         <div class="home-card-image film-hero"></div>
                         <div class="home-card-icon">🎬</div>
                         <h2>Films</h2>
-                        <p>Découvrez votre collection de films classés par genre.</p>
+                        <p><span id="homeFilmsStats">468 films • 42 collections</span></p>
                         <button type="button">Accéder aux films ›</button>
+                        <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
+                            ▶&nbsp;&nbsp;&nbsp;<span id="resumeFilmText"></span>
+                        </button>
                     </article>
 
                     <article class="home-card home-card-series" onclick="window.location.href='series.html'">
                         <div class="home-card-image serie-hero"></div>
                         <div class="home-card-icon purple">📺</div>
                         <h2>Séries</h2>
-                        <p>Retrouvez vos séries organisées par saison et épisode.</p>
+                        <p><span id="homeSeriesStats">34 séries • 1586 épisodes</span></p>
                         <button type="button" class="purple-button">Accéder aux séries ›</button>
+                        <button id="resumeSerieButton" class="resume-button hidden" onclick="resumeSerie()">
+                            ▶&nbsp;&nbsp;&nbsp;<span id="resumeSerieText"></span>
+                        </button>
                     </article>
                 </div>
-
-                <div class="stats-row">
-                    <div class="stat-card">
-                        <span id="statFilms">0</span>
-                        <small>Films</small>
-                    </div>
-                    <div class="stat-card">
-                        <span id="statSeries">0</span>
-                        <small>Séries</small>
-                    </div>
-                    <div class="stat-card">
-                        <span id="statEpisodes">0</span>
-                        <small>Épisodes</small>
-                    </div>
-                </div>
-
             </section>
 
             <section id="page-films" class="page">
