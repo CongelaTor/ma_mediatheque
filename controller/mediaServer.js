@@ -253,6 +253,7 @@ function getLatestVlcPlayback() {
 }
 
 function getResumePlayback(data, response) {
+  console.log("getResumePlayback");
   const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
   const resumeSource = config.sources.find(
     (source) => source.type === "reprise_vlc",
