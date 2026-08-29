@@ -254,6 +254,8 @@ function getResumePlayback(data, response) {
     (source) => source.type === "reprise_vlc",
   );
   const resumeFile = resolvePhysicalPath(resumeSource.path);
+  console.log("resumeFile =", resumeFile);
+
   const resumeData = fs.existsSync(resumeFile)
     ? JSON.parse(fs.readFileSync(resumeFile, "utf8"))
     : {};
