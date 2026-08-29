@@ -23,33 +23,37 @@ const driveMappings = {
 detectDriveMappings();
 
 function detectDriveMappings() {
-  const driveLetters = [
-    "Z:",
-    "Y:",
-    "X:",
-    "W:",
-    "V:",
-    "U:",
-    "T:",
-    "S:",
-    "R:",
-    "Q:",
-    "P:",
-    "O:",
-    "N:",
-    "M:",
-    "L:",
-    "K:",
-    "J:",
-    "I:",
-    "H:",
-    "G:",
-    "F:",
-    "E:",
-    "D:",
-  ];
+  const driveLetters =
+    process.platform === "linux"
+      ? ["/run/user/1000/gvfs"]
+      : [
+          "Z:",
+          "Y:",
+          "X:",
+          "W:",
+          "V:",
+          "U:",
+          "T:",
+          "S:",
+          "R:",
+          "Q:",
+          "P:",
+          "O:",
+          "N:",
+          "M:",
+          "L:",
+          "K:",
+          "J:",
+          "I:",
+          "H:",
+          "G:",
+          "F:",
+          "E:",
+          "D:",
+        ];
 
   for (const drive of driveLetters) {
+    console.log("test", drive);
     if (!driveMappings["01"] && fs.existsSync(`${drive}\\01_Films`)) {
       driveMappings["01"] = drive;
     }
