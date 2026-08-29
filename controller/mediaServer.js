@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { execFile } = require("child_process");
 const PORT = 9876;
+console.log("MediaServer version test 2026-08-29 v1.6");
 
 const VLC = "C:\\Program Files\\VideoLAN\\VLC\\vlc.exe";
 const vlcInterfacePath = path.join(
