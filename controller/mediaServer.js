@@ -201,11 +201,11 @@ http
   });
 
 function launchVlc(data, response) {
+  console.log("Début launcVlc");
   const physicalPath = resolvePhysicalPath(data.fichier);
 
   console.log("CATALOG =", data.fichier);
   console.log("PHYSICAL =", physicalPath);
-
   console.log("physicalPath =", physicalPath);
   execFile(VLC, [physicalPath.replaceAll("/", "\\")], (error) => {
     if (error) {

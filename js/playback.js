@@ -139,6 +139,9 @@ function updateResumeButtons() {
   })
     .then((response) => {
       console.log("response =", response.status);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
       return response.json();
     })
     .then((resumeData) => {
