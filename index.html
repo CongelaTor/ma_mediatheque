@@ -52,7 +52,8 @@
                         <h2>Films</h2>
                         <p><span id="homeFilmsStats">468 films • 42 collections</span></p>
                         <button type="button">Accéder aux films ›</button>
-                        <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
+                        <button id="resumeFilmButton" class="resume-button hidden" 
+                                onclick="event.stopPropagation(); resumeFilm()">
                             ▶&nbsp;&nbsp;&nbsp;<span id="resumeFilmText"></span>
                         </button>
                     </article>
@@ -63,7 +64,8 @@
                         <h2>Séries</h2>
                         <p><span id="homeSeriesStats">34 séries • 1586 épisodes</span></p>
                         <button type="button" class="purple-button">Accéder aux séries ›</button>
-                        <button id="resumeSerieButton" class="resume-button hidden" onclick="resumeSerie()">
+                        <button id="resumeSerieButton" class="resume-button hidden"
+                                onclick="event.stopPropagation(); resumeSerie()">
                             ▶&nbsp;&nbsp;&nbsp;<span id="resumeSerieText"></span>
                         </button>
                     </article>
