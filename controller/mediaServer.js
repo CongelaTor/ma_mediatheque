@@ -26,7 +26,17 @@ detectDriveMappings();
 function detectDriveMappings() {
   const driveLetters =
     process.platform === "linux"
-      ? ["/run/user/1000/gvfs"]
+      ? fs.readdirSync("/run/user").flatMap((userId) => {
+          const gvfsPath = `/run/user/${userId}/gvfs`;
+
+          if (!fs.existsSync(gvfsPath)) {
+            return [];
+          }
+
+          return fs
+            .readdirSync(gvfsPath)
+            .map((entry) => `${gvfsPath}/${entry}`);
+        })
       : [
           "Z:",
           "Y:",
