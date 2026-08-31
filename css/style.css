@@ -1,3 +1,7 @@
+body.linux .linux-hidden {
+    display: none !important;
+}
+
 :root {
     --bg: #070b14;
     --bg-soft: #0e1625;
