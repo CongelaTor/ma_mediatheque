@@ -54,7 +54,7 @@ async function initFilmsPage() {
     backToCollectionsButton.classList.remove("hidden");
 
     backToCollectionsButton.onclick = () => {
-      window.location.href = "collections.html";
+      window.location.href = "_collections.html";
     };
   }
 

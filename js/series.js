@@ -167,7 +167,7 @@ function createSerieCard(serie) {
       showTmdbSerieSearch(serie);
       return;
     }
-    window.location.href = `episodes.html?id=${encodeURIComponent(serie.id)}`;
+    window.location.href = `_episodes.html?id=${encodeURIComponent(serie.id)}`;
   };
   posterZone.appendChild(
     createPosterContent(serie.image, serie.titre, serie.id),

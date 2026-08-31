@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Séries - Médiathèque</title>
+    <title>Episodes - Médiathèque</title>
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="css/style.css">
@@ -19,9 +19,9 @@
             </div>
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
-                <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
-                <a class="nav-button" data-page="films" href="films.html">Films</a>
-                <a class="nav-button active" data-page="series" href="series.html">Séries</a>
+                <a class="nav-button" data-page="collections" href="_collections.html">Collections</a>
+                <a class="nav-button" data-page="films" href="_films.html">Films</a>
+                <a class="nav-button" data-page="series" href="_series.html">Séries</a>
             </nav>
             <div class="top-actions">
                 <input id="searchInput" 
@@ -32,7 +32,7 @@
                     oninput="handleSearch()">
 
                     <button
-                    class="icon-button refresh-button linux-hidden"
+                    class="icon-button refresh-button"
                     onclick="reloadCatalog('series')">
                     <span class="refresh-icon">↻</span>
                     <span>Scan des séries</span>
@@ -42,24 +42,50 @@
         <main>
             <section id="page-series" class="page active">
                 <div class="layout">
+
                     <aside class="sidebar">
                         <div class="sidebar-title">Statistiques</div>
                         <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
                         <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
-                        <div class="sidebar-section"></div>
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Ajouts</div>
+                                <button class="sidebar-link active"
+                                    id="allEpisodesButton">
+                                    Tous les épisodes
+                                </button>
+
+                                <button class="sidebar-link"
+                                    id="missingEpisodesMenuButton">
+                                    Manquants
+                                </button>
+                        </div>
                     </aside>
+
                     <section class="content">
+
                         <div class="content-header">
                             <div>
-                                <h1 id="seriesTitle">Séries</h1>
-                                <p id="seriesCount">0 série</p>
+                                <h1 id="seriesTitle">Série</h1>
+                                <p id="seriesCount">0 épisode</p>
                             </div>
+                            <a id="backToSeriesButton" class="secondary-button" href="_series.html">← Retour aux
+                                séries</a>
                         </div>
-                        <button id="resumeSerieButton" 
-                                class="resume-button hidden" 
-                                onclick="resumeSerie()">
-                            ▶ Reprendre : 
-                            <span id="resumeSerieText"></span>
+
+                        <div id="serieInfoCard" class="tmdb-result-card serie-info-card hidden">
+                            <div class="serie-info-image"></div>
+                            <div>
+                                <div id="serieInfoTitle" class="tmdb-result-title"></div>
+                                <div id="serieInfoYear" class="tmdb-result-year"></div>
+                                <div id="serieInfoDescription" class="tmdb-result-description"></div>
+                            </div>
+                            <button id="serieTmdbButton" class="tmdb-associate-button">
+                                TMDB
+                            </button>
+                        </div>
+
+                        <button id="resumeSerieButton" class="resume-button hidden" onclick="resumeSerie()">▶ Reprendre
+                            : <span id="resumeSerieText"></span>
                         </button>
 
                         <div id="languageFilters" class="language-filters">
@@ -69,8 +95,8 @@
                             <button class="language-button active" data-language="VOSTFR">VOSTFR</button>
                             <button class="language-button active" data-language="TBD">TBD</button>
                         </div>
+                        <div id="episodesPanel" class="episodes-panel"></div>
 
-                        <div id="seriesGrid" class="cards-grid"></div>
                     </section>
                 </div>
             </section>
@@ -86,7 +112,7 @@
         </div>
     </div>
 
-    <div id="scanModal" class="tmdb-modal hidden">
+    <div id="scanModal" class="tmdb-modal hidden linux-hidden">
         <div class="tmdb-modal-panel">
             <div class="tmdb-modal-header">
                 <h2 id="scanTitle">Scan des séries</h2>
@@ -110,10 +136,11 @@
     <script src="js/playback.js"></script>
     <script src="js/tmdb.js"></script>
     <script src="js/series.js"></script>
+    <script src="js/episodes.js"></script>
     <script src="js/collections.js"></script>
     <script src="js/app-init.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", initSeriesPage);
+        document.addEventListener("DOMContentLoaded", initSerieDetailPage);
     </script>
 </body>
 

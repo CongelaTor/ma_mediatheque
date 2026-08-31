@@ -203,7 +203,7 @@ function createFilmCard(film) {
   posterZone.className = "poster-zone";
   posterZone.onclick = () => {
     if (film.titreTmdb) {
-      window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
+      window.location.href = `_film-detail.html?tmdbId=${film.tmdbId}`;
       return;
     }
     showTmdbFilmSearch(film);

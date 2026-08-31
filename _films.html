@@ -19,13 +19,13 @@
             </div>
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
-                <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
-                <a class="nav-button" data-page="films" href="films.html"
+                <a class="nav-button" data-page="collections" href="_collections.html">Collections</a>
+                <a class="nav-button" data-page="films" href="_films.html"
                     onclick="
                         sessionStorage.removeItem('selectedCollectionId');
                         sessionStorage.removeItem('selectedCollectionName');
                     ">Films</a>
-                <a class="nav-button" data-page="series" href="series.html">Séries</a>
+                <a class="nav-button" data-page="series" href="_series.html">Séries</a>
             </nav>
             <div class="top-actions">
                 <input id="searchInput" 
@@ -152,7 +152,7 @@
         </div>
     </div>
 
-    <div id="scanModal" class="tmdb-modal hidden">
+    <div id="scanModal" class="tmdb-modal hidden linux-hidden">
         <div class="tmdb-modal-panel">
             <div class="tmdb-modal-header">
                 <h2 id="scanTitle">Scan des films</h2>

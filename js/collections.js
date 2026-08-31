@@ -87,7 +87,7 @@ function renderCollections() {
       sessionStorage.setItem("selectedCollectionId", collection.id);
       sessionStorage.setItem("selectedCollectionName", collection.nom);
       sessionStorage.setItem("collectionMode", "true");
-      window.location.href = "films.html";
+      window.location.href = "_films.html";
     };
     const uniqueFilms = new Set();
 

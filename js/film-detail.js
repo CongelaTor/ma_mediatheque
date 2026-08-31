@@ -17,7 +17,7 @@ async function initFilmDetailPage() {
   const tmdbId = Number(params.get("tmdbId"));
 
   if (!tmdbId) {
-    window.location.href = "films.html";
+    window.location.href = "_films.html";
     return;
   }
 
@@ -177,7 +177,8 @@ function createFilmFileCard(film) {
   playButton.title = "Lire";
   playButton.onclick = () => playFilm(film);
   const tmdbButton = document.createElement("button");
-  tmdbButton.className = "tmdb-associate-button film-file-action-button linux-hidden";
+  tmdbButton.className =
+    "tmdb-associate-button film-file-action-button linux-hidden";
   tmdbButton.innerHTML = `
     <span class="play-icon film-link-icon">
       <svg viewBox="0 0 24 24"
@@ -197,13 +198,15 @@ function createFilmFileCard(film) {
   tmdbButton.onclick = () => showTmdbFilmSearch(film);
 
   const locationButton = document.createElement("button");
-  locationButton.className = "tmdb-associate-button film-file-action-button linux-hidden";
+  locationButton.className =
+    "tmdb-associate-button film-file-action-button linux-hidden";
   locationButton.innerHTML = '<span class="play-icon film-open-icon">🗁</span>';
   locationButton.title = "Ouvrir l'emplacement";
   locationButton.onclick = () => openFilmLocation(film);
 
   const deleteButton = document.createElement("button");
-  deleteButton.className = "tmdb-associate-button film-file-action-button linux-hidden";
+  deleteButton.className =
+    "tmdb-associate-button film-file-action-button linux-hidden";
 
   deleteButton.innerHTML = `
     <svg viewBox="0 0 24 24"
