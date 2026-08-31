@@ -17,7 +17,7 @@ async function initFilmDetailPage() {
   const tmdbId = Number(params.get("tmdbId"));
 
   if (!tmdbId) {
-    window.location.href = "_films.html";
+    window.location.href = "films.html";
     return;
   }
 
