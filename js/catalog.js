@@ -1,7 +1,15 @@
 async function loadCatalog() {
-  const response = await fetch("data/catalog.json");
+  const response = await fetch("http://localhost:9876/get-catalog", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: "{}",
+  });
+
   catalog = await response.json();
 }
+
 async function reloadCatalog(type = "all") {
   openScanModal();
   document.getElementById("scanTitle").textContent =
