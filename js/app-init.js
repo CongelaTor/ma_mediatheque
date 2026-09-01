@@ -1,3 +1,7 @@
+// ------------------------------------
+// Projet créé le 15/08/2026
+// ------------------------------------
+
 async function initHomePage() {
   await loadCatalog();
   updateStats();

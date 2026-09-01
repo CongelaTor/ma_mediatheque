@@ -75,6 +75,7 @@ function updateResumePlayback(type, media) {
     body: JSON.stringify({
       type: type,
       catalogPath: media.fichier,
+      durationSeconds: 0,
     }),
   })
     .then((response) => response.text())
@@ -211,3 +212,7 @@ function getResumeSerie() {
   }
   return JSON.parse(value);
 }
+
+setInterval(() => {
+  updateResumeButtons();
+}, 60000);
