@@ -178,7 +178,7 @@ function createFilmFileCard(film) {
   playButton.onclick = () => playFilm(film);
   const tmdbButton = document.createElement("button");
   tmdbButton.className =
-    "tmdb-associate-button film-file-action-button linux-hidden";
+    "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";
   tmdbButton.innerHTML = `
     <span class="play-icon film-link-icon">
       <svg viewBox="0 0 24 24"
@@ -199,14 +199,14 @@ function createFilmFileCard(film) {
 
   const locationButton = document.createElement("button");
   locationButton.className =
-    "tmdb-associate-button film-file-action-button linux-hidden";
+    "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";
   locationButton.innerHTML = '<span class="play-icon film-open-icon">🗁</span>';
   locationButton.title = "Ouvrir l'emplacement";
   locationButton.onclick = () => openFilmLocation(film);
 
   const deleteButton = document.createElement("button");
   deleteButton.className =
-    "tmdb-associate-button film-file-action-button linux-hidden";
+    "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";
 
   deleteButton.innerHTML = `
     <svg viewBox="0 0 24 24"

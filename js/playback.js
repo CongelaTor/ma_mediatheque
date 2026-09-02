@@ -124,46 +124,57 @@ function updateResumeButtons() {
   const resumeFilm = getResumeFilm();
   const resumeSerie = getResumeSerie();
 
+  if (!mediaServerAvailable) {
+    document.getElementById("resumeCollectionButton")?.classList.add("hidden");
+    document.getElementById("resumeFilmButton")?.classList.add("hidden");
+    document.getElementById("resumeSerieButton")?.classList.add("hidden");
+    return;
+  }
+
   const resumeCollectionButton = document.getElementById(
     "resumeCollectionButton",
   );
   const resumeFilmButton = document.getElementById("resumeFilmButton");
   const resumeSerieButton = document.getElementById("resumeSerieButton");
 
-  console.log("appel get-resume-playback");
-  fetch("http://localhost:9876/get-resume-playback", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: "{}",
-  })
-    .then((response) => {
-      console.log("response =", response.status);
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-      return response.json();
+  if (mediaServerAvailable) {
+    console.log("appel get-resume-playback");
+
+    fetch("http://localhost:9876/get-resume-playback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: "{}",
     })
-    .then((resumeData) => {
-      if (resumeFilmButton && resumeData.film) {
-        resumeFilmButton.classList.remove("hidden");
+      .then((response) => {
+        console.log("response =", response.status);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((resumeData) => {
+        if (resumeFilmButton && resumeData.film) {
+          resumeFilmButton.classList.remove("hidden");
 
-        const duration = new Date(resumeData.film.positionSeconds * 1000)
-          .toISOString()
-          .substring(11, 19);
+          const duration = new Date(resumeData.film.positionSeconds * 1000)
+            .toISOString()
+            .substring(11, 19);
 
-        const film = catalog.films.find(
-          (item) => item.fichier === resumeData.film.catalogPath,
-        );
+          const film = catalog.films.find(
+            (item) => item.fichier === resumeData.film.catalogPath,
+          );
 
-        setText(
-          "resumeFilmText",
-          `${film?.titreTmdb || film?.titre || "Film"} (${duration})`,
-        );
-      }
-    })
-    .catch((error) => console.error(error));
+          setText(
+            "resumeFilmText",
+            `${film?.titreTmdb || film?.titre || "Film"} (${duration})`,
+          );
+        }
+      })
+
+      .catch((error) => console.error(error));
+  }
 
   if (resumeCollectionButton) {
     if (resumeCollection) {

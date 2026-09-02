@@ -1,21 +1,50 @@
+let mediaServerAvailable =
+  sessionStorage.getItem("mediaServerAvailable") === "true";
+
+document.body.classList.add(
+  mediaServerAvailable ? "mediaserver" : "no-mediaserver",
+);
+async function isMediaServerAvailable() {
+  try {
+    const response = await fetch("http://localhost:9876/get-catalog", {
+      method: "POST",
+    });
+
+    mediaServerAvailable = response.ok;
+    sessionStorage.setItem("mediaServerAvailable", mediaServerAvailable);
+    document.body.classList.add("mediaserver");
+    document.body.classList.remove("no-mediaserver");
+    return mediaServerAvailable;
+  } catch {
+    mediaServerAvailable = false;
+    sessionStorage.setItem("mediaServerAvailable", mediaServerAvailable);
+    document.body.classList.add("no-mediaserver");
+    document.body.classList.remove("mediaserver");
+    return false;
+  }
+}
+
+console.log("sessionStorage =", sessionStorage.getItem("mediaServerAvailable"));
+isMediaServerAvailable();
+
 function handleSearch() {
   const input = document.getElementById("searchInput");
   currentSearch = input ? input.value.trim().toLowerCase() : "";
 
-if (
+  if (
     currentPage === "collections" &&
     typeof renderCollections === "function"
   ) {
     saveSearchText();
     renderCollections();
   }
-  
+
   if (currentPage === "films" && typeof renderFilms === "function") {
     saveFilmsViewState();
     saveSearchText();
     renderFilms();
   }
-  
+
   if (currentPage === "series" && typeof renderSeries === "function") {
     saveSearchText();
     renderSeries();

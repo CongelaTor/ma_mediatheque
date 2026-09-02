@@ -10,6 +10,7 @@ async function initHomePage() {
 async function initFilmsPage() {
   currentPage = "films";
   initSidebarToggle();
+  await isMediaServerAvailable();
   await loadCatalog();
   updateStats();
   updateResumeButtons();

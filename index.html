@@ -19,7 +19,7 @@
                 <div class="brand-icon">
                     <span>🎬</span>
                 </div>
-                <div class="brand-title" href="index.html">Médiathèque v1</div>
+                <div class="brand-title" href="index.html">Médiathèque v1.1</div>
             </div>
             <nav class="main-nav">
                 <a class="nav-button active" data-page="home" href="index.html">Accueil</a>
@@ -29,7 +29,8 @@
                 <a class="nav-button" data-page="spectacles" href="films.html">Spectacles</a>
             </nav>
             <div class="top-actions">
-                <button class="icon-button refresh-button linux-hidden" onclick="reloadCatalog('all')">
+                <button class="icon-button refresh-button linux-hidden mediaserver-only" 
+                        onclick="reloadCatalog('all')">
                     <span class="refresh-icon">↻</span>
                     <span>Scan des disques</span>
                 </button>

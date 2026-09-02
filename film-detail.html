@@ -34,7 +34,7 @@
                     oninput="handleSearch()">
 
                     <button
-                    class="icon-button refresh-button"
+                    class="icon-button refresh-button linux-hidden mediaserver-only"
                     onclick="reloadCatalog('films')">
                     <span class="refresh-icon">↻</span>
                     <span>Scan des films</span>
@@ -69,9 +69,13 @@
                             <button id="filmTmdbButton" class="tmdb-associate-button">TMDB</button>
                         </div>
                         <div class="resume-row">
-                            <button id="syncFilmButton" class="sync-button"><span class="sync-icon">🗘</span></button>
-                            <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
-                                ▶ Reprendre : <span id="resumeFilmText"></span>
+                            <button id="syncFilmButton" class="sync-button linux-hidden mediaserver-only">
+                                <span class="sync-icon">🗘</span>
+                            </button>
+                            <button id="resumeFilmButton" class="resume-button hidden linux-hidden"
+                                onclick="resumeFilm()">
+                                ▶ Reprendre : 
+                                <span id="resumeFilmText"></span>
                             </button>
                         </div>
                         <div id="languageFilters" class="language-filters">
