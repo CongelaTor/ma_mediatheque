@@ -207,6 +207,7 @@ function createFilmCard(film) {
       return;
     }
     if (!mediaServerAvailable) {
+      showToast("Film à venir");
       return;
     }
     showTmdbFilmSearch(film);
