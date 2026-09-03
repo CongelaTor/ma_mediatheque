@@ -43,11 +43,13 @@ let totalNewEpisodes = 0;
 let totalKeptFilms = 0;
 let totalKeptEpisodes = 0;
 
-const sourcesToScan = config.sources.filter((source) => {
+const scanSources = process.env.MEDIA_SCAN_SOURCES
+  ? JSON.parse(process.env.MEDIA_SCAN_SOURCES)
+  : config.sources;
+const sourcesToScan = scanSources.filter((source) => {
   if (scanType === "all") {
     return true;
   }
-
   return source.type === scanType.slice(0, -1);
 });
 
