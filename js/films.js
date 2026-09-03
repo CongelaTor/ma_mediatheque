@@ -206,6 +206,9 @@ function createFilmCard(film) {
       window.location.href = `film-detail.html?tmdbId=${film.tmdbId}`;
       return;
     }
+    if (!mediaServerAvailable) {
+      return;
+    }
     showTmdbFilmSearch(film);
   };
   posterZone.appendChild(createPosterContent(film.image, film.titre, film.id));
