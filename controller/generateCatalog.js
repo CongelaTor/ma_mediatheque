@@ -1,14 +1,18 @@
 const scanType = process.argv[2] || "all";
 const fs = require("fs");
 const path = require("path");
+
 const rootDir = path.join(__dirname, "..");
-const configPath = path.join(rootDir, "config", "config.json");
-const ignoreWordsPath = path.join(rootDir, "config", "ignoreWords.json");
+const mediaServerDir = "Z:\\01_mediaServer";
+
+const configPath = path.join(mediaServerDir, "config", "config.json");
+const ignoreWordsPath = path.join(mediaServerDir, "config", "ignoreWords.json");
 const languageAliasesPath = path.join(
-  rootDir,
+  mediaServerDir,
   "config",
   "languageAliases.json",
 );
+
 const catalogPath = path.join(rootDir, "data", "catalog.json");
 
 const config = readJson(configPath);
