@@ -283,7 +283,7 @@ function formatFilmFileSize(size) {
 
   const gigabytes = size / (1024 * 1024 * 1024);
 
-  if (gigabytes >= 1) {
+  if (gigabytes > 1) {
     return `${gigabytes.toFixed(2)} Go`;
   }
 

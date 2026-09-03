@@ -168,7 +168,7 @@ function updateResumeButtons() {
 
           setText(
             "resumeFilmText",
-            `${film?.titreTmdb || film?.titre || "Film"} (${duration})`,
+            `${film?.titreTmdb || film?.titre || resumeData.film.catalogPath.split("/").pop() || "Film"} (${duration})`,
           );
         }
       })

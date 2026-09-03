@@ -94,7 +94,7 @@ function updateStats() {
       uniqueFilms.add(key);
     }
 
-    return uniqueFilms.size > 1;
+    return uniqueFilms.size >= 1;
   });
 
   const collectionsCount = collectionList.length;

@@ -47,10 +47,16 @@
                         <div class="sidebar-stat"><span id="sideNouveautes">0</span> Nouveautés</div>
 
                         <div class="sidebar-section"></div>
+                        
                         <div class="sidebar-title">Collections</div>
                         <button class="sidebar-link active"
                             onclick="selectCollection('all')">
                             Toutes les collections
+                        </button>
+                        <button id="incompleteCollectionsFilter"
+                            class="sidebar-link"
+                            onclick="selectCollection('incomplete')">
+                            À compléter
                         </button>
                     </aside>
 

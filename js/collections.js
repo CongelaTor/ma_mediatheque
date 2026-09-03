@@ -1,3 +1,5 @@
+let currentCollectionFilter = "all";
+
 function initCollectionsPage() {
   currentPage = "collections";
   initSidebarToggle();
@@ -5,6 +7,28 @@ function initCollectionsPage() {
     updateResumeButtons();
     renderCollections();
   });
+}
+
+function selectCollection(filter) {
+  currentCollectionFilter = filter;
+
+  document
+    .querySelectorAll(".sidebar-link")
+    .forEach((button) => button.classList.remove("active"));
+
+  if (filter === "all") {
+    document
+      .querySelector("button[onclick=\"selectCollection('all')\"]")
+      ?.classList.add("active");
+  }
+
+  if (filter === "incomplete") {
+    document
+      .querySelector("button[onclick=\"selectCollection('incomplete')\"]")
+      ?.classList.add("active");
+  }
+
+  renderCollections();
 }
 
 function renderCollections() {
@@ -35,23 +59,39 @@ function renderCollections() {
     collections.get(film.collectionId).films.push(film);
   }
 
+  for (const collection of collections.values()) {
+    if (!collection.image) {
+      const firstFilm = [...collection.films].sort(
+        (a, b) =>
+          Number(a.anneeTmdb || a.annee || 9999) -
+          Number(b.anneeTmdb || b.annee || 9999),
+      )[0];
+
+      collection.image = firstFilm?.image || null;
+    }
+  }
+
   const collectionList = [...collections.values()]
-    .filter((collection) => matchesSearch(collection.nom))
-    .filter((collection) => {
-      const uniqueFilms = new Set();
+  .filter((collection) => matchesSearch(collection.nom))
+  .filter((collection) => {
+    const uniqueFilms = new Set();
 
-      for (const film of collection.films) {
-        const key = film.tmdbId
-          ? `tmdb:${film.tmdbId}`
-          : `title:${film.titre}|${film.annee || ""}`;
+    for (const film of collection.films) {
+      const key = film.tmdbId
+        ? `tmdb:${film.tmdbId}`
+        : `title:${film.titre}|${film.annee || ""}`;
 
-        uniqueFilms.add(key);
-      }
+      uniqueFilms.add(key);
+    }
 
-      return uniqueFilms.size > 1;
-    })
-    .sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
+    if (currentCollectionFilter === "incomplete") {
+      return uniqueFilms.size === 1;
+    }
 
+    return uniqueFilms.size >= 1;
+  })
+  .sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
+  
   setText("sideCollections", collectionList.length);
   const groupedFilms = new Set();
   for (const film of catalog.films) {
@@ -74,7 +114,7 @@ function renderCollections() {
   }
   setText(
     "collectionsCount",
-    `${collectionList.length} collection${collectionList.length > 1 ? "s" : ""}`,
+    `${collectionList.length} collection${collectionList.length >= 1 ? "s" : ""}`,
   );
   setText("collectionsFilmsCount", `${uniqueFilms.size} films`);
 
