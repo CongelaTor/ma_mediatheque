@@ -82,7 +82,8 @@ function updateStats() {
     }
     collections.get(film.collectionId).push(film);
   }
-  const collectionsCount = [...collections.values()].filter((films) => {
+
+  const collectionList = [...collections.values()].filter((films) => {
     const uniqueFilms = new Set();
 
     for (const film of films) {
@@ -94,8 +95,9 @@ function updateStats() {
     }
 
     return uniqueFilms.size > 1;
-  }).length;
+  });
 
+  const collectionsCount = collectionList.length;
   const groupedFilms = new Set();
   for (const film of catalog.films) {
     const groupKey = film.tmdbId
@@ -109,6 +111,11 @@ function updateStats() {
   const seriesCount = catalog.series.length;
   const episodesCount = countEpisodes();
 
+  setText(
+    "homeFilmsStats",
+    `${filmsCount} films • ${collectionsCount} collections`,
+  );
+
   setText("sideCollections", collectionsCount);
   setText("statFilms", filmsCount);
   setText("statNouveautes", nouveautesCount);
@@ -119,6 +126,7 @@ function updateStats() {
   setText("sideSeries", seriesCount);
   setText("sideEpisodes", episodesCount);
 }
+
 function countEpisodes() {
   let count = 0;
   for (const serie of catalog.series) {

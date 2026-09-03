@@ -105,7 +105,7 @@ function renderFilms() {
     })
     .filter((film) => {
       if (!window.selectedCollectionId) {
-        return true;
+        return !film.collectionId || !film.collectionNom;
       }
       return String(film.collectionId) === window.selectedCollectionId;
     })
@@ -138,11 +138,15 @@ function renderFilms() {
   const collectionName = sessionStorage.getItem("selectedCollectionName");
 
   if (collectionName) {
-    document.querySelector("h1").textContent =
-      `${collectionName.replace(/\s*-\s*saga$/i, "")}`;
+    setText("filmsCount", `${collectionName.replace(/\s*-\s*saga$/i, "")}`);
+    setText(
+      "filmsSubtitle",
+      `${films.length} film${films.length > 1 ? "s" : ""}`,
+    );
+  } else {
+    setText("filmsCount", `${films.length} film${films.length > 1 ? "s" : ""}`);
+    setText("filmsSubtitle", "Hors collections");
   }
-
-  setText("filmsCount", `${films.length} film${films.length > 1 ? "s" : ""}`);
 
   for (const film of films) {
     grid.appendChild(createFilmCard(film));

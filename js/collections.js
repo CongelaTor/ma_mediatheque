@@ -52,20 +52,31 @@ function renderCollections() {
     })
     .sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
 
+  setText("sideCollections", collectionList.length);
+  const groupedFilms = new Set();
+  for (const film of catalog.films) {
+    const key = film.tmdbId
+      ? `tmdb:${film.tmdbId}`
+      : `title:${film.titre}|${film.annee || ""}`;
+    groupedFilms.add(key);
+  }
+  setText("sideFilms", groupedFilms.size);
+
+  const uniqueFilms = new Set();
+  for (const collection of collectionList) {
+    for (const film of collection.films) {
+      const key = film.tmdbId
+        ? `tmdb:${film.tmdbId}`
+        : `title:${film.titre}|${film.annee || ""}`;
+
+      uniqueFilms.add(key);
+    }
+  }
   setText(
     "collectionsCount",
     `${collectionList.length} collection${collectionList.length > 1 ? "s" : ""}`,
   );
-
-  setText("sideCollections", collectionList.length);
-
-  setText(
-    "sideFilms",
-    collectionList.reduce(
-      (total, collection) => total + collection.films.length,
-      0,
-    ),
-  );
+  setText("collectionsFilmsCount", `${uniqueFilms.size} films`);
 
   for (const collection of collectionList) {
     const card = document.createElement("article");
