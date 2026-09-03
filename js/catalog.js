@@ -66,6 +66,7 @@ async function reloadCatalog(type = "all") {
   }
   document.getElementById("scanLog").textContent = log;
 }
+
 function updateStats() {
   if (!catalog) {
     return;

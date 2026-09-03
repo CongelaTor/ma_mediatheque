@@ -1,9 +1,11 @@
 let mediaServerAvailable =
+  window.location.hostname !== "congelator.github.io" &&
   sessionStorage.getItem("mediaServerAvailable") === "true";
 
 document.body.classList.add(
   mediaServerAvailable ? "mediaserver" : "no-mediaserver",
 );
+
 async function isMediaServerAvailable() {
   try {
     const response = await fetch("http://localhost:9876/get-catalog", {
