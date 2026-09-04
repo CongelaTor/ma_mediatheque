@@ -3,6 +3,11 @@
 // ------------------------------------
 
 async function initHomePage() {
+  const context = calculContext.calculateContext({
+    mediaServerAvailable,
+  });
+  console.log("context =", context);
+
   await loadCatalog();
   updateStats();
   updateResumeButtons();
