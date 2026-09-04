@@ -8,7 +8,7 @@ document.body.classList.add(
 
 async function isMediaServerAvailable() {
   try {
-    const response = await fetch("http://localhost:9876/get-catalog", {
+    const response = await fetch("http://localhost:9876/get-resume-playback", {
       method: "POST",
     });
 
