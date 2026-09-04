@@ -3,6 +3,7 @@
 // ------------------------------------
 
 async function initHomePage() {
+  await isMediaServerAvailable();
   const context = calculContext.calculateContext({
     mediaServerAvailable,
   });
