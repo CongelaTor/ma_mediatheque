@@ -3,6 +3,9 @@
 // ------------------------------------
 
 async function initHomePage() {
+  await loadCatalog();
+  updateStats();
+
   await isMediaServerAvailable();
 
   const context = calculContext.calculateContext({
@@ -19,8 +22,6 @@ async function initHomePage() {
   const resumeSerieButton = document.getElementById("resumeSerieButton");
   resumeSerieButton.classList.toggle("hidden", !context.permissions.canPlay);
 
-  await loadCatalog();
-  updateStats();
   updateResumeButtons();
 }
 
