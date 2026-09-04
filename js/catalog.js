@@ -1,14 +1,5 @@
 async function loadCatalog() {
-  const response = mediaServerAvailable
-    ? await fetch("http://localhost:9876/get-catalog", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: "{}",
-      })
-    : await fetch("data/catalog.json");
-
+  const response = await fetch("data/catalog.json");
   catalog = await response.json();
 }
 
