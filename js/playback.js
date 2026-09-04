@@ -119,7 +119,6 @@ function resumeSerie() {
 }
 
 function updateResumeButtons() {
-  console.log("updateResumeButtons");
   const resumeCollection = getResumeCollection();
   const resumeFilm = getResumeFilm();
   const resumeSerie = getResumeSerie();
@@ -138,8 +137,6 @@ function updateResumeButtons() {
   const resumeSerieButton = document.getElementById("resumeSerieButton");
 
   if (mediaServerAvailable) {
-    console.log("appel get-resume-playback");
-
     fetch("http://localhost:9876/get-resume-playback", {
       method: "POST",
       headers: {

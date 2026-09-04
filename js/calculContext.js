@@ -24,17 +24,17 @@
     const isLocalUrl =
       options.isLocalUrl ?? ["127.0.0.1", "localhost"].includes(hostname);
     const mediaServerAvailable = Boolean(options.mediaServerAvailable);
-    const isDevPc = Boolean(options.isDevPc);
-    console.log("[calculContext][Environment]", {
-      isBrowser,
-      platform,
-      hostname,
-      isGitUrl,
-      isLocalUrl,
-      mediaServerAvailable,
-      isDevPc,
-    });
 
+    const isDevPc = isLocalUrl && mediaServerAvailable;
+
+    console.log("[calculContext][Environment]");
+    console.log("  platform             :", platform);
+    console.log("  hostname             :", hostname);
+    console.log("  isGitUrl             :", isGitUrl);
+    console.log("  isLocalUrl           :", isLocalUrl);
+    console.log("  mediaServerAvailable :", mediaServerAvailable);
+    console.log("  isBrowser            :", isBrowser);
+    console.log("  isDevPc              :", isDevPc);
     return {
       isBrowser,
       platform,
@@ -101,7 +101,19 @@
         : null,
       catalogUrl,
     };
-    console.log("[calculContext][Paths]", result);
+    console.log("[calculContext][Paths]");
+    console.log("  mediathequeRoot    :", mediathequeRoot);
+    console.log("  mediaServerRoot    :", mediaServerRoot);
+    console.log("  catalogPath        :", result.catalogPath);
+    console.log("  catalogUrl         :", catalogUrl);
+
+    console.log("  configPath         :", result.configPath);
+    console.log("  languageAliasesPath:", result.languageAliasesPath);
+
+    console.log("  ignoreWordsPath    :", result.ignoreWordsPath);
+    console.log("  resumePlaybackPath :", result.resumePlaybackPath);
+
+    console.log("  generateCatalogPath:", result.generateCatalogPath);
     return result;
   }
 
@@ -120,7 +132,15 @@
       canPublishCatalog: canUseMediaServer && environment.isDevPc,
       canRequest: environment.isGitUrl && !environment.isDevPc,
     };
-    console.log("[calculContext][Permissions]", result);
+    console.log("[calculContext][Permissions]");
+    console.log("  canPlay          :", result.canPlay);
+    console.log("  canResume        :", result.canResume);
+    console.log("  canSynchronize   :", result.canSynchronize);
+    console.log("  canScan          :", result.canScan);
+    console.log("  canAssociateTmdb :", result.canAssociateTmdb);
+    console.log("  canUseGreyButtons:", result.canUseGreyButtons);
+    console.log("  canPublishCatalog:", result.canPublishCatalog);
+    console.log("  canRequest       :", result.canRequest);
     return result;
   }
 
