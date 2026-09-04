@@ -23,7 +23,8 @@
       );
     const isLocalUrl =
       options.isLocalUrl ?? ["127.0.0.1", "localhost"].includes(hostname);
-    const mediaServerAvailable = Boolean(options.mediaServerAvailable);
+    console.log("options.mediaServerAvailable :", options.mediaServerAvailable);
+    const mediaServerAvailable = options.mediaServerAvailable ?? false;
 
     const isDevPc = isLocalUrl && mediaServerAvailable;
 
