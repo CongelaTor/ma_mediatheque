@@ -4,15 +4,26 @@
 
 async function initHomePage() {
   await isMediaServerAvailable();
+
   const context = calculContext.calculateContext({
     mediaServerAvailable,
   });
   console.log("context =", context);
 
+  const scanButton = document.querySelector(".refresh-button");
+  scanButton.classList.toggle("hidden", !context.permissions.canScan);
+
+  const resumeFilmButton = document.getElementById("resumeFilmButton");
+  resumeFilmButton.classList.toggle("hidden", !context.permissions.canPlay);
+
+  const resumeSerieButton = document.getElementById("resumeSerieButton");
+  resumeSerieButton.classList.toggle("hidden", !context.permissions.canPlay);
+
   await loadCatalog();
   updateStats();
   updateResumeButtons();
 }
+
 async function initFilmsPage() {
   currentPage = "films";
   initSidebarToggle();
