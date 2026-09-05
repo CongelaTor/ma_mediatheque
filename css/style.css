@@ -225,8 +225,6 @@ input {
     border-color: var(--blue);
 }
 
-
-
 .film-hero {
     background:
         linear-gradient(135deg, rgba(5, 12, 25, 0.2), rgba(12, 49, 95, 0.35)),
