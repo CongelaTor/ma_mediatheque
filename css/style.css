@@ -820,11 +820,15 @@ background: #f97316;
     display: grid;
     grid-template-columns: 227px 1fr auto;
     gap: 20px;
-    align-items: center;
+    align-items: start;
     padding: 14px;
     border: 1px solid var(--border);
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.04);
+}
+
+.episode-description {
+    grid-column: 1 / -1;
 }
 .episode-image-zone {
     width: 227px;
@@ -851,7 +855,16 @@ background: #f97316;
 .episode-info {
     min-width: 0;
 }
-
+.episode-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.episode-header > div:first-child {
+    display: flex;
+    flex-direction: column;
+}
 .episode-title {
     font-size: 18px;
     font-weight: 700;

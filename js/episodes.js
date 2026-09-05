@@ -272,6 +272,11 @@ function createEpisodeCard(serie, saison, episode, tmdbEpisode = null) {
   const info = document.createElement("div");
   info.className = "episode-info";
 
+  const header = document.createElement("div");
+  header.className = "episode-header";
+
+  const titleBlock = document.createElement("div");
+
   const title = document.createElement("div");
   title.className = "episode-title";
   title.textContent =
@@ -290,28 +295,34 @@ function createEpisodeCard(serie, saison, episode, tmdbEpisode = null) {
     metaParts.push(`${tmdbEpisode.duree} min`);
   }
   meta.textContent = metaParts.join(" • ");
+
+  titleBlock.appendChild(title);
+  titleBlock.appendChild(meta);
+
+  const tmdbButton = document.createElement("button");
+  tmdbButton.className = "tmdb-associate-button";
+  tmdbButton.textContent = "TMDB";
+
+  tmdbButton.onclick = () => {
+    if (tmdbEpisode && tmdbEpisode.tmdbUrl) {
+      window.location.href = tmdbEpisode.tmdbUrl;
+    }
+  };
+
+  header.appendChild(titleBlock);
+  header.appendChild(tmdbButton);
+
   const description = document.createElement("div");
   description.className = "episode-description";
   description.textContent =
     tmdbEpisode && tmdbEpisode.description
       ? tmdbEpisode.description
       : "Aucune description disponible.";
-  info.appendChild(title);
-  info.appendChild(meta);
-  info.appendChild(description);
-  const actions = document.createElement("div");
-  actions.className = "episode-actions";
-  const tmdbButton = document.createElement("button");
-  tmdbButton.className = "tmdb-associate-button";
-  tmdbButton.textContent = "TMDB";
-  tmdbButton.onclick = () => {
-    if (tmdbEpisode && tmdbEpisode.tmdbUrl) {
-      window.location.href = tmdbEpisode.tmdbUrl;
-    }
-  };
-  actions.appendChild(tmdbButton);
+
+  info.appendChild(header);
+
   card.appendChild(imageZone);
   card.appendChild(info);
-  card.appendChild(actions);
+  card.appendChild(description);
   return card;
 }
