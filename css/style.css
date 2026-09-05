@@ -204,7 +204,7 @@ input {
 
 .home-card {
     position: relative;
-    min-height: 458px;
+    min-height: 438px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -215,7 +215,7 @@ input {
 }
 
 .home-card-image {
-    height: 233px;
+    height: 213px;
     background-size: cover;
     background-position: center;
 }
