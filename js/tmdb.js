@@ -239,6 +239,7 @@ function renderTmdbSerieResults(serie, results) {
       '<div class="tmdb-empty">Aucun résultat trouvé.</div>';
     return;
   }
+  
   for (const result of results) {
     const card = document.createElement("article");
     card.className = "tmdb-result-card";
@@ -255,15 +256,18 @@ function renderTmdbSerieResults(serie, results) {
       imageZone.appendChild(placeholder);
     }
     const info = document.createElement("div");
+    
     const title = document.createElement("a");
     title.className = "tmdb-result-title tmdb-result-link";
     title.textContent = result.titre;
     title.href = result.tmdbUrl;
     title.target = "_self";
     title.rel = "noopener noreferrer";
+    
     const year = document.createElement("div");
     year.className = "tmdb-result-year";
     year.textContent = result.annee || "Année inconnue";
+    
     const description = document.createElement("div");
     description.className = "tmdb-result-description";
     description.textContent =
@@ -271,6 +275,7 @@ function renderTmdbSerieResults(serie, results) {
     info.appendChild(title);
     info.appendChild(year);
     info.appendChild(description);
+    
     const button = document.createElement("button");
     button.className = "tmdb-associate-button";
     button.textContent = "Associer";

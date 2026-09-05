@@ -710,9 +710,15 @@ background: #f97316;
     margin-bottom: 8px;
 }
 
+.tmdb-result-info {
+    color: var(--blue);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
 .tmdb-result-description {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.4;
 }
 
@@ -779,20 +785,29 @@ background: #f97316;
     font-weight: bold;
 }
 
+.serie-detail-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
 .serie-info-card {
     margin-bottom: 20px;
 }
-
 .serie-info-image {
-    width: 94px;
-    height: 140px;
+    width: 180px;
+    height: 267px;
+    position: relative;
 }
-
 .serie-info-image .poster-zone,
 .serie-info-image img,
 .serie-info-image .missing-poster {
-    width: 94px;
-    height: 140px;
+    width: 180px;
+    height: 267px;
     border-radius: 10px;
 }
 
@@ -801,7 +816,6 @@ background: #f97316;
     flex-direction: column;
     gap: 14px;
 }
-
 .episode-card {
     display: grid;
     grid-template-columns: 227px 1fr auto;
@@ -812,7 +826,6 @@ background: #f97316;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.04);
 }
-
 .episode-image-zone {
     width: 227px;
     height: 127px;
@@ -854,7 +867,7 @@ background: #f97316;
 
 .episode-description {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.45;
 }
 
@@ -970,6 +983,16 @@ background: #f97316;
     font-size: 14px;
     filter: grayscale(100%);
 }
+.film-detail-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
 .film-file-card {
     display: flex;
     flex-direction: column;
@@ -1000,7 +1023,7 @@ background: #f97316;
 
 .film-file-folder {
     color: var(--muted);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.4;
     overflow-wrap: anywhere;

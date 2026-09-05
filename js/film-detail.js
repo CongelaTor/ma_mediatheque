@@ -37,22 +37,34 @@ async function initFilmDetailPage() {
     const storedInfo = JSON.parse(
       sessionStorage.getItem("filmDetailInfo") || "{}",
     );
-
     setText("filmTitle", storedInfo.titreTmdb || "");
-    setText("filmDuration", "0 fichier");
-
-    setText("filmInfoTitle", storedInfo.titreTmdb || "");
-    setText("filmInfoYear", storedInfo.anneeTmdb || "");
+    setText(
+      "filmInfo",
+      storedInfo.anneeTmdb
+        ? `${storedInfo.anneeTmdb} • ${filmFiles.length} fichier${filmFiles.length > 1 ? "s" : ""}`
+        : `${filmFiles.length} fichier${filmFiles.length > 1 ? "s" : ""}`,
+    );
     setText("filmInfoDescription", storedInfo.descriptionTmdb || "");
 
     const infoCard = document.getElementById("filmInfoCard");
     infoCard.classList.remove("hidden");
 
     const imageContainer = infoCard.querySelector(".serie-info-image");
-
     imageContainer.innerHTML = "";
-
     if (storedInfo.image) {
+      const tmdbBadge = document.createElement("button");
+      tmdbBadge.className = "play-button";
+      tmdbBadge.style.right = "6px";
+      tmdbBadge.style.bottom = "6px";
+      tmdbBadge.style.width = "32px";
+      tmdbBadge.style.height = "32px";
+      tmdbBadge.style.fontSize = "14px";
+      tmdbBadge.innerHTML = "🔍";
+      tmdbBadge.onclick = (event) => {
+        event.stopPropagation();
+        window.location.href = storedInfo.tmdbUrl;
+      };
+
       imageContainer.appendChild(
         createPosterContent(
           storedInfo.image,
@@ -60,8 +72,12 @@ async function initFilmDetailPage() {
           "film-detail",
         ),
       );
+      imageContainer.appendChild(tmdbBadge);
+      imageContainer.style.cursor = "pointer";
+      imageContainer.onclick = () => {
+        window.location.href = storedInfo.tmdbUrl;
+      };
     }
-
     document.getElementById("filmTmdbButton").onclick = () => {
       window.location.href = storedInfo.tmdbUrl;
     };
@@ -86,27 +102,30 @@ async function initFilmDetailPage() {
   );
 
   setText("filmTitle", referenceFilm.titreTmdb || referenceFilm.titre);
-
   setText(
-    "filmDuration",
-    referenceFilm.dureeTmdb
-      ? `${referenceFilm.dureeTmdb} min`
-      : "Durée inconnue",
+    "filmInfo",
+    `${referenceFilm.anneeTmdb || referenceFilm.annee || "?"} • ${referenceFilm.dureeTmdb || "?"} min • ${films.length} fichier${films.length > 1 ? "s" : ""}`,
   );
-
-  setText("filmInfoTitle", referenceFilm.titreTmdb || referenceFilm.titre);
-
-  setText("filmInfoYear", referenceFilm.anneeTmdb || referenceFilm.annee || "");
-
   setText("filmInfoDescription", referenceFilm.descriptionTmdb || "");
 
   const infoCard = document.getElementById("filmInfoCard");
   infoCard.classList.remove("hidden");
 
+  const tmdbBadge = document.createElement("button");
+  tmdbBadge.className = "play-button";
+  tmdbBadge.style.right = "6px";
+  tmdbBadge.style.bottom = "6px";
+  tmdbBadge.style.width = "32px";
+  tmdbBadge.style.height = "32px";
+  tmdbBadge.style.fontSize = "14px";
+  tmdbBadge.innerHTML = "🔍";
+  tmdbBadge.onclick = (event) => {
+    event.stopPropagation();
+    window.location.href = referenceFilm.tmdbUrl;
+  };
+
   const imageContainer = infoCard.querySelector(".serie-info-image");
-
   imageContainer.innerHTML = "";
-
   imageContainer.appendChild(
     createPosterContent(
       referenceFilm.image,
@@ -114,8 +133,9 @@ async function initFilmDetailPage() {
       referenceFilm.id,
     ),
   );
-
-  document.getElementById("filmTmdbButton").onclick = () => {
+  imageContainer.appendChild(tmdbBadge);
+  imageContainer.style.cursor = "pointer";
+  imageContainer.onclick = () => {
     window.location.href = referenceFilm.tmdbUrl;
   };
 
@@ -142,7 +162,7 @@ function renderFilmFiles(films) {
     .sort((a, b) => (a.taille || 0) - (b.taille || 0));
 
   setText(
-    "filmDuration",
+    "film",
     `${filteredFilms.length} fichier${filteredFilms.length > 1 ? "s" : ""}`,
   );
 
@@ -176,6 +196,7 @@ function createFilmFileCard(film) {
   playButton.innerHTML = '<span class="play-icon">▶</span>';
   playButton.title = "Lire";
   playButton.onclick = () => playFilm(film);
+
   const tmdbButton = document.createElement("button");
   tmdbButton.className =
     "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";
@@ -193,7 +214,6 @@ function createFilmFileCard(film) {
         <path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L13 20"/>
       </svg>
     </span>`;
-
   tmdbButton.title = "Réassocier TMDB";
   tmdbButton.onclick = () => showTmdbFilmSearch(film);
 
@@ -207,7 +227,6 @@ function createFilmFileCard(film) {
   const deleteButton = document.createElement("button");
   deleteButton.className =
     "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";
-
   deleteButton.innerHTML = `
     <svg viewBox="0 0 24 24"
         width="18"
@@ -223,7 +242,6 @@ function createFilmFileCard(film) {
       <path d="M10 11v5"/>
       <path d="M14 11v5"/>
     </svg>`;
-
   deleteButton.title = "Supprimer le fichier";
   deleteButton.onclick = async () => {
     const confirmed = confirm(
@@ -267,7 +285,6 @@ function createFilmFileCard(film) {
 
   const pathInfo = document.createElement("div");
   pathInfo.className = "film-file-folder";
-
   pathInfo.textContent = `${getFilmFolder(film.fichier)}/${film.nomFichier}`;
 
   card.appendChild(playbackRow);

@@ -55,18 +55,13 @@
                         <div class="content-header">
                             <div>
                                 <h1 id="filmTitle">Film</h1>
-                                <p id="filmDuration">Durée inconnue</p>
+                                <p id="filmInfo" class="tmdb-result-info"></p>
                             </div>
                             <a id="backToFilmsButton" class="secondary-button" href="films.html">← Retour aux films</a>
                         </div>
-                        <div id="filmInfoCard" class="tmdb-result-card serie-info-card hidden">
+                        <div id="filmInfoCard" class="film-detail-card serie-info-card hidden">
                             <div class="serie-info-image"></div>
-                            <div>
-                                <div id="filmInfoTitle" class="tmdb-result-title"></div>
-                                <div id="filmInfoYear" class="tmdb-result-year"></div>
-                                <div id="filmInfoDescription" class="tmdb-result-description"></div>
-                            </div>
-                            <button id="filmTmdbButton" class="tmdb-associate-button">TMDB</button>
+                            <div id="filmInfoDescription" class="tmdb-result-description"></div>
                         </div>
                         <div class="resume-row">
                             <button id="syncFilmButton" class="sync-button linux-hidden mediaserver-only">

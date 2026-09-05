@@ -110,7 +110,7 @@ async function showSerieDetails(serie, requestedSeasonNumber = null) {
       .sort((a, b) => a.numero - b.numero);
     setText(
       "seriesCount",
-      `${sortedEpisodes.length} épisode${sortedEpisodes.length > 1 ? "s" : ""}`,
+      `${serie.anneeTmdb || ""} • ${sortedEpisodes.length} épisode${sortedEpisodes.length > 1 ? "s" : ""}`,
     );
 
     const allEpisodes = [];
@@ -206,24 +206,32 @@ function renderSerieInfoCard(serie) {
   imageZone.appendChild(
     createPosterContent(serie.image, serie.titre, serie.id),
   );
-  setText("serieInfoTitle", serie.titreTmdb || serie.titre);
-  setText("serieInfoYear", serie.anneeTmdb || "");
+
+  if (serie.tmdbId) {
+    const tmdbBadge = document.createElement("button");
+    tmdbBadge.className = "play-button";
+    tmdbBadge.innerHTML = "🔍";
+    tmdbBadge.style.width = "32px";
+    tmdbBadge.style.height = "32px";
+    tmdbBadge.style.fontSize = "14px";
+    tmdbBadge.style.right = "6px";
+    tmdbBadge.style.bottom = "6px";
+    tmdbBadge.onclick = (event) => {
+      event.stopPropagation();
+      window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
+    };
+
+    imageZone.appendChild(tmdbBadge);
+    imageZone.style.cursor = "pointer";
+    imageZone.onclick = () => {
+      window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
+    };
+  }
+
   setText(
     "serieInfoDescription",
     serie.descriptionTmdb || "Aucune description disponible.",
   );
-  const button = document.getElementById("serieTmdbButton");
-  if (serie.tmdbId) {
-    button.textContent = "TMDB";
-    button.onclick = () => {
-      window.location.href = `${tmdbBaseUrl}/tv/${serie.tmdbId}`;
-    };
-  } else {
-    button.textContent = "Associer TMDB";
-    button.onclick = () => {
-      showTmdbSerieSearch(serie);
-    };
-  }
   card.classList.remove("hidden");
 }
 
