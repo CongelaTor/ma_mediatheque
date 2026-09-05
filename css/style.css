@@ -204,7 +204,7 @@ input {
 
 .home-card {
     position: relative;
-    min-height: 470px;
+    min-height: 458px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -214,16 +214,18 @@ input {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.home-card-image {
+    height: 233px;
+    background-size: cover;
+    background-position: center;
+}
+
 .home-card:hover {
     transform: translateY(-4px);
     border-color: var(--blue);
 }
 
-.home-card-image {
-    height: 245px;
-    background-size: cover;
-    background-position: center;
-}
+
 
 .film-hero {
     background:
