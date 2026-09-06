@@ -98,15 +98,15 @@ sortCatalog(syncedCatalog);
 syncedCatalog.dateDernierScan = new Date().toISOString();
 writeJson(jsonCatalogPath, syncedCatalog);
 function logStat(label, value) {
-  console.log(`${label.padEnd(20)} : ${value}`);
+  console.log(`${label.padEnd(29)} : ${value}`);
 }
 console.log("");
 if (scanType === "films") {
   logStat("Vidéos analysées", totalVideos);
   console.log("");
-  logStat("Films ajoutés", totalNewFilms);
-  logStat("Films conservés", totalKeptFilms);
-  logStat("Films au catalogue", syncedCatalog.films.length);
+  logStat("Fichiers de film ajoutés", totalNewFilms);
+  logStat("Fichiers de film conservés", totalKeptFilms);
+  logStat("Fichiers de film au catalogue", syncedCatalog.films.length);
   console.log("");
 } else if (scanType === "series") {
   logStat("Vidéos analysées", totalVideos);
@@ -118,9 +118,9 @@ if (scanType === "films") {
 } else {
   logStat("Vidéos analysées", totalVideos);
   console.log("");
-  logStat("Films ajoutés", totalNewFilms);
-  logStat("Films conservés", totalKeptFilms);
-  logStat("Films au catalogue", syncedCatalog.films.length);
+  logStat("Fichiers de film ajoutés", totalNewFilms);
+  logStat("Fichiers de film conservés", totalKeptFilms);
+  logStat("Fichiers de film au catalogue", syncedCatalog.films.length);
   console.log("");
   logStat("Épisodes ajoutés", totalNewEpisodes);
   logStat("Épisodes conservés", totalKeptEpisodes);
@@ -386,6 +386,8 @@ function findAssociatedImage(videoPath) {
   return null;
 }
 function syncFilm(catalog, analyse) {
+  console.log("catalog =", existingCatalog.films[0].fichier);
+  console.log("scan    =", analyse.fichier);
   const existing = existingFilmByPath.get(
     pathKey(analyse.fichier.replace(/^[A-Z]:/i, "")),
   );

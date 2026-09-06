@@ -12,8 +12,8 @@
     <div class="app">
         <header class="topbar">
             <div class="brand">
-                <div class="brand-icon" id="sidebarToggle"><span>🎬</span></div>
-                <a class="brand-title" href="index.html">Médiathèque</a>
+                <div class="brand-icon sidebar-toggle" id="sidebarToggle"><span>☰</span></div>
+                <span class="brand-title">Médiathèque</span>
             </div>
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
@@ -82,6 +82,21 @@
                 </div>
             </section>
         </main>
+    </div>
+
+        <div id="scanModal" class="tmdb-modal hidden linux-hidden">
+        <div class="tmdb-modal-panel">
+            <div class="tmdb-modal-header">
+                <h2 id="scanTitle">Scan des films</h2>
+            </div>
+            <div id="scanLog" class="tmdb-results"></div>
+            <div id="detectionLog" class="tmdb-results hidden"></div>
+            <div style="padding:16px;text-align:right">
+                <button class="secondary-button" onclick="closeScanModal()">
+                    Fermer
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="config/constants.js"></script>

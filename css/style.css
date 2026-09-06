@@ -65,11 +65,15 @@ input {
     min-width: 230px;
 }
 
+.brand-logo {
+    cursor: default;
+}
+
 .brand-icon {
     width: 34px;
     height: 34px;
     border-radius: 8px;
-    background: linear-gradient(135deg, var(--blue), #0004ff);
+    background: #1677CF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1193,4 +1197,13 @@ background: #f97316;
 .sync-icon {
     display: inline-block;
     transform: rotate(90deg);
+}
+
+.sidebar-toggle {
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+.sidebar-toggle:hover {
+    opacity: 0.8;
 }

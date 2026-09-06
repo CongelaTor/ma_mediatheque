@@ -15,11 +15,11 @@
 
     <div class="app">
         <header class="topbar">
-            <div class="brand" onclick="showPage('home')">
+            <div class="brand brand-logo">
                 <div class="brand-icon">
                     <span>🎬</span>
                 </div>
-                <div class="brand-title" href="index.html">Médiathèque v1.4</div>
+                <span class="brand-title">Médiathèque</span>
             </div>
             <nav class="main-nav">
                 <a class="nav-button active" data-page="home" href="index.html">Accueil</a>
@@ -62,74 +62,13 @@
                         <div class="home-card-image serie-hero"></div>
                         <div class="home-card-icon purple">📺</div>
                         <h2>Séries</h2>
-                        <p><span id="homeSeriesStats">34 séries • 1586 épisodes</span></p>
+                        <p><span id="homeSeriesStats"></span></p>
                         <button type="button" class="purple-button">Accéder aux séries ›</button>
                         <button id="resumeSerieButton" class="resume-button hidden"
                                 onclick="event.stopPropagation(); resumeSerie()">
                             ▶&nbsp;&nbsp;&nbsp;<span id="resumeSerieText"></span>
                         </button>
                     </article>
-                </div>
-            </section>
-
-            <section id="page-films" class="page">
-                <div class="layout">
-                    <aside class="sidebar">
-                        <div class="sidebar-title">Statistiques</div>
-                        <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
-                        <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
-                        <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
-                        <div class="sidebar-section"></div>
-                    </aside>
-                    <section class="content">
-                        <div class="content-header">
-                            <div>
-                                <h1>Films</h1>
-                                <p id="filmsCount">0 film</p>
-                            </div>
-                        </div>
-
-                        <button id="resumeFilmButton" class="resume-button hidden" onclick="resumeFilm()">
-                            ▶ Reprendre : <span id="resumeFilmText"></span>
-                        </button>
-                        <div id="filmsGrid" class="cards-grid"></div>
-                    </section>
-                </div>
-            </section>
-
-            <section id="page-series" class="page">
-                <div class="layout">
-                    <aside class="sidebar">
-                        <div class="sidebar-title">Navigation</div>
-                        <button class="sidebar-link active" onclick="renderSeries()">Toutes les séries</button>
-                        <button class="sidebar-link" onclick="showPage('films')">Films</button>
-                    </aside>
-
-                    <section class="content">
-                        <div class="content-header">
-                            <div>
-                                <h1 id="seriesTitle">Séries</h1>
-                                <p id="seriesCount">0 série</p>
-                            </div>
-                            <button id="backToSeriesButton" class="secondary-button hidden" onclick="renderSeries()">←
-                                Retour aux séries</button>
-                        </div>
-
-                        <button id="resumeSerieButton" class="resume-button hidden" onclick="resumeSerie()">
-                            ▶ Reprendre : <span id="resumeSerieText"></span>
-                        </button>
-
-                        <div id="languageFilters" class="language-filters">
-                            <button class="language-button active" data-language="VO">VO</button>
-                            <button class="language-button active" data-language="VF">VF</button>
-                            <button class="language-button active" data-language="VOST">VOST</button>
-                            <button class="language-button active" data-language="VOSTFR">VOSTFR</button>
-                            <button class="language-button active" data-language="TBD">TBD</button>
-                        </div>
-
-                        <div id="seriesGrid" class="cards-grid"></div>
-                        <div id="episodesPanel" class="episodes-panel hidden"></div>
-                    </section>
                 </div>
             </section>
         </main>

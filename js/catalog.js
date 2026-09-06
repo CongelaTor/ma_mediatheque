@@ -116,6 +116,10 @@ function updateStats() {
   setText("sideNouveautes", nouveautesCount);
   setText("sideSeries", seriesCount);
   setText("sideEpisodes", episodesCount);
+  setText(
+    "homeSeriesStats",
+    `${seriesCount} séries • ${episodesCount} épisodes`,
+  );
 }
 
 function countEpisodes() {

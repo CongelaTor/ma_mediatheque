@@ -14,8 +14,8 @@
     <div class="app">
         <header class="topbar">
             <div class="brand">
-                <div class="brand-icon" id="sidebarToggle"><span>🎬</span></div>
-                <a class="brand-title" href="index.html">Médiathèque</a>
+                <div class="brand-icon sidebar-toggle" id="sidebarToggle"><span>☰</span></div>
+                <span class="brand-title">Médiathèque</span>
             </div>
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
@@ -24,13 +24,6 @@
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
-                <input id="searchInput" 
-                    class="search-input" 
-                    type="search" 
-                    autocomplete="off"
-                    placeholder="Filtrer..."
-                    oninput="handleSearch()">
-
                 <button 
                     class="icon-button refresh-button linux-hidden mediaserver-only"
                     onclick="reloadCatalog('series')">

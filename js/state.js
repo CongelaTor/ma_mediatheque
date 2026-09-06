@@ -24,30 +24,38 @@ const filmsViewStateKey = "filmsViewState";
 const seriesViewStateKey = "seriesViewState";
 
 function getSearchTextKey() {
+  let key;
   switch (currentPage) {
     case "collections":
-      return "searchCollections";
+      key = "searchCollections";
+      break;
     case "films":
-      return "searchFilms";
+      key = "searchFilms";
+      break;
     case "series":
-      return "searchSeries";
-    case "episodes":
-      return "searchEpisodes";
-    default:
-      return "searchHome";
+      key = "searchSeries";
+      break;
   }
+  return key;
 }
-console.log("searchKey =", getSearchTextKey());
 
 function saveSearchText() {
+  const key = getSearchTextKey();
+  if (!key) {
+    return;
+  }
   localStorage.setItem(
-    getSearchTextKey(),
+    key,
     document.getElementById("searchInput").value ?? "",
   );
 }
 
 function loadSearchText() {
-  return localStorage.getItem(getSearchTextKey()) ?? "";
+  const key = getSearchTextKey();
+  if (!key) {
+    return "";
+  }
+  return localStorage.getItem(key) ?? "";
 }
 
 function saveFilmsViewState() {
