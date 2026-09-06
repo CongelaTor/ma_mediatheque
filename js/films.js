@@ -119,7 +119,7 @@ function renderFilms() {
       (a, b) =>
         new Date(b.dateAjout).getTime() - new Date(a.dateAjout).getTime(),
     );
-  } else {
+  } else if (window.selectedCollectionId) {
     films = films.sort((a, b) => {
       const anneeA = a.anneeTmdb || a.annee || 0;
       const anneeB = b.anneeTmdb || b.annee || 0;
@@ -133,6 +133,10 @@ function renderFilms() {
 
       return titreA.localeCompare(titreB, "fr");
     });
+  } else {
+    films = films.sort((a, b) =>
+      (a.titreTmdb || a.titre).localeCompare(b.titreTmdb || b.titre, "fr"),
+    );
   }
 
   const collectionName = sessionStorage.getItem("selectedCollectionName");

@@ -22,7 +22,33 @@ let showMissingEpisodesOnly = false;
 
 const filmsViewStateKey = "filmsViewState";
 const seriesViewStateKey = "seriesViewState";
-const searchTextKey = "searchText";
+
+function getSearchTextKey() {
+  switch (currentPage) {
+    case "collections":
+      return "searchCollections";
+    case "films":
+      return "searchFilms";
+    case "series":
+      return "searchSeries";
+    case "episodes":
+      return "searchEpisodes";
+    default:
+      return "searchHome";
+  }
+}
+console.log("searchKey =", getSearchTextKey());
+
+function saveSearchText() {
+  localStorage.setItem(
+    getSearchTextKey(),
+    document.getElementById("searchInput").value ?? "",
+  );
+}
+
+function loadSearchText() {
+  return localStorage.getItem(getSearchTextKey()) ?? "";
+}
 
 function saveFilmsViewState() {
   const state = {
@@ -50,15 +76,4 @@ function saveSeriesViewState() {
 
 function loadSeriesViewState() {
   return JSON.parse(localStorage.getItem(seriesViewStateKey) ?? "{}");
-}
-
-function saveSearchText() {
-  localStorage.setItem(
-    searchTextKey,
-    document.getElementById("searchInput")?.value ?? "",
-  );
-}
-
-function loadSearchText() {
-  return localStorage.getItem(searchTextKey) ?? "";
 }
