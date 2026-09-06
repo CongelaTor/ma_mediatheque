@@ -46,6 +46,9 @@ let totalKeptEpisodes = 0;
 const scanSources = process.env.MEDIA_SCAN_SOURCES
   ? JSON.parse(process.env.MEDIA_SCAN_SOURCES)
   : config.sources;
+
+console.log("config.sources =", config.sources);
+console.log("scanSources =", scanSources);
 const sourcesToScan = scanSources.filter((source) => {
   if (scanType === "all") {
     return true;
@@ -153,7 +156,7 @@ function buildExistingFilmByPath(catalog) {
   const map = new Map();
   for (const film of catalog.films || []) {
     if (film.fichier) {
-      map.set(pathKey(film.fichier), film);
+      map.set(pathKey(film.fichier.replace(/^[A-Z]:/i, "")), film);
     }
   }
   return map;
@@ -181,19 +184,33 @@ function buildExistingSerieByKey(catalog) {
 
 function buildCatalogPath(fullPath) {
   const normalizedFullPath = fullPath.replaceAll("\\", "/");
-
-  for (const source of config.sources) {
+  if (!buildCatalogPath.logCount) {
+    buildCatalogPath.logCount = 0;
+  }
+  for (const source of scanSources)
     for (const sourcePath of source.paths) {
       const normalizedSourcePath = sourcePath.replaceAll("\\", "/");
+      if (buildCatalogPath.logCount < 3) {
+        console.log("FULL =", normalizedFullPath);
+        console.log("SOURCE =", normalizedSourcePath);
+        console.log(
+          "MATCH =",
+          normalizedFullPath.startsWith(`${normalizedSourcePath}/`),
+        );
+        buildCatalogPath.logCount++;
+      }
 
       if (normalizedFullPath.startsWith(`${normalizedSourcePath}/`)) {
         const rootName = normalizedSourcePath.split("/").pop();
 
+        if (buildCatalogPath.logCount < 3) {
+          console.log("rootName =", rootName);
+          const catalogPath = `/${rootName}${normalizedFullPath.substring(normalizedSourcePath.length)}`;
+          console.log("catalogPath =", catalogPath);
+        }
         return `/${rootName}${normalizedFullPath.substring(normalizedSourcePath.length)}`;
       }
     }
-  }
-
   return normalizedFullPath;
 }
 
@@ -386,8 +403,8 @@ function findAssociatedImage(videoPath) {
   return null;
 }
 function syncFilm(catalog, analyse) {
-  console.log("catalog =", existingCatalog.films[0].fichier);
-  console.log("scan    =", analyse.fichier);
+  // console.log("catalog =", existingCatalog.films[0].fichier);
+  // console.log("scan    =", analyse.fichier);
   const existing = existingFilmByPath.get(
     pathKey(analyse.fichier.replace(/^[A-Z]:/i, "")),
   );
