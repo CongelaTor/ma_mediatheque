@@ -13,12 +13,12 @@ const languageAliasesPath = path.join(
   "languageAliases.json",
 );
 
-const catalogPath = path.join(mediathequeRoot, "data", "catalog.json");
+const jsonCatalogPath = path.join(mediathequeRoot, "data", "catalog.json");
 
 const config = readJson(configPath);
 const ignoreWordsConfig = readJson(ignoreWordsPath);
 const languageAliases = readJson(languageAliasesPath);
-const existingCatalog = readJson(catalogPath);
+const existingCatalog = readJson(jsonCatalogPath);
 
 normalizeIgnoreWordsConfig(ignoreWordsConfig);
 writeJson(ignoreWordsPath, ignoreWordsConfig);
@@ -96,7 +96,7 @@ removeEmptySeries(syncedCatalog);
 recomputeDuplicates(syncedCatalog);
 sortCatalog(syncedCatalog);
 syncedCatalog.dateDernierScan = new Date().toISOString();
-writeJson(catalogPath, syncedCatalog);
+writeJson(jsonCatalogPath, syncedCatalog);
 function logStat(label, value) {
   console.log(`${label.padEnd(20)} : ${value}`);
 }
@@ -386,7 +386,9 @@ function findAssociatedImage(videoPath) {
   return null;
 }
 function syncFilm(catalog, analyse) {
-  const existing = existingFilmByPath.get(pathKey(analyse.fichier));
+  const existing = existingFilmByPath.get(
+    pathKey(analyse.fichier.replace(/^[A-Z]:/i, "")),
+  );
   if (existing) {
     catalog.films.push({
       ...existing,
@@ -423,6 +425,7 @@ function syncFilm(catalog, analyse) {
   });
   return "new";
 }
+
 function syncEpisode(catalog, analyse) {
   if (!analyse.saison || !analyse.episode) {
     return false;
