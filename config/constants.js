@@ -1,5 +1,4 @@
 const TOOL_TYPES = ["Animation", "Anime", "Film", "Spectacle"];
-
 const TOOL_GENRES = [
   "Action",
   "Aventure",
@@ -12,19 +11,44 @@ const TOOL_GENRES = [
   "Policier",
   "SF",
 ];
-
+const TMDB_IGNORE_GENRES = [
+  "Animation",
+  "Crime",
+  "Documentaire",
+  "Familial",
+  "Fantastique",
+  "Histoire",
+  "Musique",
+  "Mystère",
+  "Romance",
+  "Science-Fiction",
+  "Téléfilm",
+  "Thriller",
+  "Western",
+];
 const TOOL_STUDIOS = ["DC", "Disney", "Disney Classic", "Marvel", "Pixar"];
 
 const TOOLS_FILTER_STATE_KEY = "toolsFilterState";
-
 function loadFilterState(storageKey, defaultState) {
   return JSON.parse(
     sessionStorage.getItem(storageKey) || JSON.stringify(defaultState),
   );
 }
-
 function saveFilterState(storageKey, state) {
   sessionStorage.setItem(storageKey, JSON.stringify(state));
+}
+
+function loadSidebarState() {
+  return loadFilterState("sidebarState", {
+    ajoutsExpanded: true,
+    genreExpanded: true,
+    typeExpanded: true,
+    studioExpanded: true,
+  });
+}
+
+function saveSidebarState(state) {
+  saveFilterState("sidebarState", state);
 }
 
 const appConstants = {
@@ -45,7 +69,7 @@ function renderSidebarFilters(containerId, values, dataAttribute, allLabel) {
     return;
   }
   container.innerHTML =
-    `<button class="sidebar-link active" data-${dataAttribute}="all">${allLabel}</button>` +
+    `<button class="sidebar-link" data-${dataAttribute}="all">${allLabel}</button>` +
     values
       .map(
         (value) =>

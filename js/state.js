@@ -38,6 +38,9 @@ function getSearchTextKey() {
     case "films":
       key = "searchFilms";
       break;
+    case "tools":
+      key = "searchFilms";
+      break;
     case "series":
       key = "searchSeries";
       break;
@@ -61,7 +64,7 @@ function loadSearchText() {
   return localStorage.getItem(key) ?? "";
 }
 
-function saveFilmsViewState() {
+function saveSidebarFiltersState() {
   const state = {
     ajouts: currentAjouts,
     genre: currentGenre,
@@ -74,7 +77,7 @@ function saveFilmsViewState() {
   localStorage.setItem(filmsViewStateKey, JSON.stringify(state));
 }
 
-function loadFilmsViewState() {
+function loadSidebarFiltersState() {
   return JSON.parse(localStorage.getItem(filmsViewStateKey) ?? "{}");
 }
 

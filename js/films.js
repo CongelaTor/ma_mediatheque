@@ -1,4 +1,103 @@
-function initFilmFilters() {
+async function initFilmsPage() {
+  currentPage = "films";
+
+  initSidebarToggle();
+  await isMediaServerAvailable();
+  await loadCatalog();
+
+  updateStats();
+  updateResumeButtons();
+
+  initFilmsFilters();
+  initFilmsLanguageFilters();
+
+  document.getElementById("searchInput").value = loadSearchText();
+  currentSearch = loadSearchText();
+  document.getElementById("searchInput").oninput = () => {
+    renderFilms();
+  };
+
+  const state = loadSidebarFiltersState();
+  currentAjouts = state.ajouts ?? "all";
+  currentGenre = state.genre ?? "all";
+  currentType = state.type ?? "all";
+  currentStudio = state.studio ?? "all";
+  window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
+
+  document
+    .querySelectorAll(".nav-button")
+    .forEach((button) => button.classList.remove("active"));
+  document
+    .querySelector('.nav-button[data-page="films"]')
+    ?.classList.add("active");
+
+  if (window.selectedCollectionId) {
+    currentSearch = "";
+    document.getElementById("searchInput").value = "";
+  }
+
+  if (window.selectedCollectionId) {
+    currentSearch = "";
+  }
+  window.selectedCollectionName = sessionStorage.getItem(
+    "selectedCollectionName",
+  );
+  if (window.selectedCollectionId) {
+    document
+      .querySelector('.nav-button[data-page="films"]')
+      ?.classList.remove("active");
+    document
+      .querySelector('.nav-button[data-page="collections"]')
+      ?.classList.add("active");
+  }
+  const backToCollectionsButton = document.getElementById(
+    "backToCollectionsButton",
+  );
+
+  if (window.selectedCollectionId && backToCollectionsButton) {
+    backToCollectionsButton.classList.remove("hidden");
+
+    backToCollectionsButton.onclick = () => {
+      window.location.href = "collections.html";
+    };
+  }
+
+  document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.ajouts === currentAjouts);
+  });
+
+  document.querySelectorAll(".sidebar-link[data-genre]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.genre === currentGenre);
+  });
+
+  if (state.languages) {
+    document.querySelectorAll(".language-button").forEach((button) => {
+      button.classList.toggle(
+        "active",
+        state.languages.includes(button.dataset.language),
+      );
+    });
+  }
+
+  renderFilms();
+}
+
+function initFilmsFilters() {
+  const viewState = loadSidebarFiltersState();
+
+  currentAjouts = viewState.ajouts || "all";
+  currentGenre = viewState.genre || "all";
+  currentType = viewState.type || "all";
+  currentStudio = viewState.studio || "all";
+
+  console.log("initFilmsPage");
+  console.log("currentAjouts = ", currentAjouts);
+  console.log("currentGenre = ", currentGenre);
+  console.log("currentType = ", currentType);
+  console.log("currentStudio = ", currentStudio);
+
+  renderAllSidebarFilters();
+
   document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
     button.onclick = () => selectAjouts(button.dataset.ajouts);
   });
@@ -11,9 +110,76 @@ function initFilmFilters() {
   document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
     button.onclick = () => selectStudio(button.dataset.studio);
   });
+
+  document
+    .querySelector(`.sidebar-link[data-ajouts="${currentAjouts}"]`)
+    ?.classList.add("active");
+  document
+    .querySelector(`.sidebar-link[data-genre="${currentGenre}"]`)
+    ?.classList.add("active");
+  document
+    .querySelector(`.sidebar-link[data-type="${currentType}"]`)
+    ?.classList.add("active");
+  document
+    .querySelector(`.sidebar-link[data-studio="${currentStudio}"]`)
+    ?.classList.add("active");
+
+  const state = loadSidebarState();
+
+  if (!state.ajoutsExpanded) {
+    document.getElementById("ajoutsFilters")?.classList.add("hidden");
+  }
+
+  if (!state.genreExpanded) {
+    document.getElementById("genreFilters")?.classList.add("hidden");
+  }
+
+  if (!state.typeExpanded) {
+    document.getElementById("typeFilters")?.classList.add("hidden");
+  }
+
+  if (!state.studioExpanded) {
+    document.getElementById("studioFilters")?.classList.add("hidden");
+  }
+
+  document.getElementById("ajoutsTitle").onclick = () => {
+    const filters = document.getElementById("ajoutsFilters");
+    filters.classList.toggle("hidden");
+
+    const state = loadSidebarState();
+    state.ajoutsExpanded = !filters.classList.contains("hidden");
+    saveSidebarState(state);
+  };
+
+  document.getElementById("genreTitle").onclick = () => {
+    const filters = document.getElementById("genreFilters");
+    filters.classList.toggle("hidden");
+
+    const state = loadSidebarState();
+    state.genreExpanded = !filters.classList.contains("hidden");
+    saveSidebarState(state);
+  };
+
+  document.getElementById("typeTitle").onclick = () => {
+    const filters = document.getElementById("typeFilters");
+    filters.classList.toggle("hidden");
+
+    const state = loadSidebarState();
+    state.typeExpanded = !filters.classList.contains("hidden");
+    saveSidebarState(state);
+  };
+
+  document.getElementById("studioTitle").onclick = () => {
+    const filters = document.getElementById("studioFilters");
+    filters.classList.toggle("hidden");
+
+    const state = loadSidebarState();
+    state.studioExpanded = !filters.classList.contains("hidden");
+    saveSidebarState(state);
+  };
 }
 
-function initLanguageFilters() {
+function initFilmsLanguageFilters() {
   document.querySelectorAll(".language-button").forEach((button) => {
     button.onclick = () => {
       const language = button.dataset.language;
@@ -31,7 +197,7 @@ function initLanguageFilters() {
           ?.classList.toggle("active", !isActive);
       }
 
-      saveFilmsViewState();
+      saveSidebarFiltersState();
       renderFilms();
     };
   });
@@ -54,7 +220,7 @@ function selectAjouts(ajouts) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderFilms();
 }
 
@@ -69,7 +235,7 @@ function selectGenre(genre) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderFilms();
 }
 
@@ -84,10 +250,9 @@ function selectType(type) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderFilms();
 }
-
 function selectStudio(studio) {
   currentStudio = studio;
   document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
@@ -99,9 +264,10 @@ function selectStudio(studio) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderFilms();
 }
+
 function renderFilms() {
   currentPage = "films";
   const grid = document.getElementById("filmsGrid");
@@ -145,6 +311,8 @@ function renderFilms() {
     })
     .filter((film) => filmMatchesAjouts(film))
     .filter((film) => filmMatchesGenre(film))
+    .filter((film) => filmMatchesType(film))
+    .filter((film) => filmMatchesStudio(film))
     .filter((film) => filmMatchesLanguage(film))
     .filter((film) => matchesSearch(film.titre));
 

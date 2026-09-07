@@ -1,3 +1,193 @@
+async function initToolsPage() {
+  currentPage = "tools";
+
+  initSidebarToggle();
+  await isMediaServerAvailable();
+  await loadCatalog();
+  showUnknownGenres();
+
+  updateStats();
+  updateResumeButtons();
+
+  initToolsFilters();
+  initToolsLanguageFilters();
+
+  document.getElementById("searchInput").value = loadSearchText();
+  currentSearch = loadSearchText();
+  document.getElementById("searchInput").oninput = () => {
+    renderTools();
+  };
+
+  const state = loadSidebarFiltersState();
+  currentAjouts = state.ajouts ?? "all";
+  currentGenre = state.genre ?? "all";
+  currentType = state.type ?? "all";
+  currentStudio = state.studio ?? "all";
+  window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
+
+  document.getElementById("showTypeButton").onclick = () => {
+    showType = !showType;
+    document
+      .getElementById("showTypeButton")
+      .classList.toggle("active", showType);
+    renderTools();
+  };
+  document.getElementById("showGenreButton").onclick = () => {
+    showGenre = !showGenre;
+    document
+      .getElementById("showGenreButton")
+      .classList.toggle("active", showGenre);
+    renderTools();
+  };
+  document.getElementById("showFileButton").onclick = () => {
+    showFile = !showFile;
+    document
+      .getElementById("showFileButton")
+      .classList.toggle("active", showFile);
+    renderTools();
+  };
+  document.getElementById("applyToAllButton").onclick = () => {
+    applyToAll = !applyToAll;
+    document
+      .getElementById("applyToAllButton")
+      .classList.toggle("active", applyToAll);
+  };
+  document.getElementById("showStudioButton").onclick = () => {
+    showStudio = !showStudio;
+    document
+      .getElementById("showStudioButton")
+      .classList.toggle("active", showStudio);
+    renderTools();
+  };
+
+  document.getElementById("ajoutsTitle").onclick = () => {
+    const filters = document.getElementById("ajoutsFilters");
+    filters.classList.toggle("hidden");
+
+    const state = loadSidebarState();
+    state.ajoutsExpanded = !filters.classList.contains("hidden");
+    saveSidebarState(state);
+  };
+  const genreTitle = document.getElementById("genreTitle");
+  if (genreTitle) {
+    genreTitle.onclick = () => {
+      const filters = document.getElementById("genreFilters");
+      filters.classList.toggle("hidden");
+
+      const state = loadSidebarState();
+      state.genreExpanded = !filters.classList.contains("hidden");
+      saveSidebarState(state);
+    };
+  }
+  const typeTitle = document.getElementById("typeTitle");
+  if (typeTitle) {
+    typeTitle.onclick = () => {
+      const filters = document.getElementById("typeFilters");
+      filters.classList.toggle("hidden");
+
+      const state = loadSidebarState();
+      state.typeExpanded = !filters.classList.contains("hidden");
+      saveSidebarState(state);
+    };
+  }
+  const studioTitle = document.getElementById("studioTitle");
+  if (studioTitle) {
+    studioTitle.onclick = () => {
+      const filters = document.getElementById("studioFilters");
+      filters.classList.toggle("hidden");
+
+      const state = loadSidebarState();
+      state.studioExpanded = !filters.classList.contains("hidden");
+      saveSidebarState(state);
+    };
+  }
+  renderTools();
+}
+
+function initToolsFilters() {
+  const viewState = loadSidebarFiltersState();
+
+  currentAjouts = viewState.ajouts || "all";
+  currentGenre = viewState.genre || "all";
+  currentType = viewState.type || "all";
+  currentStudio = viewState.studio || "all";
+
+  console.log("initToolsPage");
+  console.log("currentAjouts = ", currentAjouts);
+  console.log("currentGenre = ", currentGenre);
+  console.log("currentType = ", currentType);
+  console.log("currentStudio = ", currentStudio);
+
+  renderAllSidebarFilters();
+
+  document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
+    button.onclick = () => selectToolsAjouts(button.dataset.ajouts);
+  });
+  document.querySelectorAll(".sidebar-link[data-genre]").forEach((button) => {
+    button.onclick = () => selectToolsGenre(button.dataset.genre);
+  });
+  document.querySelectorAll(".sidebar-link[data-type]").forEach((button) => {
+    button.onclick = () => selectToolsType(button.dataset.type);
+  });
+  document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
+    button.onclick = () => selectToolsStudio(button.dataset.studio);
+  });
+
+  document
+    .querySelector(`.sidebar-link[data-ajouts="${currentAjouts}"]`)
+    ?.classList.add("active");
+
+  document
+    .querySelector(`.sidebar-link[data-genre="${currentGenre}"]`)
+    ?.classList.add("active");
+
+  document
+    .querySelector(`.sidebar-link[data-type="${currentType}"]`)
+    ?.classList.add("active");
+
+  document
+    .querySelector(`.sidebar-link[data-studio="${currentStudio}"]`)
+    ?.classList.add("active");
+
+  const filterState = loadSidebarState();
+  if (!filterState.ajoutsExpanded) {
+    document.getElementById("ajoutsFilters")?.classList.add("hidden");
+  }
+  if (!filterState.genreExpanded) {
+    document.getElementById("genreFilters")?.classList.add("hidden");
+  }
+  if (!filterState.typeExpanded) {
+    document.getElementById("typeFilters")?.classList.add("hidden");
+  }
+  if (!filterState.studioExpanded) {
+    document.getElementById("studioFilters")?.classList.add("hidden");
+  }
+}
+
+function initToolsLanguageFilters() {
+  document.querySelectorAll(".language-button").forEach((button) => {
+    button.onclick = () => {
+      const language = button.dataset.language;
+      const isActive = button.classList.contains("active");
+
+      button.classList.toggle("active");
+
+      if (language === "VO") {
+        document
+          .querySelector('.language-button[data-language="VOST"]')
+          ?.classList.toggle("active", !isActive);
+
+        document
+          .querySelector('.language-button[data-language="VOSTFR"]')
+          ?.classList.toggle("active", !isActive);
+      }
+
+      saveSidebarFiltersState();
+      renderTools();
+    };
+  });
+}
+
 function renderToolButtons(values, category, fichier) {
   return values
     .map((value) => {
@@ -30,19 +220,10 @@ let showGenre = true;
 let showStudio = true;
 let applyToAll = false;
 
-function initToolsFilters() {
-  document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
-    button.onclick = () => selectToolsAjouts(button.dataset.ajouts);
-  });
-  document.querySelectorAll(".sidebar-link[data-genre]").forEach((button) => {
-    button.onclick = () => selectToolsGenre(button.dataset.genre);
-  });
-  document.querySelectorAll(".sidebar-link[data-type]").forEach((button) => {
-    button.onclick = () => selectToolsType(button.dataset.type);
-  });
-  document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
-    button.onclick = () => selectToolsStudio(button.dataset.studio);
-  });
+function getSelectedLanguages() {
+  return [...document.querySelectorAll(".language-button.active")].map(
+    (button) => button.dataset.language,
+  );
 }
 
 function selectToolsAjouts(ajouts) {
@@ -56,7 +237,7 @@ function selectToolsAjouts(ajouts) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderTools();
 }
 
@@ -71,7 +252,7 @@ function selectToolsGenre(genre) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderTools();
 }
 
@@ -86,7 +267,7 @@ function selectToolsType(type) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderTools();
 }
 
@@ -101,7 +282,7 @@ function selectToolsStudio(studio) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveFilmsViewState();
+  saveSidebarFiltersState();
   renderTools();
 }
 
@@ -115,8 +296,26 @@ function filmMatchesAjouts(fichier) {
   if (currentAjouts === "Récents") {
     return true;
   }
-  if (currentAjouts === "Doublons") {
-    return Boolean(fichier.doublonExact);
+  if (currentAjouts === "ACorriger") {
+    const genreCount = Array.isArray(fichier.genre)
+      ? fichier.genre.length
+      : fichier.genre
+        ? 1
+        : 0;
+
+    if (showGenre && (genreCount === 0 || genreCount > 1)) {
+      return true;
+    }
+
+    if (showType && !fichier.type) {
+      return true;
+    }
+
+    if (showStudio && !fichier.studio) {
+      return true;
+    }
+
+    return false;
   }
   return false;
 }
@@ -148,144 +347,6 @@ function filmMatchesStudio(fichier) {
   return fichier.studio === currentStudio;
 }
 
-function loadToolsFilterState() {
-  return loadFilterState(TOOLS_FILTER_STATE_KEY, {
-    ajoutsExpandedTools: false,
-    genreExpandedTools: false,
-    typeExpandedTools: false,
-    studioExpandedTools: false,
-    currentAjoutsTools: "all",
-    currentGenreTools: "all",
-    currentTypeTools: "all",
-    currentStudioTools: "all",
-  });
-}
-
-function saveToolsFilterState(state) {
-  sessionStorage.setItem(TOOLS_FILTER_STATE_KEY, JSON.stringify(state));
-}
-
-async function initToolsPage() {
-  await loadCatalog();
-
-  const viewState = loadFilmsViewState();
-
-  currentAjouts = viewState.ajouts || "all";
-  currentGenre = viewState.genre || "all";
-  currentType = viewState.type || "all";
-  currentStudio = viewState.studio || "all";
-
-  renderAllSidebarFilters();
-  initToolsFilters();
-
-  const filterState = loadToolsFilterState();
-  if (!filterState.ajoutsExpanded) {
-    document.getElementById("ajoutsFilters")?.classList.add("hidden");
-  }
-  if (!filterState.genreExpanded) {
-    document.getElementById("genreFilters")?.classList.add("hidden");
-  }
-  if (!filterState.typeExpanded) {
-    document.getElementById("typeFilters")?.classList.add("hidden");
-  }
-  if (!filterState.studioExpanded) {
-    document.getElementById("studioFilters")?.classList.add("hidden");
-  }
-
-  document.getElementById("searchInput").oninput = () => {
-    renderTools();
-  };
-
-  document.getElementById("showTypeButton").onclick = () => {
-    showType = !showType;
-    document
-      .getElementById("showTypeButton")
-      .classList.toggle("active", showType);
-    renderTools();
-  };
-
-  document.getElementById("showGenreButton").onclick = () => {
-    showGenre = !showGenre;
-    document
-      .getElementById("showGenreButton")
-      .classList.toggle("active", showGenre);
-    renderTools();
-  };
-
-  document.getElementById("showFileButton").onclick = () => {
-    showFile = !showFile;
-    document
-      .getElementById("showFileButton")
-      .classList.toggle("active", showFile);
-    renderTools();
-  };
-
-  document.getElementById("applyToAllButton").onclick = () => {
-    applyToAll = !applyToAll;
-    document
-      .getElementById("applyToAllButton")
-      .classList.toggle("active", applyToAll);
-  };
-
-  document.getElementById("showStudioButton").onclick = () => {
-    showStudio = !showStudio;
-    document
-      .getElementById("showStudioButton")
-      .classList.toggle("active", showStudio);
-    renderTools();
-  };
-
-  document.getElementById("searchInput").oninput = () => {
-    renderTools();
-  };
-
-  document.getElementById("ajoutsTitle").onclick = () => {
-    const filters = document.getElementById("ajoutsFilters");
-    filters.classList.toggle("hidden");
-
-    const state = loadToolsFilterState();
-    state.ajoutsExpanded = !filters.classList.contains("hidden");
-    saveToolsFilterState(state);
-  };
-
-  const genreTitle = document.getElementById("genreTitle");
-  if (genreTitle) {
-    genreTitle.onclick = () => {
-      const filters = document.getElementById("genreFilters");
-      filters.classList.toggle("hidden");
-
-      const state = loadToolsFilterState();
-      state.genreExpanded = !filters.classList.contains("hidden");
-      saveToolsFilterState(state);
-    };
-  }
-
-  const typeTitle = document.getElementById("typeTitle");
-  if (typeTitle) {
-    typeTitle.onclick = () => {
-      const filters = document.getElementById("typeFilters");
-      filters.classList.toggle("hidden");
-
-      const state = loadToolsFilterState();
-      state.typeExpanded = !filters.classList.contains("hidden");
-      saveToolsFilterState(state);
-    };
-  }
-
-  const studioTitle = document.getElementById("studioTitle");
-  if (studioTitle) {
-    studioTitle.onclick = () => {
-      const filters = document.getElementById("studioFilters");
-      filters.classList.toggle("hidden");
-
-      const state = loadToolsFilterState();
-      state.studioExpanded = !filters.classList.contains("hidden");
-      saveToolsFilterState(state);
-    };
-  }
-  renderTools();
-}
-
 async function saveFilmMetadata(fichier) {
   const response = await fetch("http://localhost:9876/save-film-metadata", {
     method: "POST",
@@ -306,6 +367,30 @@ async function saveFilmMetadata(fichier) {
 }
 
 let displayedFiles = [];
+
+function findUnknownGenres() {
+  const knownGenres = new Set([...TOOL_GENRES, ...TMDB_IGNORE_GENRES]);
+
+  const unknownGenres = new Set();
+
+  for (const film of catalog.films) {
+    const genres = Array.isArray(film.genre)
+      ? film.genre
+      : film.genre
+        ? [film.genre]
+        : [];
+
+    for (const genre of genres) {
+      if (!knownGenres.has(genre)) {
+        unknownGenres.add(genre);
+      }
+    }
+  }
+
+  const result = [...unknownGenres].sort();
+  console.log("Genres inconnus :", result);
+  alert(result.length === 0 ? "Aucun genre inconnu" : result.join("\n"));
+}
 
 function renderTools() {
   const container = document.getElementById("toolsContainer");
@@ -402,7 +487,16 @@ function renderTools() {
                   showGenre
                     ? `
                 <span class="tool-group">
-                    ${renderToolButtons(TOOL_GENRES, "genre", fichier)}
+                    ${renderToolButtons(
+                      [
+                        ...TOOL_GENRES,
+                        ...TMDB_IGNORE_GENRES.filter((genre) =>
+                          fichier.genre?.includes(genre),
+                        ),
+                      ],
+                      "genre",
+                      fichier,
+                    )}
                 </span>
                 `
                     : ""
@@ -477,4 +571,26 @@ function renderTools() {
         renderTools();
       };
     });
+}
+
+function showUnknownGenres() {
+  const knownGenres = new Set([...TOOL_GENRES, ...TMDB_IGNORE_GENRES]);
+  const unknownGenres = new Set();
+  for (const film of catalog.films) {
+    const genres = Array.isArray(film.genre)
+      ? film.genre
+      : film.genre
+        ? [film.genre]
+        : [];
+    for (const genre of genres) {
+      if (!knownGenres.has(genre)) {
+        unknownGenres.add(genre);
+      }
+    }
+  }
+  if (unknownGenres.size === 0) {
+    return;
+  }
+  const result = [...unknownGenres].sort();
+  console.log("Genres inconnus à ajouter dans TMDB_IGNORE_GENRES :", result);
 }

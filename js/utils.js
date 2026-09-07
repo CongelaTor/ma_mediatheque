@@ -42,7 +42,13 @@ function handleSearch() {
   }
 
   if (currentPage === "films" && typeof renderFilms === "function") {
-    saveFilmsViewState();
+    saveSidebarFiltersState();
+    saveSearchText();
+    renderFilms();
+  }
+
+  if (currentPage === "tools" && typeof renderTools === "function") {
+    saveSidebarFiltersState();
     saveSearchText();
     renderFilms();
   }
