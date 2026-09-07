@@ -1207,3 +1207,51 @@ background: #f97316;
 .sidebar-toggle:hover {
     opacity: 0.8;
 }
+
+.tools-container {
+    padding: 12px;
+}
+
+.tool-film {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+.tool-film-title {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
+    font-weight: 600;
+}
+
+.tool-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.tool-button {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.tool-duplicate-separator {
+    height: 12px;
+}
+
+.tool-group {
+    display: inline-flex;
+    gap: 4px;
+    margin-right: 12px;
+}
+.tools-filter-separator {
+    display: inline-block;
+    width: 14px;
+}

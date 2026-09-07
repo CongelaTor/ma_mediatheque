@@ -9308,7 +9308,9 @@
             "dureeTmdb": 70,
             "descriptionTmdb": "Patch, le chiot de Pongo et Perdita, a l’opportunité de rencontrer son idole, Ouragan. Lorsqu’ils apprennent qu’il sera remplacé, Ouragan et Patch se transforment en vrais héros. Et quand Cruella d’Enfer refait surface, c’est le travail d’équipe de Patch et d’Ouragan qui les sauvera.",
             "collectionId": 100693,
-            "collectionNom": "Les 101 Dalmatiens (Animation) - Saga"
+            "collectionNom": "Les 101 Dalmatiens (Animation) - Saga",
+            "type": "Animation",
+            "studio": "Disney Classic"
         },
         {
             "id": "les_4_fantastiques",
@@ -19430,7 +19432,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.595Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -19627,7 +19630,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.603Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -19824,7 +19828,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.611Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 4,
@@ -20045,7 +20050,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.620Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 5,
@@ -20266,7 +20272,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.630Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 6,
@@ -20487,7 +20494,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.640Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 7,
@@ -20648,7 +20656,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.646Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
