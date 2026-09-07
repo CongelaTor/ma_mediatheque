@@ -1,15 +1,16 @@
-const TOOL_TYPES = ["Animation", "Film", "Spectacle"];
+const TOOL_TYPES = ["Animation", "Anime", "Film", "Spectacle"];
 
 const TOOL_GENRES = [
   "Action",
   "Aventure",
+  "Biopic",
   "Comédie",
   "Comédie musicale",
+  "Drame",
   "Espionnage",
   "Guerre",
   "Policier",
   "SF",
-  "Western",
 ];
 
 const TOOL_STUDIOS = ["DC", "Disney", "Disney Classic", "Marvel", "Pixar"];
@@ -18,16 +19,12 @@ const TOOLS_FILTER_STATE_KEY = "toolsFilterState";
 
 function loadFilterState(storageKey, defaultState) {
   return JSON.parse(
-    sessionStorage.getItem(storageKey) ||
-      JSON.stringify(defaultState)
+    sessionStorage.getItem(storageKey) || JSON.stringify(defaultState),
   );
 }
 
 function saveFilterState(storageKey, state) {
-  sessionStorage.setItem(
-    storageKey,
-    JSON.stringify(state)
-  );
+  sessionStorage.setItem(storageKey, JSON.stringify(state));
 }
 
 const appConstants = {

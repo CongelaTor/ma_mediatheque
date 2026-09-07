@@ -1,10 +1,16 @@
 let catalog = null;
 let currentPage = "home";
+
 let currentSerie = null;
 let currentSeason = null;
+
 let currentAjouts = "all";
 let currentGenre = "all";
+let currentType = "all";
+let currentStudio = "all";
+
 let currentSearch = "";
+
 const languageOrder = ["VO", "VF", "VOST", "VOSTFR", "TBD"];
 const savedSeriesLanguages = sessionStorage.getItem(
   "maMediatheque.activeSeriesLanguages",
@@ -44,10 +50,7 @@ function saveSearchText() {
   if (!key) {
     return;
   }
-  localStorage.setItem(
-    key,
-    document.getElementById("searchInput").value ?? "",
-  );
+  localStorage.setItem(key, document.getElementById("searchInput").value ?? "");
 }
 
 function loadSearchText() {
@@ -62,11 +65,12 @@ function saveFilmsViewState() {
   const state = {
     ajouts: currentAjouts,
     genre: currentGenre,
+    type: currentType,
+    studio: currentStudio,
     languages: [...document.querySelectorAll(".language-button.active")].map(
       (button) => button.dataset.language,
     ),
   };
-
   localStorage.setItem(filmsViewStateKey, JSON.stringify(state));
 }
 

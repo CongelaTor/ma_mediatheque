@@ -2,9 +2,14 @@ function initFilmFilters() {
   document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
     button.onclick = () => selectAjouts(button.dataset.ajouts);
   });
-
   document.querySelectorAll(".sidebar-link[data-genre]").forEach((button) => {
     button.onclick = () => selectGenre(button.dataset.genre);
+  });
+  document.querySelectorAll(".sidebar-link[data-type]").forEach((button) => {
+    button.onclick = () => selectType(button.dataset.type);
+  });
+  document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
+    button.onclick = () => selectStudio(button.dataset.studio);
   });
 }
 
@@ -68,6 +73,35 @@ function selectGenre(genre) {
   renderFilms();
 }
 
+function selectType(type) {
+  currentType = type;
+  document.querySelectorAll(".sidebar-link[data-type]").forEach((button) => {
+    button.classList.remove("active");
+  });
+  const activeButton = document.querySelector(
+    `.sidebar-link[data-type="${type}"]`,
+  );
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
+  saveFilmsViewState();
+  renderFilms();
+}
+
+function selectStudio(studio) {
+  currentStudio = studio;
+  document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
+    button.classList.remove("active");
+  });
+  const activeButton = document.querySelector(
+    `.sidebar-link[data-studio="${studio}"]`,
+  );
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
+  saveFilmsViewState();
+  renderFilms();
+}
 function renderFilms() {
   currentPage = "films";
   const grid = document.getElementById("filmsGrid");
@@ -187,6 +221,20 @@ function filmMatchesGenre(film) {
     return film.genre.includes(currentGenre);
   }
   return film.genre === currentGenre;
+}
+
+function filmMatchesType(film) {
+  if (currentType === "all") {
+    return true;
+  }
+  return film.type === currentType;
+}
+
+function filmMatchesStudio(film) {
+  if (currentStudio === "all") {
+    return true;
+  }
+  return film.studio === currentStudio;
 }
 
 function filmMatchesLanguage(film) {

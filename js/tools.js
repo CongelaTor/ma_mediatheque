@@ -34,9 +34,14 @@ function initToolsFilters() {
   document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
     button.onclick = () => selectToolsAjouts(button.dataset.ajouts);
   });
-
   document.querySelectorAll(".sidebar-link[data-genre]").forEach((button) => {
     button.onclick = () => selectToolsGenre(button.dataset.genre);
+  });
+  document.querySelectorAll(".sidebar-link[data-type]").forEach((button) => {
+    button.onclick = () => selectToolsType(button.dataset.type);
+  });
+  document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
+    button.onclick = () => selectToolsStudio(button.dataset.studio);
   });
 }
 
@@ -51,6 +56,7 @@ function selectToolsAjouts(ajouts) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
+  saveFilmsViewState();
   renderTools();
 }
 
@@ -65,6 +71,37 @@ function selectToolsGenre(genre) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
+  saveFilmsViewState();
+  renderTools();
+}
+
+function selectToolsType(type) {
+  currentType = type;
+  document.querySelectorAll(".sidebar-link[data-type]").forEach((button) => {
+    button.classList.remove("active");
+  });
+  const activeButton = document.querySelector(
+    `.sidebar-link[data-type="${type}"]`,
+  );
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
+  saveFilmsViewState();
+  renderTools();
+}
+
+function selectToolsStudio(studio) {
+  currentStudio = studio;
+  document.querySelectorAll(".sidebar-link[data-studio]").forEach((button) => {
+    button.classList.remove("active");
+  });
+  const activeButton = document.querySelector(
+    `.sidebar-link[data-studio="${studio}"]`,
+  );
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
+  saveFilmsViewState();
   renderTools();
 }
 
@@ -97,6 +134,20 @@ function filmMatchesGenre(fichier) {
   return fichier.genre === currentGenre;
 }
 
+function filmMatchesType(fichier) {
+  if (currentType === "all") {
+    return true;
+  }
+  return fichier.type === currentType;
+}
+
+function filmMatchesStudio(fichier) {
+  if (currentStudio === "all") {
+    return true;
+  }
+  return fichier.studio === currentStudio;
+}
+
 function loadToolsFilterState() {
   return loadFilterState(TOOLS_FILTER_STATE_KEY, {
     ajoutsExpandedTools: false,
@@ -117,8 +168,16 @@ function saveToolsFilterState(state) {
 async function initToolsPage() {
   await loadCatalog();
 
+  const viewState = loadFilmsViewState();
+
+  currentAjouts = viewState.ajouts || "all";
+  currentGenre = viewState.genre || "all";
+  currentType = viewState.type || "all";
+  currentStudio = viewState.studio || "all";
+
   renderAllSidebarFilters();
   initToolsFilters();
+
   const filterState = loadToolsFilterState();
   if (!filterState.ajoutsExpanded) {
     document.getElementById("ajoutsFilters")?.classList.add("hidden");
@@ -253,6 +312,8 @@ function renderTools() {
   let fichiers = catalog.films
     .filter((fichier) => filmMatchesAjouts(fichier))
     .filter((fichier) => filmMatchesGenre(fichier))
+    .filter((fichier) => filmMatchesType(fichier))
+    .filter((fichier) => filmMatchesStudio(fichier))
     .filter((fichier) => {
       const filtre = document
         .getElementById("searchInput")
@@ -366,32 +427,48 @@ function renderTools() {
     .querySelectorAll(".language-button[data-category]")
     .forEach((button) => {
       button.onclick = async () => {
+        if (applyToAll) {
+          showToast(`Mise à jour de ${displayedFiles.length} fichiers...`);
+        }
+
         const fichierPath = button.dataset.fichier;
         const fichier = catalog.films.find(
           (item) => item.fichier === fichierPath,
         );
+
         if (!fichier) {
           return;
         }
+
         const fichiersToUpdate = applyToAll ? displayedFiles : [fichier];
         const category = button.dataset.category;
         const value = button.dataset.value;
-
+        const shouldActivate = !button.classList.contains("active");
         for (const fichierToUpdate of fichiersToUpdate) {
           if (category === "type") {
-            fichierToUpdate.type = value;
+            if (!shouldActivate) {
+              fichierToUpdate.type = null;
+            } else {
+              fichierToUpdate.type = value;
+            }
           }
           if (category === "studio") {
-            fichierToUpdate.studio = value;
+            if (!shouldActivate) {
+              fichierToUpdate.studio = null;
+            } else {
+              fichierToUpdate.studio = value;
+            }
           }
           if (category === "genre") {
             const genres = Array.isArray(fichierToUpdate.genre)
               ? [...fichierToUpdate.genre]
               : [];
-            if (genres.includes(value)) {
+            if (!shouldActivate) {
               fichierToUpdate.genre = genres.filter((g) => g !== value);
             } else {
-              genres.push(value);
+              if (!genres.includes(value)) {
+                genres.push(value);
+              }
               fichierToUpdate.genre = genres;
             }
           }
