@@ -48,10 +48,8 @@ function handleSearch() {
   }
 
   if (currentPage === "tools" && typeof renderTools === "function") {
-    saveSidebarFiltersState();
-    saveToolsButtonsState();
     saveSearchText();
-    renderFilms();
+    renderTools();
   }
 
   if (currentPage === "series" && typeof renderSeries === "function") {

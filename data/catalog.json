@@ -3965,7 +3965,7 @@
             "descriptionTmdb": "Décidément, John McLane ne peut jamais avoir la paix ! Après avoir libéré un building des mains d’un terroriste, après avoir sauvé sa femme d’un avion en perdition, le voilà aux prises avec un psychopathe qui le fait jouer à un « Jacques a dit » meurtrier. Les règles sont simples, si il ne résout pas les énigmes posées, une bombe explose dans un lieu public.",
             "collectionId": 1570,
             "collectionNom": "Die Hard - Saga",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -4384,7 +4384,9 @@
             "dureeTmdb": 109,
             "descriptionTmdb": "Pendant la draft NFL (Ligue de Football Américain), le manager des Cleveland Browns cherche à obtenir le premier choix pour son club.",
             "collectionId": null,
-            "collectionNom": null
+            "collectionNom": null,
+            "type": "Film",
+            "studio": null
         },
         {
             "id": "dragon_3_2019",
@@ -4691,7 +4693,7 @@
             "descriptionTmdb": "Jerry et Rachel ne se connaissent pas, mais un cauchemar leur a donné rendez-vous. Parce que quelqu'un l'a fait passer pour un terroriste et qu'il est désormais recherché par toutes les polices, Jerry n'a pas d'autre choix que d'obéir à la mystérieuse voix qui contrôle chacun de ses faits et gestes. Rachel est elle aussi obligée d'obéir, sinon ce sera son fils, Sam, qui le paiera de sa vie. S'ils veulent survivre au piège, ils vont devoir à la fois échapper à leurs poursuivants et percer le secret de ceux qui mènent ce jeu infernal...",
             "collectionId": null,
             "collectionNom": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -5349,7 +5351,7 @@
             "descriptionTmdb": "John Hobbes, un policier d'élite de la brigade criminelle, a pour principe d'assister aux derniers instants de ses clients. C'est ainsi qu'il se rend à l'exécution d'un serial killer, Reese. Avant d'être conduit à la chambre à gaz, celui-ci le surprend en lui proposant une énigme et en se livrant à des invocations dans une langue étrangère. Quelques heures plus tard, Hobbes est réveillé par un étrange appel.",
             "collectionId": null,
             "collectionNom": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -5626,7 +5628,7 @@
             "descriptionTmdb": "Un meurtre oblige Dom Toretto, un ancien taulard en cavale, et l'agent Brian O'Conner à revenir à L.A. où leur querelle se rallume. Mais confrontés à un ennemi commun, ils sont contraints à former une alliance incertaine s'ils espèrent parvenir à déjouer ses plans. De l'attaque de convoi aux glissades de précision qui les mèneront hors de leurs propres frontières, les deux hommes trouveront le meilleur moyen de prendre leur revanche : en poussant les limites de ce qui est faisable au volant d'un bolide.",
             "collectionId": 9485,
             "collectionNom": "Fast and Furious - Saga",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -5686,7 +5688,7 @@
             "descriptionTmdb": "Laissé à moitié mort par Dominic Toretto et son clan de voleur de voitures as du volant, le criminel Owen Shaw gît sur un lit d'hôpital à Londres. Déterminé à le venger, son frère Deckard Shaw commet des attaques vicieuses contre les membres de la famille de Toretto, notamment contre sa sœur, son beau-frère et leur petit garçon. Une aide inespérée leur parvient en la personne de Frank Petty, agent des services secrets américains aux ressources impressionnantes. Il promet assistance à Dominic, en échange de quoi ce dernier devra libérer une talentueuse informaticienne, nommée Ramsey, qui a mis au point un logiciel de surveillance ultraperfectionné baptisé « God's Eye ». La jeune femme est en effet retenue prisonnière par Jakande, un dangereux terroriste, au milieu des inaccessibles montagnes de l'Azerbaïdjan. Le clan de Dominic se reforme donc pour cette dangereuse mission.",
             "collectionId": 9485,
             "collectionNom": "Fast and Furious - Saga",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -5716,7 +5718,7 @@
             "descriptionTmdb": "Maintenant que Dom et Letty sont en lune de miel, que Brian et Mia se sont rangés et que le reste de l’équipe a été disculpé, la bande de globe-trotteurs retrouve un semblant de vie normale. Mais quand une mystérieuse femme entraîne Dom dans le monde de la criminalité, ce dernier ne pourra éviter de trahir ses proches qui vont faire face à des épreuves qu’ils n’avaient jamais rencontrées jusqu’alors.  Des rivages de Cuba aux rues de New York en passant par les plaines gelées de la mer arctique de Barrents, notre équipe va sillonner le globe pour tenter d'empêcher une anarchiste de déchaîner un chaos mondial et de ramener à la maison l’homme qui a fait d’eux une famille.",
             "collectionId": 9485,
             "collectionNom": "Fast and Furious - Saga",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -6835,7 +6837,7 @@
             "descriptionTmdb": "Gran Turismo est inspiré de l'incroyable histoire vécue d'une invraisemblable bande d'infortunés – un amateur de jeu vidéo de classe ouvrière, un ex-pilote d'autos de course paumé et un idéaliste de l'industrie du sport motorisé. Ensemble, ils risquent tout pour percer dans le sport le plus prestigieux au monde. Gran Turismo est une captivante histoire et un feu roulant d'action qui prouvent que tout est possible lorsqu'on conduit avec l'énergie du désespoir.",
             "collectionId": null,
             "collectionNom": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -6895,7 +6897,7 @@
             "descriptionTmdb": "L'incroyable histoire vraie du plus grand joueur sans bourse décrochée de l'histoire du football universitaire.",
             "collectionId": null,
             "collectionNom": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -7294,7 +7296,9 @@
             "dureeTmdb": 114,
             "descriptionTmdb": "Un joueur professionnel de base-ball,en proie à des problème liées à l'alcool,est forcé de rejoindre sa ville natalepour y suivre une cure de sevrage.\r En acceptant un poste d'entraîneur dans une équipe de la Little League,Cory Brand tentera de prendre une nouveau départet d'accepter son passé mouvementé.",
             "collectionId": null,
-            "collectionNom": null
+            "collectionNom": null,
+            "type": "Film",
+            "studio": null
         },
         {
             "id": "honey_2",
@@ -7413,7 +7417,7 @@
             "descriptionTmdb": "Dans le but de remporter une bourse d'études, Skyler, une aspirante danseuse, a décidé de se joindre à une troupe de danse dont fait partie sa sœur Tosha qui, elle, a reçu une formation professionnelle. Skyler s'entraîne sans arrêt dans le milieu de la danse émergente d'Atlanta où elle attire l'attention de Tyrell. Ce dernier l'aide à repousser les limites de ses mouvements sensuels et ses aptitudes en affrontement hip-hop afin de lui permettre de réaliser ses rêves...",
             "collectionId": 144689,
             "collectionNom": "Honey - Saga",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -11455,7 +11459,9 @@
             "dureeTmdb": 133,
             "descriptionTmdb": "Voici l’histoire vraie de Billy Beane, un ancien joueur de baseball prometteur qui, à défaut d’avoir réussi sur le terrain, décida de tenter sa chance en dirigeant une équipe comme personne ne l’avait fait auparavant… Alors que la saison 2002 se profile, Billy Beane, le manager général des Oakland Athletics, est confronté à une situation difficile : sa petite équipe a encore perdu ses meilleurs joueurs, attirés par les grands clubs et leurs gros salaires. Bien décidé à gagner malgré tout, il cherche des solutions qui ne coûtent rien et auxquelles personne n’aurait pensé avant… Il va s’appuyer sur des théories statistiques et engager Peter Brand, un économiste amateur de chiffres issu de Yale. Ensemble, contre tous les principes, ils reconsidèrent la valeur de chaque joueur sur la base des statistiques et réunissent une brochette de laissés-pour-compte oubliés par l’establishment du baseball.",
             "collectionId": null,
-            "collectionNom": null
+            "collectionNom": null,
+            "type": "Film",
+            "studio": null
         },
         {
             "id": "moonbound_custom_onlymovie_2021",
@@ -13945,7 +13951,7 @@
             "collectionDescription": null,
             "collectionImage": null,
             "collectionTmdbUrl": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -13978,7 +13984,7 @@
             "collectionDescription": null,
             "collectionImage": null,
             "collectionTmdbUrl": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -14077,7 +14083,7 @@
             "collectionDescription": null,
             "collectionImage": null,
             "collectionTmdbUrl": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -14176,7 +14182,7 @@
             "collectionDescription": "James Bond, agent 007, autorisé à tuer, est le héros de la plus longue saga cinématographique de tous les temps, au succès sans égal. Armé de son Walther PPK, accompagné des plus jolies filles de la terre et opposé aux plus cyniques des méchants, il a poursuivi le mal aux quatre coins du monde, survécu à la guerre froide et à la chute du mur de Berlin.",
             "collectionImage": "https://image.tmdb.org/t/p/w500/ammkAiFPUQhqrWAdzNZSXR8VMpy.jpg",
             "collectionTmdbUrl": "https://www.themoviedb.org/collection/645",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -14242,7 +14248,7 @@
             "collectionDescription": "Speed, est un film d'action américain de 1994 réalisé par Jan de Bont. Jack Traven, officier du LAPD, devient le centre d'intérêt d'Howard Payne, un bombardier et extorqueur, sergent à la retraite de l'équipe de déminage d'Atlanta. Le film se déroule à Los Angeles en 1993. En 1997, une suite, Speed 2 : Cruise Control, sort. Sandra Bullock accepte de jouer à nouveau le rôle d'Annie, pour obtenir un soutien financier pour un autre projet, mais Keanu Reeves décline l'offre de revenir dans le rôle de Jack. En conséquence, Jason Patric a été intégré à l'histoire en tant qu'Alex Shaw, le nouveau petit ami d'Annie, qui a rompu avec Jack parce qu'elle s'inquiétait du mode de vie dangereux de ce dernier. Willem Dafoe joue le rôle du méchant John Geiger, et Glenn Plummer (qui joue la victime du carjacking de Reeves) est également un caméléon dans le rôle d'un conducteur de bateau. Le film est considéré comme l'une des pires suites de tous les temps.",
             "collectionImage": "https://image.tmdb.org/t/p/w500/o0eZDtoeMSxQbT3hjPtF0qSDJU0.jpg",
             "collectionTmdbUrl": "https://www.themoviedb.org/collection/43064",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -15607,7 +15613,9 @@
             "collectionNom": null,
             "collectionDescription": null,
             "collectionImage": null,
-            "collectionTmdbUrl": null
+            "collectionTmdbUrl": null,
+            "type": "Film",
+            "studio": null
         },
         {
             "id": "the_rock_1996",
@@ -16225,7 +16233,7 @@
             "collectionDescription": null,
             "collectionImage": null,
             "collectionTmdbUrl": null,
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -16552,7 +16560,7 @@
             "collectionDescription": "Les films \"Step Up\" sont une série de films de danse/romance-drame créés par Duane Adler.",
             "collectionImage": "https://image.tmdb.org/t/p/w500/syG4B7AnF9W8Cd0QEebl50YyN7M.jpg",
             "collectionTmdbUrl": "https://www.themoviedb.org/collection/86092",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {
@@ -17440,7 +17448,7 @@
             "collectionDescription": "Vin Diesel interprète xXx, un agent secret rebelle travaillant pour l'administration américaine. xXx doit d'abord démanteler un reseau de criminels caché dans les montagnes pour rendre service à la patrie.",
             "collectionImage": "https://image.tmdb.org/t/p/w500/wca7mxkpJwfJNOoHllonrSqePsq.jpg",
             "collectionTmdbUrl": "https://www.themoviedb.org/collection/52785",
-            "type": null,
+            "type": "Film",
             "studio": null
         },
         {

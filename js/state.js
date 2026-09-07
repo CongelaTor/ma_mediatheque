@@ -27,6 +27,7 @@ const tmdbSearchBaseUrl = "https://www.themoviedb.org/search";
 let showMissingEpisodesOnly = false;
 
 const filmsViewStateKey = "filmsViewState";
+const toolsButtonsStateKey = "toolsButtonsState";
 const seriesViewStateKey = "seriesViewState";
 
 function getSearchTextKey() {
@@ -78,17 +79,32 @@ function saveSidebarFiltersState() {
 }
 
 function saveToolsButtonsState() {
-  const state = loadSidebarFiltersState();
-  state.showType = showType;
-  state.showGenre = showGenre;
-  state.showStudio = showStudio;
-  localStorage.setItem(filmsViewStateKey, JSON.stringify(state));
+  const state = {
+    showType,
+    showGenre,
+    showStudio,
+    showFile,
+  };
+  localStorage.setItem(toolsButtonsStateKey, JSON.stringify(state));
 }
+function saveToolsFiltersState() {
+  if (currentAjouts !== "ACorriger") {
+    const state = loadSidebarFiltersState();
+    state.ajouts = currentAjouts;
+    state.genre = currentGenre;
+    state.type = currentType;
+    state.studio = currentStudio;
+    localStorage.setItem(filmsViewStateKey, JSON.stringify(state));
+  }
 
+  saveToolsButtonsState();
+}
 function loadSidebarFiltersState() {
   return JSON.parse(localStorage.getItem(filmsViewStateKey) ?? "{}");
 }
-
+function loadToolsButtonsState() {
+  return JSON.parse(localStorage.getItem(toolsButtonsStateKey) ?? "{}");
+}
 function saveSeriesViewState() {
   const state = {
     languages: [...activeSeriesLanguages],

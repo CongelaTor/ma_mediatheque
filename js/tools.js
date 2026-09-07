@@ -25,13 +25,18 @@ async function initToolsPage() {
   };
 
   const state = loadSidebarFiltersState();
-  currentAjouts = state.ajouts ?? "all";
+  const toolsState = loadToolsButtonsState();
+  currentAjouts =
+    currentAjouts === "ACorriger" ? currentAjouts : (state.ajouts ?? "all");
+
   currentGenre = state.genre ?? "all";
   currentType = state.type ?? "all";
   currentStudio = state.studio ?? "all";
-  showType = state.showType ?? true;
-  showGenre = state.showGenre ?? true;
-  showStudio = state.showStudio ?? true;
+
+  showType = toolsState.showType ?? true;
+  showGenre = toolsState.showGenre ?? true;
+  showStudio = toolsState.showStudio ?? true;
+  showFile = toolsState.showFile ?? false;
   window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
 
   document.getElementById("applyToAllButton").onclick = () => {
@@ -46,9 +51,7 @@ async function initToolsPage() {
     document
       .getElementById("showFileButton")
       .classList.toggle("active", showFile);
-    saveSidebarFiltersState();
-    saveToolsButtonsState();
-
+    saveToolsFiltersState();
     renderTools();
   };
   document.getElementById("showTypeButton").onclick = () => {
@@ -56,8 +59,7 @@ async function initToolsPage() {
     document
       .getElementById("showTypeButton")
       .classList.toggle("active", showType);
-    saveSidebarFiltersState();
-    saveToolsButtonsState();
+    saveToolsFiltersState();
     renderTools();
   };
   document.getElementById("showGenreButton").onclick = () => {
@@ -65,8 +67,7 @@ async function initToolsPage() {
     document
       .getElementById("showGenreButton")
       .classList.toggle("active", showGenre);
-    saveSidebarFiltersState();
-    saveToolsButtonsState();
+    saveToolsFiltersState();
     renderTools();
   };
   document.getElementById("showStudioButton").onclick = () => {
@@ -74,8 +75,7 @@ async function initToolsPage() {
     document
       .getElementById("showStudioButton")
       .classList.toggle("active", showStudio);
-    saveSidebarFiltersState();
-    saveToolsButtonsState();
+    saveToolsFiltersState();
     renderTools();
   };
 
@@ -122,6 +122,10 @@ async function initToolsPage() {
   }
 
   document
+    .getElementById("showFileButton")
+    .classList.toggle("active", showFile);
+
+  document
     .getElementById("showTypeButton")
     .classList.toggle("active", showType);
 
@@ -132,7 +136,6 @@ async function initToolsPage() {
   document
     .getElementById("showStudioButton")
     .classList.toggle("active", showStudio);
-
   renderTools();
 }
 
@@ -213,9 +216,7 @@ function initToolsLanguageFilters() {
           .querySelector('.language-button[data-language="VOSTFR"]')
           ?.classList.toggle("active", !isActive);
       }
-
-      saveSidebarFiltersState();
-      saveToolsButtonsState();
+      saveToolsFiltersState();
       renderTools();
     };
   });
@@ -264,8 +265,7 @@ function selectToolsAjouts(ajouts) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveSidebarFiltersState();
-  saveToolsButtonsState();
+  saveToolsFiltersState();
   renderTools();
 }
 
@@ -280,8 +280,7 @@ function selectToolsGenre(genre) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveSidebarFiltersState();
-  saveToolsButtonsState();
+  saveToolsFiltersState();
   renderTools();
 }
 
@@ -296,8 +295,7 @@ function selectToolsType(type) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveSidebarFiltersState();
-  saveToolsButtonsState();
+  saveToolsFiltersState();
   renderTools();
 }
 
@@ -312,8 +310,7 @@ function selectToolsStudio(studio) {
   if (activeButton) {
     activeButton.classList.add("active");
   }
-  saveSidebarFiltersState();
-  saveToolsButtonsState();
+  saveToolsFiltersState();
   renderTools();
 }
 
@@ -378,20 +375,21 @@ function filmMatchesStudio(fichier) {
   return fichier.studio === currentStudio;
 }
 
-async function saveFilmMetadata(fichier) {
+async function saveFilmMetadata(fichiers) {
   const response = await fetch("http://localhost:9876/save-film-metadata", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      fichier: fichier.fichier,
-      type: fichier.type || null,
-      genre: fichier.genre || [],
-      studio: fichier.studio || null,
+      fichiers: fichiers.map((fichier) => ({
+        fichier: fichier.fichier,
+        type: fichier.type || null,
+        genre: fichier.genre || [],
+        studio: fichier.studio || null,
+      })),
     }),
   });
-
   if (!response.ok) {
     throw new Error(await response.text());
   }

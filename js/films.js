@@ -86,6 +86,10 @@ function initFilmsFilters() {
   const viewState = loadSidebarFiltersState();
 
   currentAjouts = viewState.ajouts || "all";
+  const validAjouts = ["all", "Nouveautés", "Récents", "Doublons"];
+  if (!validAjouts.includes(currentAjouts)) {
+    currentAjouts = "all";
+  }
   currentGenre = viewState.genre || "all";
   currentType = viewState.type || "all";
   currentStudio = viewState.studio || "all";
