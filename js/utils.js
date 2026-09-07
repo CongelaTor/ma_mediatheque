@@ -49,6 +49,7 @@ function handleSearch() {
 
   if (currentPage === "tools" && typeof renderTools === "function") {
     saveSidebarFiltersState();
+    saveToolsButtonsState();
     saveSearchText();
     renderFilms();
   }

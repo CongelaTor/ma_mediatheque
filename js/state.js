@@ -77,6 +77,14 @@ function saveSidebarFiltersState() {
   localStorage.setItem(filmsViewStateKey, JSON.stringify(state));
 }
 
+function saveToolsButtonsState() {
+  const state = loadSidebarFiltersState();
+  state.showType = showType;
+  state.showGenre = showGenre;
+  state.showStudio = showStudio;
+  localStorage.setItem(filmsViewStateKey, JSON.stringify(state));
+}
+
 function loadSidebarFiltersState() {
   return JSON.parse(localStorage.getItem(filmsViewStateKey) ?? "{}");
 }

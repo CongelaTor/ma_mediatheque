@@ -1,3 +1,9 @@
+let showFile = false;
+let showType = true;
+let showGenre = true;
+let showStudio = true;
+let applyToAll = false;
+
 async function initToolsPage() {
   currentPage = "tools";
 
@@ -23,13 +29,35 @@ async function initToolsPage() {
   currentGenre = state.genre ?? "all";
   currentType = state.type ?? "all";
   currentStudio = state.studio ?? "all";
+  showType = state.showType ?? true;
+  showGenre = state.showGenre ?? true;
+  showStudio = state.showStudio ?? true;
   window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
 
+  document.getElementById("applyToAllButton").onclick = () => {
+    applyToAll = !applyToAll;
+    document
+      .getElementById("applyToAllButton")
+      .classList.toggle("active", applyToAll);
+  };
+
+  document.getElementById("showFileButton").onclick = () => {
+    showFile = !showFile;
+    document
+      .getElementById("showFileButton")
+      .classList.toggle("active", showFile);
+    saveSidebarFiltersState();
+    saveToolsButtonsState();
+
+    renderTools();
+  };
   document.getElementById("showTypeButton").onclick = () => {
     showType = !showType;
     document
       .getElementById("showTypeButton")
       .classList.toggle("active", showType);
+    saveSidebarFiltersState();
+    saveToolsButtonsState();
     renderTools();
   };
   document.getElementById("showGenreButton").onclick = () => {
@@ -37,26 +65,17 @@ async function initToolsPage() {
     document
       .getElementById("showGenreButton")
       .classList.toggle("active", showGenre);
+    saveSidebarFiltersState();
+    saveToolsButtonsState();
     renderTools();
-  };
-  document.getElementById("showFileButton").onclick = () => {
-    showFile = !showFile;
-    document
-      .getElementById("showFileButton")
-      .classList.toggle("active", showFile);
-    renderTools();
-  };
-  document.getElementById("applyToAllButton").onclick = () => {
-    applyToAll = !applyToAll;
-    document
-      .getElementById("applyToAllButton")
-      .classList.toggle("active", applyToAll);
   };
   document.getElementById("showStudioButton").onclick = () => {
     showStudio = !showStudio;
     document
       .getElementById("showStudioButton")
       .classList.toggle("active", showStudio);
+    saveSidebarFiltersState();
+    saveToolsButtonsState();
     renderTools();
   };
 
@@ -101,6 +120,19 @@ async function initToolsPage() {
       saveSidebarState(state);
     };
   }
+
+  document
+    .getElementById("showTypeButton")
+    .classList.toggle("active", showType);
+
+  document
+    .getElementById("showGenreButton")
+    .classList.toggle("active", showGenre);
+
+  document
+    .getElementById("showStudioButton")
+    .classList.toggle("active", showStudio);
+
   renderTools();
 }
 
@@ -183,6 +215,7 @@ function initToolsLanguageFilters() {
       }
 
       saveSidebarFiltersState();
+      saveToolsButtonsState();
       renderTools();
     };
   });
@@ -214,12 +247,6 @@ function renderToolButtons(values, category, fichier) {
     .join("");
 }
 
-let showFile = false;
-let showType = true;
-let showGenre = true;
-let showStudio = true;
-let applyToAll = false;
-
 function getSelectedLanguages() {
   return [...document.querySelectorAll(".language-button.active")].map(
     (button) => button.dataset.language,
@@ -238,6 +265,7 @@ function selectToolsAjouts(ajouts) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+  saveToolsButtonsState();
   renderTools();
 }
 
@@ -253,6 +281,7 @@ function selectToolsGenre(genre) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+  saveToolsButtonsState();
   renderTools();
 }
 
@@ -268,6 +297,7 @@ function selectToolsType(type) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+  saveToolsButtonsState();
   renderTools();
 }
 
@@ -283,6 +313,7 @@ function selectToolsStudio(studio) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+  saveToolsButtonsState();
   renderTools();
 }
 
@@ -566,7 +597,11 @@ function renderTools() {
               fichierToUpdate.genre = genres;
             }
           }
-          await saveFilmMetadata(fichierToUpdate);
+        }
+        if (applyToAll) {
+          await saveFilmMetadata(fichiersToUpdate);
+        } else {
+          await saveFilmMetadata([fichier]);
         }
         renderTools();
       };

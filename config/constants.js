@@ -9,7 +9,7 @@ const TOOL_GENRES = [
   "Espionnage",
   "Guerre",
   "Policier",
-  "SF",
+  "Science-Fiction",
 ];
 const TMDB_IGNORE_GENRES = [
   "Animation",
@@ -21,7 +21,6 @@ const TMDB_IGNORE_GENRES = [
   "Musique",
   "Mystère",
   "Romance",
-  "Science-Fiction",
   "Téléfilm",
   "Thriller",
   "Western",
