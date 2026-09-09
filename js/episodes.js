@@ -92,6 +92,7 @@ async function showSerieDetails(serie, requestedSeasonNumber = null) {
 
   async function renderSeason(selectedSeason) {
     currentSeason = selectedSeason.numero;
+    updateLanguageButtons();
     seasonsBar.querySelectorAll(".season-button").forEach((button) => {
       button.classList.remove("active");
     });

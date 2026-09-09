@@ -17797,7 +17797,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.527Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -24111,7 +24112,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.743Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -24380,7 +24382,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.754Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -24661,7 +24664,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.766Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -24993,7 +24997,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.812Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -25346,7 +25351,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.819Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -25735,7 +25741,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.827Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 4,
@@ -26172,7 +26179,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.835Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 5,
@@ -26597,7 +26605,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.844Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -30083,7 +30092,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.989Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -30352,7 +30362,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.000Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -30669,7 +30680,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:39.016Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },

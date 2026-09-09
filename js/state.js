@@ -18,8 +18,7 @@ const savedSeriesLanguages = sessionStorage.getItem(
 let activeSeriesLanguages = savedSeriesLanguages
   ? new Set(JSON.parse(savedSeriesLanguages))
   : new Set(languageOrder);
-let activeDetailLanguage = null;
-let activeDetailTbd = true;
+let activeEpisodesLanguages = new Set();
 
 const tmdbBaseUrl = "https://www.themoviedb.org";
 const tmdbSearchBaseUrl = "https://www.themoviedb.org/search";

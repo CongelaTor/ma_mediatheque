@@ -11,10 +11,13 @@ function handleLanguageButtonClick(button) {
     return;
   }
   if (currentSerie) {
-    if (language === "TBD") {
-      button.classList.toggle("active");
+    if (button.classList.contains("active")) {
+      if (activeEpisodesLanguages.size === 1) {
+        return;
+      }
+      activeEpisodesLanguages.delete(language);
     } else {
-      activeDetailLanguage = language;
+      activeEpisodesLanguages.add(language);
     }
 
     updateLanguageButtons();
@@ -43,15 +46,48 @@ function handleLanguageButtonClick(button) {
     renderSeries();
   }
 }
+
 function getSerieLanguages(serie) {
   const languages = new Set();
+
   for (const saison of serie.saisons) {
     for (const episode of saison.episodes) {
-      if (episode.langue) {
-        languages.add(episode.langue);
+      if (!episode.langue) {
+        languages.add("TBD");
+        continue;
+      }
+
+      const episodeLanguages = Array.isArray(episode.langue)
+        ? episode.langue
+        : [episode.langue];
+
+      for (const language of episodeLanguages) {
+        languages.add(language || "TBD");
       }
     }
   }
+
+  return languageOrder.filter((language) => languages.has(language));
+}
+
+function getSeasonLanguages(saison) {
+  const languages = new Set();
+
+  for (const episode of saison.episodes) {
+    if (!episode.langue) {
+      languages.add("TBD");
+      continue;
+    }
+
+    const episodeLanguages = Array.isArray(episode.langue)
+      ? episode.langue
+      : [episode.langue];
+
+    for (const language of episodeLanguages) {
+      languages.add(language || "TBD");
+    }
+  }
+
   return languageOrder.filter((language) => languages.has(language));
 }
 function updateLanguageButtons() {
@@ -70,14 +106,19 @@ function updateSeriesLanguageButtons() {
       button.classList.toggle("active", activeSeriesLanguages.has(language));
     });
 }
+
 function updateDetailLanguageButtons() {
-  const availableLanguages = getSerieLanguages(currentSerie);
-  if (
-    availableLanguages.length > 0 &&
-    !availableLanguages.includes(activeDetailLanguage)
-  ) {
-    activeDetailLanguage = availableLanguages[0];
+  const saison = currentSerie?.saisons?.find(
+    (item) => item.numero === currentSeason,
+  );
+  const availableLanguages = saison
+    ? getSeasonLanguages(saison)
+    : getSerieLanguages(currentSerie);
+
+  if (activeEpisodesLanguages.size === 0 && availableLanguages.length > 0) {
+    activeEpisodesLanguages = new Set(availableLanguages);
   }
+
   document
     .querySelectorAll("#languageFilters .language-button")
     .forEach((button) => {
@@ -85,32 +126,23 @@ function updateDetailLanguageButtons() {
       const isVisible =
         button.id === "missingEpisodesButton" ||
         availableLanguages.includes(language);
+
       button.classList.toggle("hidden", !isVisible);
+
       button.classList.toggle(
         "active",
-        isVisible &&
-          (language === activeDetailLanguage ||
-            (language === "TBD" && activeDetailTbd)),
+        isVisible && activeEpisodesLanguages.has(language),
       );
     });
 }
 function episodeMatchesDetailLanguage(episode) {
   const languages = Array.isArray(episode.langue)
     ? episode.langue
-    : [episode.langue];
+    : [episode.langue || "TBD"];
 
-  if (activeDetailLanguage && languages.includes(activeDetailLanguage)) {
-    return true;
-  }
-
-  if (
-    activeDetailTbd &&
-    (episode.langue == null || languages.includes("TBD"))
-  ) {
-    return true;
-  }
-
-  return false;
+  return languages.some((language) =>
+    activeEpisodesLanguages.has(language || "TBD"),
+  );
 }
 function serieMatchesSeriesLanguages(serie) {
   let hasLanguage = false;
