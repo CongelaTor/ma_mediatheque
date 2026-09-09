@@ -5,7 +5,7 @@
 async function initHomePage() {
   await loadCatalog();
   updateStats();
-
+  updateUserGreeting();
   await isMediaServerAvailable();
 
   const context = calculContext.calculateContext({
@@ -24,7 +24,6 @@ async function initHomePage() {
 
   updateResumeButtons();
 }
-
 
 async function initSeriesPage() {
   currentPage = "series";
