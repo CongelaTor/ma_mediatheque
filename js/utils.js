@@ -116,3 +116,33 @@ function showToast(message, type = "success") {
     }, 200);
   }, 1500);
 }
+
+
+function showUserPrompt() {
+  const currentName = localStorage.getItem("demandeur") || "";
+  const demandeur = prompt("Prénom :", currentName);
+  if (demandeur === null) {
+    return;
+  }
+  localStorage.setItem("demandeur", demandeur.trim());
+  updateUserGreeting();
+}
+
+function updateUserGreeting() {
+  const demandeur = localStorage.getItem("demandeur");
+  const greeting = document.getElementById("userGreeting");
+  const button = document.getElementById("userButton");
+
+  if (!greeting || !button) {
+    return;
+  }
+
+  if (demandeur) {
+    greeting.textContent = `Bonjour ${demandeur}`;
+    greeting.classList.remove("hidden");
+    button.textContent = demandeur.charAt(0).toUpperCase();
+  } else {
+    greeting.classList.add("hidden");
+    button.textContent = "?";
+  }
+}

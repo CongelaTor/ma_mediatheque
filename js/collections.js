@@ -3,6 +3,7 @@ let currentCollectionFilter = "all";
 function initCollectionsPage() {
   currentPage = "collections";
   initSidebarToggle();
+  updateUserGreeting();
   loadCatalog().then(() => {
     updateResumeButtons();
     renderCollections();

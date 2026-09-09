@@ -3,6 +3,7 @@ currentPage = "film-detail";
 async function initFilmDetailPage() {
   currentPage = "film-detail";
   initSidebarToggle();
+  updateUserGreeting();
 
   if (sessionStorage.getItem("selectedCollectionId")) {
     document
@@ -192,10 +193,20 @@ function createFilmFileCard(film) {
   metadata.textContent = `${languages} • ${formatFilmFileSize(film.taille)}`;
 
   const playButton = document.createElement("button");
-  playButton.className = "tmdb-associate-button film-file-action-button";
+  playButton.className =
+    "tmdb-associate-button film-file-action-button mediaserver-only";
   playButton.innerHTML = '<span class="play-icon">▶</span>';
   playButton.title = "Lire";
   playButton.onclick = () => playFilm(film);
+
+  const downloadButton = document.createElement("button");
+  downloadButton.className =
+    "tmdb-associate-button film-file-action-button download-only";
+  downloadButton.innerHTML = '<span class="request-icon">⭳</span>';
+  downloadButton.title = "Télécharger";
+  downloadButton.onclick = () => {
+    requestFilmDownload(film);
+  };
 
   const tmdbButton = document.createElement("button");
   tmdbButton.className =
@@ -280,6 +291,7 @@ function createFilmFileCard(film) {
   rightActions.appendChild(deleteButton);
 
   playbackRow.appendChild(playButton);
+  playbackRow.appendChild(downloadButton);
   playbackRow.appendChild(metadata);
   playbackRow.appendChild(rightActions);
 
@@ -333,4 +345,22 @@ async function openFilmLocation(film) {
   if (!response.ok) {
     console.error(await response.text());
   }
+}
+
+function requestFilmDownload(film) {
+  const demandeurValue = localStorage.getItem("demandeur");
+  if (!demandeurValue) {
+    showToast("Identifiez-vous pour télécharger");
+    return;
+  }
+  const demandeur = encodeURIComponent(demandeurValue);
+  const titre = encodeURIComponent(film.titreTmdb || film.titre);
+  const fichier = encodeURIComponent(film.fichier.replaceAll("/", "\\"));
+  const url =
+    `https://docs.google.com/forms/d/e/1FAIpQLSc4bsOBKlNGPC5pVSz-TMDYFLoSCyUJ6bUxCchSQXsHcl5aWg/viewform` +
+    `?usp=pp_url` +
+    `&entry.989827274=${demandeur}` +
+    `&entry.75537578=${titre}` +
+    `&entry.287740096=${fichier}`;
+  window.open(url, "_blank");
 }

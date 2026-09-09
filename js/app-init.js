@@ -29,6 +29,7 @@ async function initHomePage() {
 async function initSeriesPage() {
   currentPage = "series";
   initSidebarToggle();
+  updateUserGreeting();
   await loadCatalog();
   initializeLanguageFilters();
   updateStats();

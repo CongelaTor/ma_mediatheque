@@ -2,6 +2,7 @@ async function initFilmsPage() {
   currentPage = "films";
 
   initSidebarToggle();
+  updateUserGreeting();
   await isMediaServerAvailable();
   await loadCatalog();
 

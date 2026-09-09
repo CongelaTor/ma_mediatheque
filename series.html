@@ -31,11 +31,22 @@
                     placeholder="Filtrer..."
                     oninput="handleSearch()">
 
-                    <button
-                        class="icon-button refresh-button linux-hidden mediaserver-only"
-                        onclick="reloadCatalog('series')">
-                        <span class="refresh-icon">↻</span>
-                        <span>Scan des séries</span>
+                <button
+                    class="icon-button refresh-button linux-hidden mediaserver-only"
+                    onclick="reloadCatalog('series')">
+                    <span class="refresh-icon">↻</span>
+                    <span>Scan des séries</span>
+                </button>
+                <span class="user-separator"></span>
+
+                <span id="userGreeting" class="user-greeting hidden">
+                    Bonjour
+                </span>
+                <button
+                    id="userButton"
+                    class="user-button"
+                    onclick="showUserPrompt()">
+                    ?
                 </button>
             </div>
         </header>
