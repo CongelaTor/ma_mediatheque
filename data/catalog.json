@@ -19437,7 +19437,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.595Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -19634,7 +19635,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.603Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -19831,7 +19833,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.611Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 4,
@@ -20052,7 +20055,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.620Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 5,
@@ -20273,7 +20277,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.630Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 6,
@@ -20494,7 +20499,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.640Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 7,
@@ -20655,7 +20661,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.646Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },

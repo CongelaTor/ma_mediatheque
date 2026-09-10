@@ -268,13 +268,25 @@ function createEpisodeCard(serie, saison, episode, tmdbEpisode = null) {
     imageZone.appendChild(warningButton);
   } else {
     const playButton = document.createElement("button");
-    playButton.className = "play-button";
+    playButton.className = "play-button mediaserver-only";
     playButton.innerHTML = '<span class="play-icon">▶</span>';
     playButton.onclick = (event) => {
       event.stopPropagation();
       playEpisode(serie, saison, episode);
     };
     imageZone.appendChild(playButton);
+
+    if (episode.numero === 1) {
+      const downloadButton = document.createElement("button");
+      downloadButton.className = "play-button download-only";
+      downloadButton.innerHTML = '<span class="download-icon">⭳</span>';
+      downloadButton.title = `Télécharger la saison ${saison.numero}`;
+      downloadButton.onclick = (event) => {
+        event.stopPropagation();
+        requestSeasonDownload(serie, saison, episode);
+      };
+      imageZone.appendChild(downloadButton);
+    }
   }
   const info = document.createElement("div");
   info.className = "episode-info";
@@ -332,4 +344,26 @@ function createEpisodeCard(serie, saison, episode, tmdbEpisode = null) {
   card.appendChild(info);
   card.appendChild(description);
   return card;
+}
+
+function requestSeasonDownload(serie, saison, episode) {
+  const demandeurValue = localStorage.getItem("demandeur");
+  if (!demandeurValue) {
+    showToast("Identifiez-vous pour télécharger");
+    return;
+  }
+  const demandeur = encodeURIComponent(demandeurValue);
+  const titre = encodeURIComponent(`${serie.titre} - Saison ${saison.numero}`);
+  const dernierSeparateur = episode.fichier.lastIndexOf("/");
+  const repertoire = encodeURIComponent(
+    episode.fichier.substring(0, dernierSeparateur).replaceAll("/", "\\"),
+  );
+  const url =
+    "https://docs.google.com/forms/d/e/1FAIpQLSc4bsOBKlNGPC5pVSz-TMDYFLoSCyUJ6bUxCchSQXsHcl5aWg/viewform" +
+    `?usp=pp_url` +
+    `&entry.989827274=${demandeur}` +
+    `&entry.75537578=${titre}` +
+    `&entry.287740096=${repertoire}`;
+
+  window.open(url, "_blank");
 }

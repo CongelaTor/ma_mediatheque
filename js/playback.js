@@ -9,6 +9,15 @@ function playFilm(film) {
   });
 }
 function playEpisode(serie, saison, episode) {
+  const episodes = saison.episodes
+    .filter((item) => episodeMatchesDetailLanguage(item))
+    .sort((a, b) => a.numero - b.numero);
+  const selectedEpisodeIndex = episodes.findIndex(
+    (item) => item.fichier === episode.fichier,
+  );
+  const fichiers = episodes
+    .slice(selectedEpisodeIndex)
+    .map((item) => item.fichier);
   saveResumeSerie(serie, saison, episode);
   updateResumePlayback("serie", episode);
   requestLocalPlay({
@@ -17,6 +26,7 @@ function playEpisode(serie, saison, episode) {
     saison: saison.numero,
     episode: episode.numero,
     fichier: episode.fichier,
+    fichiers: fichiers,
   });
 }
 function requestLocalPlay(payload) {

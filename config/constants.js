@@ -79,13 +79,23 @@ function renderSidebarFilters(containerId, values, dataAttribute, allLabel) {
 
 function renderAllSidebarFilters() {
   renderSidebarFilters("genreFilters", TOOL_GENRES, "genre", "Tous les films");
-
   renderSidebarFilters("typeFilters", TOOL_TYPES, "type", "Tous les types");
-
   renderSidebarFilters(
     "studioFilters",
     TOOL_STUDIOS,
     "studio",
     "Tous les studios",
   );
+}
+
+function updateSidebarTitle(elementId, label, value) {
+  const element = document.getElementById(elementId);
+
+  if (!element) {
+    return;
+  }
+
+  const displayValue = value === "all" ? "Tous" : value;
+
+  element.textContent = `${label} (${displayValue})`;
 }

@@ -80,6 +80,11 @@ async function initFilmsPage() {
     });
   }
 
+  updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
+  updateSidebarTitle("genreTitle", "GENRE", currentGenre);
+  updateSidebarTitle("typeTitle", "TYPE", currentType);
+  updateSidebarTitle("studioTitle", "STUDIO", currentStudio);
+
   renderFilms();
 }
 
@@ -226,6 +231,13 @@ function selectAjouts(ajouts) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+
+  document.getElementById("ajoutsFilters")?.classList.add("hidden");
+  const state = loadSidebarState();
+  state.ajoutsExpanded = false;
+  saveSidebarState(state);
+  updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
+
   renderFilms();
 }
 
@@ -241,6 +253,13 @@ function selectGenre(genre) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+
+  document.getElementById("genreFilters")?.classList.add("hidden");
+  const state = loadSidebarState();
+  state.genreExpanded = false;
+  saveSidebarState(state);
+  updateSidebarTitle("genreTitle", "GENRE", currentGenre);
+
   renderFilms();
 }
 
@@ -256,6 +275,13 @@ function selectType(type) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+
+  document.getElementById("typeFilters")?.classList.add("hidden");
+  const state = loadSidebarState();
+  state.typeExpanded = false;
+  saveSidebarState(state);
+  updateSidebarTitle("typeTitle", "TYPE", currentType);
+
   renderFilms();
 }
 function selectStudio(studio) {
@@ -270,6 +296,13 @@ function selectStudio(studio) {
     activeButton.classList.add("active");
   }
   saveSidebarFiltersState();
+
+  document.getElementById("studioFilters")?.classList.add("hidden");
+  const state = loadSidebarState();
+  state.studioExpanded = false;
+  saveSidebarState(state);
+  updateSidebarTitle("studioTitle", "STUDIO", currentStudio);
+
   renderFilms();
 }
 
