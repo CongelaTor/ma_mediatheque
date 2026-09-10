@@ -30,7 +30,12 @@ async function sendMissingEpisodeFlags(serieId, missingSeasonNumbers) {
 }
 
 async function showSerieDetails(serie, requestedSeasonNumber = null) {
+  if (currentSerie?.id !== serie.id) {
+    activeEpisodesLanguages.clear();
+  }
+
   currentSerie = serie;
+
   const serieLanguages = getSerieLanguages(serie);
   if (activeSeriesLanguages.size === 1) {
     const selectedLanguage = [...activeSeriesLanguages][0];

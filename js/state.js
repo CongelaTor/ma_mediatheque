@@ -12,22 +12,19 @@ let currentStudio = "all";
 let currentSearch = "";
 
 const languageOrder = ["VO", "VF", "VOST", "VOSTFR", "TBD"];
-const savedSeriesLanguages = sessionStorage.getItem(
-  "maMediatheque.activeSeriesLanguages",
+const seriesViewStateKey = "seriesViewState";
+const savedSeriesViewState = JSON.parse(
+  localStorage.getItem(seriesViewStateKey) ?? "{}",
 );
-let activeSeriesLanguages = savedSeriesLanguages
-  ? new Set(JSON.parse(savedSeriesLanguages))
+let activeSeriesLanguages = Array.isArray(savedSeriesViewState.languages)
+  ? new Set(savedSeriesViewState.languages)
   : new Set(languageOrder);
 let activeEpisodesLanguages = new Set();
-
 const tmdbBaseUrl = "https://www.themoviedb.org";
 const tmdbSearchBaseUrl = "https://www.themoviedb.org/search";
-
 let showMissingEpisodesOnly = false;
-
 const filmsViewStateKey = "filmsViewState";
 const toolsButtonsStateKey = "toolsButtonsState";
-const seriesViewStateKey = "seriesViewState";
 
 function getSearchTextKey() {
   let key;

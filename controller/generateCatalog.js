@@ -191,12 +191,6 @@ function buildCatalogPath(fullPath) {
     for (const sourcePath of source.paths) {
       const normalizedSourcePath = sourcePath.replaceAll("\\", "/");
       if (buildCatalogPath.logCount < 3) {
-        console.log("FULL =", normalizedFullPath);
-        console.log("SOURCE =", normalizedSourcePath);
-        console.log(
-          "MATCH =",
-          normalizedFullPath.startsWith(`${normalizedSourcePath}/`),
-        );
         buildCatalogPath.logCount++;
       }
 
@@ -415,7 +409,10 @@ function syncFilm(catalog, analyse) {
       titre: analyse.titre,
       // titre: existing.titre || analyse.titre,
       annee: existing.annee ?? analyse.annee,
-      langue: existing.langue ?? analyse.langue,
+
+      langue: analyse.langue,
+      // langue: existing.langue ?? analyse.langue,
+
       taille: analyse.taille,
       image: existing.image || analyse.image,
       fichier: analyse.fichier,
@@ -490,7 +487,10 @@ function syncEpisode(catalog, analyse) {
     saison.episodes.push({
       ...existing,
       numero: analyse.episode,
-      langue: existing.langue ?? analyse.langue,
+
+      langue: analyse.langue,
+      // langue: existing.langue ?? analyse.langue,
+
       fichier: analyse.fichier,
       nomFichier: analyse.nomFichier,
       taille: analyse.taille,

@@ -116,7 +116,13 @@ function updateDetailLanguageButtons() {
     : getSerieLanguages(currentSerie);
 
   if (activeEpisodesLanguages.size === 0 && availableLanguages.length > 0) {
-    activeEpisodesLanguages = new Set(availableLanguages);
+    const matchingLanguages = availableLanguages.filter((language) =>
+      activeSeriesLanguages.has(language),
+    );
+
+    activeEpisodesLanguages = new Set(
+      matchingLanguages.length > 0 ? matchingLanguages : availableLanguages,
+    );
   }
 
   document

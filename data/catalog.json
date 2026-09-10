@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-09-06T18:10:40.173Z",
+    "dateDernierScan": "2026-09-09T17:39:32.258Z",
     "films": [
         {
             "id": "08bthe_2017",
@@ -17797,8 +17797,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.527Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -17962,7 +17961,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.532Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -18258,8 +18258,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.544Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -18528,8 +18527,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.556Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -18798,8 +18796,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.567Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 4,
@@ -19140,8 +19137,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.578Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 5,
@@ -19278,8 +19274,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.587Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -19443,8 +19438,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.595Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -19641,8 +19635,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.603Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -19839,8 +19832,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.611Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 4,
@@ -20061,8 +20053,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.620Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 5,
@@ -20283,8 +20274,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.630Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 6,
@@ -20505,8 +20495,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.640Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 7,
@@ -20667,8 +20656,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.646Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -24112,8 +24100,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.743Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -24382,8 +24369,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.754Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -24664,8 +24650,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.766Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -30659,14 +30644,14 @@
                         {
                             "numero": 13,
                             "langue": [
-                                "VF"
+                                "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Quantico/S03/Quantico.S03E13.Who.Are.You.FRENCH.WEBRip.XviD-EXTREME.avi",
-                            "nomFichier": "Quantico.S03E13.Who.Are.You.FRENCH.WEBRip.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Quantico/S03/Quantico.S03E13.Who.Are.You.VOSTFR.WEBRip.XviD-EXTREME.avi",
+                            "nomFichier": "Quantico.S03E13.Who.Are.You.VOSTFR.WEBRip.XviD-EXTREME.avi",
                             "taille": 393107354,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-09-06T18:10:39.006Z"
+                            "dateAjout": "2026-09-09T17:39:30.951Z"
                         },
                         {
                             "numero": 13,
@@ -36104,7 +36089,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.236Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -36242,9 +36228,11 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.238Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": true
                 }
-            ]
+            ],
+            "hasMissingEpisodes": true
         },
         {
             "id": "whiskey_cavalier",
