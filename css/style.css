@@ -24,6 +24,7 @@ body:not(.no-mediaserver) .download-only {
     --green: #1ec98b;
     --danger: #ffcc00;
     --card-radius: 14px;
+    --cadres-max-width: 800px;
 }
 
 * {
@@ -805,6 +806,7 @@ background: #f97316;
 }
 .serie-info-card {
     margin-bottom: 20px;
+    max-width: var(--cadres-max-width);
 }
 .serie-info-image {
     width: 180px;
@@ -817,6 +819,10 @@ background: #f97316;
     width: 180px;
     height: 267px;
     border-radius: 10px;
+}
+
+.episodes-panel {
+max-width: var(--cadres-max-width);
 }
 
 .episode-list {
@@ -1013,6 +1019,7 @@ background: #f97316;
     border: 1px solid var(--border);
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.04);
+    max-width: var(--cadres-max-width);
 }
 .film-file-card {
     display: flex;
@@ -1022,8 +1029,9 @@ background: #f97316;
     border: 1px solid var(--border);
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.04);
+    max-width: var(--cadres-max-width);
+    width: 100%;
 }
-
 .film-file-row {
     display: flex;
     align-items: center;
@@ -1107,7 +1115,7 @@ background: #f97316;
 
 .film-files-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 14px;
 }
 
