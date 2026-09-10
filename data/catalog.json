@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-09-09T17:39:32.258Z",
+    "dateDernierScan": "2026-09-10T11:45:47.373Z",
     "films": [
         {
             "id": "08bthe_2017",
@@ -17961,8 +17961,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.532Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -18535,7 +18534,7 @@
                         {
                             "numero": 1,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Blindspot/Saison 3/Blindspot.S03E01.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Blindspot.S03E01.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -18547,7 +18546,7 @@
                         {
                             "numero": 2,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Blindspot/Saison 3/Blindspot.S03E02.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Blindspot.S03E02.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -18643,7 +18642,7 @@
                         {
                             "numero": 10,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Blindspot/Saison 3/Blindspot.S03E10.SUBFRENCH.WEB.XviD-EXTREME.avi",
                             "nomFichier": "Blindspot.S03E10.SUBFRENCH.WEB.XviD-EXTREME.avi",
@@ -18679,7 +18678,7 @@
                         {
                             "numero": 13,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Blindspot/Saison 3/Blindspot.S03E13.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Blindspot.S03E13.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -18703,7 +18702,7 @@
                         {
                             "numero": 15,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Blindspot/Saison 3/Blindspot.S03E15.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "nomFichier": "Blindspot.S03E15.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
@@ -18715,7 +18714,7 @@
                         {
                             "numero": 16,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Blindspot/Saison 3/Blindspot.S03E16.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Blindspot.S03E16.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -24100,7 +24099,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.743Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -24369,7 +24369,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.754Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -24650,7 +24651,8 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.766Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },
@@ -30077,8 +30079,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.989Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -30098,7 +30099,7 @@
                         {
                             "numero": 2,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E02.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S02E02.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30110,7 +30111,7 @@
                         {
                             "numero": 3,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E03.SUBFRENCH.WEB-DL.XviD-ShowFr.avi",
                             "nomFichier": "Quantico.S02E03.SUBFRENCH.WEB-DL.XviD-ShowFr.avi",
@@ -30122,7 +30123,7 @@
                         {
                             "numero": 4,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E04.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S02E04.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30134,7 +30135,7 @@
                         {
                             "numero": 5,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E05.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S02E05.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30146,7 +30147,7 @@
                         {
                             "numero": 6,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E06.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S02E06.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30158,7 +30159,7 @@
                         {
                             "numero": 7,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E07.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S02E07.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30182,7 +30183,7 @@
                         {
                             "numero": 9,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E09.SUBFRENCH.WEB-DL.x264-ARK01.flv",
                             "nomFichier": "Quantico.S02E09.SUBFRENCH.WEB-DL.x264-ARK01.flv",
@@ -30218,7 +30219,7 @@
                         {
                             "numero": 12,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S02/Quantico.S02E12.SUBFRENCH.WEB-DL.XViD-EXTREME.avi",
                             "nomFichier": "Quantico.S02E12.SUBFRENCH.WEB-DL.XViD-EXTREME.avi",
@@ -30347,8 +30348,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.000Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -30356,7 +30356,7 @@
                         {
                             "numero": 1,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E01.SUBFRENCH.WEBRip.XviD-EXTREME.avi",
                             "nomFichier": "Quantico.S03E01.SUBFRENCH.WEBRip.XviD-EXTREME.avi",
@@ -30380,7 +30380,7 @@
                         {
                             "numero": 2,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E02.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "nomFichier": "Quantico.S03E02.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
@@ -30404,7 +30404,7 @@
                         {
                             "numero": 3,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E03.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S03E03.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30428,7 +30428,7 @@
                         {
                             "numero": 4,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E04.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "nomFichier": "Quantico.S03E04.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
@@ -30452,7 +30452,7 @@
                         {
                             "numero": 5,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E05.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "nomFichier": "Quantico.S03E05.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
@@ -30476,7 +30476,7 @@
                         {
                             "numero": 6,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E06.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S03E06.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30500,7 +30500,7 @@
                         {
                             "numero": 7,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E07.SUBFRENCH.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "Quantico.S03E07.SUBFRENCH.WEB-DL.XviD-ZT.avi",
@@ -30572,7 +30572,7 @@
                         {
                             "numero": 10,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E10.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "nomFichier": "Quantico.S03E10.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
@@ -30620,7 +30620,7 @@
                         {
                             "numero": 12,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Quantico/S03/Quantico.S03E12.SUBFRENCH.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "Quantico.S03E12.SUBFRENCH.HDTV.XviD-EXTREME.avi",
@@ -30665,8 +30665,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:39.016Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -33095,7 +33094,7 @@
                         {
                             "numero": 3,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E03.SUBFRENCH.WEB.XviD-EXTREME..avi",
                             "nomFichier": "Shooter.S03E03.SUBFRENCH.WEB.XviD-EXTREME..avi",
@@ -33107,7 +33106,7 @@
                         {
                             "numero": 4,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E04.SUBFRENCH.WEB.XviD-EXTREME.avi",
                             "nomFichier": "Shooter.S03E04.SUBFRENCH.WEB.XviD-EXTREME.avi",
@@ -33131,7 +33130,7 @@
                         {
                             "numero": 6,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E06.SUBFRENCH.WEB.XviD-EXTREME.avi",
                             "nomFichier": "Shooter.S03E06.SUBFRENCH.WEB.XviD-EXTREME.avi",
@@ -33143,7 +33142,7 @@
                         {
                             "numero": 7,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E07.SUBFRENCH.WEB.XviD-EXTREME.avi",
                             "nomFichier": "Shooter.S03E07.SUBFRENCH.WEB.XviD-EXTREME.avi",
@@ -33179,7 +33178,7 @@
                         {
                             "numero": 10,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E10.SUBFRENCH.WEBRip.XviD-EXTREME [ Torrent9.blue ].avi",
                             "nomFichier": "Shooter.S03E10.SUBFRENCH.WEBRip.XviD-EXTREME [ Torrent9.blue ].avi",
@@ -33191,7 +33190,7 @@
                         {
                             "numero": 11,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E11.SUBFRENCH.WEBRip.XviD-ZT.avi",
                             "nomFichier": "Shooter.S03E11.SUBFRENCH.WEBRip.XviD-ZT.avi",
@@ -33203,7 +33202,7 @@
                         {
                             "numero": 12,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Shooter/S03/Shooter.S03E12.subfrench.web.x264-amb3r.mkv",
                             "nomFichier": "Shooter.S03E12.subfrench.web.x264-amb3r.mkv",
@@ -33467,7 +33466,7 @@
                         {
                             "numero": 9,
                             "langue": [
-                                "TBD"
+                                "VOSTFR"
                             ],
                             "fichier": "/01_Series/Taken/S02 1-16 Ok/Taken.2017.S02E09.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
                             "nomFichier": "Taken.2017.S02E09.SUBFRENCH.WEB-DL.XviD-EXTREME.avi",
@@ -35893,6 +35892,7 @@
             "titreTmdb": "Timeless",
             "anneeTmdb": "2016",
             "descriptionTmdb": "Un criminel mystérieux vole une machine à voyager dans le temps top-secrète. Il veut détruire les États-Unis en modifiant le passé. Le seul espoir est dans une petite équipe formée d’un scientifique, d’un soldat, et d’une historienne. Ils doivent utiliser un prototype de la machine pour poursuivre le fugitif, mais faire attention à ne pas changer l’histoire à leur tour.",
+            "hasMissingEpisodes": true,
             "saisons": [
                 {
                     "numero": 1,
@@ -36089,8 +36089,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.236Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -36228,11 +36227,9 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.238Z"
                         }
-                    ],
-                    "hasMissingEpisodes": true
+                    ]
                 }
-            ],
-            "hasMissingEpisodes": true
+            ]
         },
         {
             "id": "whiskey_cavalier",

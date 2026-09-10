@@ -140,7 +140,27 @@ async function initFilmDetailPage() {
     window.location.href = referenceFilm.tmdbUrl;
   };
 
-  console.log("films du groupe", films);
+  const availableLanguages = new Set();
+
+  for (const film of films) {
+    const languages = Array.isArray(film.langue)
+      ? film.langue
+      : [film.langue || "TBD"];
+
+    for (const language of languages) {
+      availableLanguages.add(language || "TBD");
+    }
+  }
+
+  document
+    .querySelectorAll("#languageFilters .language-button")
+    .forEach((button) => {
+      button.classList.toggle(
+        "hidden",
+        !availableLanguages.has(button.dataset.language),
+      );
+    });
+
   renderFilmFiles(films);
 }
 
