@@ -22,6 +22,7 @@ async function initHomePage() {
   const resumeSerieButton = document.getElementById("resumeSerieButton");
   resumeSerieButton.classList.toggle("hidden", !context.permissions.canPlay);
 
+  initResumeButtons();
   updateResumeButtons();
 }
 

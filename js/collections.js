@@ -12,6 +12,7 @@ async function initCollectionsPage() {
   initLanguageFilters();
 
   updateStats();
+  initResumeButtons();
   updateResumeButtons();
 
   //------------------------------
@@ -107,7 +108,7 @@ function renderCollections() {
           : `title:${film.titre}|${film.annee || ""}`;
         uniqueFilms.add(key);
       }
-      if (currentCollectionFilter === "incomplete") {
+      if (currentAjouts === "À compléter") {
         return uniqueFilms.size === 1;
       }
       return uniqueFilms.size >= 1;
@@ -204,27 +205,3 @@ function renderCollections() {
     grid.appendChild(card);
   }
 }
-
-// function selectCollection(filter) {}
-
-// loadCatalog().then(() => {
-//   updateResumeButtons();
-//   renderCollections();
-// });
-
-// currentCollectionFilter = filter;
-// document
-//   .querySelectorAll(".sidebar-link")
-//   .forEach((button) => button.classList.remove("active"));
-
-// if (filter === "all") {
-//   document
-//     .querySelector("button[onclick=\"selectCollection('all')\"]")
-//     ?.classList.add("active");
-// }
-
-// if (filter === "incomplete") {
-//   document
-//     .querySelector("button[onclick=\"selectCollection('incomplete')\"]")
-//     ?.classList.add("active");
-// }

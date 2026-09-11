@@ -5,6 +5,7 @@ async function initSerieDetailPage() {
   updateUserGreeting();
   initializeLanguageFilters();
   updateStats();
+  initResumeButtons();
   updateResumeButtons();
   const serieId = new URLSearchParams(window.location.search).get("id");
   const serie = catalog.series.find((item) => item.id === serieId);

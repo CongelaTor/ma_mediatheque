@@ -10,6 +10,7 @@ async function initSeriesPage() {
   initializeLanguageFilters();
 
   updateStats();
+  initResumeButtons();
   updateResumeButtons();
 
   //------------------------------

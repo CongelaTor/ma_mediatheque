@@ -14,6 +14,7 @@ async function initToolsPage() {
   showUnknownGenres();
 
   updateStats();
+  initResumeButtons();
   updateResumeButtons();
 
   initToolsFilters();

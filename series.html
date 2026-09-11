@@ -84,12 +84,17 @@
                             </div>
                         </div>
 
-                        <button id="resumeSerieButton" 
-                                class="resume-button hidden" 
-                                onclick="resumeSerie()">
-                            ▶ Reprendre : 
-                            <span id="resumeSerieText"></span>
-                        </button>
+                        <div class="resume-row">
+                            <button id="syncSerieButton" class="sync-button linux-hidden mediaserver-only">
+                                <span class="sync-icon">🗘</span>
+                            </button>
+                            <button id="resumeSerieButton"
+                                    class="resume-button hidden"
+                                    onclick="resumeSerie()">
+                                ▶ Reprendre :
+                                <span id="resumeSerieText"></span>
+                            </button>
+                        </div>
 
                         <div id="languageFilters" class="language-filters">
                             <button class="language-button active" data-language="VO">VO</button>

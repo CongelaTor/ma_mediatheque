@@ -10,6 +10,7 @@ async function initFilmsPage() {
   initLanguageFilters();
 
   updateStats();
+  initResumeButtons();
   updateResumeButtons();
 
   //------------------------------

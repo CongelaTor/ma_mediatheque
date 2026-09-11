@@ -24,14 +24,9 @@ async function initFilmDetailPage() {
 
   await loadCatalog();
   updateStats();
+  initResumeButtons();
   updateResumeButtons();
-
-  const syncFilmButton = document.getElementById("syncFilmButton");
-  if (syncFilmButton) {
-    syncFilmButton.onclick = () => {
-      syncResumePlayback("film");
-    };
-  }
+  
 
   const films = catalog.films.filter((film) => film.tmdbId === tmdbId);
   if (films.length === 0) {
