@@ -38,7 +38,7 @@ function initSidebarToggle() {
     document.body.classList.add("sidebar-hidden");
   }
 
-  document.getElementById("sidebarToggle")?.addEventListener("click", () => {
+  document.querySelector(".brand")?.addEventListener("click", () => {
     document.body.classList.toggle("sidebar-hidden");
     localStorage.setItem(
       "sidebarHidden",
