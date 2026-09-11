@@ -1,34 +1,59 @@
 let currentCollectionFilter = "all";
 
-function initCollectionsPage() {
+async function initCollectionsPage() {
   currentPage = "collections";
+
   initSidebarToggle();
   updateUserGreeting();
-  loadCatalog().then(() => {
-    updateResumeButtons();
+
+  await loadCatalog();
+
+  initFiltersSidebar();
+  initLanguageFilters();
+
+  updateStats();
+  updateResumeButtons();
+
+  //------------------------------
+  // SET MAIN SEARCH
+  //------------------------------
+  document.getElementById("searchInput").value = loadSearchText();
+  currentSearch = loadSearchText();
+  document.getElementById("searchInput").oninput = (event) => {
+    currentSearch = event.target.value;
     renderCollections();
-  });
-}
+  };
 
-function selectCollection(filter) {
-  currentCollectionFilter = filter;
+  //------------------------------
+  // SET SIDE FILTERS
+  //------------------------------
+  const state = loadSidebarFiltersState();
+  currentAjouts = state.ajouts ?? "all";
+  currentGenre = state.genre ?? "all";
+  currentType = state.type ?? "all";
+  currentStudio = state.studio ?? "all";
+  // window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
 
-  document
-    .querySelectorAll(".sidebar-link")
-    .forEach((button) => button.classList.remove("active"));
+  updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
+  updateSidebarTitle("genreTitle", "GENRE", currentGenre);
+  updateSidebarTitle("typeTitle", "TYPE", currentType);
+  updateSidebarTitle("studioTitle", "STUDIO", currentStudio);
 
-  if (filter === "all") {
-    document
-      .querySelector("button[onclick=\"selectCollection('all')\"]")
-      ?.classList.add("active");
+  //------------------------------
+  // SET LANGUAGE FILTERS
+  //------------------------------
+  if (state.languages) {
+    document.querySelectorAll(".language-button").forEach((button) => {
+      button.classList.toggle(
+        "active",
+        state.languages.includes(button.dataset.language),
+      );
+    });
   }
 
-  if (filter === "incomplete") {
-    document
-      .querySelector("button[onclick=\"selectCollection('incomplete')\"]")
-      ?.classList.add("active");
-  }
-
+  //------------------------------
+  // RENDER SCREEN
+  //------------------------------
   renderCollections();
 }
 
@@ -71,28 +96,45 @@ function renderCollections() {
       collection.image = firstFilm?.image || null;
     }
   }
-
+  console.log("collections.size =", collections.size);
   const collectionList = [...collections.values()]
-  .filter((collection) => matchesSearch(collection.nom))
-  .filter((collection) => {
-    const uniqueFilms = new Set();
+    .filter((collection) => matchesSearch(collection.nom))
+    .filter((collection) => {
+      const uniqueFilms = new Set();
+      for (const film of collection.films) {
+        const key = film.tmdbId
+          ? `tmdb:${film.tmdbId}`
+          : `title:${film.titre}|${film.annee || ""}`;
+        uniqueFilms.add(key);
+      }
+      if (currentCollectionFilter === "incomplete") {
+        return uniqueFilms.size === 1;
+      }
+      return uniqueFilms.size >= 1;
+    })
+    .filter((collection) => {
+      const firstFilm = [...collection.films].sort(
+        (a, b) =>
+          Number(a.anneeTmdb || a.annee || 9999) -
+          Number(b.anneeTmdb || b.annee || 9999),
+      )[0];
 
-    for (const film of collection.films) {
-      const key = film.tmdbId
-        ? `tmdb:${film.tmdbId}`
-        : `title:${film.titre}|${film.annee || ""}`;
+      console.log(
+        collection.nom,
+        firstFilm?.titreTmdb || firstFilm?.titre,
+        matchesGenre(firstFilm),
+        matchesType(firstFilm),
+        matchesStudio(firstFilm),
+      );
 
-      uniqueFilms.add(key);
-    }
+      return (
+        matchesGenre(firstFilm) &&
+        matchesType(firstFilm) &&
+        matchesStudio(firstFilm)
+      );
+    })
+    .sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
 
-    if (currentCollectionFilter === "incomplete") {
-      return uniqueFilms.size === 1;
-    }
-
-    return uniqueFilms.size >= 1;
-  })
-  .sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
-  
   setText("sideCollections", collectionList.length);
   const groupedFilms = new Set();
   for (const film of catalog.films) {
@@ -162,3 +204,27 @@ function renderCollections() {
     grid.appendChild(card);
   }
 }
+
+// function selectCollection(filter) {}
+
+// loadCatalog().then(() => {
+//   updateResumeButtons();
+//   renderCollections();
+// });
+
+// currentCollectionFilter = filter;
+// document
+//   .querySelectorAll(".sidebar-link")
+//   .forEach((button) => button.classList.remove("active"));
+
+// if (filter === "all") {
+//   document
+//     .querySelector("button[onclick=\"selectCollection('all')\"]")
+//     ?.classList.add("active");
+// }
+
+// if (filter === "incomplete") {
+//   document
+//     .querySelector("button[onclick=\"selectCollection('incomplete')\"]")
+//     ?.classList.add("active");
+// }

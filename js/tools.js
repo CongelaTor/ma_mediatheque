@@ -154,7 +154,7 @@ function initToolsFilters() {
   console.log("currentType = ", currentType);
   console.log("currentStudio = ", currentStudio);
 
-  renderAllSidebarFilters();
+  renderAllSidebarFilters("Tous les films");
 
   document.querySelectorAll(".sidebar-link[data-ajouts]").forEach((button) => {
     button.onclick = () => selectToolsAjouts(button.dataset.ajouts);
@@ -399,7 +399,7 @@ async function saveFilmMetadata(fichiers) {
 let displayedFiles = [];
 
 function findUnknownGenres() {
-  const knownGenres = new Set([...TOOL_GENRES, ...TMDB_IGNORE_GENRES]);
+  const knownGenres = new Set([...FILTER_GENRES, ...TMDB_IGNORE_GENRES]);
 
   const unknownGenres = new Set();
 
@@ -507,7 +507,7 @@ function renderTools() {
                   showType
                     ? `
                 <span class="tool-group">
-                    ${renderToolButtons(TOOL_TYPES, "type", fichier)}
+                    ${renderToolButtons(FILTER_TYPES, "type", fichier)}
                 </span>
                 `
                     : ""
@@ -519,7 +519,7 @@ function renderTools() {
                 <span class="tool-group">
                     ${renderToolButtons(
                       [
-                        ...TOOL_GENRES,
+                        ...FILTER_GENRES,
                         ...TMDB_IGNORE_GENRES.filter((genre) =>
                           fichier.genre?.includes(genre),
                         ),
@@ -536,7 +536,7 @@ function renderTools() {
                   showStudio
                     ? `
                 <span class="tool-group">
-                    ${renderToolButtons(TOOL_STUDIOS, "studio", fichier)}
+                    ${renderToolButtons(FILTER_STUDIOS, "studio", fichier)}
                 </span>
                 `
                     : ""
@@ -608,7 +608,7 @@ function renderTools() {
 }
 
 function showUnknownGenres() {
-  const knownGenres = new Set([...TOOL_GENRES, ...TMDB_IGNORE_GENRES]);
+  const knownGenres = new Set([...FILTER_GENRES, ...TMDB_IGNORE_GENRES]);
   const unknownGenres = new Set();
   for (const film of catalog.films) {
     const genres = Array.isArray(film.genre)

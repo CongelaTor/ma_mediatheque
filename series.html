@@ -57,8 +57,25 @@
                         <div class="sidebar-title">Statistiques</div>
                         <div class="sidebar-stat"><span id="sideSeries">0</span> Séries</div>
                         <div class="sidebar-stat"><span id="sideEpisodes">0</span> Épisodes</div>
+                        <div class="sidebar-stat"><span></span></div>
                         <div class="sidebar-section"></div>
+                    
+                        <div class="sidebar-title" id="ajoutsTitle">Ajouts</div>
+                        <div id="ajoutsFilters"></div>
+                        <div class="sidebar-section"></div>
+                        
+                        <div class="sidebar-title" id="genreTitle">Genre</div>
+                        <div id="genreFilters"></div>
+                        <div class="sidebar-section"></div>
+
+                        <div class="sidebar-title" id="typeTitle">Type</div>
+                        <div id="typeFilters"></div>
+                        <div class="sidebar-section"></div>
+
+                        <div class="sidebar-title" id="studioTitle">Studio</div>
+                        <div id="studioFilters"></div>
                     </aside>
+
                     <section class="content">
                         <div class="content-header">
                             <div>
@@ -66,6 +83,7 @@
                                 <p id="seriesCount">0 série</p>
                             </div>
                         </div>
+
                         <button id="resumeSerieButton" 
                                 class="resume-button hidden" 
                                 onclick="resumeSerie()">
@@ -87,6 +105,7 @@
             </section>
         </main>
     </div>
+    
     <div id="tmdbModal" class="tmdb-modal hidden">
         <div class="tmdb-modal-panel">
             <div class="tmdb-modal-header">

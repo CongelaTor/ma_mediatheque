@@ -20,7 +20,7 @@
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
                 <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
-                <a class="nav-button" data-page="films" href="films.html"
+                <a class="nav-button active" data-page="films" href="films.html"
                     onclick="
                         sessionStorage.removeItem('selectedCollectionId');
                         sessionStorage.removeItem('selectedCollectionName');
@@ -71,18 +71,9 @@
                         <div class="sidebar-section"></div>
 
                         <div class="sidebar-title" id="ajoutsTitle">Ajouts</div>
-                        <div id="ajoutsFilters">
-                            <button class="sidebar-link active" data-ajouts="all"
-                                onclick="selectAjouts('all')">Tous les films</button>
-                            <button class="sidebar-link" data-ajouts="Nouveautés"
-                                onclick="selectAjouts('Nouveautés')">Nouveautés</button>
-                            <button class="sidebar-link" data-ajouts="Récents"
-                                onclick="selectAjouts('Récents')">Récents</button>
-                            <button class="sidebar-link" data-ajouts="Doublons"
-                                onclick="selectAjouts('Doublons')">Doublons</button>
-                        </div>
+                        <div id="ajoutsFilters"></div>
                         <div class="sidebar-section"></div>
-
+                        
                         <div class="sidebar-title" id="genreTitle">Genre</div>
                         <div id="genreFilters"></div>
                         <div class="sidebar-section"></div>
@@ -114,7 +105,8 @@
                             ▶ Reprendre :
                             <span id="resumeFilmText"></span>
                         </button>
-                            <div id="languageFilters" class="language-filters">
+
+                        <div id="languageFilters" class="language-filters">
                             <button class="language-button active" data-language="VO">VO</button>
                             <button class="language-button active" data-language="VF">VF</button>
                             <button class="language-button active" data-language="VOST">VOST</button>

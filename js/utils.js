@@ -37,6 +37,7 @@ function handleSearch() {
     currentPage === "collections" &&
     typeof renderCollections === "function"
   ) {
+    saveSidebarFiltersState();
     saveSearchText();
     renderCollections();
   }
@@ -48,11 +49,13 @@ function handleSearch() {
   }
 
   if (currentPage === "tools" && typeof renderTools === "function") {
+    saveSidebarFiltersState();
     saveSearchText();
     renderTools();
   }
 
   if (currentPage === "series" && typeof renderSeries === "function") {
+    saveSidebarFiltersState();
     saveSearchText();
     renderSeries();
   }

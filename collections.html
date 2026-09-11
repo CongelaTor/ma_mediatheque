@@ -21,6 +21,7 @@
                 <a class="nav-button" data-page="films" href="films.html">Films</a>
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
+
             <div class="top-actions">
                 <input id="searchInput"
                     class="search-input"
@@ -56,19 +57,22 @@
                         <div class="sidebar-stat"><span id="sideCollections">0</span> Collections</div>
                         <div class="sidebar-stat"><span id="sideFilms">0</span> Films</div>
                         <div class="sidebar-stat"><span id="sideNouveautes">0</span> Nouveautés</div>
-
                         <div class="sidebar-section"></div>
                         
-                        <div class="sidebar-title">Collections</div>
-                        <button class="sidebar-link active"
-                            onclick="selectCollection('all')">
-                            Toutes les collections
-                        </button>
-                        <button id="incompleteCollectionsFilter"
-                            class="sidebar-link"
-                            onclick="selectCollection('incomplete')">
-                            À compléter
-                        </button>
+                        <div class="sidebar-title" id="ajoutsTitle">Ajouts</div>
+                        <div id="ajoutsFilters"></div>
+                        <div class="sidebar-section"></div>
+                        
+                        <div class="sidebar-title" id="genreTitle">Genre</div>
+                        <div id="genreFilters"></div>
+                        <div class="sidebar-section"></div>
+
+                        <div class="sidebar-title" id="typeTitle">Type</div>
+                        <div id="typeFilters"></div>
+                        <div class="sidebar-section"></div>
+
+                        <div class="sidebar-title" id="studioTitle">Studio</div>
+                        <div id="studioFilters"></div>
                     </aside>
 
                     <section class="content">
@@ -87,6 +91,14 @@
                             <span id="resumeCollectionText"></span>
                         </button>
 
+                        <div id="languageFilters" class="language-filters">
+                            <button class="language-button active" data-language="VO">VO</button>
+                            <button class="language-button active" data-language="VF">VF</button>
+                            <button class="language-button active" data-language="VOST">VOST</button>
+                            <button class="language-button active" data-language="VOSTFR">VOSTFR</button>
+                            <button class="language-button active" data-language="TBD">TBD</button>
+                        </div>
+
                         <div id="collectionsGrid" class="cards-grid"></div>
 
                     </section>
@@ -95,7 +107,7 @@
         </main>
     </div>
 
-        <div id="scanModal" class="tmdb-modal hidden linux-hidden">
+    <div id="scanModal" class="tmdb-modal hidden linux-hidden">
         <div class="tmdb-modal-panel">
             <div class="tmdb-modal-header">
                 <h2 id="scanTitle">Scan des films</h2>
@@ -116,14 +128,12 @@
     <script src="js/utils.js"></script>
     <script src="js/media.js"></script>
     <script src="js/playback.js"></script>
+    <script src="js/tmdb.js"></script>
     <script src="js/collections.js"></script>
     <script src="js/app-init.js"></script>
 
     <script>
-        document.addEventListener(
-            "DOMContentLoaded",
-            initCollectionsPage,
-        );
+        document.addEventListener("DOMContentLoaded",initCollectionsPage,);
     </script>
 </body>
 </html>

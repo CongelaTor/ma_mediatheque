@@ -1,3 +1,65 @@
+async function initSeriesPage() {
+  currentPage = "series";
+
+  initSidebarToggle();
+  updateUserGreeting();
+
+  await loadCatalog();
+
+  initFiltersSidebar();
+  initializeLanguageFilters();
+
+  updateStats();
+  updateResumeButtons();
+
+  //------------------------------
+  // SET MAIN SEARCH
+  //------------------------------
+  document.getElementById("searchInput").value = loadSearchText();
+  currentSearch = loadSearchText();
+  if (window.selectedCollectionId) {
+    currentSearch = "";
+    document.getElementById("searchInput").value = "";
+    renderFilms();
+  }
+
+  //------------------------------
+  // SET SIDE FILTERS
+  //------------------------------
+  const state = loadSidebarFiltersState();
+  currentAjouts = state.ajouts ?? "all";
+  currentGenre = state.genre ?? "all";
+  currentType = state.type ?? "all";
+  currentStudio = state.studio ?? "all";
+
+  updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
+  updateSidebarTitle("genreTitle", "GENRE", currentGenre);
+  updateSidebarTitle("typeTitle", "TYPE", currentType);
+  updateSidebarTitle("studioTitle", "STUDIO", currentStudio);
+
+  //------------------------------
+  // SET LANGUAGE FILTERS
+  //------------------------------
+  const stateLg = loadSeriesViewState();
+  if (stateLg.languages) {
+    activeSeriesLanguages = new Set(stateLg.languages);
+  }
+
+  if (stateLg.languages) {
+    document.querySelectorAll(".language-button").forEach((button) => {
+      button.classList.toggle(
+        "active",
+        stateLg.languages.includes(button.dataset.language),
+      );
+    });
+  }
+
+  //------------------------------
+  // RENDER SCREEN
+  //------------------------------
+  renderSeries();
+}
+
 function initializeLanguageFilters() {
   document
     .querySelectorAll("#languageFilters .language-button")
@@ -5,6 +67,7 @@ function initializeLanguageFilters() {
       button.onclick = () => handleLanguageButtonClick(button);
     });
 }
+
 function handleLanguageButtonClick(button) {
   const language = button.dataset.language;
   if (button.classList.contains("hidden")) {

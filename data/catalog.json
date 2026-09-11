@@ -3363,7 +3363,7 @@
             "collectionId": 1451578,
             "collectionNom": "Coco - Saga",
             "type": "Animation",
-            "studio": null
+            "studio": "Disney"
         },
         {
             "id": "coluche_ses_plus_grands_sketches_cd2",
@@ -4879,7 +4879,7 @@
             "collectionId": 1451277,
             "collectionNom": "Encanto - Saga",
             "type": "Animation",
-            "studio": null
+            "studio": "Disney"
         },
         {
             "id": "enemy_state_1998",
@@ -9209,7 +9209,7 @@
             "collectionId": null,
             "collectionNom": null,
             "type": "Animation",
-            "studio": null
+            "studio": "Disney"
         },
         {
             "id": "lemonade_mouth",
@@ -9518,7 +9518,7 @@
             "collectionId": null,
             "collectionNom": null,
             "type": "Animation",
-            "studio": null
+            "studio": "Disney Classic"
         },
         {
             "id": "les_aventures_de_tigrou_disney_n_63",
@@ -10091,7 +10091,7 @@
             "collectionId": 97459,
             "collectionNom": "Le Livre de la Jungle - Saga",
             "type": "Animation",
-            "studio": null
+            "studio": "Disney Classic"
         },
         {
             "id": "le_livre_de_la_jungle_2",
@@ -10121,7 +10121,7 @@
             "collectionId": 97459,
             "collectionNom": "Le Livre de la Jungle - Saga",
             "type": "Animation",
-            "studio": null
+            "studio": "Disney Classic"
         },
         {
             "id": "le_livre_de_la_jungle2",
@@ -10151,7 +10151,7 @@
             "collectionId": 97459,
             "collectionNom": "Le Livre de la Jungle - Saga",
             "type": "Animation",
-            "studio": null
+            "studio": "Disney Classic"
         },
         {
             "id": "londres_6_2013",
@@ -10590,7 +10590,7 @@
             "collectionId": 527439,
             "collectionNom": "Mary Poppins - Saga",
             "type": "Animation",
-            "studio": "Marvel"
+            "studio": "Disney Classic"
         },
         {
             "id": "maverick_1994",
@@ -13011,7 +13011,7 @@
             "collectionId": 386382,
             "collectionNom": "La Reine des neiges - Saga",
             "type": "Animation",
-            "studio": null
+            "studio": "Disney"
         },
         {
             "id": "remo_williams_adventure_begins_1985",
@@ -16464,7 +16464,7 @@
             "collectionImage": null,
             "collectionTmdbUrl": null,
             "type": "Animation",
-            "studio": null
+            "studio": "Disney"
         },
         {
             "id": "une_grande_annee",
@@ -17797,7 +17797,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.527Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 }
             ]
         },

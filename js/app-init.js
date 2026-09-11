@@ -25,38 +25,6 @@ async function initHomePage() {
   updateResumeButtons();
 }
 
-async function initSeriesPage() {
-  currentPage = "series";
-  initSidebarToggle();
-  updateUserGreeting();
-  await loadCatalog();
-  initializeLanguageFilters();
-  updateStats();
-  updateResumeButtons();
-  document.getElementById("searchInput").value = loadSearchText();
-
-  currentSearch = loadSearchText();
-  if (window.selectedCollectionId) {
-    currentSearch = "";
-    document.getElementById("searchInput").value = "";
-  }
-
-  const state = loadSeriesViewState();
-  if (state.languages) {
-    activeSeriesLanguages = new Set(state.languages);
-  }
-
-  if (state.languages) {
-    document.querySelectorAll(".language-button").forEach((button) => {
-      button.classList.toggle(
-        "active",
-        state.languages.includes(button.dataset.language),
-      );
-    });
-  }
-
-  renderSeries();
-}
 function initSidebarToggle() {
   if (
     window.location.pathname.endsWith("index.html") ||
