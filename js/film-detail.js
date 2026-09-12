@@ -5,7 +5,7 @@ async function initFilmDetailPage() {
   initSidebarToggle();
   updateUserGreeting();
 
-  if (sessionStorage.getItem("selectedCollectionId")) {
+  if (isCollectionContextActive()) {
     document
       .querySelector('.nav-button[data-page="films"]')
       ?.classList.remove("active");
@@ -26,7 +26,6 @@ async function initFilmDetailPage() {
   updateStats();
   initResumeButtons();
   updateResumeButtons();
-  
 
   const films = catalog.films.filter((film) => film.tmdbId === tmdbId);
   if (films.length === 0) {

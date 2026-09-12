@@ -22,18 +22,19 @@ async function initToolsPage() {
 
   document.getElementById("searchInput").value = loadSearchText();
   currentSearch = loadSearchText();
-  document.getElementById("searchInput").oninput = () => {
-    renderTools();
-  };
 
   const state = loadSidebarFiltersState();
   const toolsState = loadToolsButtonsState();
   currentAjouts =
     currentAjouts === "ACorriger" ? currentAjouts : (state.ajouts ?? "all");
-
   currentGenre = state.genre ?? "all";
   currentType = state.type ?? "all";
   currentStudio = state.studio ?? "all";
+
+  updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
+  updateSidebarTitle("genreTitle", "GENRE", currentGenre);
+  updateSidebarTitle("typeTitle", "TYPE", currentType);
+  updateSidebarTitle("studioTitle", "STUDIO", currentStudio);
 
   showType = toolsState.showType ?? true;
   showGenre = toolsState.showGenre ?? true;

@@ -18,11 +18,6 @@ async function initSeriesPage() {
   //------------------------------
   document.getElementById("searchInput").value = loadSearchText();
   currentSearch = loadSearchText();
-  if (window.selectedCollectionId) {
-    currentSearch = "";
-    document.getElementById("searchInput").value = "";
-    renderFilms();
-  }
 
   //------------------------------
   // SET SIDE FILTERS

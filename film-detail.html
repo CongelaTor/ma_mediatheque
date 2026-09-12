@@ -17,12 +17,10 @@
             </div>
             <nav class="main-nav">
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
-                <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
-            <a class="nav-button active" data-page="films" href="films.html"
-                onclick="
-                    sessionStorage.removeItem('selectedCollectionId');
-                    sessionStorage.removeItem('selectedCollectionName');
-                ">Films</a>
+                <a class="nav-button" data-page="collections" href="collections.html"
+                    onclick="event.preventDefault(); openCollectionContext();">Collections</a>
+                <a class="nav-button active" data-page="films" href="films.html" 
+                    onclick=" setActiveFilmsContext(); ">Films</a>
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">

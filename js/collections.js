@@ -2,7 +2,7 @@ let currentCollectionFilter = "all";
 
 async function initCollectionsPage() {
   currentPage = "collections";
-
+  setActiveCollectionContext();
   initSidebarToggle();
   updateUserGreeting();
 
@@ -20,10 +20,6 @@ async function initCollectionsPage() {
   //------------------------------
   document.getElementById("searchInput").value = loadSearchText();
   currentSearch = loadSearchText();
-  document.getElementById("searchInput").oninput = (event) => {
-    currentSearch = event.target.value;
-    renderCollections();
-  };
 
   //------------------------------
   // SET SIDE FILTERS
@@ -182,6 +178,7 @@ function renderCollections() {
       sessionStorage.setItem("selectedCollectionId", collection.id);
       sessionStorage.setItem("selectedCollectionName", collection.nom);
       sessionStorage.setItem("collectionMode", "true");
+      setActiveCollectionContext();
       window.location.href = "films.html";
     };
     const uniqueFilms = new Set();

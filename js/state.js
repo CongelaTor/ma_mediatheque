@@ -26,6 +26,29 @@ let showMissingEpisodesOnly = false;
 const filmsViewStateKey = "filmsViewState";
 const toolsButtonsStateKey = "toolsButtonsState";
 
+function setActiveFilmsContext() {
+  if (isCollectionContextActive()) {
+    const currentUrl =
+      window.location.pathname.split("/").pop() + window.location.search;
+    sessionStorage.setItem("collectionReturnUrl", currentUrl);
+  }
+  sessionStorage.setItem("activeFilmsContext", "films");
+}
+
+function setActiveCollectionContext() {
+  sessionStorage.setItem("activeFilmsContext", "collection");
+}
+
+function openCollectionContext() {
+  setActiveCollectionContext();
+  window.location.href =
+    sessionStorage.getItem("collectionReturnUrl") ?? "collections.html";
+}
+
+function isCollectionContextActive() {
+  return sessionStorage.getItem("activeFilmsContext") === "collection";
+}
+
 function getSearchTextKey() {
   let key;
   switch (currentPage) {
@@ -33,10 +56,14 @@ function getSearchTextKey() {
       key = "searchCollections";
       break;
     case "films":
-      key = "searchFilms";
+      key = isCollectionContextActive()
+        ? "searchFilmsCollection"
+        : "searchFilmsHorsCollection";
       break;
     case "tools":
-      key = "searchFilms";
+      key = isCollectionContextActive()
+        ? "searchFilmsCollection"
+        : "searchFilmsHorsCollection";
       break;
     case "series":
       key = "searchSeries";
@@ -58,6 +85,14 @@ function loadSearchText() {
   if (!key) {
     return "";
   }
+
+  if (
+    key === "searchFilmsHorsCollection" &&
+    !localStorage.getItem(key)
+  ) {
+    return localStorage.getItem("searchFilms") ?? "";
+  }
+
   return localStorage.getItem(key) ?? "";
 }
 

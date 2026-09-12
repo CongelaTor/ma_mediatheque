@@ -18,9 +18,6 @@ async function initFilmsPage() {
   //------------------------------
   document.getElementById("searchInput").value = loadSearchText();
   currentSearch = loadSearchText();
-  document.getElementById("searchInput").oninput = () => {
-    renderFilms();
-  };
 
   //------------------------------
   // SET SIDE FILTERS
@@ -30,8 +27,17 @@ async function initFilmsPage() {
   currentGenre = state.genre ?? "all";
   currentType = state.type ?? "all";
   currentStudio = state.studio ?? "all";
-  window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
-
+  window.selectedCollectionId = isCollectionContextActive()
+    ? sessionStorage.getItem("selectedCollectionId")
+    : null;
+  if (isCollectionContextActive()) {
+    document
+      .querySelector('.nav-button[data-page="films"]')
+      ?.classList.remove("active");
+    document
+      .querySelector('.nav-button[data-page="collections"]')
+      ?.classList.add("active");
+  }
   updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
   updateSidebarTitle("genreTitle", "GENRE", currentGenre);
   updateSidebarTitle("typeTitle", "TYPE", currentType);
@@ -114,7 +120,9 @@ function renderFilms() {
     .filter((film) => matchesType(film))
     .filter((film) => matchesStudio(film))
     .filter((film) => filmMatchesLanguage(film))
-    .filter((film) => matchesSearch(film.titre));
+    .filter((film) =>
+      matchesSearch(film.titreTmdb ? film.titreTmdb : film.titre),
+    );
 
   if (currentAjouts === "Récents") {
     films = films.sort(
@@ -125,14 +133,11 @@ function renderFilms() {
     films = films.sort((a, b) => {
       const anneeA = a.anneeTmdb || a.annee || 0;
       const anneeB = b.anneeTmdb || b.annee || 0;
-
       if (anneeA !== anneeB) {
         return anneeA - anneeB;
       }
-
       const titreA = a.titreTmdb || a.titre;
       const titreB = b.titreTmdb || b.titre;
-
       return titreA.localeCompare(titreB, "fr");
     });
   } else {
@@ -141,8 +146,9 @@ function renderFilms() {
     );
   }
 
-  const collectionName = sessionStorage.getItem("selectedCollectionName");
-
+  const collectionName = isCollectionContextActive()
+    ? sessionStorage.getItem("selectedCollectionName")
+    : null;
   if (collectionName) {
     setText("filmsCount", `${collectionName.replace(/\s*-\s*saga$/i, "")}`);
     setText(
