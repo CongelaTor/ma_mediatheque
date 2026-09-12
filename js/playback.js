@@ -9,14 +9,18 @@ function playFilm(film) {
   });
 }
 function playEpisode(serie, saison, episode) {
-  const episodes = saison.episodes
-    .filter((item) => episodeMatchesDetailLanguage(item))
-    .sort((a, b) => a.numero - b.numero);
+  const episodes = [...serie.saisons]
+    .sort((a, b) => a.numero - b.numero)
+    .flatMap((item) =>
+      [...item.episodes]
+        .filter((episodeItem) => episodeMatchesDetailLanguage(episodeItem))
+        .sort((a, b) => a.numero - b.numero),
+    );
   const selectedEpisodeIndex = episodes.findIndex(
     (item) => item.fichier === episode.fichier,
   );
   const fichiers = episodes
-    .slice(selectedEpisodeIndex)
+    .slice(selectedEpisodeIndex, selectedEpisodeIndex + 11)
     .map((item) => item.fichier);
   saveResumeSerie(serie, saison, episode);
   updateResumePlayback("serie", episode);
@@ -122,9 +126,25 @@ function saveResumeSerie(serie, saison, episode) {
 
 function resumeFilm() {
   requestResumePlayback("film");
+
+  const tmdbId = document.getElementById("resumeFilmButton")?.dataset.tmdbId;
+  if (tmdbId) {
+    window.location.href = `film-detail.html?tmdbId=${tmdbId}`;
+  }
 }
+
 function resumeSerie() {
   requestResumePlayback("serie");
+
+  const resumeSerie = getResumeSerie();
+  if (!resumeSerie) {
+    return;
+  }
+
+  const serie = catalog.series.find((item) => item.titre === resumeSerie.titre);
+  if (serie?.id) {
+    window.location.href = `episodes.html?id=${encodeURIComponent(serie.id)}`;
+  }
 }
 
 function updateResumeButtons() {
@@ -174,6 +194,11 @@ function updateResumeButtons() {
         const film = catalog.films.find(
           (item) => item.fichier === resumeData.film.catalogPath,
         );
+        if (film?.tmdbId) {
+          resumeFilmButton.dataset.tmdbId = film.tmdbId;
+        } else {
+          delete resumeFilmButton.dataset.tmdbId;
+        }
         resumeFilmButton.classList.remove("hidden");
         setText(
           "resumeFilmText",
