@@ -41,8 +41,13 @@ function setActiveCollectionContext() {
 
 function openCollectionContext() {
   setActiveCollectionContext();
-  window.location.href =
-    sessionStorage.getItem("collectionReturnUrl") ?? "collections.html";
+  const collectionReturnUrl = sessionStorage.getItem("collectionReturnUrl");
+  const selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
+  if (selectedCollectionId && collectionReturnUrl) {
+    window.location.href = collectionReturnUrl;
+    return;
+  }
+  window.location.href = "collections.html";
 }
 
 function isCollectionContextActive() {
@@ -86,10 +91,7 @@ function loadSearchText() {
     return "";
   }
 
-  if (
-    key === "searchFilmsHorsCollection" &&
-    !localStorage.getItem(key)
-  ) {
+  if (key === "searchFilmsHorsCollection" && !localStorage.getItem(key)) {
     return localStorage.getItem("searchFilms") ?? "";
   }
 

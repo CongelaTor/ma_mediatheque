@@ -29,7 +29,6 @@ async function initCollectionsPage() {
   currentGenre = state.genre ?? "all";
   currentType = state.type ?? "all";
   currentStudio = state.studio ?? "all";
-  // window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
 
   updateSidebarTitle("ajoutsTitle", "AJOUTS", currentAjouts);
   updateSidebarTitle("genreTitle", "GENRE", currentGenre);

@@ -21,10 +21,7 @@
                 <a class="nav-button" data-page="home" href="index.html">Accueil</a>
                 <a class="nav-button" data-page="collections" href="collections.html">Collections</a>
                 <a class="nav-button" data-page="films" href="films.html"
-                    onclick="
-                        sessionStorage.removeItem('selectedCollectionId');
-                        sessionStorage.removeItem('selectedCollectionName');
-                    ">Films</a>
+                    onclick="setActiveFilmsContext();">Films</a>
                 <a class="nav-button active mediaserver-only" data-page="tools" href="tools.html">Tools</a>
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>

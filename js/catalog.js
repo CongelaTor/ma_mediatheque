@@ -97,14 +97,25 @@ function updateStats() {
     groupedFilms.add(groupKey);
   }
   const filmsCount = groupedFilms.size;
+  const filmsSize = catalog.films.reduce(
+    (total, film) => total + (Number(film.taille) || 0),
+    0,
+  );
   const nouveautesCount = catalog.films.filter((film) => !film.tmdbId).length;
-
   const seriesCount = catalog.series.length;
   const episodesCount = countEpisodes();
 
+  let seriesSize = 0;
+  for (const serie of catalog.series) {
+    for (const saison of serie.saisons) {
+      for (const episode of saison.episodes) {
+        seriesSize += Number(episode.taille) || 0;
+      }
+    }
+  }
   setText(
     "homeFilmsStats",
-    `${filmsCount} films • ${collectionsCount} collections`,
+    `${filmsCount} films • ${collectionsCount} collections • ${formatMediaSize(filmsSize)}`,
   );
 
   setText("sideCollections", collectionsCount);
@@ -118,8 +129,26 @@ function updateStats() {
   setText("sideEpisodes", episodesCount);
   setText(
     "homeSeriesStats",
-    `${seriesCount} séries • ${episodesCount} épisodes`,
+    `${seriesCount} séries • ${episodesCount} épisodes • ${formatMediaSize(seriesSize)}`,
   );
+
+  setText(
+    "homeLibrarySize",
+    `Accédez à ${formatMediaSize(filmsSize + seriesSize)} de films, séries, BD, livres, musiques et jeux.`,
+  );
+}
+
+function formatMediaSize(size) {
+  const megaBytes = size / (1024 * 1024);
+  const gigaBytes = size / (1024 * 1024 * 1024);
+  const teraBytes = size / (1024 * 1024 * 1024 * 1024);
+  if (teraBytes >= 1) {
+    return `${teraBytes.toFixed(2).replace(".", ",")} To`;
+  }
+  if (gigaBytes >= 1) {
+    return `${Math.round(gigaBytes)} Go`;
+  }
+  return `${Math.round(megaBytes)} Mo`;
 }
 
 function countEpisodes() {

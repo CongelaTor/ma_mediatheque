@@ -40,7 +40,9 @@ async function initToolsPage() {
   showGenre = toolsState.showGenre ?? true;
   showStudio = toolsState.showStudio ?? true;
   showFile = toolsState.showFile ?? false;
-  window.selectedCollectionId = sessionStorage.getItem("selectedCollectionId");
+  window.selectedCollectionId = isCollectionContextActive()
+    ? sessionStorage.getItem("selectedCollectionId")
+    : null;
 
   document.getElementById("applyToAllButton").onclick = () => {
     applyToAll = !applyToAll;
