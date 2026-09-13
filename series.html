@@ -24,13 +24,6 @@
                 <a class="nav-button active" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
-                <input id="searchInput" 
-                    class="search-input" 
-                    type="search" 
-                    autocomplete="off"
-                    placeholder="Filtrer..."
-                    oninput="handleSearch()">
-
                 <button
                     class="icon-button refresh-button linux-hidden mediaserver-only"
                     onclick="reloadCatalog('series')">
@@ -78,9 +71,18 @@
 
                     <section class="content">
                         <div class="content-header">
-                            <div>
-                                <h1 id="seriesTitle">Séries</h1>
-                                <p id="seriesCount">0 série</p>
+                            <div class="content-title-row">
+                                <div>
+                                    <h1 id="seriesTitle">Séries</h1>
+                                    <p id="seriesCount">0 série</p>
+                                </div>
+
+                                <input id="searchInput"
+                                    class="search-input"
+                                    type="search"
+                                    autocomplete="off"
+                                    placeholder="Filtrer..."
+                                    oninput="handleSearch()">
                             </div>
                         </div>
 

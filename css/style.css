@@ -1345,6 +1345,11 @@ max-width: var(--cadres-max-width);
     .sidebar-hidden .layout {
         grid-template-columns: 1fr;
     }
+    .content-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
     .film-detail-card,
     .serie-detail-card {
         grid-template-columns: 1fr;
