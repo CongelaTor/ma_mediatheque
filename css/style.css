@@ -1324,6 +1324,10 @@ max-width: var(--cadres-max-width);
     .sidebar-hidden .layout {
         grid-template-columns: 1fr;
     }
+    .film-detail-card,
+    .serie-detail-card {
+        grid-template-columns: 1fr;
+    }
     .episode-card {
         grid-template-columns: 1fr;
     }
