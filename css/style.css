@@ -141,6 +141,7 @@ input {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
 }
 
 .search-input {
@@ -1321,7 +1322,7 @@ max-width: var(--cadres-max-width);
         gap: 8px;
     }
     .brand-title {
-        font-size: 20px;
+        font-size: 40px;
     }
     .main-nav {
         order: 3;
@@ -1333,7 +1334,7 @@ max-width: var(--cadres-max-width);
     .nav-button {
         height: 48px;
         padding: 0 15px;
-        font-size: 16px;
+        font-size: 32px;
         white-space: nowrap;
         flex: 1 0 auto;
     }
