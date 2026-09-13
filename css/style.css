@@ -1326,6 +1326,7 @@ max-width: var(--cadres-max-width);
     }
     .top-actions {
         margin-left: auto;
+        align-items: center;
     }
     .main-nav {
         width: 100%;
