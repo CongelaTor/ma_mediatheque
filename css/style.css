@@ -41,6 +41,7 @@ body {
     background: radial-gradient(circle at top left, #142447 0, #070b14 38%, #03050a 100%);
     color: var(--text);
     overflow-y: scroll;
+    font-size: calc(1rem * var(--font-scale));
 }
 
 button,
