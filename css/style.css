@@ -425,6 +425,10 @@ gap: 26px;
     color: var(--blue);
 }
 
+.content-header .search-input {
+    margin-left: auto;
+}
+
 .sort-label {
     color: var(--muted);
     font-size: calc(14px * var(--font-scale));
@@ -1344,11 +1348,6 @@ max-width: var(--cadres-max-width);
     .layout,
     .sidebar-hidden .layout {
         grid-template-columns: 1fr;
-    }
-    .content-title-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
     }
     .film-detail-card,
     .serie-detail-card {
