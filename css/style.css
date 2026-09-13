@@ -1335,6 +1335,7 @@ max-width: var(--cadres-max-width);
         border-top: 1px solid var(--border);
         margin-top: 6px;
         padding-top: 6px;
+        padding-bottom: 12px;
     }
     .home-cards {
         grid-template-columns: 1fr;
