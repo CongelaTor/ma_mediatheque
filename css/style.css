@@ -1324,10 +1324,11 @@ max-width: var(--cadres-max-width);
         --font-scale: 2;
     }
     .topbar {
+        height: auto;
+        min-height: 70px;
         flex-wrap: wrap;
         padding-top: 10px;
-    }
-    .brand {
+    }    .brand {
         flex: 1;
         min-width: 0;
     }
