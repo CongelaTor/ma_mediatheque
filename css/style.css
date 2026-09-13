@@ -427,6 +427,9 @@ gap: 26px;
 
 .content-header .search-input {
     margin-left: auto;
+    width: 260px;
+    min-height: 48px;
+    font-size: calc(15px * var(--font-scale));
 }
 
 .sort-label {
