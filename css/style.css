@@ -1316,16 +1316,14 @@ max-width: var(--cadres-max-width);
     :root {
         --font-scale: 2;
     }
-
     .topbar {
         flex-wrap: wrap;
+        padding-top: 10px;
     }
-
     .brand {
         flex: 1;
         min-width: 0;
     }
-
     .top-actions {
         margin-left: auto;
     }
