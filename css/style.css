@@ -11,6 +11,7 @@ body:not(.no-mediaserver) .download-only {
 }
 
 :root {
+    --font-scale: 1;
     --bg: #070b14;
     --bg-soft: #0e1625;
     --panel: #111c2d;
@@ -83,7 +84,7 @@ input {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-scale));
     box-shadow: 0 0 18px rgba(22, 131, 255, 0.45);
     position: relative;
 }
@@ -98,7 +99,7 @@ input {
 }
 
 .brand-title {
-    font-size: 19px;
+    font-size: calc(19px * var(--font-scale));
     font-weight: 700;
 }
 
@@ -119,7 +120,7 @@ input {
     border-bottom: 3px solid transparent;
     background: transparent;
     color: var(--muted);
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
     cursor: pointer;
     text-decoration: none;
 }
@@ -199,7 +200,7 @@ input {
 
 .home-header h1 {
     margin: 0 0 8px 0;
-    font-size: 30px;
+    font-size: calc(30px * var(--font-scale));
 }
 
 .home-header p {
@@ -261,7 +262,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 34px;
+    font-size: calc(34px * var(--font-scale));
     border: 5px solid #111c2d;
 }
 
@@ -271,7 +272,7 @@ input {
 
 .home-card h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: calc(35px * var(--font-scale));
     margin: 10px 0;
 }
 
@@ -292,7 +293,7 @@ border-radius: 10px;
 background: var(--blue-dark);
 color: white;
 cursor: pointer;
-font-size: 15px;
+font-size: calc(15px * var(--font-scale));
 }
 .home-card .resume-button {
 width: calc(100% - 48px);
@@ -327,7 +328,7 @@ gap: 26px;
 
 .stat-card span {
     display: block;
-    font-size: 26px;
+    font-size: calc(26px * var(--font-scale));
     font-weight: 700;
 }
 
@@ -350,7 +351,7 @@ gap: 26px;
 .sidebar-title {
     color: var(--muted);
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: calc(12px * var(--font-scale));
     letter-spacing: 0.08em;
     margin: 0 0 12px 0;
 }
@@ -390,7 +391,7 @@ gap: 26px;
 
 .sidebar-stat {
     color: var(--muted);
-    font-size: 14px;
+    font-size: calc(14px * var(--font-scale));
     margin-bottom: 12px;
 }
 
@@ -413,7 +414,7 @@ gap: 26px;
 
 .content-header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: calc(28px * var(--font-scale));
 }
 
 .content-header p {
@@ -423,7 +424,7 @@ gap: 26px;
 
 .sort-label {
     color: var(--muted);
-    font-size: 14px;
+    font-size: calc(14px * var(--font-scale));
 }
 
 .resume-button {
@@ -437,7 +438,7 @@ gap: 26px;
     text-align: left;
     padding: 0 18px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
 }
 
 .resume-button:hover {
@@ -502,7 +503,7 @@ gap: 26px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.70);
     color: white;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-scale));
     cursor: pointer;
     z-index: 10;
 }
@@ -531,7 +532,7 @@ background: #f97316;
 
     color: white;
 
-    font-size: 24px;
+    font-size: calc(24px * var(--font-scale));
     font-weight: 600;
 
     line-height: 1.4;
@@ -564,7 +565,7 @@ background: #f97316;
             #294668 45%,
             #2c4a6e 100%);
     color: white;
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
     cursor: pointer;
     white-space: nowrap;
     transition: .15s;
@@ -600,7 +601,7 @@ background: #f97316;
             #294668 45%,
             #2c4a6e 100%);
     color: white;
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
     cursor: pointer;
     white-space: nowrap;
     transition: .15s;
@@ -648,7 +649,7 @@ background: #f97316;
 
 .tmdb-modal-header h2 {
     margin: 0;
-    font-size: 22px;
+    font-size: calc(22px * var(--font-scale));
 }
 
 .tmdb-modal-close {
@@ -658,7 +659,7 @@ background: #f97316;
     border-radius: 50%;
     background: #17263d;
     color: white;
-    font-size: 24px;
+    font-size: calc(24px * var(--font-scale));
     cursor: pointer;
 
     display: flex;
@@ -707,32 +708,32 @@ background: #f97316;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 13px;
+    font-size: calc(13px * var(--font-scale));
     text-align: center;
     padding: 8px;
 }
 
 .tmdb-result-title {
-    font-size: 18px;
+    font-size: calc(18px * var(--font-scale));
     font-weight: 700;
     margin-bottom: 4px;
 }
 
 .tmdb-result-year {
     color: var(--blue);
-    font-size: 14px;
+    font-size: calc(14px * var(--font-scale));
     margin-bottom: 8px;
 }
 
 .tmdb-result-info {
     color: var(--blue);
-    font-size: 16px;
+    font-size: calc(16px * var(--font-scale));
     margin-bottom: 8px;
 }
 
 .tmdb-result-description {
     color: var(--muted);
-    font-size: 17px;
+    font-size: calc(17px * var(--font-scale));
     line-height: 1.4;
 }
 
@@ -744,7 +745,7 @@ background: #f97316;
     color: white;
     cursor: pointer;
     white-space: nowrap;
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
 }
 
 .tmdb-associate-button:hover {
@@ -868,7 +869,7 @@ max-width: var(--cadres-max-width);
 .episode-image-zone .missing-poster {
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: calc(18px * var(--font-scale));
 }
 
 .episode-info {
@@ -885,7 +886,7 @@ max-width: var(--cadres-max-width);
     flex-direction: column;
 }
 .episode-title {
-    font-size: 18px;
+    font-size: calc(18px * var(--font-scale));
     font-weight: 700;
     color: white;
     margin-bottom: 6px;
@@ -893,13 +894,13 @@ max-width: var(--cadres-max-width);
 
 .episode-meta {
     color: var(--blue);
-    font-size: 14px;
+    font-size: calc(14px * var(--font-scale));
     margin-bottom: 10px;
 }
 
 .episode-description {
     color: var(--muted);
-    font-size: 17px;
+    font-size: calc(17px * var(--font-scale));
     line-height: 1.45;
 }
 
@@ -922,7 +923,7 @@ max-width: var(--cadres-max-width);
     border-radius: 50%;
     background: #f97316;
     color: white;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-scale));
     cursor: default;
     z-index: 10;
 }
@@ -985,7 +986,7 @@ max-width: var(--cadres-max-width);
     padding: 10px 16px;
     cursor: pointer;
     white-space: nowrap;
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
     display: flex;
     align-items: center;
     gap: 6px;
@@ -1012,7 +1013,7 @@ max-width: var(--cadres-max-width);
 }
 
 .tmdb-search-token-pin {
-    font-size: 14px;
+    font-size: calc(14px * var(--font-scale));
     filter: grayscale(100%);
 }
 .film-detail-card {
@@ -1049,7 +1050,7 @@ max-width: var(--cadres-max-width);
     min-width: 0;
     overflow: hidden;
     color: var(--muted);
-    font-size: 18px;
+    font-size: calc(18px * var(--font-scale));
     font-weight: 400;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1057,7 +1058,7 @@ max-width: var(--cadres-max-width);
 
 .film-file-folder {
     color: var(--muted);
-    font-size: 15px;
+    font-size: calc(15px * var(--font-scale));
     font-weight: 400;
     line-height: 1.4;
     overflow-wrap: anywhere;
@@ -1066,7 +1067,7 @@ max-width: var(--cadres-max-width);
 }
 .film-file-meta {
     color: var(--blue);
-    font-size: 18px;
+    font-size: calc(18px * var(--font-scale));
     font-weight: 700;
     margin-left: 1px;
 }
@@ -1165,7 +1166,7 @@ max-width: var(--cadres-max-width);
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: calc(16px * var(--font-scale));
     z-index: 10000;
     pointer-events: none;
     opacity: 0;
@@ -1203,7 +1204,7 @@ max-width: var(--cadres-max-width);
     background: linear-gradient(-90deg, rgba(30, 201, 138, 0.219), rgba(22, 131, 255, 0.08));
     color: white;
     cursor: pointer;
-    font-size: 20px;
+    font-size: calc(20px * var(--font-scale));
 }
 
 .sync-button:hover {
@@ -1256,7 +1257,7 @@ max-width: var(--cadres-max-width);
 
 .tool-button {
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: calc(12px * var(--font-scale));
 }
 
 .tool-duplicate-separator {
@@ -1291,22 +1292,26 @@ max-width: var(--cadres-max-width);
 .user-greeting {
     color: white;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: calc(14px * var(--font-scale));
     white-space: nowrap;
 }
 .request-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: calc(24px * var(--font-scale));
     line-height: 1;
     width: 100%;
     height: 100%;
 }
+
 /* ==================================================
    MOBILE
    ================================================== */
 @media (max-width: 768px) {
+    :root {
+        --font-scale: 2;
+    }
     body {
         overflow-x: hidden;
     }
@@ -1322,7 +1327,6 @@ max-width: var(--cadres-max-width);
         gap: 8px;
     }
     .brand-title {
-        font-size: 40px;
     }
     .main-nav {
         order: 3;
@@ -1334,7 +1338,6 @@ max-width: var(--cadres-max-width);
     .nav-button {
         height: 48px;
         padding: 0 15px;
-        font-size: 32px;
         white-space: nowrap;
         flex: 1 0 auto;
     }
@@ -1344,24 +1347,20 @@ max-width: var(--cadres-max-width);
     .search-input {
         width: min(180px, 42vw);
         height: 44px;
-        font-size: 17px;
     }
     .icon-button,
     .secondary-button {
         min-height: 44px;
         padding: 0 12px;
-        font-size: 16px;
     }
     .home-header {
         margin: 24px auto 18px auto;
         padding: 0 16px;
     }
     .home-header h1 {
-        font-size: 28px;
         line-height: 1.2;
     }
     .home-header p {
-        font-size: 17px;
         line-height: 1.45;
     }
     .home-cards {
@@ -1376,17 +1375,14 @@ max-width: var(--cadres-max-width);
         height: 190px;
     }
     .home-card h2 {
-        font-size: 32px;
     }
     .home-card p {
         padding: 0 12px;
-        font-size: 17px;
     }
     .home-card button:not(.resume-button),
     .home-card .resume-button {
         min-height: 50px;
         height: auto;
-        font-size: 17px;
     }
     .stats-row {
         padding: 0 16px;
@@ -1404,15 +1400,12 @@ max-width: var(--cadres-max-width);
         padding: 16px;
     }
     .sidebar-title {
-        font-size: 15px;
     }
     .sidebar-link {
         min-height: 46px;
         padding: 12px 14px;
-        font-size: 17px;
     }
     .sidebar-stat {
-        font-size: 16px;
     }
     .content {
         padding: 18px 14px;
@@ -1423,15 +1416,12 @@ max-width: var(--cadres-max-width);
         flex-wrap: wrap;
     }
     .content-header h1 {
-        font-size: 27px;
     }
     .content-header p,
     .sort-label {
-        font-size: 16px;
     }
     .resume-button {
         min-height: 54px;
-        font-size: 17px;
     }
     .cards-grid {
         grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
@@ -1440,7 +1430,6 @@ max-width: var(--cadres-max-width);
     .play-button {
         width: 48px;
         height: 48px;
-        font-size: 23px;
     }
     .serie-detail-card,
     .film-detail-card {
@@ -1464,7 +1453,6 @@ max-width: var(--cadres-max-width);
     .language-button {
         min-height: 46px;
         padding: 11px 16px;
-        font-size: 17px;
     }
     .episode-card {
         grid-template-columns: 1fr;
@@ -1476,13 +1464,10 @@ max-width: var(--cadres-max-width);
         aspect-ratio: 16 / 9;
     }
     .episode-title {
-        font-size: 21px;
     }
     .episode-meta {
-        font-size: 16px;
     }
     .episode-description {
-        font-size: 18px;
         line-height: 1.5;
     }
     .episode-actions {
@@ -1497,10 +1482,8 @@ max-width: var(--cadres-max-width);
     }
     .film-file-title,
     .film-file-meta {
-        font-size: 18px;
     }
     .film-file-folder {
-        font-size: 16px;
     }
     .tmdb-modal {
         padding: 10px;
@@ -1522,10 +1505,8 @@ max-width: var(--cadres-max-width);
     .tmdb-associate-button {
         grid-column: 1 / -1;
         min-height: 46px;
-        font-size: 17px;
     }
     .tmdb-result-description {
-        font-size: 17px;
     }
     .tools-container {
         padding: 10px;
@@ -1540,12 +1521,10 @@ max-width: var(--cadres-max-width);
         width: 100%;
         min-width: 0;
         max-width: 100%;
-        font-size: 17px;
     }
     .tool-button {
         min-height: 42px;
         padding: 8px 12px;
-        font-size: 15px;
     }
     .user-greeting {
         display: none;
