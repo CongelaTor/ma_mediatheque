@@ -284,10 +284,9 @@ input {
 text-align: center;
 color: var(--muted);
 margin: 0 auto 18px auto;
-max-width: 360px;
+width: calc(100% - 48px);
 line-height: 1.5;
 }
-
 .home-card button:not(.resume-button) {
 width: calc(100% - 48px);
 height: 42px;
