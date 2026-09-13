@@ -103,7 +103,7 @@ input {
 }
 
 .brand-title {
-    font-size: calc(19px * var(--font-scale));
+    font-size: calc(15px * var(--font-scale));
     font-weight: 700;
 }
 

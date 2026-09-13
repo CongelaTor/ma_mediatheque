@@ -134,7 +134,7 @@ function updateStats() {
 
   setText(
     "homeLibrarySize",
-    `Accédez à ${formatMediaSize(filmsSize + seriesSize)} de films, séries, BD, livres, musiques et jeux.`,
+    `Accédez à ${formatMediaSize(filmsSize + seriesSize)} de medias.`,
   );
 }
 
