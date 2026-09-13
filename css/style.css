@@ -171,17 +171,13 @@ input {
     border-radius: 10px;
     background: #0b1321;
     color: var(--text);
-    padding: 0 14px;
+    padding: 10 14px;
     cursor: pointer;
-
     text-decoration: none;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
 .icon-button:hover,
 .secondary-button:hover {
     border-color: var(--blue);
