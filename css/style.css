@@ -1329,10 +1329,14 @@ max-width: var(--cadres-max-width);
     .top-actions {
         margin-left: auto;
     }
-
     .main-nav {
         width: 100%;
         order: 2;
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid var(--border);
+        margin-top: 6px;
+        padding-top: 6px;
     }
     .home-cards {
         grid-template-columns: 1fr;
