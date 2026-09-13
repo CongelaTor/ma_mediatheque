@@ -166,7 +166,7 @@ input {
 
 .icon-button,
 .secondary-button {
-    height: 38px;
+    min-height: 38px;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: #0b1321;
