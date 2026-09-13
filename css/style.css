@@ -1,23 +1,3 @@
-
-/* ==================================================
-   RESPONSIVE MOBILE
-   ================================================== */
-@media (max-width: 768px) {
-    :root {
-        --font-scale: 2;
-    }
-    .home-cards {
-        grid-template-columns: 1fr;
-    }
-    .layout,
-    .sidebar-hidden .layout {
-        grid-template-columns: 1fr;
-    }
-    .episode-card {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ==================================================
    COMMUN PC/MOBILE
    ================================================== */
@@ -1328,3 +1308,22 @@ max-width: var(--cadres-max-width);
     height: 100%;
 }
 
+
+/* ==================================================
+   RESPONSIVE MOBILE
+   ================================================== */
+@media (max-width: 768px) {
+    :root {
+        --font-scale: 2;
+    }
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+    .layout,
+    .sidebar-hidden .layout {
+        grid-template-columns: 1fr;
+    }
+    .episode-card {
+        grid-template-columns: 1fr;
+    }
+}
