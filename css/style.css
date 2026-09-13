@@ -287,6 +287,10 @@ margin: 0 auto 18px auto;
 width: calc(100% - 48px);
 line-height: 1.5;
 }
+.home-stats {
+    display: inline-block;
+    width: 100%;
+}
 .home-card button:not(.resume-button) {
 width: calc(100% - 48px);
 height: 42px;
