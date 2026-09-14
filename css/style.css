@@ -70,7 +70,7 @@ input {
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     cursor: pointer;
     min-width: 230px;
 }
@@ -1332,6 +1332,7 @@ max-width: var(--cadres-max-width);
     .brand {
         flex: 1;
         min-width: 0;
+        padding-left: 8px;
     }
     .top-actions {
         margin-left: auto;
@@ -1345,7 +1346,7 @@ max-width: var(--cadres-max-width);
         border-top: 1px solid var(--border);
         margin-top: 12px;
         padding-top: 6px;
-        padding-bottom: 12px;
+        padding-bottom: 0px;
     }
     .home-cards {
         grid-template-columns: 1fr;
