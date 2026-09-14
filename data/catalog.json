@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-09-10T11:45:47.373Z",
+    "dateDernierScan": "2026-09-13T20:29:46.737Z",
     "films": [
         {
             "id": "08bthe_2017",
@@ -17797,8 +17797,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.527Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -24107,8 +24106,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.743Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -24377,8 +24375,7 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:38.754Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -24659,8 +24656,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.766Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -24992,8 +24988,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.812Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 2,
@@ -25346,8 +25341,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.819Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 3,
@@ -25736,8 +25730,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.827Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 4,
@@ -26174,8 +26167,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.835Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 },
                 {
                     "numero": 5,
@@ -26600,8 +26592,7 @@
                             "doublonProbable": true,
                             "dateAjout": "2026-09-06T18:10:38.844Z"
                         }
-                    ],
-                    "hasMissingEpisodes": false
+                    ]
                 }
             ]
         },
@@ -34396,7 +34387,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.169Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -34641,7 +34633,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.178Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 3,
@@ -34814,7 +34807,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.185Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 4,
@@ -35023,7 +35017,8 @@
                             "doublonProbable": false,
                             "dateAjout": "2026-09-06T18:10:39.194Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": true
                 }
             ]
         },
@@ -35910,194 +35905,195 @@
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "Timeless.S01E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 567293398,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.230Z"
+                            "dateAjout": "2026-09-13T20:29:45.934Z"
                         },
                         {
                             "numero": 2,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E02.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E02.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "Timeless.S01E02.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 363047582,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.230Z"
+                            "dateAjout": "2026-09-13T20:29:45.935Z"
                         },
                         {
                             "numero": 3,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E03.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E03.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "Timeless.S01E03.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 363184074,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.230Z"
+                            "dateAjout": "2026-09-13T20:29:45.935Z"
                         },
                         {
                             "numero": 4,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E04.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E04.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "Timeless.S01E04.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 373288156,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.231Z"
+                            "dateAjout": "2026-09-13T20:29:45.936Z"
                         },
                         {
                             "numero": 5,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E05.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E05.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "Timeless.S01E05.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 371005654,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.231Z"
+                            "dateAjout": "2026-09-13T20:29:45.936Z"
                         },
                         {
                             "numero": 6,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E06.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E06.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E06.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
                             "taille": 368735654,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.232Z"
+                            "dateAjout": "2026-09-13T20:29:45.937Z"
                         },
                         {
                             "numero": 7,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E07.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E07.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E07.FASTSUB.VOSTFR.HDTV.XviD-ZT.www.torrent9.biz.avi",
                             "taille": 364066870,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.232Z"
+                            "dateAjout": "2026-09-13T20:29:45.938Z"
                         },
                         {
                             "numero": 8,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E08.FASTSUB.VOSTFR.HDTV.x264-ARK01.www.torrent9.biz.mp4",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E08.FASTSUB.VOSTFR.HDTV.x264-ARK01.www.torrent9.biz.mp4",
                             "nomFichier": "Timeless.S01E08.FASTSUB.VOSTFR.HDTV.x264-ARK01.www.torrent9.biz.mp4",
                             "taille": 303348427,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.233Z"
+                            "dateAjout": "2026-09-13T20:29:45.938Z"
                         },
                         {
                             "numero": 9,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E09.VOSTFR.HDTV.XviD-EXTREME.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E09.VOSTFR.HDTV.XviD-EXTREME.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E09.VOSTFR.HDTV.XviD-EXTREME.www.torrent9.biz.avi",
                             "taille": 347830668,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.233Z"
+                            "dateAjout": "2026-09-13T20:29:45.939Z"
                         },
                         {
                             "numero": 10,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E10.HDTV.VOSTFR.XViD-EXTREME.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E10.HDTV.VOSTFR.XViD-EXTREME.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E10.HDTV.VOSTFR.XViD-EXTREME.www.torrent9.biz.avi",
                             "taille": 361123223,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.234Z"
+                            "dateAjout": "2026-09-13T20:29:45.939Z"
                         },
                         {
                             "numero": 11,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E11.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E11.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E11.VOSTFR.HDTV.XViD-EXTREME.www.torrent9.biz.avi",
                             "taille": 314049756,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.234Z"
+                            "dateAjout": "2026-09-13T20:29:45.939Z"
                         },
                         {
                             "numero": 12,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E12.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E12.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E12.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
                             "taille": 367069510,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.235Z"
+                            "dateAjout": "2026-09-13T20:29:45.940Z"
                         },
                         {
                             "numero": 13,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E13.FASTSUB.VOSTFR.HDTV.XviD-T9.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E13.FASTSUB.VOSTFR.HDTV.XviD-T9.avi",
                             "nomFichier": "Timeless.S01E13.FASTSUB.VOSTFR.HDTV.XviD-T9.avi",
                             "taille": 367251908,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.235Z"
+                            "dateAjout": "2026-09-13T20:29:45.940Z"
                         },
                         {
                             "numero": 14,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E14.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E14.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E14.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
                             "taille": 377511040,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.236Z"
+                            "dateAjout": "2026-09-13T20:29:45.941Z"
                         },
                         {
                             "numero": 15,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E15.VOSTFR.HDTV.XViD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E15.VOSTFR.HDTV.XViD-EXTREME.avi",
                             "nomFichier": "Timeless.S01E15.VOSTFR.HDTV.XViD-EXTREME.avi",
                             "taille": 367882780,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.236Z"
+                            "dateAjout": "2026-09-13T20:29:45.941Z"
                         },
                         {
                             "numero": 16,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S01 1-16 Ok/Timeless.S01E16.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
+                            "fichier": "/01_Series/Timeless/S01/Timeless.S01E16.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
                             "nomFichier": "Timeless.S01E16.FASTSUB.VOSTFR.HDTV.XviD-T9.www.torrent9.biz.avi",
                             "taille": 367025478,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.236Z"
+                            "dateAjout": "2026-09-13T20:29:45.942Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": false
                 },
                 {
                     "numero": 2,
@@ -36107,108 +36103,108 @@
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ Torrent9.red ] Timeless.S02E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ Torrent9.red ] Timeless.S02E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "[ Torrent9.red ] Timeless.S02E01.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 367421118,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.238Z"
+                            "dateAjout": "2026-09-13T20:29:45.945Z"
                         },
                         {
                             "numero": 2,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ Torrent9.red ] Timeless.S02E02.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ Torrent9.red ] Timeless.S02E02.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "[ Torrent9.red ] Timeless.S02E02.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 348460710,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.239Z"
+                            "dateAjout": "2026-09-13T20:29:45.945Z"
                         },
                         {
                             "numero": 3,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ Torrent9.red ] Timeless.S02E03.VOSTFR.WEB-DL.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ Torrent9.red ] Timeless.S02E03.VOSTFR.WEB-DL.XviD-ZT.avi",
                             "nomFichier": "[ Torrent9.red ] Timeless.S02E03.VOSTFR.WEB-DL.XviD-ZT.avi",
                             "taille": 367432338,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.239Z"
+                            "dateAjout": "2026-09-13T20:29:45.946Z"
                         },
                         {
                             "numero": 4,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ Torrent9.red ] Timeless.S02E04.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ Torrent9.red ] Timeless.S02E04.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "[ Torrent9.red ] Timeless.S02E04.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 358159200,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.240Z"
+                            "dateAjout": "2026-09-13T20:29:45.946Z"
                         },
                         {
                             "numero": 6,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ Torrent9.red ] Timeless.S02E06.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ Torrent9.red ] Timeless.S02E06.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "[ Torrent9.red ] Timeless.S02E06.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 357131316,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.240Z"
+                            "dateAjout": "2026-09-13T20:29:45.947Z"
                         },
                         {
                             "numero": 7,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ Torrent9.red ] Timeless.S02E07.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ Torrent9.red ] Timeless.S02E07.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "[ Torrent9.red ] Timeless.S02E07.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 367506076,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.241Z"
+                            "dateAjout": "2026-09-13T20:29:45.948Z"
                         },
                         {
                             "numero": 8,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ www.Torrent9.Red ] Timeless.S02E08.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ www.Torrent9.Red ] Timeless.S02E08.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "nomFichier": "[ www.Torrent9.Red ] Timeless.S02E08.FASTSUB.VOSTFR.HDTV.XviD-ZT.avi",
                             "taille": 367730966,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.241Z"
+                            "dateAjout": "2026-09-13T20:29:45.948Z"
                         },
                         {
                             "numero": 9,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/[ www.Torrent9.Red ] Timeless.S02E09E10.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S02/[ www.Torrent9.Red ] Timeless.S02E09E10.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "[ www.Torrent9.Red ] Timeless.S02E09E10.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 710577456,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.242Z"
+                            "dateAjout": "2026-09-13T20:29:45.949Z"
                         },
                         {
                             "numero": 11,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/Timeless.S02E11.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S02/Timeless.S02E11.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "Timeless.S02E11.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 367870142,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-09-06T18:10:39.237Z"
+                            "dateAjout": "2026-09-13T20:29:45.942Z"
                         },
                         {
                             "numero": 11,
@@ -36216,26 +36212,27 @@
                                 "VO",
                                 "VF"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/timeless.s02e11.multi.1080p.web.x264-cielos.mkv",
+                            "fichier": "/01_Series/Timeless/S02/timeless.s02e11.multi.1080p.web.x264-cielos.mkv",
                             "nomFichier": "timeless.s02e11.multi.1080p.web.x264-cielos.mkv",
                             "taille": 2279521272,
                             "doublonExact": false,
                             "doublonProbable": true,
-                            "dateAjout": "2026-09-06T18:10:39.237Z"
+                            "dateAjout": "2026-09-13T20:29:45.943Z"
                         },
                         {
                             "numero": 12,
                             "langue": [
                                 "VOSTFR"
                             ],
-                            "fichier": "/01_Series/Timeless/S02 1-12 Ok/Timeless.S02E12.FiNAL.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
+                            "fichier": "/01_Series/Timeless/S02/Timeless.S02E12.FiNAL.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "nomFichier": "Timeless.S02E12.FiNAL.FASTSUB.VOSTFR.HDTV.XviD-EXTREME.avi",
                             "taille": 365608232,
                             "doublonExact": false,
                             "doublonProbable": false,
-                            "dateAjout": "2026-09-06T18:10:39.238Z"
+                            "dateAjout": "2026-09-13T20:29:45.944Z"
                         }
-                    ]
+                    ],
+                    "hasMissingEpisodes": true
                 }
             ]
         },
