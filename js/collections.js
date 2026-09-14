@@ -153,7 +153,7 @@ function renderCollections() {
   }
   setText(
     "collectionsCount",
-    `${collectionList.length} collection${collectionList.length >= 1 ? "s" : ""}`,
+    `${collectionList.length} collection${collectionList.length > 1 ? "s" : ""}`,
   );
   setText("collectionsFilmsCount", `${uniqueFilms.size} films`);
 
