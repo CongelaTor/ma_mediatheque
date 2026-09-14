@@ -762,6 +762,19 @@ background: #f97316;
     top: -1px;
 }
 
+#backToCollectionsButton {
+    position: relative;
+    line-height: 1.5;
+}
+#backToFilmsButton {
+    position: relative;
+    line-height: 1.5;
+}
+#backToSeriesButton {
+    position: relative;
+    line-height: 1.5;
+}
+
 .tmdb-associate-button:hover {
     transform: translateY(-1px);
 }
