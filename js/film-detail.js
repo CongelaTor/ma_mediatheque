@@ -216,8 +216,7 @@ function createFilmFileCard(film) {
   const downloadButton = document.createElement("button");
   downloadButton.className =
     "tmdb-associate-button film-file-action-button download-only";
-  // downloadButton.innerHTML = '<span class="play-icon">↓</span>';
-  downloadButton.innerHTML = '<span class="request-icon">➤</span>';
+  downloadButton.innerHTML = '<span class="play-icon">↓</span>';
   downloadButton.title = "Télécharger";
   downloadButton.onclick = () => {
     requestFilmDownload(film);
