@@ -1400,9 +1400,9 @@ max-width: var(--cadres-max-width);
         grid-template-columns: 1fr;
     }
     .season-button.active {
-    outline: 3px solid var(--blue);
+    outline: 2px solid var(--blue);
     }
     .language-button.active {
-    outline: 3px solid var(--blue);
+    outline: 2px solid var(--blue);
     }
 }
