@@ -27,12 +27,6 @@
                 <a class="nav-button" data-page="series" href="series.html">Séries</a>
             </nav>
             <div class="top-actions">
-                <input id="searchInput" 
-                    class="search-input" 
-                    type="text" 
-                    autocomplete="off"
-                    placeholder="Filtrer..."
-                    oninput="handleSearch()">
                 <button
                     id="scanFilmsButton"
                     class="icon-button refresh-button linux-hidden mediaserver-only"
@@ -90,10 +84,16 @@
                                 <h1 id="filmsCount">0 film</h1>
                                 <p id="filmsSubtitle">Hors collections</p>
                             </div>
-
-                            <button id="backToCollectionsButton" class="secondary-button hidden">
-                                ← Retour aux collections
-                            </button>
+                            <input id="searchInput"
+                                class="search-input"
+                                type="text"
+                                autocomplete="off"
+                                placeholder="Filtrer..."
+                                oninput="handleSearch()">
+                        <button id="backToCollectionsButton" 
+                            class="tmdb-associate-button hidden">
+                            ← Retour
+                        </button>
                         </div>
                         <button id="resumeFilmButton" 
                                 class="resume-button hidden" 

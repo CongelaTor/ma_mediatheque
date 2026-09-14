@@ -61,8 +61,12 @@ async function initFilmsPage() {
   const backToCollectionsButton = document.getElementById(
     "backToCollectionsButton",
   );
+  const searchInput = document.getElementById("searchInput");
+
   if (window.selectedCollectionId && backToCollectionsButton) {
     backToCollectionsButton.classList.remove("hidden");
+    searchInput.classList.add("hidden");
+
     backToCollectionsButton.onclick = () => {
       window.location.href = "collections.html";
     };

@@ -280,7 +280,7 @@ function createEpisodeCard(serie, saison, episode, tmdbEpisode = null) {
     if (episode.numero === 1) {
       const downloadButton = document.createElement("button");
       downloadButton.className = "play-button download-only";
-      downloadButton.innerHTML = '<span class="download-icon">⭳</span>';
+      downloadButton.innerHTML = '<span class="play-icon">↓</span>';
       downloadButton.title = `Télécharger la saison ${saison.numero}`;
       downloadButton.onclick = (event) => {
         event.stopPropagation();

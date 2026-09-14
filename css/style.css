@@ -147,6 +147,7 @@ input {
     align-items: center;
     gap: 10px;
     min-width: 0;
+    margin-right: -8px;
 }
 
 .search-input {
@@ -378,8 +379,8 @@ gap: 26px;
     background: transparent;
     color: var(--muted);
     cursor: pointer;
+    font-size: calc(14px * var(--font-scale));
 }
-
 .sidebar-link:hover,
 .sidebar-link.active {
     background: linear-gradient(90deg, rgba(22, 131, 255, 0.28), rgba(22, 131, 255, 0.06));
@@ -428,10 +429,9 @@ gap: 26px;
 .content-header .search-input {
     margin-left: auto;
     width: 260px;
-    min-height: 48px;
+    min-height: 52px;
     font-size: calc(15px * var(--font-scale));
 }
-
 .sort-label {
     color: var(--muted);
     font-size: calc(14px * var(--font-scale));
@@ -492,12 +492,9 @@ gap: 26px;
 }
 
 .play-icon {
-
     position: relative;
-
     left: 2px;
     top: -1px;
-
 }
 
 .play-button {
@@ -756,6 +753,13 @@ background: #f97316;
     cursor: pointer;
     white-space: nowrap;
     font-size: calc(15px * var(--font-scale));
+    text-decoration: none;
+    text-align: center;
+}
+
+.back-arrow {
+    position: relative;
+    top: -1px;
 }
 
 .tmdb-associate-button:hover {
@@ -1298,18 +1302,22 @@ max-width: var(--cadres-max-width);
     font-weight: bold;
     margin-right: 10px;
 }
-
 .user-greeting {
     color: white;
     margin-right: 10px;
     font-size: calc(14px * var(--font-scale));
     white-space: nowrap;
 }
+
 .request-icon {
+    position: relative;
+    left: 3px;
+    top: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: calc(24px * var(--font-scale));
+    font-size: calc(12px * var(--font-scale));
     line-height: 1;
     width: 100%;
     height: 100%;
@@ -1322,6 +1330,19 @@ max-width: var(--cadres-max-width);
 @media (max-width: 768px) {
     :root {
         --font-scale: 2;
+    }
+    .episode-image-zone {
+        width: 330px !important;
+        height: 185px !important;
+    }
+    .play-button,
+    .user-button {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    .user-button {
+        font-size: calc(14px * var(--font-scale)) !important;
     }
     .topbar {
         height: auto;
