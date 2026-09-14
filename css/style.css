@@ -619,7 +619,7 @@ background: #f97316;
 }
 
 .language-button.active {
-    border: 2px solid var(--blue);
+    outline: 2px solid var(--blue);
 }
 
 .tmdb-modal {
@@ -1400,9 +1400,9 @@ max-width: var(--cadres-max-width);
         grid-template-columns: 1fr;
     }
     .season-button.active {
-    outline: 8px solid var(--blue) !important;
+    outline: 4px solid var(--blue);
     }
     .language-button.active {
-    border: 8px solid var(--blue) !important;
+    outline: 4px solid var(--blue);
     }
 }
