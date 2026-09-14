@@ -1400,6 +1400,6 @@ max-width: var(--cadres-max-width);
         grid-template-columns: 1fr;
     }
     .language-button.active {
-    border: 4px solid var(--blue);
+    border: 4px solid var(--blue) !important;
     }
 }
