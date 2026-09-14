@@ -1399,4 +1399,7 @@ max-width: var(--cadres-max-width);
     .episode-card {
         grid-template-columns: 1fr;
     }
+    .language-button.active {
+    border: 3px solid var(--blue);
+    }
 }
