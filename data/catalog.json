@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "dateDernierScan": "2026-09-13T20:29:46.737Z",
+    "dateDernierScan": "2026-09-16T22:07:04.725Z",
     "films": [
         {
             "id": "08bthe_2017",
@@ -14881,36 +14881,6 @@
             "studio": null
         },
         {
-            "id": "a_team_repack_1cd_fms_2010",
-            "titre": "The A Team",
-            "annee": 2010,
-            "langue": [
-                "VF"
-            ],
-            "taille": 738129602,
-            "genre": [
-                "Action"
-            ],
-            "image": "https://image.tmdb.org/t/p/w342/tZmlUikHctU4qy82HMmkbGWDHfY.jpg",
-            "fichier": "/02_Films/Action/The A-Team.EXTENDED.CUT.2010.FRENCH.BDRiP.Repack.1CD.XViD-FMS.avi",
-            "nomFichier": "The A-Team.EXTENDED.CUT.2010.FRENCH.BDRiP.Repack.1CD.XViD-FMS.avi",
-            "imdbId": null,
-            "tmdbId": 34544,
-            "tmdbUrl": "https://www.themoviedb.org/movie/34544",
-            "doublonExact": false,
-            "doublonProbable": true,
-            "groupeDoublon": "the_a_team",
-            "dateAjout": "2026-08-22T08:23:33.558Z",
-            "titreTmdb": "L'Agence tous risques",
-            "anneeTmdb": "2010",
-            "dureeTmdb": 118,
-            "descriptionTmdb": "Quatre hommes, hyper qualifiés et autrefois membres respectés d'une unité d'élite de l'armée, sont chargés d'une mission secrète destinée à les piéger et qui les conduit en prison pour un crime qu'ils n'ont pas commis. Mais la somme de leurs talents leur permet de s'évader. Devenus des rebelles, ils décident de blanchir leurs noms et de retrouver les vrais coupables.",
-            "collectionId": null,
-            "collectionNom": null,
-            "type": "Film",
-            "studio": null
-        },
-        {
             "id": "a_team_2010",
             "titre": "The A Team",
             "annee": 2010,
@@ -14931,6 +14901,36 @@
             "doublonProbable": true,
             "groupeDoublon": "the_a_team",
             "dateAjout": "2026-08-22T08:23:33.560Z",
+            "titreTmdb": "L'Agence tous risques",
+            "anneeTmdb": "2010",
+            "dureeTmdb": 118,
+            "descriptionTmdb": "Quatre hommes, hyper qualifiés et autrefois membres respectés d'une unité d'élite de l'armée, sont chargés d'une mission secrète destinée à les piéger et qui les conduit en prison pour un crime qu'ils n'ont pas commis. Mais la somme de leurs talents leur permet de s'évader. Devenus des rebelles, ils décident de blanchir leurs noms et de retrouver les vrais coupables.",
+            "collectionId": null,
+            "collectionNom": null,
+            "type": "Film",
+            "studio": null
+        },
+        {
+            "id": "a_team_repack_1cd_fms_2010",
+            "titre": "The A Team",
+            "annee": 2010,
+            "langue": [
+                "VF"
+            ],
+            "taille": 738129602,
+            "genre": [
+                "Action"
+            ],
+            "image": "https://image.tmdb.org/t/p/w342/tZmlUikHctU4qy82HMmkbGWDHfY.jpg",
+            "fichier": "/02_Films/Action/The A-Team.EXTENDED.CUT.2010.FRENCH.BDRiP.Repack.1CD.XViD-FMS.avi",
+            "nomFichier": "The A-Team.EXTENDED.CUT.2010.FRENCH.BDRiP.Repack.1CD.XViD-FMS.avi",
+            "imdbId": null,
+            "tmdbId": 34544,
+            "tmdbUrl": "https://www.themoviedb.org/movie/34544",
+            "doublonExact": false,
+            "doublonProbable": true,
+            "groupeDoublon": "the_a_team",
+            "dateAjout": "2026-08-22T08:23:33.558Z",
             "titreTmdb": "L'Agence tous risques",
             "anneeTmdb": "2010",
             "dureeTmdb": 118,

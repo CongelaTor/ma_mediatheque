@@ -90,11 +90,6 @@ function loadSearchText() {
   if (!key) {
     return "";
   }
-
-  if (key === "searchFilmsHorsCollection" && !localStorage.getItem(key)) {
-    return localStorage.getItem("searchFilms") ?? "";
-  }
-
   return localStorage.getItem(key) ?? "";
 }
 
