@@ -7,31 +7,24 @@ document.body.classList.add(
 );
 
 async function isMediaServerAvailable() {
-  mediaServerAvailable = true;
-  sessionStorage.setItem("mediaServerAvailable", true);
-  document.body.classList.add("mediaserver");
-  document.body.classList.remove("no-mediaserver");
-  return true;
-}
-// async function isMediaServerAvailable() {
-//   try {
-//     const response = await fetch("http://localhost:9876/get-resume-playback", {
-//       method: "POST",
-//     });
+  try {
+    const response = await fetch("http://localhost:9876/get-resume-playback", {
+      method: "POST",
+    });
 
-//     mediaServerAvailable = response.ok;
-//     sessionStorage.setItem("mediaServerAvailable", mediaServerAvailable);
-//     document.body.classList.add("mediaserver");
-//     document.body.classList.remove("no-mediaserver");
-//     return mediaServerAvailable;
-//   } catch {
-//     mediaServerAvailable = false;
-//     sessionStorage.setItem("mediaServerAvailable", mediaServerAvailable);
-//     document.body.classList.add("no-mediaserver");
-//     document.body.classList.remove("mediaserver");
-//     return false;
-//   }
-// }
+    mediaServerAvailable = response.ok;
+    sessionStorage.setItem("mediaServerAvailable", mediaServerAvailable);
+    document.body.classList.add("mediaserver");
+    document.body.classList.remove("no-mediaserver");
+    return mediaServerAvailable;
+  } catch {
+    mediaServerAvailable = false;
+    sessionStorage.setItem("mediaServerAvailable", mediaServerAvailable);
+    document.body.classList.add("no-mediaserver");
+    document.body.classList.remove("mediaserver");
+    return false;
+  }
+}
 
 console.log("sessionStorage =", sessionStorage.getItem("mediaServerAvailable"));
 isMediaServerAvailable();
