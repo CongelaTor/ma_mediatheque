@@ -88,6 +88,8 @@ function saveSearchText() {
 function loadSearchText() {
   const key = getSearchTextKey();
   if (!key) {
+
+    
     return "";
   }
   return localStorage.getItem(key) ?? "";
