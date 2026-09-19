@@ -219,9 +219,12 @@ function createFilmFileCard(film) {
   downloadButton.innerHTML = '<span class="play-icon">↓</span>';
   downloadButton.title = "Télécharger";
   downloadButton.onclick = () => {
-    requestFilmDownload(film);
-  };
-
+  if (window.flutterTest) {
+    window.flutterTest(film.nomFichier);
+    return;
+  }
+  requestFilmDownload(film);
+};
   const tmdbButton = document.createElement("button");
   tmdbButton.className =
     "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";

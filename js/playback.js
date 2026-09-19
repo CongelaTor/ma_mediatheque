@@ -3,11 +3,6 @@ function playFilm(film) {
   updateResumePlayback("film", film);
   updateResumeButtons();
 
-  if (window.flutterTest) {
-    window.flutterTest(film.nomFichier);
-    return;
-  }
-
   requestLocalPlay({
     type: "film",
     titre: film.titre,
