@@ -221,13 +221,10 @@ function createFilmFileCard(film) {
 
   downloadButton.onclick = () => {
     const demandeur = localStorage.getItem("demandeur");
-    if (demandeur === "MyWindow") {
+    if (demandeur === "MyWindow" && window.flutterTest) {
       window.flutterTest("COUCOU");
-      if (window.flutterTest) {
-        window.flutterTest("COUCOU dans le if");
-        window.flutterTest(film.nomFichier);
-        return;
-      }
+      // window.flutterTest(film.nomFichier);
+      return;
     }
     requestFilmDownload(film);
   };
