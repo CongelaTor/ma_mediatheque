@@ -2,12 +2,19 @@ function playFilm(film) {
   saveResumeFilm(film);
   updateResumePlayback("film", film);
   updateResumeButtons();
+
+  if (window.flutterTest) {
+    window.flutterTest(film.nomFichier);
+    return;
+  }
+
   requestLocalPlay({
     type: "film",
     titre: film.titre,
     fichier: film.fichier,
   });
 }
+
 function playEpisode(serie, saison, episode) {
   const episodes = [...serie.saisons]
     .sort((a, b) => a.numero - b.numero)
