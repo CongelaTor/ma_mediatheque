@@ -218,15 +218,20 @@ function createFilmFileCard(film) {
     "tmdb-associate-button film-file-action-button download-only";
   downloadButton.innerHTML = '<span class="play-icon">↓</span>';
   downloadButton.title = "Télécharger";
+
   downloadButton.onclick = () => {
-    window.flutterTest("COUCOU");
-    if (window.flutterTest) {
-      window.flutterTest("COUCOU dans le if");
-      window.flutterTest(film.nomFichier);
-      return;
+    const demandeur = localStorage.getItem("demandeur");
+    if (demandeur === "MyWindow") {
+      window.flutterTest("COUCOU");
+      if (window.flutterTest) {
+        window.flutterTest("COUCOU dans le if");
+        window.flutterTest(film.nomFichier);
+        return;
+      }
+      requestFilmDownload(film);
     }
-    requestFilmDownload(film);
   };
+
   const tmdbButton = document.createElement("button");
   tmdbButton.className =
     "tmdb-associate-button film-file-action-button linux-hidden mediaserver-only";
