@@ -228,8 +228,8 @@ function createFilmFileCard(film) {
         window.flutterTest(film.nomFichier);
         return;
       }
-      requestFilmDownload(film);
     }
+    requestFilmDownload(film);
   };
 
   const tmdbButton = document.createElement("button");
