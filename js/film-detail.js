@@ -219,13 +219,9 @@ function createFilmFileCard(film) {
   downloadButton.innerHTML = '<span class="play-icon">↓</span>';
   downloadButton.title = "Télécharger";
   downloadButton.onclick = () => {
-    alert(
-      "type = " +
-        typeof window.flutterTest +
-        "\n\nvaleur = " +
-        window.flutterTest,
-    );
+    window.flutterTest("COUCOU");
     if (window.flutterTest) {
+      window.flutterTest("COUCOU dans le if");
       window.flutterTest(film.nomFichier);
       return;
     }
