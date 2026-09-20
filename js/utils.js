@@ -1,4 +1,6 @@
 window.isWebContainer = typeof window.flutterTest === "function";
+console.log("isWebContainer =", window.isWebContainer);
+console.log("flutterTest =", typeof window.flutterTest);
 
 let mediaServerAvailable =
   window.location.hostname !== "congelator.github.io" &&
