@@ -220,11 +220,13 @@ function createFilmFileCard(film) {
   downloadButton.title = "Télécharger";
 
   downloadButton.onclick = () => {
-    const demandeur = localStorage.getItem("demandeur");
-    if (demandeur === "MyWindow" && window.flutterTest) {
+    const isWindowsContainer = typeof window.flutterTest === "function";
+
+    if (isWindowsContainer) {
       window.flutterTest(film.nomFichier);
       return;
     }
+
     requestFilmDownload(film);
   };
 
