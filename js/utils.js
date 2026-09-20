@@ -1,3 +1,5 @@
+window.isWebContainer = typeof window.flutterTest === "function";
+
 let mediaServerAvailable =
   window.location.hostname !== "congelator.github.io" &&
   sessionStorage.getItem("mediaServerAvailable") === "true";

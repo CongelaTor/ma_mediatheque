@@ -216,17 +216,18 @@ function createFilmFileCard(film) {
   const downloadButton = document.createElement("button");
   downloadButton.className =
     "tmdb-associate-button film-file-action-button download-only";
-  downloadButton.innerHTML = '<span class="play-icon">↓</span>';
-  downloadButton.title = "Télécharger";
-
+  if (window.isWebContainer) {
+    downloadButton.innerHTML = '<span class="play-icon">▶</span>';
+    downloadButton.title = "Lire";
+  } else {
+    downloadButton.innerHTML = '<span class="play-icon">↓</span>';
+    downloadButton.title = "Télécharger";
+  }
   downloadButton.onclick = () => {
-    const isWindowsContainer = typeof window.flutterTest === "function";
-
-    if (isWindowsContainer) {
+    if (window.isWebContainer) {
       window.flutterTest(film.nomFichier);
       return;
     }
-
     requestFilmDownload(film);
   };
 
