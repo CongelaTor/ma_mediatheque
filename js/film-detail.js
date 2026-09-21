@@ -225,6 +225,8 @@ function createFilmFileCard(film) {
   }
   downloadButton.onclick = () => {
     if (window.isWebContainer) {
+      console.log("WEBCONTAINER PLAY", film.nomFichier);
+
       window.flutterTest(film.nomFichier);
       return;
     }
