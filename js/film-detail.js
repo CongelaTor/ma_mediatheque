@@ -216,17 +216,26 @@ function createFilmFileCard(film) {
   const downloadButton = document.createElement("button");
   downloadButton.className =
     "tmdb-associate-button film-file-action-button download-only";
+  //--------------------------
+  // PLAY only si accès box via windows et si film sur disque de la box
+  //--------------------------
   if (window.isWebContainer) {
-    downloadButton.innerHTML = '<span class="play-icon">▶</span>';
-    downloadButton.title = "Lire";
+    if (film.fichier.startsWith("/Box_")) {
+      downloadButton.innerHTML = '<span class="play-icon">▶</span>';
+      downloadButton.title = "Lire";
+    } else {
+      downloadButton.innerHTML = '<span class="play-icon">↓</span>';
+      downloadButton.title = "Télécharger";
+    }
   } else {
     downloadButton.innerHTML = '<span class="play-icon">↓</span>';
     downloadButton.title = "Télécharger";
   }
-  downloadButton.onclick = () => {
-    if (window.isWebContainer) {
-      console.log("WEBCONTAINER PLAY", film.nomFichier);
 
+  downloadButton.onclick = () => {
+    console.log("DWLD BUTTON CLICK", film.fichier);
+    if (window.isWebContainer && film.fichier.startsWith("/Box_")) {
+      console.log("WEBCONTAINER PLAY", film.nomFichier);
       window.flutterTest(film.nomFichier);
       return;
     }
