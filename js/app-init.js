@@ -46,3 +46,45 @@ function initSidebarToggle() {
     );
   });
 }
+
+let fontZoomActive = false;
+
+const fontZoomButton = document.getElementById("fontZoomButton");
+
+if (fontZoomButton) {
+  fontZoomButton.addEventListener("mouseenter", () => {
+    fontZoomActive = true;
+  });
+
+  fontZoomButton.addEventListener("mouseleave", () => {
+    fontZoomActive = false;
+  });
+
+  window.addEventListener(
+    "wheel",
+    (event) => {
+      if (!fontZoomActive) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const root = document.documentElement;
+
+      let scale =
+        parseFloat(getComputedStyle(root).getPropertyValue("--font-scale")) ||
+        1;
+
+      if (event.deltaY < 0) {
+        scale += 0.1;
+      } else {
+        scale -= 0.1;
+      }
+
+      scale = Math.max(0.7, Math.min(3, scale));
+
+      root.style.setProperty("--font-scale", scale);
+    },
+    { passive: false },
+  );
+}

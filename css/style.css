@@ -1336,6 +1336,17 @@ max-width: var(--cadres-max-width);
     height: 100%;
 }
 
+.font-zoom-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.font-zoom-button:hover { color: white; }
 
 /* ==================================================
    MOBILE
