@@ -1337,16 +1337,23 @@ max-width: var(--cadres-max-width);
 }
 
 .font-zoom-button {
-    width: 32px;
-    height: 32px;
-    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #1683ff;
     background: transparent;
     color: var(--muted);
     cursor: pointer;
     font-size: 18px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.font-zoom-button:hover { color: white; }
+.font-zoom-button:hover { 
+    color: white; 
+    border-color: white;
+}
 
 /* ==================================================
    MOBILE
