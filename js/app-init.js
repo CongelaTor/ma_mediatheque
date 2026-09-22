@@ -1,6 +1,11 @@
 // ------------------------------------
 // Projet créé le 15/08/2026
 // ------------------------------------
+const savedFontScale = localStorage.getItem("fontScale");
+
+if (savedFontScale) {
+  document.documentElement.style.setProperty("--font-scale", savedFontScale);
+}
 
 async function initHomePage() {
   await loadCatalog();
@@ -47,15 +52,15 @@ function initSidebarToggle() {
   });
 }
 
+//--------------------------
+// ZOOM TEXTE MOLETTE SOURIS
+//--------------------------
 let fontZoomActive = false;
-
 const fontZoomButton = document.getElementById("fontZoomButton");
-
 if (fontZoomButton) {
   fontZoomButton.addEventListener("mouseenter", () => {
     fontZoomActive = true;
   });
-
   fontZoomButton.addEventListener("mouseleave", () => {
     fontZoomActive = false;
   });
@@ -66,24 +71,21 @@ if (fontZoomButton) {
       if (!fontZoomActive) {
         return;
       }
-
       event.preventDefault();
 
       const root = document.documentElement;
-
       let scale =
         parseFloat(getComputedStyle(root).getPropertyValue("--font-scale")) ||
         1;
-
       if (event.deltaY < 0) {
         scale += 0.1;
       } else {
         scale -= 0.1;
       }
-
       scale = Math.max(0.7, Math.min(3, scale));
-
       root.style.setProperty("--font-scale", scale);
+      root.style.setProperty("--font-scale", scale);
+      localStorage.setItem("fontScale", scale);
     },
     { passive: false },
   );
