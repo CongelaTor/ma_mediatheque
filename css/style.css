@@ -1340,7 +1340,7 @@ max-width: var(--cadres-max-width);
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 2px solid #1683ff;
+    border: 2.5px solid #1683ff;
     background: transparent;
     color: var(--muted);
     cursor: pointer;
