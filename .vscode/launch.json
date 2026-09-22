@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Launch Program",
-            "program": "C:\\Users\\alnos\\Documents\\Projets\\ma_mediatheque\\controller\\generateCatalog.js",
+            "program": "C:\\Users\\alnos\\Documents\\Projets\\mediatheque\\controller\\generateCatalog.js",
             "args": ["films"],
             "request": "launch",
             "skipFiles": [
